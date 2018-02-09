@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class SocietySeeder extends Seeder
+class SocietyTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -21,9 +21,9 @@ class SocietySeeder extends Seeder
         'name_society'       => 'nom de la societe',
         'adress'    => 'route des champs ',
         'city'        => 'Paris',
-        'phone'        => 0232324324,
+        'phone'        => '0232324324',
         'email'        => 'example@gmail.com',
-        'siret'        => '123456789',
+        'siren'        => 123456789,
         'created_at'  => $date
       );
       $society[] = array(
@@ -32,9 +32,9 @@ class SocietySeeder extends Seeder
         'name_society'       => 'nom de la societe2',
         'adress'    => 'route des poules ',
         'city'        => 'Evreux',
-        'phone'        => 0232434324,
+        'phone'        => '0232434324',
         'email'        => 'example2@gmail.com',
-        'siret'        => '123456789',
+        'siren'        => 123456787,
         'created_at'  => $date
       );
 

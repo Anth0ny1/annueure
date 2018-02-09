@@ -25,9 +25,9 @@ class CreateSocietyTable extends Migration
             $table->string('name_society');
             $table->string('adress');
             $table->string('city');
-            $table->integer('phone');
+            $table->char('phone',10);
             $table->string('email')->unique();
-            $table->integer('siret')->unique();
+            $table->integer('siren')->unique();
             $table->timestamps();
         });
     }
