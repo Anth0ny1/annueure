@@ -17,21 +17,35 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// FRONT ROUTING
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['namespace' => 'Front'], function(){
+  // FRONT ROUTING
+  //
+  // HOME ROUTING
+  //
+  Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/contact', 'ContactUsController@contactView')->name('nous-contacter-view');
-Route::post('/contact', 'ContactUsController@contactAction')->name('nous-contacter-action');
+  // CONTACT ROUTING
+  //
+  Route::get('/contact', 'ContactUsController@contactView')->name('nous-contacter-view');
+  Route::post('/contact', 'ContactUsController@contactAction')->name('nous-contacter-action');
 
-Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
+  // PRESENTATION ROUTING
+  //
+  Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
 
-// Route::get('/newsrss', 'NewRssController')->name('new-rss');
+  // Route::get('/newsrss', 'NewRssController')->name('new-rss');
+  // Route::post('/search', 'SearchController@searchAction')->name('search-action');
 
+  // SEARCH ROUTING
+  //
+  Route::get('/search', 'SearchController@searchView')->name('search-view');
 
-Route::get('/search', 'SearchController@searchView')->name('search-view');
-// Route::post('/search', 'SearchController@searchAction')->name('search-action');
+  // MENTION LEGALES ROUTING
+  //
+  Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
+});
+
 
 Route::group(['namespace' => 'Admin'], function(){
 
@@ -63,4 +77,9 @@ Route::group(['namespace' => 'Admin'], function(){
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
 
+  Route::get('/dashboard/listing/users', 'AdminListingUsers@listingUsers')->name('listing-users');
+
+  Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
+
+  Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
 });
