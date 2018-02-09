@@ -32,8 +32,8 @@ Route::get('/search', 'SearchController@searchView')->name('search-view');
 Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
 
-Route::get('/dashboard/listing/users', 'ListingUsers@listingUsers')->name('listing-users');
+Route::get('/dashboard/listing/users', 'AdminListingUsers@listingUsers')->name('listing-users');
 
-Route::get('/dashboard/listing/society', 'ListingSociety@listingSociety')->name('listing-society');
+Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 
-Route::get('/dashboard/listing/categories', 'ListingCategoriess@listingCategories')->name('listing-categories');
+Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
