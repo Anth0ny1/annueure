@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ContactUsController extends Controller
 {
     //
     public function contactView(){
-      return view('contactUs');
+      return view('front/contactUs');
     }
 
     public function contactAction(){
