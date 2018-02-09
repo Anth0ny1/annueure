@@ -26,7 +26,14 @@ Route::get('/presentation', 'PresentationController@presentation')->name('presen
 
 // Route::get('/newsrss', 'NewRssController')->name('new-rss');
 
+<<<<<<< HEAD
 // Route::get('/search', 'SearchController')->name('search-view');
 // Route::post('/search', 'SearchController')->name('search-action');
 //
 // Route::get('/mentions-legales', 'MentionsController')->name('mentions-legales');
+=======
+Route::get('/search', 'SearchController@searchView')->name('search-view');
+// Route::post('/search', 'SearchController@searchAction')->name('search-action');
+
+Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
+>>>>>>> 4b4447c58479410acb8068395aed15bddd80d787
