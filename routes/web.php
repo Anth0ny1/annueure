@@ -21,10 +21,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/contact', 'ContactUsController')->name('nous-contacter');
 
-Route::get('/presentation', 'PresentationController')->name('presentation');
+Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
 
 // Route::get('/newsrss', 'NewRssController')->name('new-rss');
 
-Route::get('/search', 'SearchController')->name('search');
+Route::get('/search', 'SearchController@searchView')->name('search-view');
+// Route::post('/search', 'SearchController@searchAction')->name('search-action');
 
-Route::get('/mentions-legales', 'MentionsController')->name('mentions-legales');
+Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
