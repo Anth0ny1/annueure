@@ -8,7 +8,7 @@ class ContactUsController extends Controller
 {
     //
     public function contactView(){
-      return view('contactUs');
+      return view('front/contactUs');
     }
 
     public function contactAction(){

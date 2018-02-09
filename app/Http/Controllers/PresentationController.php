@@ -8,6 +8,6 @@ class PresentationController extends Controller
 {
       public function presentation()
   {
-    return view('presentation');
+    return view('front/presentation');
   }
 }
