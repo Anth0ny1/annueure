@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class UsersTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
           'name' => 'Loic',
           'city' => 'Evreux',
           'email' => 'loic@mail.com',
-          'role' => 'societe',
+          'role' => 'membre',
           'password' => bcrypt('123456'),
           'created_at' => Carbon::now()
         );

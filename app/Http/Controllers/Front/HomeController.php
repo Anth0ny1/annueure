@@ -1,5 +1,11 @@
 <?php
 
+/**
+*  Affichage de 3 categories
+*  Nombre de pro inscrit
+*  3 Derniers pro inscrit
+**/
+
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
