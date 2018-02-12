@@ -34,11 +34,11 @@ Route::group(['namespace' => 'Front'], function(){
   Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
 
   // Route::get('/newsrss', 'NewRssController')->name('new-rss');
-  // Route::post('/search', 'SearchController@searchAction')->name('search-action');
 
   // SEARCH ROUTING
   //
   Route::get('/search', 'SearchController@searchView')->name('search-view');
+  Route::post('/search', 'SearchController@searchAction')->name('search-action');
 
   // MENTION LEGALES ROUTING
   //
@@ -60,12 +60,16 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::get('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users');
   Route::put('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users-action');
 
+  Route::get('/dashboard/listing/users', 'AdminListingUsers@listingUsers')->name('listing-users');
+
   // BACK SOCIETY ROUTING
 
   Route::delete('/dashboard/society/delete/{id}', 'AdminSocietyController@deleteSociety')->name('delete-society');
 
   Route::get('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
   Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
+
+  Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 
   // BACK CATEGORIES ROUTING
 
@@ -76,10 +80,6 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::post('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategories')->name('update-categories-action');
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
-
-  Route::get('/dashboard/listing/users', 'AdminListingUsers@listingUsers')->name('listing-users');
-
-  Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 
   Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
 });

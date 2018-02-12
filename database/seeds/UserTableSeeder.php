@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class UsersTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'Anthony',
+          'lastname' => 'Thiriot',
           'city' => 'Beuzeville',
           'email' => 'anthony@mail.com',
           'role' => 'membre',
@@ -26,15 +27,17 @@ class UsersTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'Loic',
+          'lastname' => 'Gourdeau',
           'city' => 'Evreux',
           'email' => 'loic@mail.com',
-          'role' => 'societe',
+          'role' => 'membre',
           'password' => bcrypt('123456'),
           'created_at' => Carbon::now()
         );
 
         $users[] = array(
           'name' => 'admin',
+          'lastname' => 'admin',
           'city' => 'Paris',
           'email' => 'admin@mail.com',
           'role' => 'admin',
