@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   // HOME ROUTING
   //
-  Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/', 'HomeController@index')->name('home');
 
   // CONTACT ROUTING
   //
@@ -81,5 +81,5 @@ Route::group(['namespace' => 'Admin'], function(){
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
 
-  Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
+  Route::get('/dashboard/listing/categories', 'AdminListingCategories@listingCategories')->name('listing-categories');
 });

@@ -9,6 +9,6 @@ class AdminListingUsers extends Controller
 {
     public function listingUsers()
     {
-        return view('listing-users');
+        return 'okListingUsers';
     }
 }
