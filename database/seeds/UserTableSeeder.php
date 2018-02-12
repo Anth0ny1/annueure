@@ -17,6 +17,7 @@ class UserTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'Anthony',
+          'lastname' => 'Thiriot',
           'city' => 'Beuzeville',
           'email' => 'anthony@mail.com',
           'role' => 'membre',
@@ -26,6 +27,7 @@ class UserTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'Loic',
+          'lastname' => 'Gourdeau',
           'city' => 'Evreux',
           'email' => 'loic@mail.com',
           'role' => 'membre',
@@ -35,6 +37,7 @@ class UserTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'admin',
+          'lastname' => 'admin',
           'city' => 'Paris',
           'email' => 'admin@mail.com',
           'role' => 'admin',

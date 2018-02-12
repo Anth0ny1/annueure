@@ -80,6 +80,6 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::post('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategories')->name('update-categories-action');
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
-  
+
   Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
 });

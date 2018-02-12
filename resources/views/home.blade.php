@@ -26,4 +26,16 @@
   Nombre de pro inscrit
   3 Derniers pro inscrit
 --}}
+
+{{-- {{ dd($users)}} --}}
+  @foreach ($users as $user)
+    {{ $user->name }}
+  @endforeach
+
+  {{ $count }}
+
+  @foreach ($categories as $categorie)
+    {{ $categorie->categorie_name }}
+  @endforeach
+  
 @endsection

@@ -31,13 +31,13 @@
     {!! Form::label('sujet', 'Sujet *', ['class' => 'label']) !!}<br />
     {!! Form::text('sujet',null,['class' => 'sujet','placeholder' => 'votre sujet']) !!}<br />
 
-    {!! Form::label('mess', 'Message *', ['class' => 'label']) !!}<br />
-    {!! Form::text('mess',null,['class' => 'message','placeholder' => 'votre message']) !!}<br />
+    {!! Form::label('message', 'Message *', ['class' => 'label']) !!}<br />
+    {!! Form::textarea('message',null,['class' => 'message','placeholder' => 'votre message']) !!}<br />
 
     {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!}
     {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
     {!! $errors->first('sujet', '<small class="help-block">:message</small><br />') !!}
-    {!! $errors->first('mess', '<small class="help-block">:message</small><br />') !!}
+    {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
 
     {!! Form::submit('OK',['class' => 'button']) !!}
 

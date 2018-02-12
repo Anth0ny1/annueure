@@ -10,11 +10,12 @@ class SearchController extends Controller
 
   public function searchView()
   {
-      return view('search');
+      return view('front/search');
   }
 
   public function searchAction()
   {
       // return view('search');
+      
   }
 }
