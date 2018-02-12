@@ -9,6 +9,6 @@ class MentionsController extends Controller
 {
   public function mentions()
   {
-    return view('mentions-legales');
+    return view('front/mentions-legales');
   }
 }

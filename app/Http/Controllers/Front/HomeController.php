@@ -1,9 +1,17 @@
 <?php
 
+/**
+*  Affichage de 3 categories
+*  Nombre de pro inscrit
+*  3 Derniers pro inscrit
+**/
+
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use App\Categories;
 
 class HomeController extends Controller
 {
@@ -24,6 +32,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       
+      $users = User::orderBy('created_at', 'desc')->get();
+
+      $count = \DB::table('society')->count();
+
+      $categories = Categories::inRandomOrder()->limit(3)->get();
+
+        return view('home', compact('users', 'count', 'categories'));
     }
 }
