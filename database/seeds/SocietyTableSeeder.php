@@ -17,11 +17,7 @@ class SocietyTableSeeder extends Seeder
 
       $society[] = array(
         'user_id'        => 1,
-<<<<<<< HEAD
         'site_web' => 'mldkgmfdgk',
-        // 'lastname'        => 'NomSociete',
-=======
->>>>>>> 6d4d133145eb03235b88fbf4b83bb4ed6283b81f
         'name_society'       => 'nom de la societe',
         'adress'    => 'route des champs ',
         'city'        => 'Paris',
@@ -33,12 +29,7 @@ class SocietyTableSeeder extends Seeder
       );
       $society[] = array(
         'user_id'        => 2,
-<<<<<<< HEAD
         'site_web' => 'mldkgmfdgk',
-        
-        // 'lastname'        => 'NomSociete2',
-=======
->>>>>>> 6d4d133145eb03235b88fbf4b83bb4ed6283b81f
         'name_society'       => 'nom de la societe2',
         'adress'    => 'route des poules ',
         'city'        => 'Evreux',
