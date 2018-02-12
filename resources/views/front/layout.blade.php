@@ -22,6 +22,7 @@
             <li><a href="{{ route('presentation') }}">Présentation</a></li>
             <li><a href="{{ route('register') }}">Nous rejoindre</a></li>
             <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li>
+            <li><a href="{{ route('dashboard') }}">admin</a></li>
           </ul>
         </nav>
         <div class="search">
