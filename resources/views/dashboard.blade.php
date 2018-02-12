@@ -317,7 +317,11 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      {{-- @foreach ($societies as $societe)
+                        {{ $societe->city }}
+                      @endforeach --}}
+
+                      @yield('content')
                   </div>
                 </div>
               </div>
