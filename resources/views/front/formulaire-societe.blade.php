@@ -34,6 +34,13 @@ Inscription societe
     {!! $errors->first('city', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
+<div class="form-group">
+    {!! Form::label('zip_code', 'Entrez le code postal : ') !!}
+    <div class="col-md-6">
+    {!! Form::text('zip_code', null, ['class' => 'dede','placeholder' => '']) !!}
+    {!! $errors->first('zip_code', '<small class="help-block">:message</small>') !!}
+  </div>
+</div>
 
 <div class="form-group">
     {!! Form::label('phone', 'Entrez votre numéro de téléphone : ') !!}
@@ -43,6 +50,12 @@ Inscription societe
   </div>
 </div>
 
+<select name="department" id="department" class="form-control">
+    <option value=""> -- Select One --</option>
+    {{-- @foreach ($categories as $cat)
+        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+    @endforeach --}}
+</select>
 <div class="form-group">
     {!! Form::label('email', 'email : ') !!}
     <div class="col-md-6">

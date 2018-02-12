@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Categories;
 
 class AdminListingCategories extends Controller
 {
-       public function listingCategories()
-    {
-        return view('listing-categories');
-    }
+    //
+  public function listingCategories(){
+    $categories = Categories::all();
+     return view('front/formulaire-societe', compact('categories'));
+ }
 }

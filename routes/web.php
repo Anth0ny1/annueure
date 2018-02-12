@@ -87,5 +87,5 @@ Route::group(['namespace' => 'Admin'], function(){
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
 
-  Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
+  Route::get('/dashboard/listing/categories', 'AdminListingCategories@listingCategories')->name('listing-categories');
 });
