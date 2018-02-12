@@ -69,15 +69,9 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
             @if (Auth::user()->role == 'membre')
-<<<<<<< HEAD
               <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
             @endif
                 <li class="dropdown">
-=======
-              <li><a href="{{ route('') }}">inscrire votre societe</a></li>
-            @endif --}}
-                {{-- <li class="dropdown">
->>>>>>> aad4ac64910daf40b3892fa3417d220c04dd81c5
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
