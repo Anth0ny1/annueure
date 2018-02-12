@@ -49,7 +49,7 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
             @if (Auth::user()->role == 'membre')
-              <li><a href="{{ route('') }}">inscrire votre societe</a></li>
+              <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
             @endif
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

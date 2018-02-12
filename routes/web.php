@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   // HOME ROUTING
   //
-  Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/', 'HomeController@index')->name('home');
 
   // CONTACT ROUTING
   //
@@ -32,6 +32,12 @@ Route::group(['namespace' => 'Front'], function(){
   // PRESENTATION ROUTING
   //
   Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
+
+  // INSCRIPTION SOCIETE
+  //
+  Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe');
+  Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action');
+
 
   // Route::get('/newsrss', 'NewRssController')->name('new-rss');
 
