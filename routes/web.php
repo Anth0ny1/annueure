@@ -33,6 +33,12 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
 
+  // INSCRIPTION SOCIETE
+  //
+  Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe');
+  Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action');
+
+
   // Route::get('/newsrss', 'NewRssController')->name('new-rss');
 
   // SEARCH ROUTING

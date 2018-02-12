@@ -12,7 +12,13 @@ use App\Society;
 
 class AdminController extends Controller
 {
-    //
+  public function __construct()
+  {
+    $this->middleware('auth');
+    $this->middleware('admin');
+  }
+
+
     public function dashboard(){
       $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 

@@ -21,7 +21,7 @@
               <li><a href="{{ route('home') }}">Accueil</a></li>
               <li><a href="{{ route('presentation') }}">Présentation</a></li>
               <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li>
-              
+
             @if (Auth::guest())
               <li><a href="{{ route('register') }}">Nous rejoindre</a></li>
               <li><a href="{{ route('login') }}">Login</a></li>
@@ -41,7 +41,7 @@
             @endif
 
             @if (Auth::user()->role == 'membre')
-              <li><a href="{{ route('dashboard') }}">inscrire votre societe</a></li>
+              <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
             @endif
           @endif
           </ul>
@@ -68,9 +68,15 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
             @if (Auth::user()->role == 'membre')
+<<<<<<< HEAD
+              <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
+            @endif
+                <li class="dropdown">
+=======
               <li><a href="{{ route('') }}">inscrire votre societe</a></li>
             @endif --}}
                 {{-- <li class="dropdown">
+>>>>>>> aad4ac64910daf40b3892fa3417d220c04dd81c5
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>

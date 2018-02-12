@@ -24,6 +24,7 @@ class CreateSocietyTable extends Migration
             $table->string('name_society');
             $table->string('adress');
             $table->string('city');
+            $table->string('zip_code');
             $table->char('phone',10);
             $table->string('site_web');
             $table->string('email')->unique();
