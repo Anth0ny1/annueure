@@ -21,11 +21,11 @@ class CreateSocietyTable extends Migration
                 ->on('users')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->string('lastname');
             $table->string('name_society');
             $table->string('adress');
             $table->string('city');
             $table->char('phone',10);
+            $table->string('site_web');
             $table->string('email')->unique();
             $table->integer('siren')->unique();
             $table->timestamps();
