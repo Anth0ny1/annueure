@@ -42,7 +42,7 @@
               </div>
               <div class="profile_info">
                 <span>Bonjour,</span>
-                <h2>John Doe</h2>
+                <h2>{{ Auth::user()->name }}</h2>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -55,13 +55,15 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                  <li><a href="{{ route('listing-society') }}"><i class="fa fa-home"></i> Liste societe {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
+                    {{-- <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>
-                    </ul>
-                  </li>
+                    </ul> --}}
+                  {{-- </li> --}}
+                  <li><a href="{{ route('listing-users') }}"><i class="fa fa-home"></i> Liste utilisateurs {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
+                  <li><a href="{{ route('listing-categories') }}"><i class="fa fa-home"></i> Liste categories {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
@@ -184,7 +186,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="admin/img/img.jpg" alt="">John Doe
+                    <img src="admin/img/img.jpg" alt="">{{ Auth::user()->name }}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -315,7 +317,11 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      {{-- @foreach ($societies as $societe)
+                        {{ $societe->city }}
+                      @endforeach --}}
+
+                      @yield('content')
                   </div>
                 </div>
               </div>

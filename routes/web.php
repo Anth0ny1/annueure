@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   // HOME ROUTING
   //
-  Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/', 'HomeController@index')->name('home');
 
   // CONTACT ROUTING
   //
@@ -32,6 +32,12 @@ Route::group(['namespace' => 'Front'], function(){
   // PRESENTATION ROUTING
   //
   Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
+
+  // INSCRIPTION SOCIETE
+  //
+  Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe');
+  Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action');
+
 
   // Route::get('/newsrss', 'NewRssController')->name('new-rss');
 
@@ -58,7 +64,7 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('detele-users');
 
   Route::get('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users');
-  Route::put('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users-action');
+  Route::put('/dashboard/users/update/{id}', 'AdminUsersController@updateUsersAction')->name('update-users-action');
 
   Route::get('/dashboard/listing/users', 'AdminListingUsers@listingUsers')->name('listing-users');
 
@@ -67,19 +73,19 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::delete('/dashboard/society/delete/{id}', 'AdminSocietyController@deleteSociety')->name('delete-society');
 
   Route::get('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
-  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
+  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society');
 
   Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 
   // BACK CATEGORIES ROUTING
 
   Route::get('/dashboard/categories/new', 'AdminCategoriesController@newCategories')->name('new-categories');
-  Route::post('/dashboard/categories/new', 'AdminCategoriesController@newCategories')->name('new-categories-action');
+  Route::post('/dashboard/categories/new', 'AdminCategoriesController@newCategoriesAction')->name('new-categories-action');
 
   Route::get('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategories')->name('update-categories');
-  Route::post('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategories')->name('update-categories-action');
+  Route::post('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategoriesAction')->name('update-categories-action');
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
 
-  Route::get('/dashboard/listing/categories', 'AdminListingCategoriess@listingCategories')->name('listing-categories');
+  Route::get('/dashboard/listing/categories', 'AdminListingCategories@listingCategories')->name('listing-categories');
 });
