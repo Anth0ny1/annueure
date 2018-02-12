@@ -8,67 +8,28 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+                  {!! Form::open(['route' => 'nous-contacter-action','method' => 'post','class' => 'form-group']) !!}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                  {!! Form::label('lastname', 'Nom :', ['class' => 'label']) !!}<br />
+                  {!! Form::text('lastname',null,['class' => 'nom','placeholder' => 'Nom']) !!}<br />
+                  {!! $errors->first('lastname', '<small class="help-block">:message</small><br />') !!}
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                  {!! Form::label('name', 'Prenom :', ['class' => 'label']) !!}<br />
+                  {!! Form::text('name',null,['class' => 'nom','placeholder' => 'Prénom']) !!}<br />
+                  {!! $errors->first('name', '<small class="help-block">:message</small><br />') !!}
 
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                  {!! Form::label('city', 'Ville :', ['class' => 'label']) !!}<br />
+                  {!! Form::text('city',null,['class' => 'nom','placeholder' => 'Ville']) !!}<br />
+                  {!! $errors->first('city', '<small class="help-block">:message</small><br />') !!}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                  {!! Form::label('email', 'E-Mail Address *', ['class' => 'label']) !!}<br />
+                  {!! Form::email('email',null,['class' => 'email','placeholder' => 'votre email']) !!}<br />
+                  {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                  {!! Form::submit('OK',['class' => 'button']) !!}
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                  {!! Form::close() !!}
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
