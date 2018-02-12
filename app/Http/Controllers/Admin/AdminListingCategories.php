@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Categories;
 
+
 class AdminListingCategories extends Controller
 {
     //
   public function listingCategories(){
     $categories = Categories::all();
-     return view('front/formulaire-societe', compact('categories'));
+     return view('Front/formulaire-societe', compact('categories'));
  }
 }

@@ -50,11 +50,11 @@ Inscription societe
   </div>
 </div>
 
-<select name="department" id="department" class="form-control">
+<select name="categorie_name" id="categorie_name" class="form-control">
     <option value=""> -- Select One --</option>
-    {{-- @foreach ($categories as $cat)
+    @foreach ($categories as $cat)
         <option value="{{ $cat->id }}">{{ $cat->name }}</option>
-    @endforeach --}}
+    @endforeach
 </select>
 <div class="form-group">
     {!! Form::label('email', 'email : ') !!}
