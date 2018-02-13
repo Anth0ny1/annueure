@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 @extends('layouts/layout')
-=======
-@extends('front/layout')
+
 
 @section('content')
 {{--
@@ -19,4 +17,3 @@
   @endforeach --}}
 
 @endsection
->>>>>>> a524aaf418d4676f652467327e5620a7e147b27f
