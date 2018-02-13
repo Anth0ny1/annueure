@@ -1,0 +1,23 @@
+.ResultatSearch{
+  text-align: center;
+}
+.bloc_societe{
+width: 200px;  /* Or whatever */
+height: 400px; /* Or whatever */
+margin: 10px;  /* Magic! */
+  background: lime;
+  text-align: center;
+
+}
+.content_search{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+
+}
+.display{
+  display: flex;
+  margin:  0px auto;
+  background: grey;
+  justify-content: center;
+}

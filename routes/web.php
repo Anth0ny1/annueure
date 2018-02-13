@@ -50,9 +50,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-  // Resultat recherche
-  //
-  Route::get('/resultat-search', 'ResultatSearch@result')->name('resultat-search');
+
 
 });
 
@@ -87,7 +85,7 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::post('/dashboard/categories/new', 'AdminCategoriesController@newCategoriesAction')->name('new-categories-action');
 
   Route::get('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategories')->name('update-categories');
-  Route::post('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategoriesAction')->name('update-categories-action');
+  Route::put('/dashboard/categorie/update/{id}', 'AdminCategoriesController@updateCategoriesAction')->name('update-categories-action');
 
   Route::delete('/dashboard/categories/delete/{id}', 'AdminCategoriesController@deleteCategories')->name('delete-categories');
 
