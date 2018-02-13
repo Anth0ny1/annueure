@@ -12,11 +12,14 @@ class AdminListingCategories extends Controller
     //
   public function listingCategories(){
 
+
+
     $categories = Categories::orderBy('created_at', 'desc')->paginate(15);
 
     // $user = User::
 
     return view('listing_categories', compact('categories'));
+
 
  }
 }
