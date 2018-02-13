@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
@@ -48,7 +48,7 @@
           </ul>
         </nav>
         <div class="search">
-          <form class="form-search" action="{{ route('search-view') }}" method="post">
+          {{-- <form class="form-search" action="{{ route('search-view') }}" method="post">
             <div class="metier">
               <label for="">Métiers ?</label>
               <input type="text" name="metier" value="" placeholder="Liste des métiers">
@@ -57,9 +57,21 @@
               <label for="">Où ?</label>
               <input type="text" name="ville" value="" placeholder="Liste des villes">
             </div>
-          </form>
+          </form> --}}
+          {!! Form::open(['route' => 'search-action', 'method' => 'post']) !!}
+
+            {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Metier ou nom de la societe']) !!}
+            {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+
+            {!! Form::search('ou', null, ['class' => 'form-control','placeholder' => 'Ville ou code postal']) !!}
+            {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+
+            {!! Form::submit('Envoyer !',['class' => ' btn btn-succes']) !!}
+
+          {!! Form::close() !!}
         </div>
       </div>
+
       <div id="login">
         <!-- login aligne a droite dans la barre de nav -->
         <ul class="nav navbar-nav navbar-right">
