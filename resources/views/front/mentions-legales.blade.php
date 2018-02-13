@@ -1,1 +1,1 @@
-mentions legales
+@extends('layouts/layout')

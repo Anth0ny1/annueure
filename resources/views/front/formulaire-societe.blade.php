@@ -1,4 +1,4 @@
-@extends('front/layout')
+@extends('layouts/layout')
 
 @section('title')
 Inscription societe
@@ -16,6 +16,14 @@ Inscription societe
   <div class="col-md-6">
     {!! Form::text('name_society', null, ['class' => 'form-control','placeholder' => 'Nom de votre société']) !!}
     {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+  </div>
+</div>
+
+<div class="form-group">
+  {{-- {!! Form::label('gerant', 'Entrez le nom du gérant : ',['class' =>'col-md-4 control-label']) !!} --}}
+  <div class="col-md-6">
+    {!! Form::text('gerant', null, ['class' => 'form-control','placeholder' => 'Nom du gérant']) !!}
+    {!! $errors->first('gerant', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
 
@@ -82,6 +90,14 @@ Inscription societe
     <div class="col-md-6">
     {!! Form::text('siren', null, ['class' => 'form-control','placeholder' => 'Siren']) !!}
     {!! $errors->first('siren', '<small class="help-block">:message</small>') !!}
+  </div>
+</div>
+
+<div class="form-group">
+    {{-- {!! Form::textarea('textarea', 'textarea : ',['class' =>'col-md-4 control-label']) !!} --}}
+    <div class="col-md-6">
+    {!! Form::textarea('skills', null, ['class' => 'form-control','placeholder' => 'Mettez en avant vos compétences....']) !!}
+    {!! $errors->first('skills', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
 
