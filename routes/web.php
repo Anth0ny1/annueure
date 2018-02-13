@@ -50,9 +50,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-  // Resultat recherche
-  //
-  Route::get('/resultat-search', 'ResultatSearch@result')->name('resultat-search');
+
 
 });
 

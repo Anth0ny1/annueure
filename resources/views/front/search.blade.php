@@ -11,7 +11,9 @@
    <hr>
 </div>
 
-
+@foreach ($quiquoi as $qq)
+  {{ $qq->name_society}}
+@endforeach
   {{-- @foreach ($categories as $categorie)
     {{ $categorie->categorie_name }}
   @endforeach --}}
