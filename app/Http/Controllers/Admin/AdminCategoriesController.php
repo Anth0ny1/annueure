@@ -14,7 +14,7 @@ class AdminCategoriesController extends Controller
     //
     public function newCategories(){
 
-      return view('admin/listing-categories');
+      return view('admin/new-categories');
     }
 
     public function newCategoriesAction(NewCategoriesRequest $request){
@@ -24,17 +24,34 @@ class AdminCategoriesController extends Controller
       // dd($post);
       // echo $post['title'];
       \DB::table('categories')->insert([
-        'categorie_name' => $post['name'],
+        'categorie_name' => $post['categorie_name'],
         'created_at' => Carbon::now(),
       ]);
 
       return redirect()
-        ->route('admin/listing-categories')
+        ->route('listing-categories')
         ->with('success', 'Votre categorie à bien était ajouté');
     }
 
-    public function updateCategories(){
+    public function updateCategories($id){
+      $categorie = Categories::findOrFail($id);
 
+      return view('admin/update-categories', compact('categorie'));
+    }
+
+    public function updateCategoriesAction($id, NewCategoriesRequest $request){
+
+      $categorie = Categories::findOrFail($id);
+
+      $categorie->update([
+        'categorie_name' => $request->input('categorie_name'),
+      ]);
+
+          // $article->update($request->all());  // Methode fonctionnel mais pas dans tous les cas
+
+    return redirect()
+      ->route('listing-categories')
+      ->with('success', 'Votre categorie à bien était MODIFIE');
     }
 
     public function deleteCategories($id){

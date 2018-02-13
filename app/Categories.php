@@ -8,6 +8,7 @@ class Categories extends Model
 {
     //
     protected $table = 'categories';
+    protected $fillable = ['categorie_name'];
 
     public function society()
     {
