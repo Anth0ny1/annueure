@@ -3,6 +3,9 @@
 @section('content')
   <h1>listing des Sociétés</h1>
 
+<<<<<<< HEAD
+  <table>
+=======
   <table class="table table-striped">
     <thead>
       <tr>
@@ -20,6 +23,7 @@
       </tr>
     </thead>
       <tbody>
+>>>>>>> 16052d025970fb163d9ed6660a8920184958c92b
       @foreach ($societies as $societie)
         <tr>
           <td>{{ $societie->id }}</td>
@@ -30,6 +34,12 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
+<<<<<<< HEAD
+        </tr>
+            <td>
+            
+            </td>
+=======
           <td>{{ $societie->created_at }}</td>
           <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
           <td>
@@ -39,6 +49,7 @@
           </td>
             </tr>
 
+>>>>>>> 16052d025970fb163d9ed6660a8920184958c92b
       @endforeach
     </tbody>
   </table>
