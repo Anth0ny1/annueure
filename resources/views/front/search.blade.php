@@ -18,22 +18,19 @@ recherche société
       <h4>{{ $count }} sociétés figure dans votre recherche.</h4>
       <hr>
     </div>
-<div class="display">
-
-
+    <div class="display">
       @foreach ($quiquoi as $qq)
         <div class="bloc_societe">
-        <h5>{{ $qq->name_society}}</h5>
-        <p>Nom gérant : {{ $qq->gerant}}</p>
-        <p>Adresse : {{ $qq->adress}}</p>
-        <p>Code postal : {{ $qq->zip_code}}</p>
-        <p>Ville : {{ $qq->city}}</p>
-        <p>Tel : {{ $qq->phone}}</p>
-        <p>Site Web : {{ $qq->site_web}}</p>
+          <h5>{{ $qq->name_society}}</h5>
+          <p>Nom gérant : {{ $qq->gerant}}</p>
+          <p>Adresse : {{ $qq->adress}}</p>
+          <p>Code postal : {{ $qq->zip_code}}</p>
+          <p>Ville : {{ $qq->city}}</p>
+          <p>Tel : {{ $qq->phone}}</p>
+          <p>Site Web : {{ $qq->site_web}}</p>
         </div>
       @endforeach
-
-</div>
+    </div>
   </div>
   {{-- @foreach ($categories as $categorie)
     {{ $categorie->categorie_name }}
