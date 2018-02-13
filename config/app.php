@@ -180,6 +180,9 @@ return [
         // DEBUGBAR
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        //Propagaiste
+        Propaganistas\LaravelPhone\PhoneServiceProvider::class,
+
     ],
 
     /*

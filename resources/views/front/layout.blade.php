@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <title>@yield('title')</title>
@@ -41,7 +42,7 @@
             @endif
 
             @if (Auth::user()->role == 'membre')
-              <li><a href="{{ route('dashboard') }}">inscrire votre societe</a></li>
+              <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
             @endif
           @endif
           </ul>
@@ -68,9 +69,9 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
             @if (Auth::user()->role == 'membre')
-              <li><a href="{{ route('') }}">inscrire votre societe</a></li>
-            @endif --}}
-                {{-- <li class="dropdown">
+              <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
+            @endif
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -102,18 +103,66 @@
       </div>
     </header>
     <section id="actualite">
-      <div class="presentation">
-
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="{{ asset('img/slide01.jpg') }}" />
+          </li>
+          <li>
+            <img src="{{ asset('img/slide02.jpg') }}" />
+          </li>
+          <li>
+            <img src="{{ asset('img/slide03.jpg') }}" />
+          </li>
+        </ul>
       </div>
-      <div class="one title">
-
+      <div class="services">
+        <div id="annuaire-pro">
+          <div class="">
+            <img src="" alt="" />
+          </div>
+          <div class="bloc-text">
+            <h4>Annuaire des Pro</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Inscription des Pro</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Prendre un rendez-vous</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Demander un devis</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+        </div>
       </div>
     </section>
-    <aside id="flux RSS">
-
+    <aside id="flux-RSS">
+      <div class"rss">
+      </div>
+      <div class"rss">
+      </div>
+      <div class"rss">
+      </div>
     </aside>
 @yield('content')
+  <footer id="footer">
+  </footer>
   </body>
   <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide"
+      });
+    });
+  </script>
 
 </html>
