@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use App\Categories;
 use App\Http\Requests\NewCategoriesRequest;
 // use App\Categories;
 
@@ -13,7 +14,7 @@ class AdminCategoriesController extends Controller
     //
     public function newCategories(){
 
-      return view('newCategories');
+      return view('admin/listing-categories');
     }
 
     public function newCategoriesAction(NewCategoriesRequest $request){
@@ -28,7 +29,7 @@ class AdminCategoriesController extends Controller
       ]);
 
       return redirect()
-        ->route('dashboard')
+        ->route('admin/listing-categories')
         ->with('success', 'Votre categorie à bien était ajouté');
     }
 
@@ -36,7 +37,13 @@ class AdminCategoriesController extends Controller
 
     }
 
-    public function deleteCategories(){
+    public function deleteCategories($id){
+      $categories = Categories::findOrFail($id);
 
+      $categories->delete();
+
+      return redirect()
+        ->route('listing-categories')
+        ->with('success', 'Votre article à bien était SUPPRIMER');
     }
 }

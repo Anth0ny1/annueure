@@ -10,6 +10,9 @@
         </tr>
             <td>
               <a href="{{ route('update-categories',['id' => $categorie->id])}}">modifier</a>
+              {!! Form::open(['route' => ['delete-categories', $categorie->id], 'method' => 'delete']) !!}
+                {!! Form::submit('Delete') !!}
+              {!! Form::close() !!}
               <a href="{{ route('delete-categories',['id' => $categorie->id])}}">effacer</a>
             </td>
       @endforeach
