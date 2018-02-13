@@ -9,6 +9,6 @@ class AdminListingSociety extends Controller
 {
     public function listingSociety()
     {
-        return view('listing-society');
+        return view('admin/society');
     }
 }
