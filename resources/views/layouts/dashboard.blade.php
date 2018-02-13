@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Gentelella Alela! | </title>
+    <title>@yield('title')</title>
 
     <!-- Bootstrap -->
     {{-- <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
@@ -23,8 +23,8 @@
     {{-- <link href="admin/css/custom.min.css" rel="stylesheet"> --}}
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" />
   </head>
-
   <body class="nav-md">
+
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -55,16 +55,28 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="{{ route('listing-society') }}"><i class="fa fa-home"></i> Liste societe {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
+
+                <li><a href="{{ route('listing-users') }}"><i class="fa fa-home"></i>Liste utilisateurs</a></li>
+
+
+                  {{-- <li><a href="{{ route('listing-society') }}"><i class="fa fa-home"></i> Liste societe {{-- <span class="fa fa-chevron-down"></span> --}}{{-- </a></li>--}}
                     {{-- <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                    </ul> --}}
+                      <li><a href="index3.html">Dashboard3</a></li> --}}
+                </ul>
                   {{-- </li> --}}
-                  <li><a href="{{ route('listing-users') }}"><i class="fa fa-home"></i> Liste utilisateurs {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
-                  <li><a href="{{ route('listing-categories') }}"><i class="fa fa-home"></i> Liste categories {{-- <span class="fa fa-chevron-down"></span> --}}</a></li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav side-menu">
+                  <li><a href="{{ route('listing-categories') }}"><i class="fa fa-home"></i>Liste categories</a></li>
+
+                </ul>
+                  {{-- <li><a href="{{ route('listing-users') }}"><i class="fa fa-home"></i> Liste utilisateurs {{-- <span class="fa fa-chevron-down"></span> --}}{{-- </a></li> --}}
+                <ul class="nav side-menu">
+                  <li><a href="{{ route('listing-society') }}"><i class="fa fa-home"></i>Liste societe</a></li>
+
+                </ul>
+                  {{-- <li><a href="{{ route('listing-categories') }}"><i class="fa fa-home"></i> Liste categories {{-- <span class="fa fa-chevron-down"></span> --}}{{-- </a></li> --}}
+                  {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
@@ -73,7 +85,7 @@
                       <li><a href="form_upload.html">Form Upload</a></li>
                       <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul>
-                  </li>
+                  </li> --}}
                   <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
@@ -149,7 +161,7 @@
                         </li>
                     </ul>
                   </li>
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                  <li><a href="{{ route('home') }}"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
               </div>
 
@@ -296,6 +308,9 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
+<<<<<<< HEAD:resources/views/layouts/dashboard.blade.php
+                @yield('content')
+=======
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Plain Page</h2>
@@ -324,6 +339,7 @@
                       @yield('content')
                   </div>
                 </div>
+>>>>>>> 9f1a87de8d337882454067a34e9c6cf60d301e9c:resources/views/dashboard.blade.php
               </div>
             </div>
           </div>
