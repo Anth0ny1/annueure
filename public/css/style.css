@@ -1,6 +1,7 @@
 body {
   color: #000;
-  font-size: 12px;
+  font-size: 1rem;
+  font-family: 'robotoregular';
 }
 #header{
   height:200px;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/fontsheet.css') }}" />
     @yield('css')
   </head>
 

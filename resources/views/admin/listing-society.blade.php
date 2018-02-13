@@ -3,9 +3,30 @@
 @section('content')
   <h1>listing des Sociétés</h1>
 
+<<<<<<< HEAD
   <table>
+=======
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom de la société</th>
+        <th>Adresse</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Site Web</th>
+        <th>E-Mail</th>
+        <th>Siren</th>
+        <th>Société crée le</th>
+        <th>Modification</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+      <tbody>
+>>>>>>> 16052d025970fb163d9ed6660a8920184958c92b
       @foreach ($societies as $societie)
         <tr>
+          <td>{{ $societie->id }}</td>
           <td>{{ $societie->name_society }}</td>
           <td>{{ $societie->adress }}</td>
           <td>{{ $societie->city }}</td>
@@ -13,10 +34,24 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
+<<<<<<< HEAD
         </tr>
             <td>
             
             </td>
+=======
+          <td>{{ $societie->created_at }}</td>
+          <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
+          <td>
+            {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
+              {!! Form::submit('Delete') !!}
+            {!! Form::close() !!}
+          </td>
+            </tr>
+
+>>>>>>> 16052d025970fb163d9ed6660a8920184958c92b
       @endforeach
+    </tbody>
   </table>
+
 @endsection
