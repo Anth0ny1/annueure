@@ -1,1 +1,1 @@
-Search
+@extends('layouts/layout')
