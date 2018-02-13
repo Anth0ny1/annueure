@@ -14,7 +14,6 @@ class AdminListingCategories extends Controller
 
 
 
-     return view('admin/users');
 
 
 
@@ -24,10 +23,9 @@ class AdminListingCategories extends Controller
     // $user = User::
 
 
-    return view('listing_categories', compact('categories'));
-
-
     return view('admin/listing-categories', compact('categories'));
+
+
 
 
  }
