@@ -11,9 +11,9 @@ class AdminListingCategories extends Controller
 {
     //
   public function listingCategories(){
-<<<<<<< HEAD
+
      return view('admin/users');
-=======
+
 
     $categories = Categories::orderBy('created_at', 'desc')->paginate(15);
 
@@ -21,6 +21,6 @@ class AdminListingCategories extends Controller
 
     return view('listing_categories', compact('categories'));
 
->>>>>>> 9f1a87de8d337882454067a34e9c6cf60d301e9c
+
  }
 }
