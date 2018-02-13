@@ -24,6 +24,10 @@ class AdminController extends Controller
 
       // $user = User::
 
+<<<<<<< HEAD
+      return view('admin.dashboard', compact('society'));
+=======
       return view('dashboard', compact('societies'));
+>>>>>>> 9f1a87de8d337882454067a34e9c6cf60d301e9c
     }
 }

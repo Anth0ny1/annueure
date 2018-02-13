@@ -36,7 +36,6 @@ class FormulaireRequest extends FormRequest
             'name.required' => 'Merci de mettre votre nom svp',
             'lastname.min' => 'Merci d\'indiquer un minimum de 3 caractères',
             'city.min' => 'Merci d\'indiquer un minimum de 3 caractères',
-            'nom.min' => 'Merci d\'indiquer un minimum de 5 caractères',
           ];
     }
 }
