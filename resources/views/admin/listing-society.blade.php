@@ -2,7 +2,7 @@
 
 @section('content')
   <h1>listing des Sociétés</h1>
-  <a href="{{ route('update-society') }}">ajouter nouvelle société</a>
+
   <table>
       @foreach ($societies as $societie)
         <tr>
@@ -15,7 +15,7 @@
           <td>{{ $societie->siren }}</td>
         </tr>
             <td>
-              <a href="{{ route('delete-society',['id' => $societie->id])}}">effacer</a>
+            
             </td>
       @endforeach
   </table>
