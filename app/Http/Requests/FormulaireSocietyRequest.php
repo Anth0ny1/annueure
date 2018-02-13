@@ -30,6 +30,7 @@ class FormulaireSocietyRequest extends FormRequest
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|numeric',
              'site_web'   => 'bail|required|min:3|max:50',
+             'categorie_name'   => 'bail|required|',
              'skills'   => 'bail|max:190',
              'email'   => 'bail|required|min:3|max:50',
              'siren'   => 'bail|required|min:9|max:9'
@@ -43,6 +44,7 @@ class FormulaireSocietyRequest extends FormRequest
              'city.min' => 'Merci d\'indiquer votre ville.',
              'zip_code.min' => 'Merci d\'indiquer votre code postal.',
              'site_web.min' => 'Merci d\'indiquer votre site internet.',
+             'categorie_name' => 'Merci d\'indiquer une categorie.',
              'skills.max' => 'Votre texte ne peut depasser 190 caractères ',
              'email.min' => 'Merci d\'indiquer votre email.',
              'siren.min' => 'Merci d\'indiquer un numéro de siren avec 9 chiffres.',

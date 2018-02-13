@@ -30,16 +30,7 @@ class FormulaireSocietyController extends Controller
 
         $id = \DB::table('society')->insertGetId(
             [
-<<<<<<< HEAD
-              'name_society' => $post['name_society'],
-              'adress' => $post['adress'],
-              'city' => $post['city'],
-              'phone' => $post['phone'],
-              'zip_code' => $post['zip_code'],
-              'email' => $post['email'],
-              'site_web' => $post['site_web'],
-              'siren' => $post['siren'],
-=======
+
               "name_society" => $post['name_society'],
               "gerant" => $post['gerant'],
               "adress" => $post['adress'],
@@ -50,20 +41,14 @@ class FormulaireSocietyController extends Controller
               "site_web" => $post['site_web'],
               "skills" => $post['skills'],
               "siren" => $post['siren'],
->>>>>>> 492a4bd9518aa0de087f0090822a63d1700a6979
               'created_at' => Carbon::now(),
               'user_id' => Auth::id(),
             ]
           );
           \DB::table('society_categories')->insert(
             [
-<<<<<<< HEAD
-            'categories_id' => $post['categorie_name'],
-            // 'society_id' =>
-            // 'user_id' => Auth::id(),
-=======
+
             "categories_id" => $post['categorie_name'],
->>>>>>> 492a4bd9518aa0de087f0090822a63d1700a6979
             'society_id' => $id,
             ]
           );
