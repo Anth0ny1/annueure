@@ -13,7 +13,6 @@ class AdminListingSociety extends Controller
 
       $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 
-      // $user = User::
 
       return view('admin/listing-society', compact('societies'));
 
