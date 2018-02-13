@@ -30,10 +30,7 @@ class FormulaireSocietyController extends Controller
 
         $id = \DB::table('society')->insertGetId(
             [
-<<<<<<< HEAD
-=======
 
->>>>>>> 45a7e69687701b6b1b5311c07ce59ed157babae2
               "name_society" => $post['name_society'],
               "gerant" => $post['gerant'],
               "adress" => $post['adress'],
@@ -50,10 +47,7 @@ class FormulaireSocietyController extends Controller
           );
           \DB::table('society_categories')->insert(
             [
-<<<<<<< HEAD
-=======
 
->>>>>>> 45a7e69687701b6b1b5311c07ce59ed157babae2
             "categories_id" => $post['categorie_name'],
             'society_id' => $id,
             ]
