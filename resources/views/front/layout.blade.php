@@ -110,22 +110,47 @@
           </li>
           <li>
             <img src="{{ asset('img/slide02.jpg') }}" />
-            <p class="flex-caption">L’annuaire des professionnels du bâtiment en Normandie</p>
           </li>
           <li>
             <img src="{{ asset('img/slide03.jpg') }}" />
-            <p class="flex-caption">L’annuaire des professionnels du bâtiment en Normandie</p>
           </li>
         </ul>
       </div>
-      <div class="one title">
-
+      <div class="services">
+        <div id="annuaire-pro">
+          <div class="">
+            <img src="" alt="" />
+          </div>
+          <div class="bloc-text">
+            <h4>Annuaire des Pro</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Inscription des Pro</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Prendre un rendez-vous</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+          <div class="bloc-text">
+            <h4>Demander un devis</h4>
+            <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+          </div>
+        </div>
       </div>
     </section>
-    <aside id="flux RSS">
-
+    <aside id="flux-RSS">
+      <div class"rss">
+      </div>
+      <div class"rss">
+      </div>
+      <div class"rss">
+      </div>
     </aside>
 @yield('content')
+  <footer id="footer">
+  </footer>
   </body>
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
