@@ -66,6 +66,8 @@ Inscription societe
     @foreach ($categories as $cat)
         <option value="{{ $cat->id }}">{{ $cat->categorie_name }}</option>
     @endforeach
+    {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
+
 </select>
 </div>
   </div>

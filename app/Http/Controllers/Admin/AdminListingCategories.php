@@ -17,5 +17,6 @@ class AdminListingCategories extends Controller
     return view('admin/listing-categories', compact('categories'));
 
 
+
  }
 }
