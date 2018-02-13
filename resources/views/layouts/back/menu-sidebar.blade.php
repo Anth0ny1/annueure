@@ -1,7 +1,7 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
   <div class="menu_section">
-    <h3>Live On</h3>
+    <h3>Annu'Eure</h3>
     <ul class="nav side-menu">
       <li><a href="{{ route('listing-categories') }}"><i class="fa fa-archive"></i>Listing des Catégories</a></li>
       <li><a href="{{ route('listing-society')}}"><i class="fa fa-industry"></i>Listing des Sociétés</a></li>
