@@ -31,12 +31,14 @@ class FormulaireSocietyController extends Controller
         $id = \DB::table('society')->insertGetId(
             [
               "name_society" => $post['name_society'],
+              "gerant" => $post['gerant'],
               "adress" => $post['adress'],
               "city" => $post['city'],
               "phone" => $post['phone'],
               "zip_code" => $post['zip_code'],
               "email" => $post['email'],
               "site_web" => $post['site_web'],
+              "skills" => $post['skills'],
               "siren" => $post['siren'],
               'created_at' => Carbon::now(),
               'user_id' => Auth::id(),
@@ -45,10 +47,7 @@ class FormulaireSocietyController extends Controller
           \DB::table('society_categories')->insert(
             [
             "categories_id" => $post['categorie_name'],
-            // 'society_id' =>
-            // 'user_id' => Auth::id(),
             'society_id' => $id,
-            'created_at' => Carbon::now(),
             ]
           );
           return redirect()->route('home')->with('success', 'votre formulaire est bien soumis');

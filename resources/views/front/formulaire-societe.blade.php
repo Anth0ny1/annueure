@@ -20,6 +20,14 @@ Inscription societe
 </div>
 
 <div class="form-group">
+  {{-- {!! Form::label('gerant', 'Entrez le nom du gérant : ',['class' =>'col-md-4 control-label']) !!} --}}
+  <div class="col-md-6">
+    {!! Form::text('gerant', null, ['class' => 'form-control','placeholder' => 'Nom du gérant']) !!}
+    {!! $errors->first('gerant', '<small class="help-block">:message</small>') !!}
+  </div>
+</div>
+
+<div class="form-group">
     {{-- {!! Form::label('adress', 'Entrez l\'adresse de votre société : ', ['class' =>'col-md-4 control-label']) !!} --}}
     <div class="col-md-6">
     {!! Form::text('adress', null, ['class' => 'form-control','placeholder' => 'Adresse complète']) !!}
@@ -82,6 +90,14 @@ Inscription societe
     <div class="col-md-6">
     {!! Form::text('siren', null, ['class' => 'form-control','placeholder' => 'Siren']) !!}
     {!! $errors->first('siren', '<small class="help-block">:message</small>') !!}
+  </div>
+</div>
+
+<div class="form-group">
+    {{-- {!! Form::textarea('textarea', 'textarea : ',['class' =>'col-md-4 control-label']) !!} --}}
+    <div class="col-md-6">
+    {!! Form::textarea('skills', null, ['class' => 'form-control','placeholder' => 'Mettez en avant vos compétences....']) !!}
+    {!! $errors->first('skills', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
 

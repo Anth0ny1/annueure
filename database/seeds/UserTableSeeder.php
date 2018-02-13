@@ -45,6 +45,16 @@ class UserTableSeeder extends Seeder
           'created_at' => Carbon::now()
         );
 
+        $users[] = array(
+          'name' => 'Quidel',
+          'lastname' => 'antoine',
+          'city' => 'Pont audemer',
+          'email' => 'quidelantoine@gmail.com',
+          'role' => 'admin',
+          'password' => bcrypt('michel'),
+          'created_at' => Carbon::now()
+        );
+
         DB::table('users')->insert($users);
 
     }
