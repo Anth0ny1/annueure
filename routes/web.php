@@ -75,7 +75,7 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::delete('/dashboard/society/delete/{id}', 'AdminSocietyController@deleteSociety')->name('delete-society');
 
   Route::get('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
-  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society');
+  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society-action');
 
   Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 
