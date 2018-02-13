@@ -37,10 +37,13 @@ class FormulaireSocietyRequest extends FormRequest
      public function messages()
        {
            return [
-             'name.required' => 'Merci de mettre votre nom svp',
-             'lastname.min' => 'Merci d\'indiquer un minimum de 3 caractères',
-             'city.min' => 'Merci d\'indiquer un minimum de 3 caractères',
-             'nom.min' => 'Merci d\'indiquer un minimum de 5 caractères',
+             'name_society.required' => 'Merci d\'indiquer le nom de votre société.',
+             'adress.min' => 'Merci d\'indiquer votre adresse.',
+             'city.min' => 'Merci d\'indiquer votre ville.',
+             'zip_code.min' => 'Merci d\'indiquer votre code postal.',
+             'site_web.min' => 'Merci d\'indiquer votre site internet.',
+             'email.min' => 'Merci d\'indiquer votre email.',
+             'siren.min' => 'Merci d\'indiquer un numéro de siren avec 9 chiffres.',
            ];
      }
 
