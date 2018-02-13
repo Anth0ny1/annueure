@@ -4,19 +4,18 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Society;
 
 class AdminListingSociety extends Controller
 {
     public function listingSociety()
     {
 
-        return view('admin/society');
-
       $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 
       // $user = User::
 
-      return view('listing_society', compact('societies'));
+      return view('admin/listing-society', compact('societies'));
 
     }
 }
