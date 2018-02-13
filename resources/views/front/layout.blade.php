@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <title>@yield('title')</title>
@@ -68,15 +69,9 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
             @if (Auth::user()->role == 'membre')
-<<<<<<< HEAD
               <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
             @endif
                 <li class="dropdown">
-=======
-              <li><a href="{{ route('') }}">inscrire votre societe</a></li>
-            @endif --}}
-                {{-- <li class="dropdown">
->>>>>>> aad4ac64910daf40b3892fa3417d220c04dd81c5
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -108,8 +103,20 @@
       </div>
     </header>
     <section id="actualite">
-      <div class="presentation">
-
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="{{ asset('img/slide01.jpg') }}" />
+          </li>
+          <li>
+            <img src="{{ asset('img/slide02.jpg') }}" />
+            <p class="flex-caption">L’annuaire des professionnels du bâtiment en Normandie</p>
+          </li>
+          <li>
+            <img src="{{ asset('img/slide03.jpg') }}" />
+            <p class="flex-caption">L’annuaire des professionnels du bâtiment en Normandie</p>
+          </li>
+        </ul>
       </div>
       <div class="one title">
 
@@ -121,5 +128,16 @@
 @yield('content')
   </body>
   <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide"
+      });
+    });
+  </script>
 
 </html>

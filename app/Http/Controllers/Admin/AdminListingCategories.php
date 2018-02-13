@@ -11,7 +11,12 @@ class AdminListingCategories extends Controller
 {
     //
   public function listingCategories(){
-    $categories = Categories::all();
-     return view('Front/formulaire-societe', compact('categories'));
+
+    $categories = Categories::orderBy('created_at', 'desc')->paginate(15);
+
+    // $user = User::
+
+    return view('listing_categories', compact('categories'));
+
  }
 }
