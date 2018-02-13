@@ -1,12 +1,18 @@
+html {
+  font-size: 100%;
+}
+
 body {
   color: #000;
-  font-size: 1rem;
-  font-family: 'robotoregular';
+  font-size: 0.65rem;
+  font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 #header{
-  height:200px;
+  height:120px;
   width:100%;
-  background: yellow;
+  background: #E6E6E6;
+  line-height:120px;
+  text-align:center; /* centrage horizontal */ }
 }
 .titre {
   text-align: center;
@@ -15,24 +21,34 @@ body {
   padding-top: 15px;
 }
 #logo-entete {
-  height:80px;
-  float:left;
-  width:15%;
+  height: 120px;
+  float: left;
+  width: 15%;
+  z-index: 10;
+  overflow: visible;
+  /* top: -100px; */
 }
 #logo {
   height: 100%;
   width: 100%;
 }
 #menu {
-  height: 200px;
+  height: 120px;
   width: 70%;
   float: left;
-  background: lime;
+  /* background: lime; */
+  /* vertical-align: middle; */
 }
 #nav {
   width:100%;
-  background: tomato;
-  height: 40px;
+  /* background: tomato; */
+  height: 120px;
+  vertical-align:middle;
+  display:inline-block;
+}
+#menutop {
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 .search {
   width: 50%;
@@ -45,28 +61,33 @@ body {
   float: left;
 }
 .ou {
-
 }
 ul#nav {
   list-style: none outside none;
   margin: 0;
   padding: 10px;
   text-align: center;
-  height: 50px;
+  height: 40px;
 }
 #nav li {
   display: inline;
-  margin: 15px; 10px;
+  margin: 10px 10px;
   /* float: left; */
-  background: yellow;
-  font-size: 1.5em;
+  /* background: yellow; */
+  font-size: 1.1rem;
   height: 30px;
-  border-radius: 3%;
-
+  /* border-radius: 3%; */
 }
 #login{
   width: 15%;
   float: left;
+}
+#nav li a {
+  color: #000;
+}
+#nav li a:hover {
+  text-decoration: none;
+  background-color: #fff;
 }
 
 form {
