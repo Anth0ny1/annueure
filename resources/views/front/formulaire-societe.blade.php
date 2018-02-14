@@ -6,7 +6,16 @@ Inscription societe
 
 @section('content')
 
-
+  @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+  @endif
+  
   <h2>Formulaire inscription société</h2>
 
 {!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post']) !!}
@@ -57,6 +66,11 @@ Inscription societe
     {!! $errors->first('phone', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
+
+{!! Form::label('image','Image de la catégorie') !!}
+
+{!! Form::file('image') !!}
+{!! $errors->first('image', '<small class="help-block">:message</small>')!!}
 {{-- {{dd($categories)}} --}}
 
 

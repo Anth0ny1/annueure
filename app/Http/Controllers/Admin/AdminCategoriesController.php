@@ -21,29 +21,32 @@ class AdminCategoriesController extends Controller
 
     public function newCategoriesAction(NewCategoriesRequest $request){
       // Categories::create($request->all());
+      //
+       $post = $request->all();
 
-      if (!empty($request->image)) {
-        // upload image si il y a
-        // ou mettre l'image,
-        // comment elle s'appelle
+      if (!empty($request->file('image'))) {
 
-        $path = new PathUpload($request->image, 'categorie');
-        $request->image->move(public_path($path->path()), $path->imageName());
 
-        $post = $request->all()
+        $path = new PathUpload($request->file('image'), 'categorie');
+        $request->file('image')->move(public_path($path->path()), $path->imageName());
+
+        $do = [
+          'categorie_name' => $post['categorie_name'],
+          'path'           => $path->path(),
+          'original_name'  => $path->originalName(),
+          'image_name'     => $path->imageName(),
+          'created_at'     => Carbon::now(),
+        ];
 
 
       } else {
-        $post = $request->all();
+        $do = [
+          'categorie_name' => $post['categorie_name'],
+          'created_at'     => Carbon::now(),
+        ];
       }
 
-
-      // dd($post);
-      // echo $post['title'];
-      \DB::table('categories')->insert([
-        'categorie_name' => $post['categorie_name'],
-        'created_at' => Carbon::now(),
-      ]);
+      Categories::insert($do);
 
       return redirect()
         ->route('listing-categories')
@@ -60,9 +63,15 @@ class AdminCategoriesController extends Controller
 
       $categorie = Categories::findOrFail($id);
 
+
+     // Categories::whereId($id)->update($do);
+
+
+     // Categories::insert($do);
       $categorie->update([
         'categorie_name' => $request->input('categorie_name'),
       ]);
+
 
           // $article->update($request->all());  // Methode fonctionnel mais pas dans tous les cas
 

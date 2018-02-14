@@ -12,7 +12,7 @@ class AdminListingCategories extends Controller
     //
   public function listingCategories(){
 
-    $categories = Categories::orderBy('created_at', 'desc')->paginate(20);
+    $categories = Categories::orderBy('created_at', 'desc')->paginate(10);
 
     return view('admin/listing-categories', compact('categories'));
 
