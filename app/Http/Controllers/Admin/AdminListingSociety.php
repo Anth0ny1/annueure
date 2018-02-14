@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Society;
+use App\Categories;
 
 class AdminListingSociety extends Controller
 {
@@ -12,9 +13,9 @@ class AdminListingSociety extends Controller
     {
 
       $societies = Society::orderBy('created_at', 'desc')->paginate(5);
-
-
-      return view('admin/listing-society', compact('societies'));
+      $categories = Categories::All();
+      // dd($categories );
+      return view('admin/listing-society', compact('societies','categories'));
 
     }
 }

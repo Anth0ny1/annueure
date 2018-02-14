@@ -1,7 +1,6 @@
 @extends('layouts/appback')
 
 @section('content')
-<<<<<<< HEAD
   <h1>listing des Utilisateurs</h1>
   <table class="table table-striped">
     <thead>
@@ -29,17 +28,4 @@
       </tbody>
     @endforeach
   </table>
-=======
-  <h1>listing des Categories</h1>
-  <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
-
-  @foreach ($users as $user)
-    {{ $user->name }}
-
-    <a href="{{ route('update-users',['id' => $user->id])}}">modifier</a>
-    {!! Form::open(['route' => ['delete-categories', $user->id], 'method' => 'delete']) !!}
-      {!! Form::submit('Delete') !!}
-    {!! Form::close() !!}
-  @endforeach
->>>>>>> 16052d025970fb163d9ed6660a8920184958c92b
 @endsection

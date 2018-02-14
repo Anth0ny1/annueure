@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FormulaireSocietyRequest;
 use App\Society;
 use App\Categories;
+use Auth;
 
 
 class AdminSocietyController extends Controller
@@ -26,6 +27,7 @@ class AdminSocietyController extends Controller
 
       $society = Society::findOrFail($id);
       $post = $request->all();
+      // dd($post);
       $society->update([
         "name_society" => $post['name_society'],
         "gerant" => $post['gerant'],
@@ -38,6 +40,53 @@ class AdminSocietyController extends Controller
         "skills" => $post['skills'],
         "siren" => $post['siren'],
       ]);
+      // $categories = Categories::findOrFail($id);
+      $categories = Categories::All();
+      // dd($categories);
+      $categories->update(
+        [
+        "categories_id" => $post['categorie_name'],
+        // 'society_id' => $id,
+        ]
+      );
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+
+// $id = \DB::table('society')->update(
+//     [
+//
+//       "name_society" => $post['name_society'],
+//       "gerant" => $post['gerant'],
+//       "adress" => $post['adress'],
+//       "city" => $post['city'],
+//       "phone" => $post['phone'],
+//       "zip_code" => $post['zip_code'],
+//       // "email" => $post['email'],
+//       "site_web" => $post['site_web'],
+//       "skills" => $post['skills'],
+//       // "siren" => $post['siren'],
+//       // 'created_at' => Carbon::now(),
+//       'user_id' => Auth::id(),
+//     ]
+//   );
+//   \DB::table('society_categories')->update(
+//     [
+//
+//     "categories_id" => $post['categorie_name'],
+//     'society_id' => $id,
+//     ]
+//   );
+
+
+  /////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////
+
+
+
 
           // $society->update($request->all());  // Methode fonctionnel mais pas dans tous les cas
 
