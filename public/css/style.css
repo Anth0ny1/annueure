@@ -46,12 +46,9 @@ body {
   width: 70%;
   float: left;
   margin-left: 18%;
-  /* background: lime; */
-  /* vertical-align: middle; */
 }
 #nav {
-  width:100%;
-  /* background: tomato; */
+  width: 100%;
   height: 120px;
   vertical-align:middle;
   display:inline-block;
@@ -61,13 +58,30 @@ body {
   text-transform: uppercase;
   color: #295173;
 }
-.search {
-  width: 50%;
-  padding: 10px;
-  background: pink;
-  height: 50px;
-  margin: auto 25%;
+div#search-box {
+  width: 100%;
+  padding: 5px;
+  background: #99D420;
+  /* height: 60px; */
+  min-height: 70px;
 }
+div#form-search-hp {
+  width: 80%;
+  margin: 10px auto;
+  vertical-align: middle;
+}
+input {
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+input.form-control.col-sm-5 {
+  padding:5px;
+  /* width: 90%; */
+}
+
+.form-group{
+  margin-bottom:10px;
+}
+
 .metier {
   float: left;
 }
@@ -83,9 +97,7 @@ ul#nav {
 #nav li {
   display: inline;
   margin: 10px 10px;
-  /* float: left; */
-  /* background: yellow; */
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   height: 30px;
   /* border-radius: 3%; */
 }
@@ -107,24 +119,10 @@ ul#nav {
   color: #ec5c1b;
 }
 
-form {
-  margin: 15px;
-}
+
 
 /* ******** Styles Flexslider 2 ******** */
 .flexslider {
-  /* max-width: 1600px;width:100%; */
   padding: 0;
-
+  border: 0px;
 }
-/* .flex-caption {
-  width: 96%;
-  padding: 2%;
-  left: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.5);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-  font-size: 14px;
-  line-height: 18px;
-} */
