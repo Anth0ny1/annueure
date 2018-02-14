@@ -16,6 +16,7 @@
         <th>Modifié le</th>
         <th>Modifier l'utilisateur</th>
         <th>Effacer</th>
+
       </tr>
     </thead>
     @foreach ($users as $user)
@@ -37,6 +38,7 @@
         </tbody>
       @endforeach
     </table>
+
 
 
 

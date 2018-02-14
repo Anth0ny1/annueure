@@ -14,8 +14,9 @@ class AdminListingSociety extends Controller
 
       $societies = Society::orderBy('created_at', 'desc')->paginate(5);
       $categories = Categories::All();
+      $categoriesby = Categories::orderBy('created_at', 'desc')->get();
       // dd($categories );
-      return view('admin/listing-society', compact('societies','categories'));
+      return view('admin/listing-society', compact('societies','categories','categoriesbyid'));
 
     }
 }

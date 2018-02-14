@@ -71,6 +71,17 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
+                @if (session('success'))
+                  <div class="alert alert-success">
+                    {{ session('success') }}
+                  </div>
+                @endif
+
+                @if (session('danger'))
+                  <div class="alert alert-danger">
+                    {{ session('danger') }}
+                  </div>
+                @endif
                 @yield('content')
               </div>
             </div>

@@ -5,6 +5,7 @@
 
 
 
+
   <table>
 
     <table class="table table-striped">
@@ -47,7 +48,5 @@
         @endforeach
       </tbody>
     </table>
-
-
 
   @endsection

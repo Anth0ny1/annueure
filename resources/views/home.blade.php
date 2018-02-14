@@ -17,28 +17,23 @@
     </ul>
   </div>
 
-  <div class="search">
-    {{-- <form class="form-search" action="{{ route('search-view') }}" method="post">
-      <div class="metier">
-        <label for="">Métiers ?</label>
-        <input type="text" name="metier" value="" placeholder="Liste des métiers">
-      </div>
-      <div class="ou">
-        <label for="">Où ?</label>
-        <input type="text" name="ville" value="" placeholder="Liste des villes">
-      </div>
-    </form> --}}
-    {!! Form::open(['route' => 'search-action', 'method' => 'post']) !!}
+  <div id="search-box">
+    <div id="form-search-hp">
+      {!! Form::open(['route' => 'search-action', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+        <div class="form-group row">
 
-      {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Metier ou nom de la societe']) !!}
-      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+          {!! Form::search('quiquoi', null, ['class' => 'form-control col-md-5','placeholder' => 'Métier ou nom de la société']) !!}
+          {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+          {!! Form::label('quiquoi', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-      {!! Form::search('ou', null, ['class' => 'form-control','placeholder' => 'Ville ou code postal']) !!}
-      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+          {!! Form::search('ou', null, ['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
+          {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+          {!! Form::label('ou', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-      {!! Form::submit('Envoyer !',['class' => ' btn btn-succes']) !!}
-
-    {!! Form::close() !!}
+          {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
+        </div>
+      {!! Form::close() !!}
+    </div>
   </div>
   <div class="">
     <h1 class="titre">Annu'Eure</h1>

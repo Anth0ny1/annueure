@@ -30,7 +30,7 @@ class FormulaireSocietyRequest extends FormRequest
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|numeric',
              'site_web'   => 'bail|required|min:3|max:50',
-             'categorie_name'   => 'bail|required|',
+             'categorie_name'   => 'bail|required',
              'skills'   => 'bail|max:190',
              'email'   => 'bail|required|min:3|max:50',
              'siren'   => 'bail|required|min:9|max:9'
