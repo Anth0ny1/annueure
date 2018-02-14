@@ -16,24 +16,31 @@ class AdminUsersController extends Controller
       return view('admin/update-users', compact('user'));
     }
 
-    public function updateUsersAction($id, UserUpdateRequest $request){
+    public function updateUsersAction(UserUpdateRequest $request, $id){
 
       $user = User::findOrFail($id);
-
+      // dd($request);
       $user->update([
         'name' => $request->input('name'),
         'lastname' => $request->input('lastname'),
         'city' => $request->input('city'),
-        'email' => $request->input('email'),
+        // 'email' => $request->input('email'),
         'status' => $request->input('status'),
+        'role' => $request->input('role'),
       ]);
 
       return redirect()
-        ->route('listing-categories')
-        ->with('success', 'Votre categorie à bien été MODIFIE');
+        ->route('listing-users')
+        ->with('success', 'L\'utilisateur à bien été MODIFIE');
     }
 
-    public function deleteUsers(){
+    public function deleteUsers($id){
+      $user = User::findOrFail($id);
 
+      $user->delete();
+
+      return redirect()
+        ->route('listing-users')
+        ->with('success', 'L\'utilisateur à bien était SUPPRIMER');
     }
 }

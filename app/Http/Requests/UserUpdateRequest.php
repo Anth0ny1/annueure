@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Route;
 
 class UserUpdateRequest extends FormRequest
 {
@@ -22,17 +24,19 @@ class UserUpdateRequest extends FormRequest
      *
      * @return array
      */
-    public function rules(Request $request)
+    public function rules()
     {
-//       $user = User::find($this->user);
+      // $user = User::find($this->user);
+      // $id = Route::current()->getParameter('users');
 // dd($user);
-
+// dd($this->route('update-users-action')->getParameter('id'));
         return [
           'name'     => 'required|min:3|max:50',
           'lastname' => 'required|min:3|max:50',
           'city'     => 'required|min:3|max:50',
-          'email'    => 'required|string|email|max:255|unique:users, email,' . $request->get('email'),
-          'role'     => 'required|in:actif,inactif',
+          // 'email'    => 'string|email|max:255|unique:users, email',
+          'role'     => 'required|in:membre,admin',
+          'status'   => 'required|in:actif,inactif',
         ];
     }
 }

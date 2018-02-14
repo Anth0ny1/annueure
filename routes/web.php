@@ -63,7 +63,7 @@ Route::group(['namespace' => 'Admin'], function(){
 
   // BACK USERS ROUTING
 
-  Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('detele-users');
+  Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('delete-users');
 
   Route::get('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users');
   Route::put('/dashboard/users/update/{id}', 'AdminUsersController@updateUsersAction')->name('update-users-action');
@@ -75,7 +75,7 @@ Route::group(['namespace' => 'Admin'], function(){
   Route::delete('/dashboard/society/delete/{id}', 'AdminSocietyController@deleteSociety')->name('delete-society');
 
   Route::get('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
-  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society-action');
+  Route::put('/dashboard/society/update/action/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society-action');
 
   Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 

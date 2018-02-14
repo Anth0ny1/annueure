@@ -12,6 +12,6 @@ class Categories extends Model
 
     public function society()
     {
-        return $this->belongsToMany('App\Society');
+        return $this->belongsToMany('\App\Society', 'categories_society');
     }
 }
