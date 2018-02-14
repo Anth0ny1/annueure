@@ -13,11 +13,13 @@ use App\Http\Requests\NewCategoriesRequest;
 
 class AdminCategoriesController extends Controller
 {
-    //
+    // CREATION D UNE NOUVELLE CATEGORIE
     public function newCategories(){
 
       return view('admin/new-categories');
     }
+
+    // CREATION D UNE NOUVELLE CATEGORIE ACTION
 
     public function newCategoriesAction(NewCategoriesRequest $request){
       // Categories::create($request->all());
@@ -54,17 +56,47 @@ class AdminCategoriesController extends Controller
         ->with('success', 'Votre categorie à bien était ajouté');
     }
 
+    // UPDATE D UNE CATEGORIE
+
     public function updateCategories($id){
       $categorie = Categories::findOrFail($id);
 
       return view('admin/update-categories', compact('categorie'));
     }
 
+    // UPDATE D UNE CATEGORIE ACTION
+
     public function updateCategoriesAction($id, NewCategoriesRequest $request){
 
       $categorie = Categories::findOrFail($id);
 
+      $post = $request->all();
 
+     if (!empty($request->file('image'))) {
+
+
+       $path = new PathUpload($request->file('image'), 'categorie');
+       $request->file('image')->move(public_path($path->path()), $path->imageName());
+
+       $do = [
+         'categorie_name' => $post['categorie_name'],
+         'path'           => $path->path(),
+         'original_name'  => $path->originalName(),
+         'image_name'     => $path->imageName(),
+         'created_at'     => Carbon::now(),
+       ];
+       $post = $request->all();
+
+
+     } else {
+       $do = [
+         'categorie_name' => $post['categorie_name'],
+         'created_at'     => Carbon::now(),
+       ];
+     }
+
+     Categories::whereId($id)->update($do);
+// Selection::whereId($id)->update($request->all()));
      // Categories::whereId($id)->update($do);
 
 

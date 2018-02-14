@@ -25,49 +25,57 @@ class FormulaireSocietyController extends Controller
 
     public function createSocietyAction(FormulaireSocietyRequest $request)
       {
-       //
         $post = $request->all();
-       // if (!empty($request->image)) {
-       //   // dd($post);
-       // //
-       // //
-       //   $path = new PathUpload($request->image, 'society');
-       //   // dd($path);
-       //   $request->image->move(public_path($path->path()), $path->imageName());
-       // //
-       // $ids = array();
-       //
-       // foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
-       //
-       // $id = \DB::table('society')->insertGetId(
-       //     [
-       //       "name_society" => $post['name_society'],
-       //       "gerant" => $post['gerant'],
-       //       "adress" => $post['adress'],
-       //       "city" => $post['city'],
-       //       "phone" => $post['phone'],
-       //       "zip_code" => $post['zip_code'],
-       //       "email" => $post['email'],
-       //       "site_web" => $post['site_web'],
-       //       "skills" => $post['skills'],
-       //       "siren" => $post['siren'],
-       //       'created_at' => Carbon::now(),
-       //       'path'           => $path->path(),
-       //       'original_name'  => $path->originalName(),
-       //       'image_name'     => $path->imageName(),
-       //       'user_id' => Auth::id(),
-       //     ]
-       //   );
-       //
-       //   $society = Society::findOrFail($id);
-       //   $society->categories()->sync($ids);
-       // //
-       // //
-       // } else {
+        $ids = array();
 
-         $ids = array();
+        foreach($post['categorie_name'] as $idCat) {
+          $ids[] = $idCat;
+        }
+       //
 
-         foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
+       // dd($request);
+       if (!empty($request->file('logo'))) {
+         // dd($post);
+       //
+       //
+
+         $path = new PathUpload($request->file('logo'), 'society');
+         // dd($path);
+         $request->file('logo')->move(public_path($path->path()), $path->imageName());
+       //
+
+
+       $id = \DB::table('society')->insertGetId(
+           [
+             "name_society" => $post['name_society'],
+             "gerant" => $post['gerant'],
+             "adress" => $post['adress'],
+             "city" => $post['city'],
+             "phone" => $post['phone'],
+             "zip_code" => $post['zip_code'],
+             "email" => $post['email'],
+             "site_web" => $post['site_web'],
+             "skills" => $post['skills'],
+             "siren" => $post['siren'],
+             'created_at' => Carbon::now(),
+             'path'           => $path->path(),
+             'original_name'  => $path->originalName(),
+             'image_name'     => $path->imageName(),
+             'user_id' => Auth::id(),
+           ]
+         );
+
+         // $society = Society::findOrFail($id);
+         // $society->categories()->sync($ids);
+       //
+       //
+       }
+       else {
+         // $post = $request->all();
+         //
+         // $ids = array();
+
+         // foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
 
          $id = \DB::table('society')->insertGetId(
              [
@@ -86,9 +94,11 @@ class FormulaireSocietyController extends Controller
              ]
            );
 
-           $society = Society::findOrFail($id);
-           $society->categories()->sync($ids);
-       // }
+
+       }
+
+       $society = Society::findOrFail($id);
+       $society->categories()->sync($ids);
        //
        // Categories::insert($do);
         // $post = $request->all();

@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Formulaire pour modifier une categorie</h1>
-{!! Form::open(['route' => ['update-categories-action', $categorie->id], 'method' => 'put']) !!}
+{!! Form::open(['route' => ['update-categories-action', $categorie->id], 'method' => 'put', 'files' => true]) !!}
 
     {{-- Champ Titre --}}
     {!! Form::label('categorie_name', 'Titre de votre categorie') !!}
@@ -14,7 +14,7 @@
 
     {!! Form::file('image') !!}
     {!! $errors->first('image', '<small class="help-block">:message</small>')!!}
-    
+
     {!! Form::submit('envoyer') !!}
 {!! Form::close() !!}
 @endsection
