@@ -31,10 +31,10 @@
     {!! Form::open(['route' => 'search-action', 'method' => 'post']) !!}
 
       {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Metier ou nom de la societe']) !!}
-      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('quiquoi', '<small class="help-block">:message</small>') !!}
 
       {!! Form::search('ou', null, ['class' => 'form-control','placeholder' => 'Ville ou code postal']) !!}
-      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('ou', '<small class="help-block">:message</small>') !!}
 
       {!! Form::submit('Envoyer !',['class' => ' btn btn-succes']) !!}
 

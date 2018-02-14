@@ -11,7 +11,7 @@
         <th>email</th>
         <th>Role</th>
         <th>Modification</th>
-        <th>Supression</th>
+        {{-- <th>Supression</th> --}}
       </tr>
     </thead>
     @foreach ($users as $user)
@@ -23,11 +23,11 @@
           <td>{{ $user->email }}</td>
           <td>{{ $user->role }}</td>
           <td><a href="{{ route('update-users',['id' => $user->id])}}">modifier</a></td>
-          <td>
-            {!! Form::open(['route' => ['update-users', $user->id], 'method' => 'delete']) !!}
+          {{-- <td>
+            {!! Form::open(['route' => ['delete-users', $user->id], 'method' => 'delete']) !!}
               {!! Form::submit('Delete') !!}
             {!! Form::close() !!}
-          </td>
+          </td> --}}
         </tr>
 
     @endforeach

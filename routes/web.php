@@ -63,7 +63,7 @@ Route::group(['namespace' => 'Admin'], function(){
 
   // BACK USERS ROUTING
 
-  Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('detele-users');
+  Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('delete-users');
 
   Route::get('/dashboard/users/update/{id}', 'AdminUsersController@updateUsers')->name('update-users');
   Route::put('/dashboard/users/update/{id}', 'AdminUsersController@updateUsersAction')->name('update-users-action');

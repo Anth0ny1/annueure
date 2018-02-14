@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use App\Categories;
+use App\Services\PathUpload;
+
 use App\Http\Requests\NewCategoriesRequest;
 // use App\Categories;
 
@@ -20,7 +22,22 @@ class AdminCategoriesController extends Controller
     public function newCategoriesAction(NewCategoriesRequest $request){
       // Categories::create($request->all());
 
-      $post = $request->all();
+      if (!empty($request->image)) {
+        // upload image si il y a
+        // ou mettre l'image,
+        // comment elle s'appelle
+
+        $path = new PathUpload($request->image, 'categorie');
+        $request->image->move(public_path($path->path()), $path->imageName());
+
+        $post =
+
+
+      } else {
+        $post = $request->all();
+      }
+
+
       // dd($post);
       // echo $post['title'];
       \DB::table('categories')->insert([
