@@ -35,13 +35,15 @@
           <td>'$categories->categorie_name'</td>
           <td>{{ $societie->created_at }}</td>
           <td>{{ $societie->updated_at }}</td>
+          <td>{{ $societie->created_at }}</td>
+
           <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
           <td>
             {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
               {!! Form::submit('Delete') !!}
             {!! Form::close() !!}
           </td>
-            </tr>
+        </tr>
 
       @endforeach
     </tbody>

@@ -2,9 +2,10 @@
 
 @section('content')
   <h1>listing des Categories</h1>
+ 
+  <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
 
 
-  <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
   <table class="table table-striped">
     <thead>
       <tr>
