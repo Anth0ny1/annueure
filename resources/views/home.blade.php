@@ -4,6 +4,11 @@
 
 <section id="actualite">
   <div class="flexslider">
+    <!-- Compteur d'inscription (position absolue) -->
+    <div id="compteur">
+      {{ $count }}
+      <p>Professionnels</p>
+    </div>
     <ul class="slides">
       <li>
         <img src="{{ asset('img/slide01.jpg') }}" />
@@ -22,6 +27,7 @@
       {!! Form::open(['route' => 'search-action', 'method' => 'post', 'class' => 'form-horizontal']) !!}
         <div class="form-group row">
 
+          <!-- Formulaire de recherche -->
           {!! Form::search('quiquoi', null, ['class' => 'form-control col-md-5','placeholder' => 'Métier ou nom de la société']) !!}
           {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
           {!! Form::label('quiquoi', '&nbsp;',['class' =>'col-md-1 control-label']) !!}

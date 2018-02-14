@@ -1,7 +1,9 @@
+
+
+/*********** Styles pour écran (screen) ***********/
 html {
   font-size: 100%;
 }
-
 body {
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
@@ -41,19 +43,19 @@ body {
   min-width: 160px;
   height: auto;
 }
-#menu {
+#menuhp {
   height: 100px;
   width: 70%;
   float: left;
   margin-left: 18%;
 }
-#nav {
+#navhp {
   width: 100%;
   height: 120px;
   vertical-align:middle;
   display:inline-block;
 }
-#menutop {
+#menuhptop {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #295173;
@@ -62,7 +64,6 @@ div#search-box {
   width: 100%;
   padding: 5px;
   background: #99D420;
-  /* height: 60px; */
   min-height: 70px;
 }
 div#form-search-hp {
@@ -75,26 +76,23 @@ input {
 }
 input.form-control.col-sm-5 {
   padding:5px;
-  /* width: 90%; */
 }
-
 .form-group{
   margin-bottom:10px;
 }
-
 .metier {
   float: left;
 }
 .ou {
 }
-ul#nav {
+ul#navhp {
   list-style: none outside none;
   margin: 0;
   padding: 10px;
   text-align: center;
   height: 40px;
 }
-#nav li {
+#navhp li {
   display: inline;
   margin: 10px 10px;
   font-size: 1.0rem;
@@ -105,24 +103,101 @@ ul#nav {
   width: 14%;
   float: left;
 }
-#nav li a {
+#navhp li a {
   color: #295173;
   padding: 5px;
 }
-#nav li a:hover {
+#navhp li a:hover {
   text-decoration: none;
   background-color: #efefef;
   border-radius: 5%;
 }
-#nav li.active a {
+#navhp li.active a {
   text-decoration: none;
   color: #ec5c1b;
 }
 
-
-
 /* ******** Styles Flexslider 2 ******** */
 .flexslider {
+  position: relative;
   padding: 0;
   border: 0px;
+}
+#compteur {
+  position: absolute;
+  overflow: visible;
+  z-index: 15;
+  top : 25px;
+  right: 25px;
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  /* font-size: 1.6rem; */
+  text-align:center;
+  line-height:1.4rem;
+  font-size: 350%;
+  color: #ec5c1b;
+  text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
+}
+#compteur p {
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 35%;
+  color: #ec5c1b;
+    text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
+}
+
+/*********** Media Queries ***********/
+@media screen and (max-width: 1050px) {
+    body {
+      width:800px;
+    }
+
+    #logo-entete {
+      position: absolute;
+      width: 16%;
+      z-index: 10;
+      overflow: visible;
+      top: 15px;
+      left:15px;
+    }
+
+    #navhp li {
+      margin: 6px 6px;
+      font-size: 0.75rem;
+      height: 25px;
+    }
+
+    #compteur {
+      top : 20px;
+      right: 20px;
+      max-width: 100%;
+      height: auto;
+      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      line-height:1.2rem;
+      font-size: 250%;
+      text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
+    }
+    #compteur p {
+      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-size: 35%;
+      color: #ec5c1b;
+      text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
+    }
+}
+
+@media screen and (max-width: 790px)
+{
+    body
+    {
+      width:600px;
+    }
+}
+
+@media screen and (max-width: 590px)
+{
+    body
+    {
+      width:320px;
+    }
 }
