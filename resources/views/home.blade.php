@@ -16,7 +16,33 @@
       </li>
     </ul>
   </div>
-  <h1 class="titre">Annu'Eure</h1>
+
+  <div class="search">
+    {{-- <form class="form-search" action="{{ route('search-view') }}" method="post">
+      <div class="metier">
+        <label for="">Métiers ?</label>
+        <input type="text" name="metier" value="" placeholder="Liste des métiers">
+      </div>
+      <div class="ou">
+        <label for="">Où ?</label>
+        <input type="text" name="ville" value="" placeholder="Liste des villes">
+      </div>
+    </form> --}}
+    {!! Form::open(['route' => 'search-action', 'method' => 'post']) !!}
+
+      {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Metier ou nom de la societe']) !!}
+      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+
+      {!! Form::search('ou', null, ['class' => 'form-control','placeholder' => 'Ville ou code postal']) !!}
+      {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
+
+      {!! Form::submit('Envoyer !',['class' => ' btn btn-succes']) !!}
+
+    {!! Form::close() !!}
+  </div>
+  <div class="">
+    <h1 class="titre">Annu'Eure</h1>
+  </div>
   <div class="services">
     <div id="annuaire-pro">
       <div class="">
