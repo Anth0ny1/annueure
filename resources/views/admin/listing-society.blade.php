@@ -3,6 +3,7 @@
 @section('content')
   <h1>listing des Sociétés</h1>
 
+    {{-- {{dd($categories)}} --}}
   <table class="table table-striped">
     <thead>
       <tr>
@@ -24,6 +25,7 @@
       <tbody>
       @foreach ($societies as $societie)
         <tr>
+
           <td>{{ $societie->id }}</td>
           <td>{{ $societie->name_society }}</td>
           <td>{{ $societie->adress }}</td>
@@ -32,7 +34,11 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
-          <td>'$categories->categorie_name'</td>
+          <td>' $societie->siren '</td>
+          {{-- @foreach ($categoriesby as $category)
+          <td>{{$category->categorie_name}}</td>
+          @endforeach --}}
+
           <td>{{ $societie->created_at }}</td>
           <td>{{ $societie->updated_at }}</td>
           <td>{{ $societie->created_at }}</td>
@@ -49,4 +55,5 @@
     </tbody>
   </table>
 
-@endsection
+
+  @endsection

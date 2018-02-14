@@ -31,6 +31,9 @@ class CreateSocietyTable extends Migration
             $table->char('skills',190);
             $table->string('email')->unique();
             $table->integer('siren')->unique();
+            $table->char('path',190)->nullable();
+            $table->string('original_name')->nullable();
+            $table->char('image_name',190)->nullable();
             $table->timestamps();
         });
     }
@@ -42,6 +45,7 @@ class CreateSocietyTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('society_categories');
         Schema::dropIfExists('society');
     }
 }

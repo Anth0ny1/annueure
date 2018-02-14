@@ -14,6 +14,6 @@ class Society extends Model
     ];
     public function categories()
     {
-        return $this->belongsToMany('App\Categories');
+        return $this->belongsToMany('\App\Categories', 'categories_society');
     }
 }

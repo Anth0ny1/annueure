@@ -4,6 +4,7 @@
   <h1>listing des Categories</h1>
 
   <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
+  <table>
 
 
   <table class="table table-striped">
@@ -12,7 +13,7 @@
         <th>#</th>
         <th>Nom de la catégorie</th>
         <th>Modification</th>
-        <th>Delete</th>
+        <th>Effacer</th>
       </tr>
     </thead>
     <tbody>
