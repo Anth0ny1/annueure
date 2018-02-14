@@ -13,7 +13,7 @@ class CreateSocietyCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('society_categories', function (Blueprint $table) {
+        Schema::create('categories_society', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('society_id')->unsigned();
@@ -29,7 +29,7 @@ class CreateSocietyCategoriesTable extends Migration
                 ->on('categories')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-                
+
             $table->timestamps();
         });
     }
@@ -41,6 +41,6 @@ class CreateSocietyCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('society_categories');
+        Schema::dropIfExists('categories_society');
     }
 }

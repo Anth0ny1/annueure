@@ -15,22 +15,21 @@ class FormulaireSocietyController extends Controller
     public function createSociety()
     {
       // $categories = Categories::All();
-
       $categories = \DB::table('categories')->get();
-
       // dd($categories->categorie_name);
       // $user = User::
-
           return view('front/formulaire-societe', compact('categories'));
     }
     public function createSocietyAction(FormulaireSocietyRequest $request)
       {
         $post = $request->all();
-        // dd($post);
+
+        $ids = array();
+
+        foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
 
         $id = \DB::table('society')->insertGetId(
             [
-
               "name_society" => $post['name_society'],
               "gerant" => $post['gerant'],
               "adress" => $post['adress'],
@@ -45,23 +44,9 @@ class FormulaireSocietyController extends Controller
               'user_id' => Auth::id(),
             ]
           );
-          \DB::table('society_categories')->insert(
-            [
-
-            "categories_id" => $post['categorie_name'],
-            'society_id' => $id,
-            ]
-          );
+          $society = Society::findOrFail($id);
+          $society->categories()->sync($ids);
           return redirect()->route('home')->with('success', 'votre formulaire est bien soumis');
     }
 
-    public function listingCategoriesAll(){
-
-      // $categories = Categories::all();
-      // // dd($categories);
-      // // $user = User::
-      //
-      // return compact('categories');
-
-   }
 }

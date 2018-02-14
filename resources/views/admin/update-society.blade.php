@@ -3,6 +3,16 @@
 @section('content')
  <h1>Formulaire pour modifier une société</h1>
 
+ @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
 {!! Form::open(['route' => ['update-society-action',$society->id ], 'method' => 'put']) !!}
 
@@ -53,6 +63,14 @@
   </div>
 </div>
 {{-- {{dd($categories)}} --}}
+
+
+
+
+
+
+
+
 <div class="form-group">
     {!! Form::label('email', 'email : ',['class' =>'col-md-4 control-label']) !!}
     <div class="col-md-6">
@@ -78,12 +96,14 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('textarea', 'textarea : ',['class' =>'col-md-4 control-label']) !!}
+    {!! Form::label('textarea', 'Description : ',['class' =>'col-md-4 control-label']) !!}
     <div class="col-md-6">
     {!! Form::textarea('skills', $society->skills, ['class' => 'form-control','placeholder' => 'Mettez en avant vos compétences....']) !!}
     {!! $errors->first('skills', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
+
+
 <div class="form-group">
   {{-- {!! Form::label('categorie_name', 'Choississez votre catégorie : ',['class' =>'col-md-4 control-label']) !!} --}}
   <div class="col-md-6">
@@ -96,7 +116,7 @@
 
     {{-- {!! Form::select('categorie_name',$arrayCat,null,array()) !!} --}}
     {{Form::label('categorie_name', 'metier')}}
-    {{Form::select('categorie_name',$arrayCat,$cat->categorie_name,array())}}
+    {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
   </div>
 </div>
 

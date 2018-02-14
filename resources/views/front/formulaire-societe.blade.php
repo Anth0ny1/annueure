@@ -58,7 +58,31 @@ Inscription societe
   </div>
 </div>
 {{-- {{dd($categories)}} --}}
+
+
+
+
 <div class="form-group">
+  {{-- {!! Form::label('categorie_name', 'Choississez votre catégorie : ',['class' =>'col-md-4 control-label']) !!} --}}
+  <div class="col-md-6">
+
+    <?php $arrayCat = [];
+    foreach ($categories as $cat)
+    {
+          $arrayCat[$cat->id] = $cat->categorie_name;
+    } ?>
+
+    {{-- {!! Form::select('categorie_name',$arrayCat,null,array()) !!} --}}
+    {{Form::label('categorie_name', 'metier')}}
+    {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
+  </div>
+</div>
+
+
+
+
+
+{{-- <div class="form-group">
 {!! Form::label('categorie_name', 'Choississez votre catégorie : ',['class' =>'col-md-4 control-label']) !!}
     <div class="col-md-6">
 <select name="categorie_name" id="categorie_name" class="col-md-6">
@@ -70,7 +94,7 @@ Inscription societe
 
 </select>
 </div>
-  </div>
+  </div> --}}
 <div class="form-group">
     {{-- {!! Form::label('email', 'email : ',['class' =>'col-md-4 control-label']) !!} --}}
     <div class="col-md-6">
