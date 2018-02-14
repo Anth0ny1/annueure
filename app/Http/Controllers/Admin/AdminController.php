@@ -19,12 +19,12 @@ class AdminController extends Controller
   }
 
 
-    public function dashboard(){
-      $societies = Society::orderBy('created_at', 'desc')->paginate(5);
+  public function dashboard(){
+    $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 
-      // $user = User::
+    // $user = User::
 
-      return view('admin.dashboard', compact('societies'));
+    return view('admin.dashboard', compact('societies'));
 
-    }
+  }
 }

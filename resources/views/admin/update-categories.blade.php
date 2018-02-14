@@ -10,6 +10,11 @@
     {!! Form::text('categorie_name', $categorie->categorie_name) !!}
     {!! $errors->first('categorie_name', '<span class="help-block">:message</span>') !!}
 
+    {!! Form::label('image','Image de la catégorie') !!}
+
+    {!! Form::file('image') !!}
+    {!! $errors->first('image', '<small class="help-block">:message</small>')!!}
+    
     {!! Form::submit('envoyer') !!}
 {!! Form::close() !!}
 @endsection

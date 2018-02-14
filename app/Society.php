@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Society extends Model
 {
-
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
+    
     protected $table = 'society';
     // protected $timestamp = false;
     protected $fillable = [
@@ -16,4 +19,6 @@ class Society extends Model
     {
         return $this->belongsToMany('\App\Categories', 'categories_society');
     }
+
+
 }
