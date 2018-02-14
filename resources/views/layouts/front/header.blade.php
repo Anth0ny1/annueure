@@ -2,9 +2,9 @@
   <div id="logo-entete">
     <img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure" />
   </div>
-  <div id="menu">
-    <nav id="nav">
-      <ul id="menutop">
+  <div id="menuhp">
+    <nav id="navhp">
+      <ul id="menuhptop">
           <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
 
           <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->

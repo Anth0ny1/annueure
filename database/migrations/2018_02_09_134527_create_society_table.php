@@ -35,6 +35,7 @@ class CreateSocietyTable extends Migration
             $table->string('original_name')->nullable();
             $table->char('image_name',190)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
