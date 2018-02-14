@@ -37,6 +37,7 @@ class AdminCategoriesController extends Controller
           'image_name'     => $path->imageName(),
           'created_at'     => Carbon::now(),
         ];
+        $post = $request->all();
 
 
       } else {
