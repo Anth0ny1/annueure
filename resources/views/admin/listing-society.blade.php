@@ -2,8 +2,9 @@
 
 @section('content')
   <h1>listing des Sociétés</h1>
-{{-- {{dd($societiesbyid)}} --}}
-    {{-- {{dd($categories)}} --}}
+
+  {{-- {{dd($societiesbyid)}} --}}
+  {{-- {{dd($categories)}} --}}
   <table class="table table-striped">
     <thead>
       <tr>
@@ -22,7 +23,7 @@
         <th>Delete</th>
       </tr>
     </thead>
-      <tbody>
+    <tbody>
       @foreach ($societies as $societie)
         <tr>
 
@@ -36,27 +37,27 @@
           <td>{{ $societie->siren }}</td>
           {{-- <td> '$societie->categories->categorie_name' </td> --}}
           {{-- <td> @foreach ($societies->category as $a)
-            {{dd($a)}}
-          @endforeach </td> --}}
-          {{-- @foreach ($categoriesby as $category)
-          <td>{{$category->categorie_name}}</td>
-          @endforeach --}}
+          {{dd($a)}}
+        @endforeach </td> --}}
+        {{-- @foreach ($categoriesby as $category)
+        <td>{{$category->categorie_name}}</td>
+      @endforeach --}}
 
-          <td>{{ $societie->created_at }}</td>
-          <td>{{ $societie->updated_at }}</td>
+      <td>{{ $societie->created_at }}</td>
+      <td>{{ $societie->updated_at }}</td>
 
 
-          <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
-          <td>
-            {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
-              {!! Form::submit('Delete') !!}
-            {!! Form::close() !!}
-          </td>
-        </tr>
+      <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
+      <td>
+        {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
+        {!! Form::submit('Delete') !!}
+        {!! Form::close() !!}
+      </td>
+    @endforeach
 
-      @endforeach
-    </tbody>
+
+
+  </tbody>
   </table>
 
-
-  @endsection
+@endsection

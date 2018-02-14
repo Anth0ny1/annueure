@@ -30,7 +30,7 @@ class AdminCategoriesController extends Controller
         $path = new PathUpload($request->image, 'categorie');
         $request->image->move(public_path($path->path()), $path->imageName());
 
-        $post = $request->all()
+        $post = $request->all();
 
 
       } else {

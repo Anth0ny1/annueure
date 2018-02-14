@@ -6,10 +6,10 @@
   {{--  --}}
   <h1>listing des Categories</h1>
 
+
   <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
-  <table>
 
-
+  
   <table class="table table-striped">
     <thead>
       <tr>
@@ -34,5 +34,6 @@
         </tr>
       @endforeach
     </tbody>
+
   </table>
 @endsection

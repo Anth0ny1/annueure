@@ -7,40 +7,51 @@
 @section('content')
 
   @if ($errors->any())
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-      </div>
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
   @endif
 
-  <h2>Ici le formulaire de contact</h2>
+<h2>page nous contacter</h2>
 
+  <div class="col-md-6">
 
-<div class="form-group">
-  {!! Form::open(['route' => 'nous-contacter-action','method' => 'post','class' => 'form-group']) !!}
+    {!! Form::open(['route' => 'nous-contacter-action','method' => 'post','class' => 'form-group']) !!}
 
-    {!! Form::label('nom', 'Nom *', ['class' => 'label']) !!}<br />
-    {!! Form::text('nom',null,['class' => 'nom','placeholder' => 'votre nom']) !!}<br />
+    <div class="form-group">
+      {!! Form::label('nom', 'Nom *', ['class' => 'col-md-6 control-label']) !!}<br />
+      {!! Form::text('nom',null,['class' => 'form-control','placeholder' => 'votre nom']) !!}<br />
+      {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!}
+    </div>
 
-    {!! Form::label('email', 'E-Mail Address *', ['class' => 'label']) !!}<br />
-    {!! Form::email('email',null,['class' => 'email','placeholder' => 'votre email']) !!}<br />
+    <div class="form-group">
+      {!! Form::label('email', 'E-Mail Address *', ['class' => 'col-md-6 control-label']) !!}<br />
+      {!! Form::email('email',null,['class' => 'form-control','placeholder' => 'votre email']) !!}<br />
+      {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
+    </div>
 
-    {!! Form::label('sujet', 'Sujet *', ['class' => 'label']) !!}<br />
-    {!! Form::text('sujet',null,['class' => 'sujet','placeholder' => 'votre sujet']) !!}<br />
+    <div class="form-group">
+      {!! Form::label('sujet', 'Sujet *', ['class' => 'col-md-6 control-label']) !!}<br />
+      {!! Form::text('sujet',null,['class' => 'form-control','placeholder' => 'votre sujet']) !!}<br />
+      {!! $errors->first('sujet', '<small class="help-block">:message</small><br />') !!}
+    </div>
 
-    {!! Form::label('message', 'Message *', ['class' => 'label']) !!}<br />
-    {!! Form::textarea('message',null,['class' => 'message','placeholder' => 'votre message']) !!}<br />
+    <div class="form-group">
+      {!! Form::label('message', 'Message *', ['class' => 'col-md-6 control-label']) !!}<br />
+      {!! Form::textarea('message',null,['class' => 'form-control','placeholder' => 'votre message']) !!}<br />
+      {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
+    </div>
 
-    {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!}
-    {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
-    {!! $errors->first('sujet', '<small class="help-block">:message</small><br />') !!}
-    {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
+    {!! Form::submit('OK',['class' => 'btn btn-success']) !!}
+    {!! Form::close() !!}
+  </div>
 
-    {!! Form::submit('OK',['class' => 'button']) !!}
+  @section('js')
+    <scriptsrc="{{ asset('admin/js/bootstrap.min.js') }}"></script>
 
-  {!! Form::close() !!}
-</div>
+  @endsection
 @endsection

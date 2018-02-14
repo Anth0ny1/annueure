@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/fontsheet.css') }}" />
     @yield('css')
@@ -16,11 +16,12 @@
     <div id="wrapper">
       @include('layouts.front.header')
         @yield('content')
-      @include('layouts.front.footer')      
+      @include('layouts.front.footer')
     </div>
 
       <script src="{{ asset('js/app.js') }}"></script>
       <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+      <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
 
     @yield('js')
   </body>
