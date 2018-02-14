@@ -1,7 +1,9 @@
 @extends('layouts/appback')
 
 @section('content')
-
+{{--  --}}
+{{-- DON'T TOUCH --}}
+{{--  --}}
   <h1>listing des Utilisateurs</h1>
   <table class="table table-striped">
     <thead>
@@ -13,8 +15,8 @@
         <th>Email</th>
         <th>Role</th>
         <th>Créé le</th>
-        <th>Modifié le</th>
         <th>Modifier l'utilisateur</th>
+        <th>Delete</th>
       </tr>
     </thead>
     @foreach ($users as $user)
@@ -26,19 +28,17 @@
           <td>{{ $user->city }}</td>
           <td>{{ $user->email }}</td>
           <td>{{ $user->role }}</td>
-
           <td>{{ $user->created_at }}</td>
-          <td>{{ $user->updated_at }}</td>
           <td><a href="{{ route('update-users',['id' => $user->id])}}">modifier</a></td>
-          {{-- <td>
+          <td>
             {!! Form::open(['route' => ['delete-users', $user->id], 'method' => 'delete']) !!}
-              {!! Form::submit('Delete') !!}
+            {!! Form::submit('Delete') !!}
             {!! Form::close() !!}
-          </td> --}}
+          </td>
         </tr>
 
       @endforeach
-        </tbody>
+    </tbody>
   </table>
 
 @endsection

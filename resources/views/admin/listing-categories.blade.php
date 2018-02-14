@@ -1,9 +1,12 @@
 @extends('layouts/appback')
 
 @section('content')
+  {{--  --}}
+  {{-- VOIR IMAGE OUI OU NON--}}
+  {{--  --}}
   <h1>listing des Categories</h1>
 
-  <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
+  <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
   <table>
 
 
