@@ -3,15 +3,21 @@ html {
 }
 
 body {
-  color: #000;
-  font-size: 0.65rem;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 0.65rem;
+  color: #000;
 }
-#header{
-  height:120px;
+#wrapper {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+#header {
+  position: relative;
+  height:100px;
   width:100%;
-  background: #E6E6E6;
-  line-height:120px;
+  background: #e6e6e6;
+  line-height:100px;
   text-align:center; /* centrage horizontal */ }
 }
 .titre {
@@ -21,21 +27,25 @@ body {
   padding-top: 15px;
 }
 #logo-entete {
-  height: 120px;
-  float: left;
-  width: 15%;
+  position: absolute;
+  width: 16%;
   z-index: 10;
   overflow: visible;
-  /* top: -100px; */
+  top: 25px;
+  left:25px;
 }
 #logo {
-  height: 100%;
-  width: 100%;
+  border: #e6e6e6 4px solid;
+  background: #295173;
+  max-width: 100%;
+  min-width: 160px;
+  height: auto;
 }
 #menu {
-  height: 120px;
+  height: 100px;
   width: 70%;
   float: left;
+  margin-left: 18%;
   /* background: lime; */
   /* vertical-align: middle; */
 }
@@ -49,6 +59,7 @@ body {
 #menutop {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  color: #295173;
 }
 .search {
   width: 50%;
@@ -79,15 +90,21 @@ ul#nav {
   /* border-radius: 3%; */
 }
 #login{
-  width: 15%;
+  width: 14%;
   float: left;
 }
 #nav li a {
-  color: #000;
+  color: #295173;
+  padding: 5px;
 }
 #nav li a:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #efefef;
+  border-radius: 5%;
+}
+#nav li.active a {
+  text-decoration: none;
+  color: #ec5c1b;
 }
 
 form {
@@ -97,6 +114,7 @@ form {
 /* ******** Styles Flexslider 2 ******** */
 .flexslider {
   /* max-width: 1600px;width:100%; */
+  padding: 0;
 
 }
 /* .flex-caption {

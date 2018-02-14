@@ -1,18 +1,44 @@
 <header id="header">
   <div id="logo-entete">
-    <img id="logo" src="{{ asset('img/logo/logo-annueure-carre-baseline-hp.svg') }}" alt="logo du site AnnuEure" />
+    <img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure" />
   </div>
   <div id="menu">
     <nav id="nav">
       <ul id="menutop">
-          <li><a href="{{ route('home') }}">Accueil</a></li>
-          <li><a href="{{ route('presentation') }}">Présentation</a></li>
+          <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
+
+          <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->
+
+          <!-- <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li> -->
+
+          <li class="{{Request::path() == '/' ? 'active' : ''}}">
+            <a href="{{ route('home') }}">Accueil</a>
+          </li>
+
+          <li class="{{Request::path() == 'presentation' ? 'active' : ''}}">
+            <a href="{{ route('presentation') }}">Présentation</a>
+          </li>
+
           <li><a href="#">Annuaire</a></li>
-          <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li>
+
+          <li class="{{Request::path() == 'contact' ? 'active' : ''}}">
+            <a href="{{ route('nous-contacter-view') }}">Nous contacter</a>
+          </li>
+
+          <!-- <li><a href="{{ route('home') }}" class="{{ (\Request::route()->getName() == 'this.route') ? 'active' : '' }}">Accueil</a></li> -->
 
         @if (Auth::guest())
-          <li><a href="{{ route('register') }}">Nous rejoindre</a></li>
-          <li><a href="{{ route('login') }}">Login</a></li>
+          <!-- <li><a href="{{ route('register') }}">Nous rejoindre</a></li>
+          <li><a href="{{ route('login') }}">Login</a></li> -->
+
+          <li class="{{Request::path() == 'register' ? 'active' : ''}}">
+            <a href="{{ route('register') }}">Nous rejoindre</a>
+          </li>
+
+          <li class="{{Request::path() == 'login' ? 'active' : ''}}">
+            <a href="{{ route('login') }}">Login</a>
+          </li>
+
         @else
           <li>
               <a href="{{ route('logout') }}"
