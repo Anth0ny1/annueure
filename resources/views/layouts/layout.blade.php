@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <div id="wrapper">
       @include('layouts.front.header')
         @yield('content')
-      @include('layouts.front.footer')
+      @include('layouts.front.footer')      
+    </div>
 
       <script src="{{ asset('js/app.js') }}"></script>
       <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
