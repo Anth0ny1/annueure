@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Http\Requests\UserUpdateRequest;
 
 class AdminUsersController extends Controller
 {
@@ -15,17 +16,21 @@ class AdminUsersController extends Controller
       return view('admin/update-users', compact('user'));
     }
 
-    public function updateUsersAction($id){
+    public function updateUsersAction($id, UserUpdateRequest $request){
 
       $user = User::findOrFail($id);
 
       $user->update([
-        'categorie_name' => $request->input('categorie_name'),
+        'name' => $request->input('name'),
+        'lastname' => $request->input('lastname'),
+        'city' => $request->input('city'),
+        'email' => $request->input('email'),
+        'status' => $request->input('status'),
       ]);
 
       return redirect()
         ->route('listing-categories')
-        ->with('success', 'Votre categorie à bien était MODIFIE');
+        ->with('success', 'Votre categorie à bien été MODIFIE');
     }
 
     public function deleteUsers(){

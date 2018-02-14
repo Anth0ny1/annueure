@@ -2,13 +2,18 @@
 
 @section('content')
   <h1>listing des Categories</h1>
+<<<<<<< HEAD
 
   <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
   <table>
 
 
+=======
+ 
+  <a href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
+>>>>>>> aa14b0066ff6566736a1bbc72b53c5d11fa75bd2
 
-  <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -32,6 +37,9 @@
         </tr>
       @endforeach
     </tbody>
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa14b0066ff6566736a1bbc72b53c5d11fa75bd2
   </table>
 @endsection
