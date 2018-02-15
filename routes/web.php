@@ -59,7 +59,8 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-
+// ANNUAIRE ROUTING
+  Route::get('/annuaire', 'HomeController@annuaire')->name('annuaire');
 
 });
 
