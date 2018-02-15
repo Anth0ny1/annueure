@@ -1104,16 +1104,16 @@
         },
         {
             "name": "propaganistas/laravel-phone",
-            "version": "3.0.5",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Propaganistas/Laravel-Phone.git",
-                "reference": "2f442c022002aeb392108b352c15e36714fb61b1"
+                "reference": "64369bf44d10c11c0d4738f79b78f5247ecbe33c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Propaganistas/Laravel-Phone/zipball/2f442c022002aeb392108b352c15e36714fb61b1",
-                "reference": "2f442c022002aeb392108b352c15e36714fb61b1",
+                "url": "https://api.github.com/repos/Propaganistas/Laravel-Phone/zipball/64369bf44d10c11c0d4738f79b78f5247ecbe33c",
+                "reference": "64369bf44d10c11c0d4738f79b78f5247ecbe33c",
                 "shasum": ""
             },
             "require": {
@@ -1164,7 +1164,7 @@
                 "phone",
                 "validation"
             ],
-            "time": "2018-02-11T11:00:52+00:00"
+            "time": "2018-02-13T18:58:39+00:00"
         },
         {
             "name": "psr/log",

@@ -20,6 +20,7 @@ class FormulaireSocietyController extends Controller
       // $user = User::
           return view('front/formulaire-societe', compact('categories'));
     }
+    
     public function createSocietyAction(FormulaireSocietyRequest $request)
       {
         $post = $request->all();
