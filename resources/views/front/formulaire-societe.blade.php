@@ -6,10 +6,19 @@ Inscription societe
 
 @section('content')
 
+  @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+  @endif
 
   <h2>Formulaire inscription société</h2>
 
-{!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post']) !!}
+{!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post', 'files' => true]) !!}
 
 <div class="form-group">
   {{-- {!! Form::label('name_society', 'Entrez le nom de votre société : ',['class' =>'col-md-4 control-label']) !!} --}}
@@ -57,6 +66,11 @@ Inscription societe
     {!! $errors->first('phone', '<small class="help-block">:message</small>') !!}
   </div>
 </div>
+
+{!! Form::label('logo','Image de la catégorie') !!}
+
+{!! Form::file('logo') !!}
+{!! $errors->first('logo', '<small class="help-block">:message</small>')!!}
 {{-- {{dd($categories)}} --}}
 
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FormulaireSocietyRequest;
 use App\Society;
 use App\Categories;
+use Carbon\Carbon;
 use Auth;
 
 
@@ -34,7 +35,6 @@ class AdminSocietyController extends Controller
       $post = $request->all();
       $society = Society::findOrFail($id);
 
-
       $ids = array();
 
       foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
@@ -50,23 +50,22 @@ class AdminSocietyController extends Controller
         "site_web" => $post['site_web'],
         "skills" => $post['skills'],
         "siren" => $post['siren'],
+        "updated_at" => Carbon::now(),
       ]);
 
   $society->categories()->sync($ids);
 
-    return redirect()->route('listing-society')->with('success', 'Votre categorie à bien était MODIFIE');
+    return redirect()->route('listing-society')->with('success', 'Votre categorie à bien été MODIFIE');
 
     }
 
-
-
-
-
-
-
-
-    public function deleteSociety()
+    public function deleteSociety($id)
     {
+        $society = Society::findOrFail($id);
 
+        $society->delete();
+
+        return redirect()->route('listing-society')->with('success', '');
     }
+
 }
