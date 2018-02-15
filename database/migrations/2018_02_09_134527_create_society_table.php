@@ -28,7 +28,7 @@ class CreateSocietyTable extends Migration
             $table->string('zip_code');
             $table->char('phone',10);
             $table->string('site_web');
-            $table->char('skills',190);
+            $table->char('skills',190)->nullable();
             $table->string('email')->unique();
             $table->integer('siren')->unique();
             $table->char('path',190)->nullable();

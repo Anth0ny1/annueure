@@ -33,6 +33,15 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/presentation', 'PresentationController@presentation')->name('presentation');
 
+  // ANNUAIRE
+  //
+  Route::get('/annuaire', 'HomeController@annuaire')->name('annuaire');
+
+  // Profil Societe
+  //
+  Route::get('/annuaire/society/{id}', 'HomeController@profilSociete')->name('annuaire-profil-societe');
+
+
   // INSCRIPTION SOCIETE
   //
   Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe');

@@ -44,4 +44,21 @@ class HomeController extends Controller
 
         return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip'));
     }
+
+    public function annuaire()
+    {
+      // $societies = Society::all();
+
+      $categories = Categories::with('society')->get();
+      return view('/front/annuaire',compact('categories'));
+    }
+    // UPDATE D UNE CATEGORIE
+
+    public function profilSociete($id){
+      $categorie = Categories::findOrFail($id);
+      $societies = Society::findOrFail($id);
+
+      return view('/front/annuaire-profil', compact('categorie','societies'));
+    }
+
 }

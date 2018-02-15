@@ -19,7 +19,9 @@
             <a href="{{ route('presentation') }}">Présentation</a>
           </li>
 
-          <li><a href="#">Annuaire</a></li>
+          <li class="{{Request::path() == 'annuaire' ? 'active' : ''}}">
+            <a href="{{ route('annuaire') }}">Annuaire</a>
+          </li>
 
           <li class="{{Request::path() == 'contact' ? 'active' : ''}}">
             <a href="{{ route('nous-contacter-view') }}">Nous contacter</a>
