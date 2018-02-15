@@ -51,7 +51,7 @@ class AdminCategoriesController extends Controller
 
       return redirect()
         ->route('listing-categories')
-        ->with('success', 'Votre categorie à bien était ajouté');
+        ->with('success', 'Votre categorie à bien été ajoutée.');
     }
 
     public function updateCategories($id){
@@ -78,7 +78,7 @@ class AdminCategoriesController extends Controller
 
     return redirect()
       ->route('listing-categories')
-      ->with('success', 'Votre categorie à bien était MODIFIE');
+      ->with('success', 'Votre categorie à bien été modifiée');
     }
 
     public function deleteCategories($id){
@@ -88,6 +88,6 @@ class AdminCategoriesController extends Controller
 
       return redirect()
         ->route('listing-categories')
-        ->with('success', 'Votre article à bien était SUPPRIMER');
+        ->with('success', 'Votre article à bien été supprimée');
     }
 }

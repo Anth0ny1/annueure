@@ -17,8 +17,6 @@
         <th>Créé le</th>
         <th>Modifier l'utilisateur</th>
         <th>Effacer</th>
-
-
       </tr>
     </thead>
     @foreach ($users as $user)
@@ -32,16 +30,13 @@
           <td>{{ $user->role }}</td>
           <td>{{ $user->created_at }}</td>
           <td><a href="{{ route('update-users',['id' => $user->id])}}">modifier</a></td>
-
           <td>
             {!! Form::open(['route' => ['delete-users', $user->id], 'method' => 'delete']) !!}
             {!! Form::submit('Delete') !!}
             {!! Form::close() !!}
           </td>
         </tr>
-
       @endforeach
     </tbody>
   </table>
-
 @endsection
