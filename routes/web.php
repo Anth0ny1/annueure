@@ -50,7 +50,7 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-
+  // Route::get('/profile', 'ProfileController')->name('profile');
 
 });
 

@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder
 
         $users[] = array(
           'name' => 'Anthony',
-          'lastname' => 'Thiriot',
+          'lastname' => 'Antho',
           'city' => 'Beuzeville',
           'email' => 'anthony@mail.com',
           'role' => 'membre',

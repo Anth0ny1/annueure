@@ -41,6 +41,9 @@
 
         @else
           <li>
+            {{-- <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ Auth::user()->name }} <span class="caret"></span>
+              </a>             --}}
               <a href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
@@ -49,6 +52,14 @@
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
+
+              {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('profile') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      Profile
+                  </a>
+              </div> --}}
           </li>
         @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
