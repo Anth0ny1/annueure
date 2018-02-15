@@ -21,13 +21,25 @@ recherche société
     <div class="display">
       @foreach ($quiquoi as $qq)
         <div class="bloc_societe">
+          <div class="logo">
+
+            @if (!empty())
+
+            @endif
+            <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' .$qq->path . '/' . $qq->image_name,100,100,array())}}" alt="">
+
+
+
+          </div>
           <h5>{{ $qq->name_society}}</h5>
           <p>Nom gérant : {{ $qq->gerant}}</p>
           <p>Adresse : {{ $qq->adress}}</p>
           <p>Code postal : {{ $qq->zip_code}}</p>
           <p>Ville : {{ $qq->city}}</p>
           <p>Tel : {{ $qq->phone}}</p>
-          <p>Site Web : {{ $qq->site_web}}</p>
+          <p><a href="{{$qq->site_web}}">site_web</a></p>
+          <p>E-mail : {{$qq->email}}</p>
+          <p>Numéro siren : {{$qq->siren}}</p>
         </div>
       @endforeach
     </div>

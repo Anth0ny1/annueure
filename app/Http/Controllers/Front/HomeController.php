@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Categories;
+use App\Society;
 
 class HomeController extends Controller
 {
@@ -32,7 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
+
       $users = User::orderBy('created_at', 'desc')->get();
 
       $count = \DB::table('society')->count();
@@ -41,4 +42,21 @@ class HomeController extends Controller
 
         return view('home', compact('users', 'count', 'categories'));
     }
+
+    public function annuaire()
+    {
+      // $societies = Society::all();
+
+      $categories = Categories::with('society')->get();
+      return view('/front/annuaire',compact('categories'));
+    }
+    // UPDATE D UNE CATEGORIE
+
+    public function profilSociete($id){
+      $categorie = Categories::findOrFail($id);
+      $societies = Society::findOrFail($id);
+
+      return view('/front/annuaire-profil', compact('categorie','societies'));
+    }
+
 }
