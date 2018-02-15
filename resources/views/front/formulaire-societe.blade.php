@@ -15,10 +15,10 @@ Inscription societe
           </ul>
       </div>
   @endif
-  
+
   <h2>Formulaire inscription société</h2>
 
-{!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post']) !!}
+{!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post', 'files' => true]) !!}
 
 <div class="form-group">
   {{-- {!! Form::label('name_society', 'Entrez le nom de votre société : ',['class' =>'col-md-4 control-label']) !!} --}}
@@ -67,10 +67,10 @@ Inscription societe
   </div>
 </div>
 
-{!! Form::label('image','Image de la catégorie') !!}
+{!! Form::label('logo','Image de la catégorie') !!}
 
-{!! Form::file('image') !!}
-{!! $errors->first('image', '<small class="help-block">:message</small>')!!}
+{!! Form::file('logo') !!}
+{!! $errors->first('logo', '<small class="help-block">:message</small>')!!}
 {{-- {{dd($categories)}} --}}
 
 

@@ -11,13 +11,40 @@
     </div>
     <ul class="slides">
       <li>
-        <img src="{{ asset('img/slide01.jpg') }}" />
+        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"></a><img src="{{ asset('img/photo/slide01a.jpg') }}" />
       </li>
       <li>
-        <img src="{{ asset('img/slide02.jpg') }}" />
+        <img src="{{ asset('img/photo/slide02a.jpg') }}" />
       </li>
       <li>
-        <img src="{{ asset('img/slide03.jpg') }}" />
+        <img src="{{ asset('img/photo/slide03a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide04a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide05a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide06a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide07a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide08a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide09a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide10a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide11a.jpg') }}" />
+      </li>
+      <li>
+        <img src="{{ asset('img/photo/slide12a.jpg') }}" />
       </li>
     </ul>
   </div>
@@ -126,8 +153,10 @@
   // Can also be used with $(document).ready()
   $(window).load(function() {
     $('.flexslider').flexslider({
-      animation: "slide",
-      controlNav: false
+      animation: "fade",
+      controlNav: false,
+      prevText:	"",
+      nextText:	"",
     });
   });
 </script>
