@@ -1,6 +1,6 @@
 <header id="header">
   <div id="logo-entete">
-    <img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure" />
+    <a href="{{ route('home') }}"><img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure"></a>
   </div>
   <div id="menuhp">
     <nav id="navhp">

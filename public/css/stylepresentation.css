@@ -1,5 +1,6 @@
 .textePresentation {
-  height: 80px;
+  height: 70px;
+  width: 100%;
   background: #99D420;
   text-align: center;
   color: white;
@@ -8,15 +9,21 @@
 }
 .asidePresentation {
   float: left;
-  background: #295173;
+  background: #a4a4a4;
   width: 20%;
-  max-height: auto;
-  min-height: 720px;
+  min-height: 350px;
 }
 .sectionPresentation {
-  height:auto;
+  float: left;
+  width: 80%;
+  padding-left: 10px;
   background:#E6E6E6;
   font-size:1.6em;
+}
+.paragraphePresentation {
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 1rem;
 }
 .footerPresentation {
   width: 100%;
@@ -26,4 +33,48 @@
 .center_div{
     margin: 0 auto;
     width: 80%;
+}
+.footerPresentation ul li a {
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color:#E6E6E6;
+  font-size: 1.4em;
+  position: relative;
+}
+.footerPresentation ul {
+  list-style: none outside none;
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+.footerPresentation li {
+  margin: 0 40px;
+  display: inline;
+}
+.mapEure {
+
+
+}
+/* Pictogrammes SVG et rollover */
+/* .picto-img {
+  width: 10%;
+  height: auto;
+  } */
+li a svg:hover #picto-annuaire {
+  fill: #2d5072;
+}
+li a svg:hover #picto-inscription {
+  fill: #b0e349;
+}
+li a svg:hover #picto-rendez-vous {
+  fill: #9e503e;
+}
+li a svg:hover #picto-devis {
+  fill: #ef743d;
+}
+.pictoPresentation {
+  padding-left: 20%;
+}
+.pictoPresentation svg {
+  padding-bottom: 5%;
+  padding-top: 5%;
 }

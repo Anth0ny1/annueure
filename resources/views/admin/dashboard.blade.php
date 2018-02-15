@@ -1,6 +1,6 @@
 @extends('layouts/appback')
 
 @section('content')
-DashboardAAA
+<h1>page dashboard</h1>
 
 @endsection

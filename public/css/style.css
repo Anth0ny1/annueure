@@ -149,9 +149,7 @@ ul#navhp {
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
-    body {
-      width:800px;
-    }
+  
 
     #logo-entete {
       position: absolute;
@@ -188,16 +186,10 @@ ul#navhp {
 
 @media screen and (max-width: 790px)
 {
-    body
-    {
-      width:600px;
-    }
+
 }
 
 @media screen and (max-width: 590px)
 {
-    body
-    {
-      width:320px;
-    }
+
 }

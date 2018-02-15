@@ -21,7 +21,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{route('home') }}" class="site_title"><i class="fab fa-app-store"></i> <span>Annu'Eure</span></a>
+              <a href="{{route('home') }}" class="site_title"><i class="fas fa-wrench"></i> <span>Annu'Eure</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -91,7 +91,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by dede
+            Gentelella 
           </div>
           <div class="clearfix"></div>
         </footer>
