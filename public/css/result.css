@@ -5,19 +5,42 @@
 width: 200px;  /* Or whatever */
 height: 400px; /* Or whatever */
 margin: 10px;  /* Magic! */
-  background: lime;
-  text-align: center;
-
+background: white;
 }
 .content_search{
   max-width: 1200px;
   width: 100%;
   margin: auto;
-
 }
 .display{
   display: flex;
   margin:  0px auto;
-  background: grey;
+  background: lightgrey;
   justify-content: center;
+}
+h4{
+  margin-top: 15px;
+}
+img{
+  padding: 10px 0 ;
+  margin: auto;
+}
+.logo{
+  text-align: center;
+}
+h5{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #295173;
+    font-size: 150%;
+    text-align:center;
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+p{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 120%;
+  padding-left: 10px;
+  line-height: 10px;
 }
