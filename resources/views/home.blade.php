@@ -72,29 +72,35 @@
     <h1 class="titre">Annu'Eure</h1>
   </div>
   <div class="services">
-    <div id="annuaire-pro">
-      <div class="">
-        <img src="" alt="" />
+      <div class="service-box">
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Annuaire des Pro</h2>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Vous pouvez accéder au répertoire de notre annuaire.</p>
+          </div>
       </div>
-      <div class="bloc-text">
-        <h2>Annuaire des Pro</h2>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
-      </div>
+
+
+
       <div class="bloc-text">
         <h4>Inscription des Pro</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+        <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Pas de problème .</p>
       </div>
       <div class="bloc-text">
         <h4>Prendre un rendez-vous</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+        <p>Vous avez recherché et trouver le professionnel ou l'artisan qui vous convient et vous souhaitez le notifier ? Envoyez-lui une notification</p>
       </div>
       <div class="bloc-text">
         <h4>Demander un devis</h4>
         <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
       </div>
-    </div>
   </div>
 </section>
+
 <aside id="flux-RSS">
   <div class"rss">
   </div>
