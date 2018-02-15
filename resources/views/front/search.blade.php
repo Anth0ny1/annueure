@@ -23,9 +23,9 @@ recherche société
         <div class="bloc_societe">
           <div class="logo">
 
-            @if (!empty())
+            {{-- @if (!empty())
 
-            @endif
+            @endif --}}
             <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' .$qq->path . '/' . $qq->image_name,100,100,array())}}" alt="">
 
 
