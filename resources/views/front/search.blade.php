@@ -15,19 +15,27 @@ recherche société
   @endforeach --}}
   <div class="content_search">
     <div class="ResultatSearch">
-      <h4>{{ $count }} sociétés figure dans votre recherche.</h4>
+      <h4> XXX sociétés figure dans votre recherche.</h4>
       <hr>
     </div>
     <div class="display">
-      @foreach ($quiquoi as $qq)
+      @foreach ($categories as $categorie)
         <div class="bloc_societe">
-          <h5>{{ $qq->name_society}}</h5>
-          <p>Nom gérant : {{ $qq->gerant}}</p>
+
+          <p>{{ $categorie->categorie_name }}</p>
+
+          @foreach($categorie->society as $society)
+                {{ $society->name_society }}
+                {{-- {{ $count += 1 }}
+                {{ $count }} --}}
+          @endforeach
+          {{-- <h5>{{ $qq->name_society}}</h5> --}}
+          {{-- <p>Nom gérant : {{ $qq->gerant}}</p>
           <p>Adresse : {{ $qq->adress}}</p>
           <p>Code postal : {{ $qq->zip_code}}</p>
           <p>Ville : {{ $qq->city}}</p>
           <p>Tel : {{ $qq->phone}}</p>
-          <p>Site Web : {{ $qq->site_web}}</p>
+          <p>Site Web : {{ $qq->site_web}}</p> --}}
         </div>
       @endforeach
     </div>
