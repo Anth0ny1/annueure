@@ -49,19 +49,39 @@
     </ul>
   </div>
 
+  <?php
+  $arrayCat = [];
+    foreach ($selectCategories as $cat)
+    {
+          $arrayCat[$cat->id] = $cat->categorie_name;
+    }
+ // dd($selectZip);
+ $arrayZip = [];
+    foreach ($selectZip as $zip)
+    {
+      // echo $zip->zip_code;
+      // echo '<br>';
+
+          $arrayZip[$zip->zip_code] = $zip->zip_code;
+
+          // dd($arrayZip);
+    }
+  ?>
   <div id="search-box">
     <div id="form-search-hp">
       {!! Form::open(['route' => 'search-action', 'method' => 'post', 'class' => 'form-horizontal']) !!}
         <div class="form-group row">
 
           <!-- Formulaire de recherche -->
-          {!! Form::search('quiquoi', null, ['class' => 'form-control col-md-5','placeholder' => 'Métier ou nom de la société']) !!}
-          {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
-          {!! Form::label('quiquoi', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
+          {!! Form::select('categorie_name',$arrayCat,'',['class' => 'form-control col-md-5','placeholder' => 'Choisisez votre métier']) !!}
+          {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
+          {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-          {!! Form::search('ou', null, ['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
-          {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
-          {!! Form::label('ou', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
+          {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
+          {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
+          {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
+
+
 
           {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
         </div>
@@ -72,29 +92,35 @@
     <h1 class="titre">Annu'Eure</h1>
   </div>
   <div class="services">
-    <div id="annuaire-pro">
-      <div class="">
-        <img src="" alt="" />
+      <div class="service-box">
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Annuaire des Pro</h2>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Vous pouvez accéder au répertoire de notre annuaire.</p>
+          </div>
       </div>
-      <div class="bloc-text">
-        <h2>Annuaire des Pro</h2>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
-      </div>
+
+
+
       <div class="bloc-text">
         <h4>Inscription des Pro</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+        <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Pas de problème .</p>
       </div>
       <div class="bloc-text">
         <h4>Prendre un rendez-vous</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
+        <p>Vous avez recherché et trouver le professionnel ou l'artisan qui vous convient et vous souhaitez le notifier ? Envoyez-lui une notification</p>
       </div>
       <div class="bloc-text">
         <h4>Demander un devis</h4>
         <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
       </div>
-    </div>
   </div>
 </section>
+
 <aside id="flux-RSS">
   <div class"rss">
   </div>

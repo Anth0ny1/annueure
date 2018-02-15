@@ -1,0 +1,15 @@
+.bloc_content_cat{
+  max-width: 1000px;
+  width: 100%;
+  /* background: lime; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bloc_cat{
+  width: 150px;
+  background: lightgrey;
+  text-align: center;
+
+}

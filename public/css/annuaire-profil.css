@@ -1,0 +1,32 @@
+.template-sct{
+background: lightgrey;
+padding-bottom: 50px;
+}
+.logo-sct{
+  padding-top: 50px;
+  padding-left: 25px;
+}
+.presentation-profil-sct{
+  background: white;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid;
+
+}
+
+h5{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #295173;
+    font-size: 400%;
+    text-align:center;
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+p{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 200%;
+}

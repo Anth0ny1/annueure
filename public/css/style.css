@@ -117,6 +117,27 @@ ul#navhp {
   color: #ec5c1b;
 }
 
+/* Pictogrammes SVG et rollover */
+.picto-img {
+  width: 10%;
+  height: auto;
+}
+.picto-box {
+}
+.picto-box a svg:hover #picto-annuaire {
+  fill: #2d5072;
+}
+.picto-box a svg:hover #picto-inscription {
+  fill: #b0e349;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #9e503e !important;
+}
+.picto-box a svg:hover #picto-devis {
+  fill: #ef743d;
+}
+
+
 /* ******** Styles Flexslider 2 ******** */
 .flexslider {
   position: relative;
