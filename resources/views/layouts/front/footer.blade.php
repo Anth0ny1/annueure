@@ -1,8 +1,6 @@
 <!-- start footer -->
 <footer id="footer">
 
-
-
   <div class="footerPresentation"> <!-- footer -->
 
     <div class="footerContainer">
@@ -12,9 +10,9 @@
         <li><a href="#">remerciements</a></li>
       </ul>
     </div>
-      <div>
-        <img class="mapEure" src="admin/img/mapEure.png" alt="carte qui représente le département de l'eure" />
-      </div>
+    <div class="footerMap">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.38177490234375006%2C48.29233063405986%2C2.4829101562500004%2C49.84860975344834&amp;layer=cyclemap" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/49.0766/1.0506&amp;layers=C">Afficher une carte plus grande</a></small>
+    </div>
   </div> <!-- end footer -->
 
 
