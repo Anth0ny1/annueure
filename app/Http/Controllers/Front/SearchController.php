@@ -65,7 +65,7 @@ class SearchController extends Controller
     }
 
 
-    dd($societies);
+    // dd($societies);
 
     // dd($search);
     // if (!empty($search['zip'])) {
