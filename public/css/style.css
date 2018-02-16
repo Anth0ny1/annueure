@@ -178,8 +178,19 @@ aside#flux-RSS {
   height: auto;
   padding: 6px;
 }
-.bloc-text {
+
+.service-box {
   float: left;
+  width: 18%;
+  margin-right: 2%;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.bloc-text {
+  width: 100%;
 }
 
 section#actualites {
@@ -281,7 +292,6 @@ a:hover #picto-annu-lum-9 {
   position: relative;
   padding-bottom: 1rem;
 }
-
 .pictoPresentation {
   padding-left: 20%;
 }
@@ -292,7 +302,6 @@ a:hover #picto-annu-lum-9 {
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
-
 
     #logo-entete {
       position: absolute;
