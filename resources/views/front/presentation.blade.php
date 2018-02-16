@@ -12,16 +12,18 @@
     <h2>Présentation de Annu'Eure</h2>
   </div>
   <div>  <!-- container -->
+
     <aside class="asidePresentation"> <!-- left aside -->
-      <div class="pictoPresentation">
+      <div class="pictoPresentation picto-box">
         <ul>
-          <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-annuaire.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-inscription.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-rendez-vous.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-devis.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
         </ul>
       </div>
     </aside> <!-- end left aside -->
+
       <section class="sectionPresentation"> <!-- section paragraphes -->
         <div class="paragraphePresentation">
           <h5><strong>Pourquoi Annu'Eure ?</strong> :</h5>
@@ -35,7 +37,7 @@
           <h5><strong>Financement participatif</strong> :</h5>
           <p>Ce site pour le moment est en version beta(test) mais nous souhaiterions le mettre en ligne
           pour ce faire nous aurions besoin de fonds pour l'hébergement et la maintenance du site,
-          envoyez vos dons a l'adresse suivante: thekingofpizzas@gmail.com.(qui servira a financer également son opération du sexe ) </p>
+          envoyez vos dons a l'adresse du sites</p>
         </div>
       </section> <!-- end section paragraphes -->
       <div class="clear"></div> <!-- classe clear pour fixer div aside -->

@@ -24,7 +24,7 @@ h6{
 .dropdown-menu{
       border-radius: 5px;
 }
-h4{
+h5{
   text-align: center;
   background: #295173;
   line-height: 50px;
@@ -32,4 +32,41 @@ h4{
   border-radius: 0 0 5px 5px;
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
 
+}
+/* Styles pictogrammes SVG + rollover */
+
+.picto-img {
+  width: 10%;
+  height: auto;
+}
+.picto-box {
+}
+.picto-box a:hover svg #pictoannuaire {
+  fill: #204159 !important;
+}
+.picto-box a:hover svg #pictoinscription {
+  fill: #8dba1e !important;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #713527 !important;
+}
+.picto-box a:hover svg #picto-devis {
+  fill: #d14d19 !important;
+}
+a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
+a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
+a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
+a:hover #picto-annu-lum-9 {
+  fill: #fd9400 !important;
+  stroke: #fd9400 !important;
+  fill-opacity:1 !important;
+  stroke-opacity:1 !important;
+}
+.pictoPresentation {
+  padding-left: 20%;
+}
+.pictoPresentation svg {
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
