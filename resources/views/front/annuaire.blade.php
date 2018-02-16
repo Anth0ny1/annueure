@@ -43,7 +43,7 @@
     <div class="btn-group">
 
       <div class="bloc_cat"  >
-        <h6 href="#" type="button" class="dropdown-toggle-<?php echo $cat->id ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
+        <h6 href="#" type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
           <div class="dropdown-menu">
             @foreach ($cat->society as $soc)
               <li><a class="dropdown-item" href="{{ route('annuaire-profil-societe',['id' => $soc->id])}}">{{ $soc->name_society }}</a></li>
