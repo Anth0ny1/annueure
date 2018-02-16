@@ -1,0 +1,46 @@
+.template-sct{
+background: white;
+padding-bottom: 50px;
+}
+.logo-sct{
+  padding-top: 10px;
+  padding-left: 25px;
+}
+.presentation-profil-sct{
+  background: lightgrey;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+
+}
+
+
+p{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 200%;
+}
+.textePresentation{
+text-transform: uppercase;
+}
+/* h5{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #295173;
+    font-size: 400%;
+    text-align:center;
+    text-decoration: underline;
+    padding-bottom: 30px;
+} */
+.texteretourAnnuaire{
+text-transform: uppercase;
+    font-size: 200%;
+    width: 100%;
+    color: #F25C19;
+    padding-top: 20px;
+    font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.textretour{
+  text-align: right;
+}

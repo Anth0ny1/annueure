@@ -1,6 +1,6 @@
 <header id="header">
   <div id="logo-entete">
-    <img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure" />
+    <a href="{{ route('home') }}"><img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure"></a>
   </div>
   <div id="menuhp">
     <nav id="navhp">
@@ -19,7 +19,9 @@
             <a href="{{ route('presentation') }}">Présentation</a>
           </li>
 
-          <li><a href="#">Annuaire</a></li>
+          <li class="{{Request::path() == 'annuaire' ? 'active' : ''}}">
+            <a href="{{ route('annuaire') }}">Annuaire</a>
+          </li>
 
           <li class="{{Request::path() == 'contact' ? 'active' : ''}}">
             <a href="{{ route('nous-contacter-view') }}">Nous contacter</a>
@@ -40,8 +42,13 @@
           </li>
 
         @else
-          <li>
+          <li class="dropdown show">
+            <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                Bonjour {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a href="{{ route('logout') }}"
+              class="dropdown-item"
                   onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
                   Logout
@@ -49,7 +56,35 @@
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
+            </div>
           </li>
+          {{-- <ul class="dropdown-menu" role="menu"> --}}
+          {{-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+                  <li>
+                      <a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                          Logout
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                  </li>
+                  <li>
+                      <a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                          Profil
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                  </li>
+                </li> --}}
+                {{-- </ul> --}}
         @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
         @endif

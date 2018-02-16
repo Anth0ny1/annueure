@@ -49,7 +49,7 @@
 
       <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
       <td>
-        {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
+        {!! Form::open(['route' => ['delete-society', $societie->id],  'method' => 'delete']) !!}
         {!! Form::submit('Delete') !!}
         {!! Form::close() !!}
       </td>
