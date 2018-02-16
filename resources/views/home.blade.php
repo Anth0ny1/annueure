@@ -98,9 +98,11 @@
 
   <main id="main-services">
       <section id="services">
-        <div class="">
-          <h1 class="titre">Bienvenue sur Annu'Eure, l'annuaire des professionnels du bâtiment dans l'Eure en Haute Normandie</h1>
-        </div>
+          <h1 style="">Bienvenue sur Annu'Eure, l'annuaire des professionnels du bâtiment dans l'Eure en Haute Normandie.
+          </h1>
+          <div id="titrecursive">test
+
+          </div>
         <div class="service-box">
           <div class="picto-box">
             <a href="{{ route('annuaire') }}">
