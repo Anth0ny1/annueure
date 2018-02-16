@@ -129,7 +129,7 @@ class FormulaireSocietyController extends Controller
         //   $society = Society::findOrFail($id);
         //   $society->categories()->sync($ids);
         //
-          return redirect()->route('home')->with('success', 'votre formulaire est bien soumis');
+          return redirect()->route('home')->with('success', 'Merci votre société vient d\'être ajoutée ..');
     }
 
 }

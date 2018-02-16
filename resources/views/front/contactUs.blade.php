@@ -1,11 +1,15 @@
 @extends('layouts/layout')
-
+@section('css')
+  <link rel="stylesheet" href="{{ asset('css/contactus.css') }}" />
+@endsection
 @section('title')
-  Page de Contact
+  Nous contacter
 @endsection
 
 @section('content')
-
+  <div class="textePresentation">
+  <h2>Nous contacter</h2>
+  </div>
   @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -15,11 +19,11 @@
       </ul>
     </div>
   @endif
-<div class="textePresentation">
-<h2>Nous contacter</h2>
-</div>
+
 
 <div class="container center_div">
+<div class="panel-body">
+
 
   <div class="col-md-6">
 
@@ -49,8 +53,10 @@
       {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
     </div>
 
-    {!! Form::submit('OK',['class' => 'btn btn-success']) !!}
+    {!! Form::submit('Envoyez votre message',['class' => 'btn-primary']) !!}
     {!! Form::close() !!}
+  </div>
+
   </div>
 </div>
   @section('js')

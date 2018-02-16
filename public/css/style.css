@@ -117,28 +117,8 @@ ul#navhp {
   color: #ec5c1b;
 }
 
-/* Pictogrammes SVG et rollover */
-.picto-img {
-  width: 10%;
-  height: auto;
-}
-.picto-box {
-}
-.picto-box a svg:hover #picto-annuaire {
-  fill: #2d5072;
-}
-.picto-box a svg:hover #picto-inscription {
-  fill: #b0e349;
-}
-.picto-box a:hover svg #pictorendezvous {
-  fill: #9e503e !important;
-}
-.picto-box a svg:hover #picto-devis {
-  fill: #ef743d;
-}
-
-
 /* ******** Styles Flexslider 2 ******** */
+
 .flexslider {
   position: relative;
   padding: 0;
@@ -168,11 +148,79 @@ ul#navhp {
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 
+/* Styles des blocs services */
+
+#main-services {
+  width: 100%;
+  min-height: 600px;
+}
+
+section#services {
+  width: 75%;
+  float: left;
+  margin-right:3%;
+  /* background: #555; */
+}
+
+aside#flux-RSS {
+  width: 22%;
+  float: left;
+  background: #e5e5e5;
+  min-height: 600px;
+  height: auto;
+  padding: 6px;
+}
+.bloc-text {
+  float: left;
+}
+
+section#actualites {
+
+}
+
+/* Styles pictogrammes SVG + rollover */
+
+.picto-img {
+  width: 10%;
+  height: auto;
+}
+.picto-box {
+}
+.picto-box a:hover svg #pictoannuaire {
+  fill: #204159 !important;
+}
+.picto-box a:hover svg #pictoinscription {
+  fill: #8dba1e !important;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #713527 !important;
+}
+.picto-box a:hover svg #picto-devis {
+  fill: #d14d19 !important;
+}
+a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
+a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
+a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
+a:hover #picto-annu-lum-9 {
+  fill: #fd9400 !important;
+  stroke: #fd9400 !important;
+  fill-opacity:1 !important;
+  stroke-opacity:1 !important;
+}
+
+#footer {
+  /* forcer l’affichage sous le contenu et la colonne */
+  clear:both;
+  /* text-align:center; */
+  background: #295173;
+  color:#fff;
+  min-height:50px;
+  padding:25px;
+}
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
-    body {
-      width:800px;
-    }
+
 
     #logo-entete {
       position: absolute;
@@ -209,16 +257,10 @@ ul#navhp {
 
 @media screen and (max-width: 790px)
 {
-    body
-    {
-      width:600px;
-    }
+
 }
 
 @media screen and (max-width: 590px)
 {
-    body
-    {
-      width:320px;
-    }
+
 }
