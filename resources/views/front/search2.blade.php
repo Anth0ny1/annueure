@@ -16,6 +16,14 @@ recherche société
   <div class="content_search">
     <div class="ResultatSearch">
       <h4>{{ $count }} sociétés figure dans votre recherche.</h4>
+      <h4>
+        @if ( $count  == 0)
+          <h4>{{ $count }} société figure dans votre recherche.</h4>
+          @else
+            <h4>{{ $count }} sociétés figure dans votre recherche.</h4>
+        @endif
+
+      </h4>
       <hr>
     </div>
     <div class="display">
@@ -23,9 +31,7 @@ recherche société
         <div class="bloc_societe">
           <div class="logo">
 
-            @if (!)
 
-            @endif
             <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' .$qq->path . '/' . $qq->image_name,100,100,array())}}" alt="">
 
 

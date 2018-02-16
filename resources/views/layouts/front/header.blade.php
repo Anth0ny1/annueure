@@ -43,8 +43,8 @@
 
         @else
           <li class="dropdown show">
-            <a href="#" class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                {{ Auth::user()->name }} <span class="caret"></span>
+            <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                Bonjour {{ Auth::user()->name }} <span class="caret"></span>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a href="{{ route('logout') }}"
