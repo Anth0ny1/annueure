@@ -56,6 +56,11 @@
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
+              <a href="{{ route('mes-societes') }}"
+              class="dropdown-item">
+                  Ma/Mes société(s)
+              </a>
+
             </div>
           </li>
           {{-- <ul class="dropdown-menu" role="menu"> --}}

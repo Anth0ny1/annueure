@@ -9,9 +9,9 @@ class UpdateSocietyFront extends Controller
 {
 
   public function viewMySociety(){
-    
 
-    return 'ok viewMySociety';
+
+    return view('/front/mes-societes');
   }
 
   public function updateMySociety(){
