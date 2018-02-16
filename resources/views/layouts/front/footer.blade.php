@@ -1,5 +1,35 @@
 <footer id="footer">
 
+
+
+
+  <p>
+  <label>
+    Tapez le début d'un nom de ville ou d'un code postal puis appuyez sur <b>Entrée</b>.<br>
+    <input id="ville" placeholder="Entrez un code postal ou une ville" autocomplete="off" size="50">
+  </label>
+</p>
+<ul>
+  <li data-vicopo="#ville">
+    <strong data-vicopo-code-postal></strong>
+    <span data-vicopo-ville></span>
+  </li>
+</ul>
+  <script type="text/javascript">
+  $('#input').vicopo(function (value) {
+    $('#vicopo').text(JSON.stringify(value, null, 2));
+  });
+  $('#input').codePostal(function (value) {
+    $('#code').text(JSON.stringify(value, null, 2));
+  });
+  $('#input').ville(function (value) {
+    $('#ville').text(JSON.stringify(value, null, 2));
+  });
+  </script>
+
+
+
+
   <div class="footerPresentation"> <!-- footer -->
     <ul>
       <li><a href="#">plan du site</a></li>
@@ -8,7 +38,7 @@
       <li><a href="#">partenaires</a></li>
     </ul>
     <div class="mapEure">
-    <img src="admin/img/mapEure.png" alt="carte qui représente le département de l'eure" />
+    <img src="admin/img/mapEure.png" alt="carte qui représente le département de l'eure" width="250px" />
     </div>
   </div> <!-- end footer -->
 

@@ -40,6 +40,7 @@ class HomeController extends Controller
 
       $count = \DB::table('society')->count();
 
+
       $categories = Categories::inRandomOrder()->limit(3)->get();
 
         return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip'));
@@ -48,9 +49,9 @@ class HomeController extends Controller
     public function annuaire()
     {
       // $societies = Society::all();
-
+      $categoriescount = \DB::table('categories')->count();
       $categories = Categories::with('society')->get();
-      return view('/front/annuaire',compact('categories'));
+      return view('/front/annuaire',compact('categories', 'categoriescount'));
     }
     // UPDATE D UNE CATEGORIE
 

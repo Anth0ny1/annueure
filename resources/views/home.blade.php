@@ -88,6 +88,7 @@
       {!! Form::close() !!}
     </div>
   </div>
+
   <div class="">
     <h1 class="titre">Annu'Eure</h1>
   </div>
@@ -98,6 +99,15 @@
               {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
             </a>
           </div>
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
           <div class="bloc-text">
             <h2>Annuaire des Pro</h2>
             <p>Vous recherchez un professionnel ou un artisan près de chez vous. Vous pouvez accéder au répertoire de notre annuaire.</p>

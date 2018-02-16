@@ -5,30 +5,31 @@
 @endsection
 
 @section('title')
-  Page de presentation
+  Annuaire des sociétés
 @endsection
 
 @section('content')
   <div class="textePresentation">
     <h2>Annuaire des sociétés</h2>
+
   </div>
-  <aside class="asidePresentation">
+
+  <h4>{{$categoriescount}} catégories figure dans notre annuaire</h4>
+  {{-- <aside class="asidePresentation">
     <ul>
       <li></li>
       <li></li>
       <li></li>
       <li></li>
     </ul>
-  </aside>
-{{-- {{dd($categories)}} --}}
+  </aside> --}}
 <section class=" bloc_content_cat ">
 
   @foreach ($categories as $cat)
     <div class="btn-group">
 
       <div class="bloc_cat"  >
-        <h6 href="#" type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{$cat->categorie_name}}</h6>
+        <h6 href="#" type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
           <div class="dropdown-menu">
             @foreach ($cat->society as $soc)
               <li><a class="dropdown-item" href="{{ route('annuaire-profil-societe',['id' => $soc->id])}}">{{ $soc->name_society }}</a></li>
@@ -38,12 +39,8 @@
       </div>
     @endforeach
   </section>
+<div class="clear"></div>
 
-
-  <div class="footerPresentation">
-
-
-  </div>
       @endsection
 
       @section('js')
