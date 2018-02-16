@@ -29,10 +29,10 @@
           <td>{{ $user->email }}</td>
           <td>{{ $user->role }}</td>
           <td>{{ $user->created_at }}</td>
-          <td><a href="{{ route('update-users',['id' => $user->id])}}">modifier</a></td>
+          <td><a class="btn btn-round btn-primary" href="{{ route('update-users',['id' => $user->id])}}">modifier</a></td>
           <td>
             {!! Form::open(['route' => ['delete-users', $user->id], 'method' => 'delete']) !!}
-            {!! Form::submit('Delete') !!}
+            {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
             {!! Form::close() !!}
           </td>
         </tr>
