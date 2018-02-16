@@ -2,7 +2,6 @@
 
 @section('content')
 
-<section id="actualite">
   <div class="flexslider">
     <!-- Compteur d'inscription (position absolue) -->
     <div id="compteur">
@@ -53,18 +52,16 @@
   $arrayCat = [];
     foreach ($selectCategories as $cat)
     {
-          $arrayCat[$cat->id] = $cat->categorie_name;
+        $arrayCat[$cat->id] = $cat->categorie_name;
     }
- // dd($selectZip);
- $arrayZip = [];
+  // dd($selectZip);
+  $arrayZip = [];
     foreach ($selectZip as $zip)
     {
       // echo $zip->zip_code;
       // echo '<br>';
-
-          $arrayZip[$zip->zip_code] = $zip->zip_code;
-
-          // dd($arrayZip);
+        $arrayZip[$zip->zip_code] = $zip->zip_code;
+      // dd($arrayZip);
     }
   ?>
   <div id="search-box">
@@ -81,19 +78,38 @@
           {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
           {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-
-
           {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
         </div>
       {!! Form::close() !!}
     </div>
   </div>
 
-  <div class="">
-    <h1 class="titre">Annu'Eure</h1>
-  </div>
-  <div class="services">
-      <div class="service-box">
+  <main id="main-services">
+      <section id="services">
+        <div class="">
+          <h1 class="titre">Annu'Eure</h1>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="{{ route('annuaire') }}">
+              {!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Annuaire des Pros.</h2>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire !</p>
+          </div>
+        </div>
+          <div class="picto-box">
+            <a href="{{ route('register') }}">
+              {!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Inscription des Pro.</h2>
+            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Inscrivez-vous !</p>
+          </div>
+
           <div class="picto-box">
             <a href="#">
               {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
@@ -109,77 +125,82 @@
               </div>
           @endif
           <div class="bloc-text">
-            <h2>Annuaire des Pro</h2>
-            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Vous pouvez accéder au répertoire de notre annuaire.</p>
+            <h2>Prendre un rendez-vous.</h2>
+            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez prendre rendez-vous ? Envoyez-lui une notification !</p>
           </div>
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Demander un devis.</h2>
+            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment ? Demandez un devis !</p>
+          </div>
+      </section>
+      <section id="actualites">
+      </section>
+
+    <aside id="flux-RSS">
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un flux RSS sur les annonces d'emplois (à trouver sur Internet).
+        </p>
       </div>
-
-
-
-      <div class="bloc-text">
-        <h4>Inscription des Pro</h4>
-        <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Pas de problème .</p>
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un autre flux RSS sur les formations professionnelles (à trouver sur Internet).
+        </p>
       </div>
-      <div class="bloc-text">
-        <h4>Prendre un rendez-vous</h4>
-        <p>Vous avez recherché et trouver le professionnel ou l'artisan qui vous convient et vous souhaitez le notifier ? Envoyez-lui une notification</p>
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un autre flux RSS sur les actualités du BTP en général (à trouver sur Internet).
+        </p>
       </div>
-      <div class="bloc-text">
-        <h4>Demander un devis</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
-      </div>
-  </div>
-</section>
+    </aside>
 
-<aside id="flux-RSS">
-  <div class"rss">
-  </div>
-  <div class"rss">
-  </div>
-  <div class"rss">
-  </div>
-</aside>
+    {{-- <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Dashboard</div>
 
-{{-- <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                    <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                        You are logged in!
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> --}}
+    </div> --}}
 
-{{--
-  Affichage de 3 categories
-  Nombre de pro inscrit
-  3 Derniers pro inscrit
---}}
+    {{--
+      Affichage de 3 categories
+      Nombre de pro inscrit
+      3 Derniers pro inscrit
+    --}}
 
-{{-- {{ dd($users)}} --}}
-  @foreach ($users as $user)
-    {{ $user->name }}
-  @endforeach
+    {{-- {{ dd($users)}} --}}
+      @foreach ($users as $user)
+        {{ $user->name }}
+      @endforeach
 
-  {{ $count }}
+      {{ $count }}
 
-  @foreach ($categories as $categorie)
-    {{ $categorie->categorie_name }}
-  @endforeach
+      @foreach ($categories as $categorie)
+        {{ $categorie->categorie_name }}
+      @endforeach
 
-@endsection
-
-
+    @endsection
+  </main>
 
 @section('js')
 
