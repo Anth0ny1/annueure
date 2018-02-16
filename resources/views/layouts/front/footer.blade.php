@@ -11,8 +11,7 @@
       </ul>
     </div>
     <div class="footerMap">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.38177490234375006%2C48.29233063405986%2C2.4829101562500004%2C49.84860975344834&amp;layer=cyclemap" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/49.0766/1.0506&amp;layers=C">Afficher une carte plus grande</a></small>
-    </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d334631.6632497623!2d0.854337880896347!3d49.06174431076737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e13fd4a26e28c7%3A0x30c14484fb52710!2sEure!5e0!3m2!1sfr!2sfr!4v1518787100973" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div> <!-- end footer -->
 
 

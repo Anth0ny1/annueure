@@ -7,10 +7,19 @@
 @section('content')
   OkUpdateView<br>
     {{-- {{ $soUp->siren }}<br> --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 @foreach ($societyUpdate as $soUp)
   <div class="container center_div">
   <div class="panel-body">
-{!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post']) !!}
+{!! Form::open(['route' => ['update-societes-action', $soUp->id], 'method' => 'put', 'files' => true]) !!}
 
 <div class="form-group">
   {!! Form::label('name_society', 'Entrez le nom de votre société : ',['class' =>'col-md-4 control-label']) !!}
@@ -59,20 +68,7 @@
   </div>
 </div>
 
-<div class="form-group">
-  {!! Form::label('phone', 'Choississez votre catégorie :',['class' =>'col-md-4 control-label']) !!}
-  <div class="col-md-6">
-<?php
-  // $arrayCat = [];
-  // foreach ($categories as $cat)
-  // {
-  //   $arrayCat[$cat->id] = $cat->categorie_name;
-  // }
-?>
 
-    {{-- {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('class' => 'form-control','multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}} --}}
-  </div>
-</div>
 
 
 <div class="form-group">
