@@ -12,13 +12,15 @@
   <div class="textePresentation">
     <h2>Annuaire des sociétés</h2>
   </div>
-  <aside class="asidePresentation">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+  <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
+    <div class="pictoPresentation">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
+      <ul>
+        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-annuaire.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-inscription.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-rendez-vous.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-devis.svg')) !!}</a></li>
+      </ul>
+    </div>
   </aside>
 {{-- {{dd($categories)}} --}}
 <section class=" bloc_content_cat ">
