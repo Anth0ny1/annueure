@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Htpp\Society;
 
 class UpdateSocietyFront extends Controller
 {
@@ -16,7 +17,10 @@ class UpdateSocietyFront extends Controller
 
   public function updateMySociety(){
 
-    return 'ok updateMySociety';
+    // Selectionne dans la base SOCIETY toutes les societe qui ont le user id = a l'auth::id
+    //
+    $societyUpdate = Society::
+    return view('front/updateMySociety');
   }
 
   public function updateMySocietyAction(){
