@@ -1,7 +1,7 @@
 .panel-body{
   max-width: 700px;
   border-radius: 10px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   background: #295173;
   margin: 20px auto 50px;
 }
@@ -26,13 +26,13 @@
 .btn-primary:hover{
   background: #F25C19;
   }
-	.btn-succes{
-	  margin-left: 15px;
-	  margin-bottom: 20px;
-		background: #F25C19;
-		color:white;
-	}
-	.btn-succes:hover{
+.btn-succes{
+	margin-left: 15px;
+	margin-bottom: 20px;
+	background: #F25C19;
+	color:white;
+}
+.btn-succes:hover{
   background: #99D420;
 	color:white;
-	}
+}
