@@ -25,14 +25,15 @@ class FormulaireSocietyRequest extends FormRequest
      {
          return [
              'name_society'   => 'bail|required|between:5,50',
+             'gerant'   => 'bail|required|between:5,50',
              'adress'   => 'bail|required|between:5,150',
              'city'   => 'bail|between:5,30|alpha',
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|numeric',
              'site_web'   => 'bail|required|min:3|max:50',
              'categorie_name'   => 'bail|required',
+              'email'    => 'string|email|max:255|unique:society,email',
              'skills'   => 'bail|max:190',
-             'email'   => 'bail|required|min:3|max:50',
              'siren'   => 'bail|required|min:9|max:9'
          ];
      }

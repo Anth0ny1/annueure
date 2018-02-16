@@ -21,6 +21,8 @@ class SearchController extends Controller
   {
         $search = $request->all();
 
+
+
         $categories = Categories::all();
         if (!empty($search['categorie_name']) && !empty($search['zip'])) {
 

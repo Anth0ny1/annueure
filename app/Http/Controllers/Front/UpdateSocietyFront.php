@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Society;
 use Auth;
 use App\Categories;
+use App\Http\Requests\UpdateMySocietyRequest;
+use App\Services\PathUpload;
+
 
 class UpdateSocietyFront extends Controller
 {
@@ -33,19 +36,50 @@ if ($mycountsociety == 0) {
     // dd($actual_id);
     // Selectionne dans la base SOCIETY toutes les societe qui ont le user id = a l'auth::id
     //
+    $categories = Categories::all();
 
     // $societyUpdate = Society::
 
     $societyUpdate = Society::where('user_id', '=', $actual_id)->where('id', '=', $idSociety)->get();
 
     // dd($societyUpdate);
-    return view('front/updateMySociety', compact('societyUpdate'));
+    return view('front/updateMySociety', compact('societyUpdate', 'categories'));
 
   }
 
-  public function updateMySocietyAction(){
+  public function updateMySocietyAction(UpdateMySocietyRequest $request, $idSociety){
 
-    return 'ok updateMySocietyAction';
+    $societyUpdaAction = Society::findOrFail($idSociety);
+
+    // $actual_id = Auth::id();
+    // dd('fdsfdsf');
+    //
+    // $path = new PathUpload($request->file('logo'), 'society');
+    // // dd($path);
+    //
+    // $request->file('logo')->move(public_path($path->path()), $path->imageName());
+
+
+      Society::where('id', '=', $idSociety)
+      ->update([
+          'name_society' => $request->input('name_society'),
+          'gerant' => $request->input('gerant'),
+          'adress' => $request->input('adress'),
+          'city' => $request->input('city'),
+          'zip_code' => $request->input('zip_code'),
+          'phone' => $request->input('phone'),
+          'site_web' => $request->input('site_web'),
+          'skills' => $request->input('skills'),
+          'email' => $request->input('email'),
+          'siren' => $request->input('siren'),
+          // 'path'           => $path->path(),
+          // 'original_name'  => $path->originalName(),
+          // 'image_name'     => $path->imageName(),
+        ]);
+
+        return redirect()
+          ->route('home')
+          ->with('success', 'Votre societe à bien été modifié');
   }
 
   public function deleteMySociety($idSociety){
