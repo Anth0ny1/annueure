@@ -15,19 +15,19 @@
   </div>
 
   <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
-    <div class="pictoPresentation">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
+    <div class="pictoPresentation picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
       <ul>
-        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-annuaire.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-inscription.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-rendez-vous.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('admin/svg/picto-devis.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
+        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
       </ul>
     </div>
   </aside>
 {{-- {{dd($categories)}} --}}
 
 
-  <h4>{{$categoriescount}} catégories figure dans notre annuaire</h4>
+  <h5>{{$categoriescount}} catégories figure dans notre annuaire</h5>
   {{-- <aside class="asidePresentation">
     <ul>
       <li></li>

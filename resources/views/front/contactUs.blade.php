@@ -36,7 +36,7 @@
     </div>
 
     <div class="form-group">
-      {!! Form::label('email', 'E-Mail Address *', ['class' => 'col-md-6 control-label']) !!}
+      {!! Form::label('email', 'Adresse E-Mail *', ['class' => 'col-md-6 control-label']) !!}
       {!! Form::email('email',null,['class' => 'form-control','placeholder' => 'votre email']) !!}
       {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
     </div>

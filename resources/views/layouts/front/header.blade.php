@@ -6,9 +6,7 @@
     <nav id="navhp">
       <ul id="menuhptop">
           <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
-
           <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->
-
           <!-- <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li> -->
 
           <li class="{{Request::path() == '/' ? 'active' : ''}}">
