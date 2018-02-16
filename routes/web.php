@@ -65,8 +65,8 @@ Route::group(['namespace' => 'Front'], function(){
 // MODIFICATION SOCIETES ROUTING
   Route::get('/mes-societes', 'UpdateSocietyFront@viewMySociety')->name('mes-societes');
 
-  Route::get('/mes-societes/update/{idUser}', 'UpdateSocietyFront@updateMySociety')->name('update-societes');
-  Route::post('/mes-societes/update/{idUser}', 'UpdateSocietyFront@updateMySocietyAction')->name('update-societes-action');
+  Route::get('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySociety')->name('update-societes');
+  Route::post('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySocietyAction')->name('update-societes-action');
 
   Route::delete('/mes-societes/delete/{idSociety}', 'UpdateSocietyFront@deleteMySociety')->name('delete-societes');
 
