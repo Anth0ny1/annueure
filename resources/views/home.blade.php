@@ -48,6 +48,18 @@
     </ul>
   </div>
 
+  @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif
+
   <?php
   $arrayCat = [];
     foreach ($selectCategories as $cat)
@@ -87,7 +99,7 @@
   <main id="main-services">
       <section id="services">
         <div class="">
-          <h1 class="titre">Annu'Eure</h1>
+          <h1 class="titre">Bienvenue sur Annu'Eure, l'annuaire des professionnels du bâtiment dans l'Eure en Haute Normandie</h1>
         </div>
         <div class="service-box">
           <div class="picto-box">
@@ -161,7 +173,24 @@
         </p>
       </div>
     </aside>
+{{-- <a href="# "id="btnafficheuser">Get users</a>
+<div id="afficheruser">
+<script type="text/javascript">
+  $('#btnafficheuser').on('click', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'GET',
+      url: "{{ route('ajax_user_get_all')}}",
+      beforeSend: function(){
 
+      },
+      success: function(responses){
+        $('#btnafficheuser').html(response.v);
+      }
+    });
+  });
+</script> --}}
+</div>
     {{-- <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">

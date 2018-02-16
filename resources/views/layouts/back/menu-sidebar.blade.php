@@ -6,7 +6,7 @@
       <li><a href="{{ route('listing-categories') }}"><i class="fa fa-archive"></i> Listing des Catégories</a></li>
       <li><a href="{{ route('listing-society')}}"><i class="fa fa-industry"></i> Listing des Sociétés</a></li>
       <li><a href="{{ route('listing-users')}}"><i class="fa fa-user"></i> Listing des Utilisateurs</a></li>
-      <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> Page D'accueil<span class="label label-success pull-right">Coming Soon</span></a></li>
+      <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> Page D'accueil<span class="label label-success pull-right"></span></a></li>
     </ul>
   </div>
 

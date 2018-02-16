@@ -22,7 +22,7 @@ body {
   line-height:100px;
   text-align:center; /* centrage horizontal */ }
 }
-.titre {
+h1 {
   text-align: center;
   background: blue;
   height: 90px;
@@ -138,7 +138,7 @@ ul#navhp {
   max-width: 100%;
   min-width: 50px;
   height: auto;
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   font-size: 400%;
   text-transform: uppercase;
   text-align:center;
@@ -147,7 +147,7 @@ ul#navhp {
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 #compteur p {
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   font-size: 30%;
   color: #ec5c1b;
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
@@ -189,8 +189,7 @@ section#actualites {
   width: 10%;
   height: auto;
 }
-.picto-box {
-}
+
 .picto-box a:hover svg #pictoannuaire {
   fill: #204159 !important;
 }
@@ -214,15 +213,80 @@ a:hover #picto-annu-lum-9 {
   stroke-opacity:1 !important;
 }
 
+/* Styles du footer (bas de page) */
+
 #footer {
-  /* forcer l’affichage sous le contenu et la colonne */
-  clear:both;
-  /* text-align:center; */
+  clear:both; /* forcer l’affichage sous le contenu et la colonne */
   background: #295173;
   color:#fff;
   min-height:50px;
   padding:25px;
+  /* text-align:center; */
 }
+
+.footerPresentation {
+  width: 100%;
+  background: #2A5073;
+}
+
+.footerPresentation ul li a {
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  color:#99D420;
+  font-size: 1.2em;
+  position: relative;
+  float: left;
+  margin: 5px 25px;
+}
+.footerPresentation ul {
+  list-style: none outside none;
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+.footerPresentation li {
+  margin: 0 40px;
+  display: inline;
+}
+
+/* Styles page présentation */
+
+.textePresentation {
+  height: 70px;
+  width: 100%;
+  background: #99D420;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+}
+.asidePresentation {
+  float: left;
+  background: #a4a4a4;
+  width: 20%;
+  height: auto;
+}
+.sectionPresentation {
+  float: left;
+  width: 80%;
+  padding-left: 10px;
+  background:#E6E6E6;
+  font-size:1.6em;
+  height: auto;
+}
+.paragraphePresentation {
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.pictoPresentation {
+  padding-left: 20%;
+}
+.pictoPresentation svg {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
@@ -247,13 +311,13 @@ a:hover #picto-annu-lum-9 {
       right: 20px;
       max-width: 100%;
       height: auto;
-      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
       line-height:1.3rem;
       font-size: 250%;
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
     #compteur p {
-      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
       font-size: 35%;
       color: #ec5c1b;
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;

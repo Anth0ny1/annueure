@@ -13,6 +13,8 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Categories;
 use App\Society;
+use Auth;
+
 
 class HomeController extends Controller
 {
@@ -34,16 +36,21 @@ class HomeController extends Controller
     public function index()
     {
       $selectCategories = Categories::get();
+      
       $selectZip = Society::get();
 
       $users = User::orderBy('created_at', 'desc')->get();
 
       $count = \DB::table('society')->count();
 
+      $id = Auth::id();
+
+      $mycountsociety = Society::where('user_id' ,  '=', $id)->count();
 
       $categories = Categories::inRandomOrder()->limit(3)->get();
 
-        return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip'));
+
+        return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip', 'mycountsociety'));
     }
 
     public function annuaire()
