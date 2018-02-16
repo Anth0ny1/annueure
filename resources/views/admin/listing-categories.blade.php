@@ -9,7 +9,7 @@
 
   <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
 
-  
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -24,10 +24,10 @@
         <tr>
           <td>{{ $categorie->id }}</td>
           <td>{{ $categorie->categorie_name }}</td>
-          <td><a href="{{ route('update-categories',['id' => $categorie->id])}}">modifier</a></td>
+          <td><a class="btn btn-round btn-primary" href="{{ route('update-categories',['id' => $categorie->id])}}">modifier</a></td>
           <td>
             {!! Form::open(['route' => ['delete-categories', $categorie->id], 'method' => 'delete']) !!}
-              {!! Form::submit('Delete') !!}
+              {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
             {!! Form::close() !!}</td>
             {{-- <a href="{{ route('delete-categories',['id' => $categorie->id])}}">effacer</a> --}}
           </td>

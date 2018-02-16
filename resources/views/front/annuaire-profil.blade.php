@@ -22,7 +22,7 @@
         @if (!empty($societies->path))
         <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $societies->path . '/' . $societies->image_name,150,150,array('crop','grayscale'))}}" alt="">
         @else
-          <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo_default.png',150,150,array('crop'))}}" alt="">
+          <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',150,150,array('crop'))}}" alt="">
         @endif
         <hr>
       <p>Nom du gérant : {{$societies->gerant}}</p>

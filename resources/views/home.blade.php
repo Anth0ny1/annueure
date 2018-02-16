@@ -48,6 +48,18 @@
     </ul>
   </div>
 
+  @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif
+
   <?php
   $arrayCat = [];
     foreach ($selectCategories as $cat)
@@ -161,7 +173,24 @@
         </p>
       </div>
     </aside>
+{{-- <a href="# "id="btnafficheuser">Get users</a>
+<div id="afficheruser">
+<script type="text/javascript">
+  $('#btnafficheuser').on('click', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'GET',
+      url: "{{ route('ajax_user_get_all')}}",
+      beforeSend: function(){
 
+      },
+      success: function(responses){
+        $('#btnafficheuser').html(response.v);
+      }
+    });
+  });
+</script> --}}
+</div>
     {{-- <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
