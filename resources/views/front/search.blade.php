@@ -19,24 +19,16 @@ recherche société
       <hr>
     </div>
     <div class="display">
-      @foreach ($categories as $categorie)
-        <div class="bloc_societe">
+@foreach ($societies as $society)
 
-
-          <p>{{ $categorie->categorie_name }}</p>
-
-          @foreach($categorie->society as $society)
-                {{ $society->name_society }}
-                {{-- {{ $count += 1 }}
-                {{ $count }} --}}
-          @endforeach
+@endforeach
 
           <div class="logo">
 
 
 
           </div>
-    
+
 
         </div>
       @endforeach

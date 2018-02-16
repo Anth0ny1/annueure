@@ -56,16 +56,18 @@ class SearchController extends Controller
 
 
 
-    }  elseif(!empty($search['zip'])){
+    }
+    elseif(!empty($search['zip'])){
         $zip_code = $search['zip'];
         $societies = Society::where('zip_code','=',$zip_code)->get();
 
-    } else {
-
     }
+    // else {
+    //
+    // }
 
 
-    dd($societies);
+    // dd($societies);
 
     // dd($search);
     // if (!empty($search['zip'])) {
@@ -103,7 +105,7 @@ class SearchController extends Controller
     // }
 
 
-    return view('front/search' ,compact('categories' ,'count', 'zips'));
+    return view('front/search' ,compact('categories', 'societies'));
 
       // $quiquoi = Society::
   }

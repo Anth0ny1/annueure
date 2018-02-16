@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Htpp\Society;
+use App\Society;
+use Auth;
 
 class UpdateSocietyFront extends Controller
 {
@@ -15,12 +16,18 @@ class UpdateSocietyFront extends Controller
     return 'ok viewMySociety';
   }
 
-  public function updateMySociety(){
+  public function updateMySociety($idSociety){
+    $societyUpdate = Society::findOrFail($idSociety);
 
+    $actual_id = Auth::id();
+
+    // dd($actual_id);
     // Selectionne dans la base SOCIETY toutes les societe qui ont le user id = a l'auth::id
     //
-    $societyUpdate = Society::
-    return view('front/updateMySociety');
+    $societyUpdate = Society::where('user_id', '=', $actual_id)->where('id', '=', $idSociety)->get();
+
+    // dd($societyUpdate);
+    return view('front/updateMySociety', compact('societyUpdate'));
   }
 
   public function updateMySocietyAction(){
