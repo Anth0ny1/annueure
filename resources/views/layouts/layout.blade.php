@@ -18,6 +18,9 @@
   <body>
     <div id="wrapper">
       @include('layouts.front.header')
+
+
+
         @yield('content')
       @include('layouts.front.footer')
     </div>
