@@ -98,11 +98,8 @@
 
   <main id="main-services">
       <section id="services">
-          <h1 style="">Bienvenue sur Annu'Eure, l'annuaire des professionnels du bâtiment dans l'Eure en Haute Normandie.
+          <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding-top: 10px; vertical-align: middle; color: #9EA5B2;">"Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie."
           </h1>
-          <div id="titrecursive">test
-
-          </div>
         <div class="service-box">
           <div class="picto-box">
             <a href="{{ route('annuaire') }}">
@@ -114,6 +111,7 @@
             <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire !</p>
           </div>
         </div>
+        <div class="service-box">
           <div class="picto-box">
             <a href="{{ route('register') }}">
               {!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
@@ -123,7 +121,8 @@
             <h2>Inscription des Pro.</h2>
             <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Inscrivez-vous !</p>
           </div>
-
+        </div>
+        <div class="service-box">
           <div class="picto-box">
             <a href="#">
               {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
@@ -142,6 +141,8 @@
             <h2>Prendre un rendez-vous.</h2>
             <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez prendre rendez-vous ? Envoyez-lui une notification !</p>
           </div>
+        </div>
+        <div class="service-box">
           <div class="picto-box">
             <a href="#">
               {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
@@ -151,6 +152,7 @@
             <h2>Demander un devis.</h2>
             <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment ? Demandez un devis !</p>
           </div>
+        </div>
       </section>
       <section id="actualites">
       </section>
