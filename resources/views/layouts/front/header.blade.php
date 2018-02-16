@@ -103,9 +103,9 @@
                   </li>
                 </li> --}}
                 {{-- </ul> --}}
-        @if (Auth::user()->role == 'admin')
+        {{-- @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
-        @endif
+        @endif --}}
 
         @if (Auth::user()->role == 'membre')
           <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>

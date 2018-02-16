@@ -1,7 +1,7 @@
 @extends('layouts/layout')
-<!-- @section('css')
+ @section('css')
   <link rel="stylesheet" href="{{ asset('css/présentation-projet.css') }}" />
-@endsection -->
+@endsection 
 @section('title')
   Présentation projet annu'eure
 @endsection

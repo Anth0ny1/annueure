@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Society;
 use Auth;
+use App\Categories;
 
 class UpdateSocietyFront extends Controller
 {
@@ -14,9 +15,14 @@ class UpdateSocietyFront extends Controller
     $id = Auth::id();
     // $mysociety = Society::findOrFail($id);
     $mysociety = Society::where('user_id' ,  '=', $id)->get();
+    // $mycategory = Categories::where('user_id' ,  '=', $id)->get();
     $mycountsociety = Society::where('user_id' ,  '=', $id)->count();
     // $mysociety2 = Society::All();
-    return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety'));
+
+if ($mycountsociety == 0) {
+  return redirect()->route('formulaire-societe');
+}else
+    return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety','mycategory'));
   }
 
   public function updateMySociety($idSociety){
@@ -42,8 +48,12 @@ class UpdateSocietyFront extends Controller
     return 'ok updateMySocietyAction';
   }
 
-  public function deleteMySociety(){
+  public function deleteMySociety($idSociety){
+    $societyDelete = Society::findOrFail($idSociety);
 
-    return 'ok deleteMySociety';
+    $societyDelete->delete();
+
+    return redirect()->route('home')->with('success', 'votre société vient d\'être supprimée.');
+
   }
 }
