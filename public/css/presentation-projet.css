@@ -1,4 +1,4 @@
-h5 {
+.h5 {
   background: #295173;
   padding-left: 10px;
   line-height: 40px;
@@ -6,6 +6,7 @@ h5 {
 }
 .sectionPresentation{
   padding-left: 0px;
+  height: 482px;
 }
 p {
   padding-left: 10px;

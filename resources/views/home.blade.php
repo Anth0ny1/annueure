@@ -12,16 +12,13 @@
     </div>
     <ul class="slides">
       <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"></a><img src="{{ asset('img/photo/slide01a.jpg') }}" />
+        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
       </li>
       <li>
         <img src="{{ asset('img/photo/slide02a.jpg') }}" />
       </li>
       <li>
         <img src="{{ asset('img/photo/slide03a.jpg') }}" />
-      </li>
-      <li>
-        <img src="{{ asset('img/photo/slide04a.jpg') }}" />
       </li>
       <li>
         <img src="{{ asset('img/photo/slide05a.jpg') }}" />
@@ -40,9 +37,6 @@
       </li>
       <li>
         <img src="{{ asset('img/photo/slide10a.jpg') }}" />
-      </li>
-      <li>
-        <img src="{{ asset('img/photo/slide11a.jpg') }}" />
       </li>
       <li>
         <img src="{{ asset('img/photo/slide12a.jpg') }}" />
