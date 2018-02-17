@@ -186,7 +186,7 @@
         </p>
       </div>
     </aside>
-
+  </main>
 <!-- CONTENEUR AJAX JS -->
 
 {{-- <a href="# "id="btnafficheuser">Get users</a>
@@ -205,8 +205,9 @@
       }
     });
   });
-</script> --}}
-</div>
+</script>
+</div> --}}
+
     {{-- <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -244,13 +245,11 @@
         {{ $categorie->categorie_name }}
       @endforeach
 
-    @endsection
-
-  </main>
-
-<!-- CONTENEUR & FONCTIONS JS -->
+@endsection
 
 @section('js')
+
+<!-- CONTENEUR & FONCTIONS JS -->
 
 <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 
