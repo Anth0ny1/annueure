@@ -113,8 +113,8 @@
 
           <!-- Fin affichage des erreurs du formulaire -->
 
-          <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding-top: 10px; vertical-align: middle; color: #9EA5B2;">
-            "Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie."
+          <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+            “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
           </h1>
         <div id="first-service-box" class="service-box ">
           <div class="picto-box">
@@ -124,7 +124,7 @@
           </div>
           <div class="bloc-text">
             <h2>Annuaire des Pros</h2>
-            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire !</p>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
           </div>
         </div>
         <div class="service-box">
@@ -135,7 +135,7 @@
           </div>
           <div class="bloc-text">
             <h2>Inscription des Pro</h2>
-            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Inscrivez-vous !</p>
+            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
           </div>
         </div>
         <div class="service-box">
@@ -146,7 +146,7 @@
           </div>
           <div class="bloc-text">
             <h2>Prendre un rendez-vous</h2>
-            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez prendre rendez-vous ? Envoyez-lui une notification !</p>
+            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
           </div>
         </div>
         <div class="service-box">
@@ -157,7 +157,7 @@
           </div>
           <div class="bloc-text">
             <h2>Demander un devis</h2>
-            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment ? Demandez un devis !</p>
+            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
           </div>
         </div>
       </section>
@@ -212,8 +212,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
-
+                    <div class="panel-heading">
+                      Dashboard
+                    </div>
                     <div class="panel-body">
                         @if (session('status'))
                             <div class="alert alert-success">
