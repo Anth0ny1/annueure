@@ -9,10 +9,10 @@ recherche société
 @endsection
 
 @section('content')
-{{--
-  @foreach ($users as $user)
-    {{ $user->name }}
-  @endforeach --}}
+  <div class="textePresentation">
+    <h2>Liste des sociétés</h2>
+
+  </div>
   <div class="content_search">
     <div class="ResultatSearch">
       {{-- <h4> {{$societiesCount}} sociétés figure dans votre recherche.</h4> --}}
@@ -22,22 +22,21 @@ recherche société
       @foreach ($societies as $qq)
         <div class="bloc_societe">
           <div class="logo">
-
-
-            <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' .$qq->path . '/' . $qq->image_name,100,100,array())}}" alt="">
-
-
-
-          </div>
+          @if (!empty($qq->path))
+          <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $qq->path . '/' . $qq->image_name,100,100,array('crop','grayscale'))}}" alt="">
+          @else
+            <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
+          @endif
+        </div>
           <h5>{{ $qq->name_society}}</h5>
-          <p>Nom gérant : {{ $qq->gerant}}</p>
-          <p>Adresse : {{ $qq->adress}}</p>
-          <p>Code postal : {{ $qq->zip_code}}</p>
-          <p>Ville : {{ $qq->city}}</p>
-          <p>Tel : {{ $qq->phone}}</p>
-          <p><a href="{{$qq->site_web}}">site_web</a></p>
-          <p>E-mail : {{$qq->email}}</p>
-          <p>Numéro siren : {{$qq->siren}}</p>
+          <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
+          <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p>
+          <p class="p"><i class="fas fa-map-signs"></i> : {{ $qq->zip_code}}</p>
+          <p class="p"><i class="fas fa-map-marker-alt"></i> : {{ $qq->city}}</p>
+          <p class="p"><i class="fas fa-phone-square"></i> : {{ $qq->phone}}</p>
+          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">site_web</a></p>
+          <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
+          <p class="p">Siren : {{$qq->siren}}</p>
         </div>
       @endforeach
     </div>
@@ -45,5 +44,9 @@ recherche société
   {{-- @foreach ($categories as $categorie)
     {{ $categorie->categorie_name }}
   @endforeach --}}
+
+@endsection
+@section('js')
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 @endsection

@@ -7,7 +7,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+h2{
+  font-size: 250%;
+}
 .bloc_cat{
   width: 190px;
 background:linear-gradient(#53b0ff ,#295173);
