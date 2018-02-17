@@ -116,6 +116,27 @@ ul#navhp {
   color: #ec5c1b;
 }
 
+/* Pictogrammes SVG et rollover */
+.picto-img {
+  width: 10%;
+  height: auto;
+}
+.picto-box {
+}
+.picto-box a svg:hover #picto-annuaire {
+  fill: #2d5072;
+}
+.picto-box a svg:hover #picto-inscription {
+  fill: #b0e349;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #9e503e !important;
+}
+.picto-box a svg:hover #picto-devis {
+  fill: #ef743d;
+}
+
+
 /* ******** Styles Flexslider 2 ******** */
 .flexslider {
   position: relative;
@@ -132,25 +153,23 @@ ul#navhp {
   min-width: 50px;
   height: auto;
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-  /* font-size: 1.6rem; */
+  font-size: 400%;
+  text-transform: uppercase;
   text-align:center;
-  line-height:1.4rem;
-  font-size: 350%;
+  line-height:1.8rem;
   color: #ec5c1b;
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 #compteur p {
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 35%;
+  font-size: 30%;
   color: #ec5c1b;
-    text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
+  text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
-    body {
-      width:800px;
-    }
+  
 
     #logo-entete {
       position: absolute;
@@ -173,7 +192,7 @@ ul#navhp {
       max-width: 100%;
       height: auto;
       font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-      line-height:1.2rem;
+      line-height:1.3rem;
       font-size: 250%;
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
@@ -187,16 +206,10 @@ ul#navhp {
 
 @media screen and (max-width: 790px)
 {
-    body
-    {
-      width:600px;
-    }
+
 }
 
 @media screen and (max-width: 590px)
 {
-    body
-    {
-      width:320px;
-    }
+
 }
