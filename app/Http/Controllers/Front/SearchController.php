@@ -66,6 +66,9 @@ class SearchController extends Controller
         $societies = Society::where('zip_code','=',$zip_code)->get();
 
     }
+    else {
+      return redirect()->route('home')->with('danger', 'Veuillez entrez au moin un paramètre de recherche');
+    }
     // else {
     //
     // }
