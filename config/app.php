@@ -184,7 +184,6 @@ return [
         Propaganistas\LaravelPhone\PhoneServiceProvider::class,
         //folklore
         Folklore\Image\ImageServiceProvider::class,
-        Roumen\Feed\FeedServiceProvider::class,
 
 
     ],
@@ -239,7 +238,6 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Folklore\Image\Facades\Image::class,
-        'Feed' => Roumen\Feed\Feed::class,
     ],
 
 ];
