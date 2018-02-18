@@ -47,10 +47,10 @@
       <td>{{ $societie->updated_at }}</td>
 
 
-      <td><a href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
+      <td><a class="btn btn-round btn-primary" href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
       <td>
-        {!! Form::open(['route' => ['delete-society', $societie->id], 'method' => 'delete']) !!}
-        {!! Form::submit('Delete') !!}
+        {!! Form::open(['route' => ['delete-society', $societie->id],  'method' => 'delete']) !!}
+        {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
         {!! Form::close() !!}
       </td>
     @endforeach

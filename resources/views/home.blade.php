@@ -1,8 +1,12 @@
 @extends('layouts/layout')
 
 @section('content')
+<?php
+  // require_once(asset('rss/magpiemod/rss_fetch.inc'));
+?>
 
-<section id="actualite">
+<!-- FLEXSLIDER -->
+
   <div class="flexslider">
     <!-- Compteur d'inscription (position absolue) -->
     <div id="compteur">
@@ -11,16 +15,13 @@
     </div>
     <ul class="slides">
       <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"></a><img src="{{ asset('img/photo/slide01a.jpg') }}" />
+        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
       </li>
       <li>
         <img src="{{ asset('img/photo/slide02a.jpg') }}" />
       </li>
       <li>
         <img src="{{ asset('img/photo/slide03a.jpg') }}" />
-      </li>
-      <li>
-        <img src="{{ asset('img/photo/slide04a.jpg') }}" />
       </li>
       <li>
         <img src="{{ asset('img/photo/slide05a.jpg') }}" />
@@ -41,30 +42,39 @@
         <img src="{{ asset('img/photo/slide10a.jpg') }}" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide11a.jpg') }}" />
-      </li>
-      <li>
         <img src="{{ asset('img/photo/slide12a.jpg') }}" />
       </li>
     </ul>
   </div>
 
+<!-- FORMULAIRE DE RECHERCHE DES PROFESIONNELS -->
+
+  @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif
+
   <?php
   $arrayCat = [];
     foreach ($selectCategories as $cat)
     {
-          $arrayCat[$cat->id] = $cat->categorie_name;
+        $arrayCat[$cat->id] = $cat->categorie_name;
     }
- // dd($selectZip);
- $arrayZip = [];
+  // dd($selectZip);
+  $arrayZip = [];
     foreach ($selectZip as $zip)
     {
       // echo $zip->zip_code;
       // echo '<br>';
-
-          $arrayZip[$zip->zip_code] = $zip->zip_code;
-
-          // dd($arrayZip);
+        $arrayZip[$zip->zip_code] = $zip->zip_code;
+      // dd($arrayZip);
     }
   ?>
   <div id="search-box">
@@ -81,97 +91,169 @@
           {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
           {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-
-
           {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
         </div>
       {!! Form::close() !!}
     </div>
   </div>
-  <div class="">
-    <h1 class="titre">Annu'Eure</h1>
-  </div>
-  <div class="services">
-      <div class="service-box">
+
+<!-- SERVICES AUX PROFESSIONNELS -->
+
+  <main id="main-services">
+      <section id="services">
+
+          <!-- Affichage des erreurs du formulaire -->
+
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
+
+          <!-- Fin affichage des erreurs du formulaire -->
+
+          <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+            “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
+          </h1>
+        <div id="first-service-box" class="service-box ">
           <div class="picto-box">
-            <a href="#">
-              {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
+            <a href="{{ route('annuaire') }}">
+              {!! file_get_contents(asset('img/picto/picto-annuaire.svg')) !!}
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Annuaire des Pro</h2>
-            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Vous pouvez accéder au répertoire de notre annuaire.</p>
+            <h2>Annuaire des Pros</h2>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
           </div>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="{{ route('register') }}">
+              {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Inscription des Pro</h2>
+            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Prendre un rendez-vous</h2>
+            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h2>Demander un devis</h2>
+            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
+          </div>
+        </div>
+      </section>
+      <section id="actualites">
+      </section>
+
+<!-- SIDEBAR DROITE - FLUX RSS -->
+
+    <aside id="flux-RSS">
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un flux RSS sur les annonces d'emplois (à trouver sur Internet).
+        </p>
       </div>
-
-
-
-      <div class="bloc-text">
-        <h4>Inscription des Pro</h4>
-        <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Pas de problème .</p>
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un autre flux RSS sur les formations professionnelles (à trouver sur Internet).
+        </p>
       </div>
-      <div class="bloc-text">
-        <h4>Prendre un rendez-vous</h4>
-        <p>Vous avez recherché et trouver le professionnel ou l'artisan qui vous convient et vous souhaitez le notifier ? Envoyez-lui une notification</p>
+      <div class="rss">
+        <h3>Titre du flux RSS</h3>
+        <p>
+          Ici un autre flux RSS sur les actualités du BTP en général (à trouver sur Internet).
+        </p>
       </div>
-      <div class="bloc-text">
-        <h4>Demander un devis</h4>
-        <p>Nulla vitae  libero, a pharetra augue. Integer posuere erat a ante venenatis condimentum velit dapibus.</p>
-      </div>
-  </div>
-</section>
+    </aside>
+  </main>
+<!-- CONTENEUR AJAX JS -->
 
-<aside id="flux-RSS">
-  <div class"rss">
-  </div>
-  <div class"rss">
-  </div>
-  <div class"rss">
-  </div>
-</aside>
+{{-- <a href="# "id="btnafficheuser">Get users</a>
+<div id="afficheruser">
+<script type="text/javascript">
+  $('#btnafficheuser').on('click', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'GET',
+      url: "{{ route('ajax_user_get_all')}}",
+      beforeSend: function(){
 
-{{-- <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+      },
+      success: function(responses){
+        $('#btnafficheuser').html(response.v);
+      }
+    });
+  });
+</script>
+</div> --}}
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    {{-- <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      Dashboard
+                    </div>
+                    <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
-                    You are logged in!
+                        You are logged in!
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> --}}
+    </div> --}}
 
-{{--
-  Affichage de 3 categories
-  Nombre de pro inscrit
-  3 Derniers pro inscrit
---}}
+    {{--
+      Affichage de 3 categories
+      Nombre de pro inscrit
+      3 Derniers pro inscrit
+    --}}
 
-{{-- {{ dd($users)}} --}}
-  @foreach ($users as $user)
-    {{ $user->name }}
-  @endforeach
+    {{-- {{ dd($users)}} --}}
+      @foreach ($users as $user)
+        {{ $user->name }}
+      @endforeach
 
-  {{ $count }}
+      {{ $count }}
 
-  @foreach ($categories as $categorie)
-    {{ $categorie->categorie_name }}
-  @endforeach
+      @foreach ($categories as $categorie)
+        {{ $categorie->categorie_name }}
+      @endforeach
 
 @endsection
 
-
-
 @section('js')
+
+<!-- CONTENEUR & FONCTIONS JS -->
 
 <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 
@@ -186,4 +268,5 @@
     });
   });
 </script>
+
 @endsection

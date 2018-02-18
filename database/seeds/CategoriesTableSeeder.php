@@ -68,9 +68,7 @@ class CategoriesTableSeeder extends Seeder
         $categories[] = array(
           'categorie_name' => 'Miroitier',
         );
-        $categories[] = array(
-          'categorie_name' => 'Fumisterie',
-        );
+
 
         DB::table('categories')->insert($categories);
     }

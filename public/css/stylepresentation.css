@@ -7,38 +7,61 @@
   padding-top: 20px;
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
+
 .asidePresentation {
   float: left;
   background: #a4a4a4;
   width: 20%;
-  min-height: 350px;
+  min-height: auto;
 }
+
 .sectionPresentation {
   float: left;
   width: 80%;
   padding-left: 10px;
   background:#E6E6E6;
   font-size:1.6em;
+  height: 482px;
 }
+
 .paragraphePresentation {
   padding-top: 15px;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: 3.6rem;
 }
+
+.footerContainer {
+  width: 60%;
+}
+
 .footerPresentation {
   width: 100%;
-  height:100px;
-  background: #99D420;
+  height:290px;
+  background: #2A5073;
+  height:470px;
 }
+
 .center_div{
-    margin: 0 auto;
-    width: 80%;
+  margin: 0 auto;
+  width: 80%;
 }
-.footerPresentation ul li a {
+
+.footerContainerBox a {
+  color:#99D420;
+  font-size: 1.2em;
+}
+
+.logosCCIEure {
+  height: 80px;
+}
+
+/* .footerPresentation ul li a {
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-  color:#E6E6E6;
-  font-size: 1.4em;
+  color:#99D420;
+  font-size: 1.2em;
   position: relative;
+  float: left;
+  margin: 5px 25px;
 }
 .footerPresentation ul {
   list-style: none outside none;
@@ -49,31 +72,49 @@
 .footerPresentation li {
   margin: 0 40px;
   display: inline;
-}
+} */
 .mapEure {
-
-
+  float: right;
+  width: 40%;
+  margin-right: 1%;
 }
-/* Pictogrammes SVG et rollover */
-/* .picto-img {
+
+/* Styles pictogrammes SVG + rollover */
+
+.picto-img {
   width: 10%;
   height: auto;
-  } */
-li a svg:hover #picto-annuaire {
-  fill: #2d5072;
 }
-li a svg:hover #picto-inscription {
-  fill: #b0e349;
+
+.picto-box {
 }
-li a svg:hover #picto-rendez-vous {
-  fill: #9e503e;
+.picto-box a:hover svg #pictoannuaire {
+  fill: #204159 !important;
 }
-li a svg:hover #picto-devis {
-  fill: #ef743d;
+.picto-box a:hover svg #pictoinscription {
+  fill: #8dba1e !important;
 }
+.picto-box a:hover svg #pictorendezvous {
+  fill: #713527 !important;
+}
+.picto-box a:hover svg #picto-devis {
+  fill: #d14d19 !important;
+}
+a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
+a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
+a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
+a:hover #picto-annu-lum-9 {
+  fill: #fd9400 !important;
+  stroke: #fd9400 !important;
+  fill-opacity:1 !important;
+  stroke-opacity:1 !important;
+}
+
 .pictoPresentation {
   padding-left: 20%;
 }
+
 .pictoPresentation svg {
   padding-bottom: 5%;
   padding-top: 5%;

@@ -62,6 +62,17 @@ Route::group(['namespace' => 'Front'], function(){
 // ANNUAIRE ROUTING
   Route::get('/annuaire', 'HomeController@annuaire')->name('annuaire');
 
+// MODIFICATION SOCIETES ROUTING
+  Route::get('/mes-societes', 'UpdateSocietyFront@viewMySociety')->name('mes-societes');
+
+  Route::get('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySociety')->name('update-societes');
+  Route::put('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySocietyAction')->name('update-societes-action');
+
+  Route::delete('/mes-societes/delete/{idSociety}', 'UpdateSocietyFront@deleteMySociety')->name('delete-societes');
+
+// RSS ROUTING
+  // Route::get('')
+
 });
 
 

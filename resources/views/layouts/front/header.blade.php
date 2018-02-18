@@ -6,9 +6,7 @@
     <nav id="navhp">
       <ul id="menuhptop">
           <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
-
           <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->
-
           <!-- <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li> -->
 
           <li class="{{Request::path() == '/' ? 'active' : ''}}">
@@ -43,8 +41,8 @@
 
         @else
           <li class="dropdown show">
-            <a href="#" class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                {{ Auth::user()->name }} <span class="caret"></span>
+            <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                Bonjour {{ Auth::user()->name }} <span class="caret"></span>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a href="{{ route('logout') }}"
@@ -56,8 +54,26 @@
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
+
+
+            {{-- @if ($mycountsociety != 0)
+              <a href="{{ route('mes-societes') }}"
+              class="dropdown-item">
+                  Ma/Mes société(s)
+              </a>
+            @endif --}}
+
+            <a href="{{ route('mes-societes') }}"
+            class="dropdown-item">
+                Ma/Mes société(s)
+            </a>
+
             </div>
           </li>
+
+
+
+
           {{-- <ul class="dropdown-menu" role="menu"> --}}
           {{-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -85,9 +101,9 @@
                   </li>
                 </li> --}}
                 {{-- </ul> --}}
-        @if (Auth::user()->role == 'admin')
+        {{-- @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
-        @endif
+        @endif --}}
 
         @if (Auth::user()->role == 'membre')
           <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>

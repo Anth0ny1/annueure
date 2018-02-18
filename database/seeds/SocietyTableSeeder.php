@@ -17,7 +17,6 @@ class SocietyTableSeeder extends Seeder
 
       $society[] = array(
         'user_id'        => 1,
-        'site_web' => 'mldkgmfdgk',
         'name_society'       => 'nom de la societe',
         'gerant'       => 'gerant',
         'adress'    => 'route des champs ',
@@ -32,7 +31,6 @@ class SocietyTableSeeder extends Seeder
       );
       $society[] = array(
         'user_id'        => 2,
-        'site_web' => 'mldkgmfdgk',
         'name_society'       => 'nom de la societe2',
         'gerant'       => 'gerant1',
         'adress'    => 'route des poules ',
@@ -47,5 +45,8 @@ class SocietyTableSeeder extends Seeder
       );
 
       DB::table('society')->insert($society);
+
+  
   }
+
 }

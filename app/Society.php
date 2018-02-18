@@ -14,7 +14,8 @@ class Society extends Model
     // protected $timestamp = false;
     protected $fillable = [
         'name_society',
-        'gerant', 'adress',
+        'gerant',
+        'adress',
         'city',
         'phone',
         'skills',

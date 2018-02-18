@@ -1,0 +1,34 @@
+.template-sct{
+background: white;
+max-width: 320px;
+width:100%;
+/* padding-bottom: 50px; */
+/* padding-left: 260px; */
+
+}
+.logo-sct{
+padding-top: 20px;
+  padding-left: 25px;
+}
+.presentation-profil-sct{
+  background: lightgrey;
+  /* max-width: 800px; */
+  width: 100%;
+  /* margin: auto; */
+}
+.link{
+  padding-left: 10px;
+
+}
+a{
+  margin-bottom: 5px;
+}
+.display{
+display: flex;
+
+flex-wrap: wrap;
+justify-content: center;
+}
+.btn-primary{
+  margin-top: 200px;
+}

@@ -1,4 +1,4 @@
-
+/* FEUILLE DE STYLES PRINCIPALE */
 /*********** Styles pour écran (screen) ***********/
 html {
   font-size: 100%;
@@ -21,11 +21,12 @@ body {
   line-height:100px;
   text-align:center; /* centrage horizontal */ }
 }
-.titre {
+#titrecursive {
+  font-family: 'pattayaregular', sans-serif;
   text-align: center;
-  background: blue;
-  height: 90px;
-  padding-top: 15px;
+  min-height: 30px;
+  padding-top: 10px;
+  font-size: 1.8rem;
 }
 #logo-entete {
   position: absolute;
@@ -42,6 +43,9 @@ body {
   min-width: 160px;
   height: auto;
 }
+
+/* Styles pour le menu haut principal */
+
 #menuhp {
   height: 100px;
   width: 70%;
@@ -59,31 +63,7 @@ body {
   text-transform: uppercase;
   color: #295173;
 }
-div#search-box {
-  width: 100%;
-  padding: 5px;
-  background: #99D420;
-  min-height: 70px;
-}
-div#form-search-hp {
-  width: 80%;
-  margin: 10px auto;
-  vertical-align: middle;
-}
-input {
-  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-}
-input.form-control.col-sm-5 {
-  padding:5px;
-}
-.form-group{
-  margin-bottom:10px;
-}
-.metier {
-  float: left;
-}
-.ou {
-}
+
 ul#navhp {
   list-style: none outside none;
   margin: 0;
@@ -116,28 +96,8 @@ ul#navhp {
   color: #ec5c1b;
 }
 
-/* Pictogrammes SVG et rollover */
-.picto-img {
-  width: 10%;
-  height: auto;
-}
-.picto-box {
-}
-.picto-box a svg:hover #picto-annuaire {
-  fill: #2d5072;
-}
-.picto-box a svg:hover #picto-inscription {
-  fill: #b0e349;
-}
-.picto-box a:hover svg #pictorendezvous {
-  fill: #9e503e !important;
-}
-.picto-box a svg:hover #picto-devis {
-  fill: #ef743d;
-}
+/* Styles pour le Flexslider 2 */
 
-
-/* ******** Styles Flexslider 2 ******** */
 .flexslider {
   position: relative;
   padding: 0;
@@ -152,7 +112,7 @@ ul#navhp {
   max-width: 100%;
   min-width: 50px;
   height: auto;
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   font-size: 400%;
   text-transform: uppercase;
   text-align:center;
@@ -161,15 +121,209 @@ ul#navhp {
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 #compteur p {
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   font-size: 30%;
   color: #ec5c1b;
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 
+/* Styles pour le formulaire de recherche sur HP */
+
+div#search-box {
+  width: 100%;
+  padding: 5px;
+  background: #99D420;
+  min-height: 70px;
+  border-bottom: #ec5c1b solid 4px;
+}
+div#form-search-hp {
+  width: 80%;
+  margin: 10px auto;
+  vertical-align: middle;
+}
+input {
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+input.form-control.col-sm-5 {
+  padding:5px;
+}
+.form-group{
+  margin-bottom:10px;
+}
+.metier {
+  float: left;
+}
+
+/* Styles des blocs services */
+
+#main-services {
+  width: 100%;
+  min-height: 600px;
+}
+section#services {
+  width: 76%;
+  float: left;
+  margin-right: 2%;
+  /* background: #555; */
+}
+#first-service-box {
+  margin-left: 2%;
+}
+.service-box {
+  float: left;
+  width: 23%;
+  margin-right: 1.5%;
+}
+.bloc-text {
+  width: 100%;
+}
+h2 {
+  font-size: 1.1rem;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+div .bloc-text p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Styles des pictos SVG avec rollover */
+
+.picto-box {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.picto-box svg {
+  width: 100%;
+  max-width: 120px;
+  min-width: 50px;
+  height: auto;
+}
+.picto-box a:hover svg #pictoannuaire {
+  fill: #204159 !important;
+}
+.picto-box a:hover svg #pictoinscription {
+  fill: #8dba1e !important;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #713527 !important;
+}
+.picto-box a:hover svg #picto-devis {
+  fill: #d14d19 !important;
+}
+a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
+a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
+a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
+a:hover #picto-annu-lum-9 {
+  fill: #fd9400 !important;
+  stroke: #fd9400 !important;
+  fill-opacity:1 !important;
+  stroke-opacity:1 !important;
+}
+
+/* Styles pour la Section actualités */
+
+section#actualites {
+
+}
+
+/* Styles pour la Sidebar de droite */
+
+aside#flux-RSS {
+  width: 22%;
+  float: left;
+  /* background: #e5e5e5; */
+  min-height: 600px;
+  height: auto;
+  padding: 8px;
+  margin-top: 15px;
+  border-left: 2px solid #c9c9c9;
+}
+
+/* Styles du footer (bas de page) */
+
+#footer {
+  clear:both; /* forcer l’affichage sous le contenu et la colonne */
+  background: #295173;
+  color:#fff;
+  min-height:50px;
+  padding:25px;
+  /* text-align:center; */
+}
+.footerContainerBox{
+  height: 150px;
+  float: left;
+  width: 15%;
+  margin-left: 30px;
+}
+.footerPresentation {
+  width: 100%;
+  background: #2A5073;
+}
+.footerPresentation ul li a {
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  color:#99D420;
+  font-size: 1.2em;
+  position: relative;
+  float: left;
+  margin: 5px 25px;
+}
+.footerPresentation ul {
+  list-style: none outside none;
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+.footerPresentation li {
+  margin: 0 40px;
+  display: inline;
+}
+
+/* Styles page Présentation */
+
+.textePresentation {
+  height: 70px;
+  width: 100%;
+  background: #99D420;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+}
+.asidePresentation {
+  float: left;
+  background: #a4a4a4;
+  width: 20%;
+  height: auto;
+}
+.sectionPresentation {
+  float: left;
+  width: 80%;
+  padding-left: 10px;
+  background:#E6E6E6;
+  font-size:1.6em;
+  height: auto;
+}
+.paragraphePresentation {
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.pictoPresentation {
+  padding-left: 20%;
+}
+.pictoPresentation svg {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
-  
 
     #logo-entete {
       position: absolute;
@@ -191,13 +345,13 @@ ul#navhp {
       right: 20px;
       max-width: 100%;
       height: auto;
-      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
       line-height:1.3rem;
       font-size: 250%;
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
     #compteur p {
-      font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
       font-size: 35%;
       color: #ec5c1b;
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;

@@ -5,29 +5,48 @@
 @endsection
 
 @section('title')
-  Profil société.
+  Profil société
 @endsection
 
 @section('content')
+  <div class="textePresentation">
+<h2>{{$societies->name_society}}</h2>
+
+  </div>
 
 
   <section class="template-sct">
-    <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $societies->path . '/' . $societies->image_name,150,150,array('crop','grayscale'))}}" alt="">
       <div class="presentation-profil-sct">
-      <h5>{{$societies->name_society}}</h5>
+        <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
+
+        @if (!empty($societies->path))
+        <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $societies->path . '/' . $societies->image_name,150,150,array('crop','grayscale'))}}" alt="">
+        @else
+          <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',150,150,array('crop'))}}" alt="">
+        @endif
+        <hr>
       <p>Nom du gérant : {{$societies->gerant}}</p>
+      <hr>
       <p>Adresse : {{$societies->adress}}</p>
+      <hr>
       <p>Ville : {{$societies->city}}</p>
+      <hr>
       <p>Code postal : {{$societies->zip_code}}</p>
+      <hr>
       <p>Téléphone : {{$societies->phone}}</p>
-      <p><a href="{{$societies->site_web}}">site_web</a></p>
+      <hr>
+      <p>site_web : {{$societies->site_web}}</p>
+      <hr>
       <p>E-mail : {{$societies->email}}</p>
+      <hr>
       <p>Numéro siren : {{$societies->siren}}</p>
+      <hr>
       <p>Description : <br>{{$societies->skills}}</p>
+      <hr>
+      <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
+
     </div>
   </section>
-
-
 <div class="footerPresentation">
 </div>
 
