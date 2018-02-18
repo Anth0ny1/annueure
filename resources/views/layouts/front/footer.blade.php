@@ -59,11 +59,13 @@
                         <ul>
                           <li>
                             {{-- {{dd($societelimit3)}} --}}
-                            @foreach ($societelimit3 as $societelim)
+                            {{-- @foreach ($societelimit3 as $societelim) --}}
                               <ul>
-                                <li><a href="">{{ $societelim->name_society }}</a></li>
+                                <li><a href=""></a>Societe1</li>
+                                <li><a href=""></a>Societe2</li>
+                                <li><a href=""></a>Societe3</li>
                               </ul>
-                            @endforeach
+                            {{-- @endforeach --}}
                           </li>
                         </ul>
                       </div>
