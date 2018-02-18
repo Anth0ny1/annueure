@@ -12,34 +12,34 @@
     </div>
     <ul class="slides">
       <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
+        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide02a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide02a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide03a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide03a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide05a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide05a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide06a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide06a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide07a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide07a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide08a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide08a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide09a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide09a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide10a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide10a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide12a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide12a.jpg') }}" alt="" />
       </li>
     </ul>
   </div>
@@ -113,9 +113,9 @@
 
           <!-- Fin affichage des erreurs du formulaire -->
 
-          <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+        <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
             “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
-          </h1>
+        </h1>
         <div id="first-service-box" class="service-box ">
           <div class="picto-box">
             <a href="{{ route('annuaire') }}">
@@ -123,7 +123,7 @@
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Annuaire des Pros</h2>
+            <h3>Annuaire des Pro</h3>
             <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
           </div>
         </div>
@@ -134,7 +134,7 @@
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Inscription des Pro</h2>
+            <h3>Inscription des Pro</h3>
             <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
           </div>
         </div>
@@ -145,7 +145,7 @@
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Prendre un rendez-vous</h2>
+            <h3>Prendre un rendez-vous</h3>
             <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
           </div>
         </div>
@@ -156,15 +156,53 @@
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Demander un devis</h2>
+            <h3>Demander un devis</h3>
             <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
           </div>
         </div>
       </section>
-      <section id="actualites">
-      </section>
 
-<!-- SIDEBAR DROITE - FLUX RSS -->
+      <section id="actualites">
+        <h2 class="separation">
+            Focus : les métiers du jour
+        </h2>
+        <div id="first-actu-box" class="actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-01.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Paysagistes et jardiniers</h3>
+            <p>Découvrir le métier de jardinier / paysagiste dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+        <div class="actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-02.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Menuisiers et décorateurs</h3>
+            <p>Découvrir le métier de Menuisiers / décorateurs dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+        <div class="actu-box" id="last-actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-03.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Conducteurs de travaux BTP</h3>
+            <p>Découvrir le métier de Conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+      </section>
+  </main>
+
+<!-- SIDEBAR A DROITE - FLUX RSS -->
 
     <aside id="flux-RSS">
       <div class="rss">
@@ -186,7 +224,7 @@
         </p>
       </div>
     </aside>
-  </main>
+
 <!-- CONTENEUR AJAX JS -->
 
 {{-- <a href="# "id="btnafficheuser">Get users</a>
