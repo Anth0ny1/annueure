@@ -283,9 +283,9 @@
 
       {{ $count }}
 
-      @foreach ($categories as $categorie)
+      {{-- @foreach ($categories as $categorie)
         {{ $categorie->categorie_name }}
-      @endforeach
+      @endforeach --}}
 
 @endsection
 

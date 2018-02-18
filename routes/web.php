@@ -24,6 +24,8 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/', 'HomeController@index')->name('home');
 
+  // Route::get('/', 'HomeController@footer')->name('footer');
+
   // CONTACT ROUTING
   //
   Route::get('/contact', 'ContactUsController@contactView')->name('nous-contacter-view');

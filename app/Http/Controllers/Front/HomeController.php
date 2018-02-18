@@ -33,6 +33,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     // public function footer(){
+     //   $societies = Society::orderBy('created_at', 'desc')->limit(3)->get();
+     //
+     //   return view('layouts/front/footer', compact('societies'));
+     // }
     public function index()
     {
       $selectCategories = Categories::get();
@@ -47,8 +52,9 @@ class HomeController extends Controller
 
       $mycountsociety = Society::where('user_id' ,  '=', $id)->count();
 
-      $categories = Categories::inRandomOrder()->limit(3)->get();
+      $societelimit3 = Society::inRandomOrder()->limit(3)->get();
 
+      // $societies = Society::orderBy('created_at', 'desc')->limit(3)->get();
 
 //       $url = "http://www.lemonde.fr/m-actu/rss_full.xml"; /* insérer ici l'adresse du flux RSS de votre choix */
 //       $rss = simplexml_load_file($url);
@@ -89,7 +95,7 @@ class HomeController extends Controller
 //       }
 //       echo '</ul>';
 
-        return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip', 'mycountsociety'));
+        return view('home', compact('users', 'count', 'societies', 'selectCategories', 'selectZip', 'mycountsociety', 'societelimit3'));
     }
 
     public function annuaire()

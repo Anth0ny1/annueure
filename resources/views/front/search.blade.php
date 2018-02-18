@@ -15,10 +15,11 @@ recherche société
   </div>
   <div class="content_search">
     <div class="ResultatSearch">
-      {{-- <h4> {{$societiesCount}} sociétés figure dans votre recherche.</h4> --}}
+      {{-- <h4> {{$societies}} sociétés figure dans votre recherche.</h4> --}}
       <hr>
     </div>
     <div class="display">
+
       @foreach ($societies as $qq)
         {{-- {{dd($qq)}} --}}
         <div class="bloc_societe">
@@ -32,13 +33,14 @@ recherche société
           <h5>{{ $qq->name_society}}</h5>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
-          <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p>
-          <p class="p"><i class="fas fa-map-signs"></i> : {{ $qq->zip_code}}</p>
+          {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
+          {{-- <p class="p"><i class="fas fa-map-signs"></i> : {{ $qq->zip_code}}</p> --}}
           <p class="p"><i class="fas fa-map-marker-alt"></i> : {{ $qq->city}}</p>
           <p class="p"><i class="fas fa-phone-square"></i> : {{ $qq->phone}}</p>
-          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">site_web</a></p>
+          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">{{$qq->site_web}}</a></p>
           <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
-          <p class="p">Siren : {{$qq->siren}}</p>
+          {{-- <p class="p">Siren : {{$qq->siren}}</p> --}}
+          <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->society_id])}}">Voir la fiche</a>
         </div>
       @endforeach
     </div>
