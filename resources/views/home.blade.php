@@ -208,7 +208,37 @@
 <!-- SIDEBAR A DROITE - FLUX RSS -->
 
     <aside id="flux-RSS">
-      <div class="rss">
+<div class="rss">
+    	<?php
+      
+	try{
+		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
+			throw new Exception('Flux introuvable');
+		}
+		if(empty($fluxrss->channel->title) || empty($fluxrss->channel->description) || empty($fluxrss->channel->item->title))
+			throw new Exception('Flux invalide');
+
+		echo '<h3 class="h3_rss">'.(string)$fluxrss->channel->title.'</h3>
+				<p class="p_rss">'.(string)$fluxrss->channel->description.'</p>';
+
+		$i = 0;
+		$nb_affichage = 20;
+		echo '<ul>';
+		foreach($fluxrss->channel->item as $item){
+			echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'">'.(string)$item->title.'</a> </li>';
+			if(++$i>=$nb_affichage)
+				break;
+		}
+		echo '</ul>';
+	}
+	catch(Exception $e){
+		echo $e->getMessage();
+	}
+
+?>
+</div>
+<span></span>
+      {{-- <div class="rss">
         <h3>Titre du flux RSS</h3>
         <p>
           Ici un flux RSS sur les annonces d'emplois (à trouver sur Internet).
@@ -225,7 +255,7 @@
         <p>
           Ici un autre flux RSS sur les actualités du BTP en général (à trouver sur Internet).
         </p>
-      </div>
+      </div> --}}
     </aside>
 
 <!-- CONTENEUR AJAX JS -->
@@ -277,11 +307,11 @@
     --}}
 
     {{-- {{ dd($users)}} --}}
-      @foreach ($users as $user)
+      {{-- @foreach ($users as $user)
         {{ $user->name }}
       @endforeach
 
-      {{ $count }}
+      {{ $count }} --}}
 
       {{-- @foreach ($categories as $categorie)
         {{ $categorie->categorie_name }}
