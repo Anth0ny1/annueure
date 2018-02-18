@@ -69,6 +69,8 @@ class SearchController extends Controller
     else {
       return redirect()->route('home')->with('danger', 'Veuillez entrez au moin un paramètre de recherche');
     }
+
+    // dd($societies);
     // else {
     //
     // }
