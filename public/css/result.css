@@ -3,11 +3,30 @@
 }
 .bloc_societe{
 width: 200px;  /* Or whatever */
-height: 400px; /* Or whatever */
+/* height: 400px; /* Or whatever */ */
 margin: 10px;  /* Magic! */
 background: white;
 border-radius: 10px 10px 10px 10px;
 border: 1px solid lightgrey;
+margin-bottom: 15px;
+padding-bottom: 50px;
+position: relative;
+margin-left: 10px;
+}
+
+.btn-success{
+  position :absolute;
+  left:20%;
+  background: #F25C19;
+	color:white;
+    border: none;
+}
+.btn-success:hover{
+  position :absolute;
+  left:20%;
+  background: #99D420;
+	color:white;
+    border: none;
 }
 .content_search{
   max-width: 1200px;
@@ -50,9 +69,10 @@ h5{
 .p{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
-  font-size: 120%;
+  font-size: 150%;
   padding-left: 10px;
   line-height: 7px;
+  margin-bottom: 10px;;
 }
 .fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
   color: #2A5073;
