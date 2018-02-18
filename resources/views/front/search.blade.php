@@ -34,7 +34,7 @@ recherche société
           <p class="p"><i class="fas fa-map-signs"></i> : {{ $qq->zip_code}}</p>
           <p class="p"><i class="fas fa-map-marker-alt"></i> : {{ $qq->city}}</p>
           <p class="p"><i class="fas fa-phone-square"></i> : {{ $qq->phone}}</p>
-          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">site_web</a></p>
+          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">{{$qq->site_web}}</a></p>
           <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
           <p class="p">Siren : {{$qq->siren}}</p>
         </div>
