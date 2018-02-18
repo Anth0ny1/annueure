@@ -54,6 +54,8 @@ class SearchController extends Controller
             ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
             ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
             ->where('categories_society.categories_id' ,'=',$id_categories )
+            ->select('society.*')
+
             ->get();
 
 
@@ -67,7 +69,7 @@ class SearchController extends Controller
     // else {
     //
     // }
-
+    // dd($societies);
 
     // dd($societies);
 

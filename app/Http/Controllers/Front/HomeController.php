@@ -50,44 +50,44 @@ class HomeController extends Controller
       $categories = Categories::inRandomOrder()->limit(3)->get();
 
 
-      $url = "http://www.lemonde.fr/m-actu/rss_full.xml"; /* insérer ici l'adresse du flux RSS de votre choix */
-      $rss = simplexml_load_file($url);
-
-
-// $mich = $rss->channel->item;
-
-// dd($mich);
-foreach ($rss->channel->item as $mich) {
-  # code...
-  // $mich = $rss->channel->item;
-
-  $test = (array)$mich;
-
-  // echo '<pre>';
-  // print_r($test);
-}
-
-// $michel = array_slice($test, 0, 2);
-// dd($michel);
-      // dd($test);
-      echo '<ul>';
-      foreach ($rss->channel->item as $item){
-        // dd($item);
-        // $michel = array_slice($item, 0, 10);
-        // foreach ($michel as $test => $vam) {
-        //   echo $vam;
-        //   echo '<br>';
-        // }
-        // dd($item);
-
-        echo (string)$item->title;
-        // echo $item['title'];
-        echo '<br>';
-       // $datetime = date_create($item->pubDate);
-       // $date = date_format($datetime, 'd M Y, H\hi');
-       // echo '<li><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</li>';
-      }
-      echo '</ul>';
+//       $url = "http://www.lemonde.fr/m-actu/rss_full.xml"; /* insérer ici l'adresse du flux RSS de votre choix */
+//       $rss = simplexml_load_file($url);
+//
+//
+// // $mich = $rss->channel->item;
+//
+// // dd($mich);
+// foreach ($rss->channel->item as $mich) {
+//   # code...
+//   // $mich = $rss->channel->item;
+//
+//   $test = (array)$mich;
+//
+//   // echo '<pre>';
+//   // print_r($test);
+// }
+//
+// // $michel = array_slice($test, 0, 2);
+// // dd($michel);
+//       // dd($test);
+//       echo '<ul>';
+//       foreach ($rss->channel->item as $item){
+//         // dd($item);
+//         // $michel = array_slice($item, 0, 10);
+//         // foreach ($michel as $test => $vam) {
+//         //   echo $vam;
+//         //   echo '<br>';
+//         // }
+//         // dd($item);
+//
+//         echo (string)$item->title;
+//         // echo $item['title'];
+//         echo '<br>';
+//        // $datetime = date_create($item->pubDate);
+//        // $date = date_format($datetime, 'd M Y, H\hi');
+//        // echo '<li><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</li>';
+//       }
+//       echo '</ul>';
 
         return view('home', compact('users', 'count', 'categories', 'selectCategories', 'selectZip', 'mycountsociety'));
     }
