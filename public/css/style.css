@@ -292,7 +292,17 @@ aside#flux-RSS {
   margin-top: 15px;
   border-left: 2px solid #c9c9c9;
 }
-
+.h3_rss{
+  background:#295173;
+  color:white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.p_rss{
+  font-size:110%;
+  text-align: center;
+  border-bottom: 2px dotted #c9c9c9;
+}
 /* Styles du footer (bas de page) */
 
 #footer {
