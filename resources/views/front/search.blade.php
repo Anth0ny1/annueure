@@ -40,7 +40,7 @@ recherche société
           <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">{{$qq->site_web}}</a></p>
           <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
           {{-- <p class="p">Siren : {{$qq->siren}}</p> --}}
-          <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->society_id])}}">Voir la fiche</a>
+          <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->id])}}">Voir la fiche</a>
         </div>
       @endforeach
     </div>
