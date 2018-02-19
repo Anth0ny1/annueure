@@ -196,7 +196,7 @@
           </div>
           <div class="bloc-text">
             <h3>Conducteurs de travaux BTP</h3>
-            <p>Découvrir le métier de Conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
+            <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
         </div>
       </section>
