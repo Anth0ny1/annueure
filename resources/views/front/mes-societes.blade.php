@@ -21,6 +21,17 @@
     @endif
   </div>
   <div>  <!-- container -->
+    @if (session('success'))
+      <div class="alert alert-success">
+        {{ session('success') }}
+      </div>
+    @endif
+
+    @if (session('danger'))
+      <div class="alert alert-danger">
+        {{ session('danger') }}
+      </div>
+    @endif
     <aside class="asidePresentation"> <!-- left aside -->
       <div class="pictoPresentation">
         <ul>

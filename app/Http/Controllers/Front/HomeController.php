@@ -14,7 +14,7 @@ use App\User;
 use App\Categories;
 use App\Society;
 use Auth;
-
+use App\Services\Rss;
 
 class HomeController extends Controller
 {
@@ -26,6 +26,14 @@ class HomeController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
+    }
+
+    private static function cmp( $a, $b ) {
+      // if ($a == $b) {
+      //     return 0;
+      // }
+      // return ($a < $b) ? -1 : 1;
+        return strtotime($a['pubDate']) < strtotime($b['pubDate']);
     }
 
     /**
@@ -54,14 +62,55 @@ class HomeController extends Controller
 
       $societelimit3 = Society::inRandomOrder()->limit(3)->get();
 
+      $rs = new Rss();
+      $array = $rs->Rss('http://www.lemonde.fr/m-actu/rss_full.xml', 2);
 
-      $url = 'http://www.lemonde.fr/m-actu/rss_full.xml';
+      $rs2 = new Rss();
+      $array2 = $rs2->Rss('https://www.lequipe.fr/rss/actu_rss_Football.xml', 3);
 
-      $rss = simplexml_load_file($url);
+      $rs3 = new Rss();
+      $array3 = $rs3->Rss('http://www.batiweb.com/rss', 2);
 
-      $michel = json_encode($rss);
+      $rs4 = new Rss();
+      $array4 = $rs4->Rss('http://rss.maxifoot.com/football-general.xml', 15);
 
-      // dd($michel);
+      $supermichel = $rs4->arrayMerge($array,$array2,$array3,$array4);
+      // $supermichel = $rs4->arrayMerge($array, $array2, $array3, $array4);
+
+      // dd($supermichel);
+      // dd($array);
+      // $url1 = 'http://www.lemonde.fr/m-actu/rss_full.xml';
+      // $url2 = "https://www.lequipe.fr/rss/actu_rss_Football.xml";
+      //
+      // $rss1 = simplexml_load_file($url1);
+      // $rss2 = simplexml_load_file($url2);
+      //
+      //
+      // $michel1 = json_encode($rss1);
+      // $michel2 = json_encode($rss2);
+      //
+      // $mich1 = json_decode($michel1, true);
+      // $michou1 = array_slice($mich1['channel']['item'], 0, 2);
+      //
+      // $mich2 = json_decode($michel2, true);
+      // $michou2 = array_slice($mich2['channel']['item'], 0, 2);
+      //
+      // $supermichel = array_merge($michou1, $michou2);
+      //
+      // // dd($michou1);
+      // // dd($mich1['channel']['item']);
+      // foreach ($supermichel as $key => $value) {
+      //   echo $value['title'];
+      //   echo $value['pubDate'];
+      //   echo '<br>';
+      // }
+      //
+      //
+      // dd($supermichel);
+      //   usort($supermichel, array($this, 'cmp'));
+      //   // $micheltri = array_multisort($supermichel, SORT_ASC, SORT_NUMERIC);
+      // // $michmich = array_slice($supermichel)
+      // dd($supermichel);
       // $urlFeed = "http://www.lemonde.fr/m-actu/rss_full.xml";
       // $urlFeed2 = "https://www.lequipe.fr/rss/actu_rss_Football.xml";
       //
