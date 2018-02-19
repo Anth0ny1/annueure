@@ -7,7 +7,7 @@ body {
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
   color: #000;
-  background: #dcdcdc url('../img/picto/fd-pictos-outils-gris-anthracite-trame.png');
+  background: #dcdcdc url('../img/picto/fd-pictos-outils-gris-clair.png');
 }
 #wrapper {
   max-width: 1280px;
@@ -75,8 +75,9 @@ ul#navhp {
 }
 #navhp li {
   display: inline;
-  margin: 10px 10px;
+  margin: 10px 5px;
   font-size: 1.0rem;
+  line-height: 1.15rem;
   height: 30px;
   /* border-radius: 3%; */
 }
