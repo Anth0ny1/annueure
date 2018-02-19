@@ -44,7 +44,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 3,
         'name_society'       => 'Sarl Menuiserie Andresienne',
         'gerant'       => 'Mr Andresienne',
         'adress'    => '11 Rue Jules Cayaux',
@@ -58,7 +58,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 4,
         'name_society'       => 'SARL LA CHARPENTE COURVILLOISE ',
         'gerant'       => 'Mr Courvilloise',
         'adress'    => '7 Rue de Châteauneuf',
@@ -72,7 +72,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 5,
         'name_society'       => 'Treuil Sa',
         'gerant'       => 'Mr Treuil',
         'adress'    => 'Rue de Jumelles',
@@ -86,7 +86,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 6,
         'name_society'       => 'Letac Dominique',
         'gerant'       => 'gerant1',
         'adress'    => '175 Le Bout d\'Amont',
@@ -100,7 +100,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 7,
         'name_society'       => 'Alain Lainé',
         'gerant'       => 'Mr Lainé',
         'adress'    => 'Rue du Camping',
@@ -114,7 +114,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 8,
         'name_society'       => 'Charpente Menuiserie Rénovation JM3',
         'gerant'       => 'Mr boulay',
         'adress'    => '2 Rue du Boulay',
@@ -128,7 +128,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 9,
         'name_society'       => 'Leroy Pascal',
         'gerant'       => 'Mr leroy',
         'adress'    => '14 Rue des Coquelicots',
@@ -142,7 +142,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 10,
         'name_society'       => 'Fresnais Store et Fermetures',
         'gerant'       => 'Mr Fresnais',
         'adress'    => '5 Rue du Clos Bourdin',
@@ -156,7 +156,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 11,
         'name_society'       => 'A2CM Masset',
         'gerant'       => 'Mr masset',
         'adress'    => '8 Rue Mauger, Pressagny le bal',
@@ -170,7 +170,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 12,
         'name_society'       => 'Ets CIPP',
         'gerant'       => 'Mr Cipp',
         'adress'    => 'route des poules ',
@@ -184,7 +184,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 13,
         'name_society'       => 'SARL DUCHESNE ELECTRICITE',
         'gerant'       => 'gerant1',
         'adress'    => 'Rue du Moulin à Tan',
@@ -198,7 +198,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 14,
         'name_society'       => 'ECL Electricité Christophe Larchevêque',
         'gerant'       => 'gerant1',
         'adress'    => '6 Rue des Trottiers',
@@ -207,26 +207,12 @@ class SocietyTableSeeder extends Seeder
         'phone'        => '0649378553',
         'site_web'        => 'societe8.com',
         'skills'        => 'Entreprise d\'électricité, nous réaliserons vos devis',
-        'email'        => 'larcheveques@gmail.com',
+        'email'        => 'cheveques@gmail.com',
         'siren'        => 658936787,
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
-        'name_society'       => 'nom de la societe2',
-        'gerant'       => 'gerant1',
-        'adress'    => 'route des poules ',
-        'city'        => 'Evreux',
-        'zip_code'        => '75000',
-        'phone'        => '0232434324',
-        'site_web'        => 'societe1.com',
-        'skills'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ',
-        'email'        => 'example5@gmail.com',
-        'siren'        => 393456787,
-        'created_at'  => $date
-      );
-      $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 15,
         'name_society'       => 'BRUNET BATAILLE',
         'gerant'       => 'Mr Brunet',
         'adress'    => 'Rue Jean Petit, ZA Le Haut du Val 2',
@@ -240,7 +226,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 16,
         'name_society'       => 'Yd Elec Normandie',
         'gerant'       => 'mr elmec',
         'adress'    => '36 Route de Saint-Mards',
@@ -254,7 +240,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 17,
         'name_society'       => 'ACDC Electricité',
         'gerant'       => 'Mr acedec',
         'adress'    => '7 Lotissement la Pommeraie',
@@ -268,7 +254,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 18,
         'name_society'       => 'Aulney Fils',
         'gerant'       => 'Mr Aulney',
         'adress'    => '30 Rue des Canadiens',
@@ -282,7 +268,7 @@ class SocietyTableSeeder extends Seeder
         'created_at'  => $date
       );
       $society[] = array(
-        'user_id'        => 2,
+        'user_id'        => 19,
         'name_society'       => 'Lebellois Electrcite Generale',
         'gerant'       => 'Mr Lebellois',
         'adress'    => '185 Chemin du Clos des Champs',
@@ -295,7 +281,664 @@ class SocietyTableSeeder extends Seeder
         'siren'        => 836456787,
         'created_at'  => $date
       );
-
+      $society[] = array(
+        'user_id'        => 20,
+        'name_society'       => 'Gedibois Bois et dérivés de l\'Eure',
+        'gerant'       => 'Mr Gedibois',
+        'adress'    => 'Za La Carrellerie, 45 Avenue Royal M Commando',
+        'city'        => 'Beuzeville',
+        'zip_code'        => '27210',
+        'phone'        => '0232568917',
+        'site_web'        => 'http://www.gedibois.fr/',
+        'skills'        => 'Depuis 2002, la société Gedibois Électricité, située à St-Symphorien et possédant un atelier à Epaignes',
+        'email'        => 'gedibois@gmail.com',
+        'siren'        => 836456237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 21,
+        'name_society'       => 'Eure-menuiserie',
+        'gerant'       => 'Mr deshaies',
+        'adress'    => '28 Chemin des Haies',
+        'city'        => 'Les Damps',
+        'zip_code'        => '27340',
+        'phone'        => '0668527383',
+        'site_web'        => 'http://www.euremenuiserie.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'deshaies@gmail.com',
+        'siren'        => 836286237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 22,
+        'name_society'       => 'Peltier Menuiserie Sarl',
+        'gerant'       => 'Mr Peltier',
+        'adress'    => 'bis, 3 Rue de Tréon',
+        'city'        => 'Villemeux-sur-Eure',
+        'zip_code'        => '28210',
+        'phone'        => '0237823935',
+        'site_web'        => 'http://www.menuiseriepeltier.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'peltier@gmail.com',
+        'siren'        => 831856237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 23,
+        'name_society'       => 'JP Plomberie',
+        'gerant'       => 'Mr jp',
+        'adress'    => '14 Rue des Groults',
+        'city'        => 'Rougemontiers',
+        'zip_code'        => '27350',
+        'phone'        => '0232577939',
+        'site_web'        => 'http://www.jp-plomberie-eure.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'jp@gmail.com',
+        'siren'        => 739856237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 24,
+        'name_society'       => 'C.e.p.s Sces Vasseur',
+        'gerant'       => 'Mr jp',
+        'adress'    => '7 Place Ferrand',
+        'city'        => 'Le Neubourg',
+        'zip_code'        => '27110',
+        'phone'        => '0232626560',
+        'site_web'        => 'https://www.cepsservicesvasseur.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'vasseur@gmail.com',
+        'siren'        => 039856237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 25,
+        'name_society'       => 'SARL Ledein Pascal',
+        'gerant'       => 'Mr jp',
+        'adress'    => '19 Avenue Victor Hugo',
+        'city'        => 'Saint-André-de-l\'Eure',
+        'zip_code'        => '27220',
+        'phone'        => '0232373023',
+        'site_web'        => 'http://ledeinsarl.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'ledein@gmail.com',
+        'siren'        => 744856293,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 26,
+        'name_society'       => 'Mural\'Gaz',
+        'gerant'       => 'Mr gaz',
+        'adress'    => 'Centre commercial CAP CAER',
+        'city'        => 'Normanville',
+        'zip_code'        => '27930',
+        'phone'        => '0232261000',
+        'site_web'        => 'http://www.muralgaz.com',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'gaz@gmail.com',
+        'siren'        => 744856387,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 27,
+        'name_society'       => 'Jaffre Thierry',
+        'gerant'       => 'Mr Jaffre',
+        'adress'    => '46 Route des Moulinards',
+        'city'        => 'Saint-André-de-l\'Eure',
+        'zip_code'        => '27220',
+        'phone'        => '0974561101',
+        'site_web'        => 'http://www.jaffre-plomberie-eure.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'jaffre@gmail.com',
+        'siren'        => 744527237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 28,
+        'name_society'       => 'Sc couvreur',
+        'gerant'       => 'Mr sc',
+        'adress'    => '2 rue de la république',
+        'city'        => 'Pacy-sur-Eure',
+        'zip_code'        => '27220',
+        'phone'        => '0622437502',
+        'site_web'        => 'http://sc-couvreur.business.site/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'scam@gmail.com',
+        'siren'        => 744856237,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 29,
+        'name_society'       => 'Cognard Christophe',
+        'gerant'       => 'Mr Cognard Christophe',
+        'adress'    => '33 Rue de la Croix Roger',
+        'city'        => 'Heudebouville',
+        'zip_code'        => '27400',
+        'phone'        => '0974560159',
+        'site_web'        => 'http://www.cognard-couverture.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'cognard.christophe@gmail.com',
+        'siren'        => 744861337,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 30,
+        'name_society'       => 'Bance Philippe',
+        'gerant'       => 'Mr Bance Philippe',
+        'adress'    => '8 Rue Roger Lefebvre',
+        'city'        => 'Écardenville-sur-Eure',
+        'zip_code'        => '27490',
+        'phone'        => '0232346818',
+        'site_web'        => 'http://www.bance-couverture.fr/couverture-ecardenville-sur-eure.html',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'bance.philippe@gmail.com',
+        'siren'        => 744856149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 31,
+        'name_society'       => 'Maçonnerie Générale Sas Thierry Romero',
+        'gerant'       => 'Mr Thierry Romero',
+        'adress'    => '28 Hameau de la Forêt',
+        'city'        => 'Grandvilliers',
+        'zip_code'        => '27240',
+        'phone'        => '0232348152',
+        'site_web'        => 'http://www.thierryromero.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'thierry.romero@gmail.com',
+        'siren'        => 888056149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 32,
+        'name_society'       => 'Entreprise Meslin Et Fils',
+        'gerant'       => 'Mr Meslin',
+        'adress'    => 'Zone Artisanale Le Haut Du Val',
+        'city'        => 'Crosville-la-Vieille',
+        'zip_code'        => '27110',
+        'phone'        => '0615031458',
+        'site_web'        => 'http://www.maconnerie-meslin.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'meslin@gmail.com',
+        'siren'        => 888156149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 33,
+        'name_society'       => 'Leite Et Fils Sarl',
+        'gerant'       => 'Mr Leite',
+        'adress'    => '11 Route de la Futelaye',
+        'city'        => 'Saint-André-de-l\'Eure',
+        'zip_code'        => '27220',
+        'phone'        => '0232376739',
+        'site_web'        => 'http://www.leiteetfils.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'leite@gmail.com',
+        'siren'        => 888256149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 34,
+        'name_society'       => 'Banas Frederic Menuiserie Charpente',
+        'gerant'       => 'Mr Banas Frederic',
+        'adress'    => '7 Route du Lavoir',
+        'city'        => 'Authou',
+        'zip_code'        => '27290',
+        'phone'        => '0232448722',
+        'site_web'        => 'https://www.menuiserie-charpente-banas-frederic.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'banas.frederic@gmail.com',
+        'siren'        => 888356149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 35,
+        'name_society'       => 'Malbranche Guy-François',
+        'gerant'       => 'Mr Banas Frederic',
+        'adress'    => '12 Rue de l\'Ancienne Gare',
+        'city'        => 'Lieurey',
+        'zip_code'        => '27560',
+        'phone'        => '0232579671',
+        'site_web'        => 'http://ebeniste-sculpteur.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'guy.françois@gmail.com',
+        'siren'        => 888456149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 36,
+        'name_society'       => 'ebeniste restauration de meubles',
+        'gerant'       => 'Mr rotin',
+        'adress'    => '1 Rue des Iris',
+        'city'        => 'Buis Sur Damville',
+        'zip_code'        => '27240',
+        'phone'        => '0232298566',
+        'site_web'        => 'http://restauration-meubles-anciens-ebeniste-paris-versailles.over-blog.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'rotin@gmail.com',
+        'siren'        => 888556149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 37,
+        'name_society'       => 'Defontaine Grégory',
+        'gerant'       => 'Mr Defontaine',
+        'adress'    => 'Rue du Haut des Granges',
+        'city'        => 'Courbépine',
+        'zip_code'        => '27300',
+        'phone'        => '0232449104',
+        'site_web'        => 'https://www.societe.com/societe/eurl-gregory-defontaine-501347181.html',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'defontaine@gmail.com',
+        'siren'        => 888656149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 38,
+        'name_society'       => 'ACT\'Eure Steeve SAUL',
+        'gerant'       => 'Mr SAUL',
+        'adress'    => '7 Rue du Merger',
+        'city'        => 'Les Ventes',
+        'zip_code'        => '27180',
+        'phone'        => '0635187119',
+        'site_web'        => 'http://www.act-eure.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'steeve.saul@gmail.com',
+        'siren'        => 888756149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 39,
+        'name_society'       => 'ETP LUCAS',
+        'gerant'       => 'Mr LUCAS',
+        'adress'    => '5 rue Masselin ZA Les Granges',
+        'city'        => 'Bernay',
+        'zip_code'        => '27300',
+        'phone'        => '0232463055',
+        'site_web'        => 'http://www.lucas-carreleur.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'lucas@gmail.com',
+        'siren'        => 888856149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 40,
+        'name_society'       => 'Alain ROUSSELLE',
+        'gerant'       => 'Mr ROUSSELLE',
+        'adress'    => '5 Rue des Fleurs',
+        'city'        => 'Saint-Pierre-la-Garenne',
+        'zip_code'        => '27600',
+        'phone'        => '0624326527',
+        'site_web'        => 'http://www.plaquiste-rousselle.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'alain.rousselle@gmail.com',
+        'siren'        => 888956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 41,
+        'name_society'       => 'SAS M.S.B',
+        'gerant'       => 'Mr ROUSS',
+        'adress'    => '8 rue de gaulle',
+        'city'        => 'Sainte-Marthe',
+        'zip_code'        => '27800',
+        'phone'        => '0232588918',
+        'site_web'        => 'https://www.msb-renovation.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'msb.sas@gmail.com',
+        'siren'        => 188956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 42,
+        'name_society'       => 'Blin Marcel plaquiste',
+        'gerant'       => 'Mr Blin',
+        'adress'    => 'Zi les champs riou',
+        'city'        => 'La Bonneville-sur-Iton',
+        'zip_code'        => '27190',
+        'phone'        => '0232394698',
+        'site_web'        => 'http://plaquiste-evreux-isolation-normandie.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'blin.marcel@gmail.com',
+        'siren'        => 288956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 43,
+        'name_society'       => 'Simon Projection',
+        'gerant'       => 'Mr Simon',
+        'adress'    => '207 Chemin des Thuits',
+        'city'        => 'Le Bosc-Roger-en-Roumois',
+        'zip_code'        => '27670',
+        'phone'        => '0235771803',
+        'site_web'        => 'http://www.ravalement-facades-normandie.fr/decouvrez-simon-projection',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'simon@gmail.com',
+        'siren'        => 388956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 44,
+        'name_society'       => 'Batipro',
+        'gerant'       => 'Mr pimon',
+        'adress'    => '10 Bis Avenue Mar De Lattre de Tassigny',
+        'city'        => 'Louviers',
+        'zip_code'        => '27400',
+        'phone'        => '0232406975',
+        'site_web'        => 'http://www.batipro-facades.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'pimon@gmail.com',
+        'siren'        => 488956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 45,
+        'name_society'       => 'Art Déco Habitat',
+        'gerant'       => 'Mr herdans',
+        'adress'    => 'ALLÉE DES MERISIERS - ECOPARC 1',
+        'city'        => 'Heudebouville',
+        'zip_code'        => '27400',
+        'phone'        => '0232341525',
+        'site_web'        => 'https://www.ravalement-facade-eure.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'herdans@gmail.com',
+        'siren'        => 588956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 46,
+        'name_society'       => 'Malheux Terrassements',
+        'gerant'       => 'Mr Malheux',
+        'adress'    => 'Zone Artisanale Le Trefle, Route de Lieurey',
+        'city'        => 'Épaignes',
+        'zip_code'        => '27260',
+        'phone'        => '0232575470',
+        'site_web'        => 'https://www.malheux-terrassements.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'malheux@gmail.com',
+        'siren'        => 718956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 47,
+        'name_society'       => 'BJD Sarl Terrassement',
+        'gerant'       => 'Mr ssement',
+        'adress'    => '15 Rue des Noyers',
+        'city'        => 'Émalleville',
+        'zip_code'        => '27930',
+        'phone'        => '0232349742',
+        'site_web'        => 'http://www.bjd-terrassement.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'ssement@gmail.com',
+        'siren'        => 728956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 48,
+        'name_society'       => 'BENARD TP',
+        'gerant'       => 'Mr BENARD',
+        'adress'    => '3 Chemin de la Sablonnière',
+        'city'        => 'Fontaine-Bellenger',
+        'zip_code'        => '27600',
+        'phone'        => '0232774295',
+        'site_web'        => 'http://tp-eure-voirie-gaillon-terrassement-27.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'benard@gmail.com',
+        'siren'        => 738956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 49,
+        'name_society'       => 'Metal Eure',
+        'gerant'       => 'Mr medal',
+        'adress'    => 'rue du 18 juin 40',
+        'city'        => 'Pacy-sur-Eure',
+        'zip_code'        => '27120',
+        'phone'        => '0669474989',
+        'site_web'        => 'http://www.metaleure.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'medal@gmail.com',
+        'siren'        => 748956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 50,
+        'name_society'       => 'SARL Duthe Franck',
+        'gerant'       => 'Mr duthe',
+        'adress'    => '8 Rue du Gril',
+        'city'        => 'Louviers',
+        'zip_code'        => '27400',
+        'phone'        => '0232599763',
+        'site_web'        => 'http://www.franckduthe.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'duthe@gmail.com',
+        'siren'        => 758956151,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 51,
+        'name_society'       => 'lapin sécurité serrurerie générale',
+        'gerant'       => 'Mr lapin',
+        'adress'    => '11 Rue Saint-Pierre',
+        'city'        => 'Évreux',
+        'zip_code'        => '27000',
+        'phone'        => '0618682585',
+        'site_web'        => 'http://www.serrurerie-depannage-evreux.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'lapin@gmail.com',
+        'siren'        => 758956150,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 52,
+        'name_society'       => 'AKA Alexis Karmowski',
+        'gerant'       => 'Mr karmowski',
+        'adress'    => '6 Rue de l\'Église',
+        'city'        => 'Vatteville',
+        'zip_code'        => '27430',
+        'phone'        => '0607292018',
+        'site_web'        => 'https://www.alexisk-architecture.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'karmowski@gmail.com',
+        'siren'        => 758956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 53,
+        'name_society'       => 'Parenthèse Déco',
+        'gerant'       => 'Mr prunier',
+        'adress'    => '142 route de la rairie',
+        'city'        => 'EPAIGNES',
+        'zip_code'        => '27260',
+        'phone'        => '0631376945',
+        'site_web'        => 'http://parenthesedeco.e-monsite.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'prunier_julie@yahoo.fr',
+        'siren'        => 768956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 54,
+        'name_society'       => 'Clémence Jeanjan',
+        'gerant'       => 'Mme Jeanjan',
+        'adress'    => '8 rue de la décoration',
+        'city'        => 'Moulineaux',
+        'zip_code'        => '76000',
+        'phone'        => '0663871040',
+        'site_web'        => 'http://parenthesedeco.e-monsite.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'contact@clemence-decoration.fr',
+        'siren'        => 778956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 55,
+        'name_society'       => 'Ressort T Fauteuils',
+        'gerant'       => 'Mme  Monnier',
+        'adress'    => 'La Querbonnerie',
+        'city'        => 'Livet-sur-Authou',
+        'zip_code'        => '27800',
+        'phone'        => '0232434186',
+        'site_web'        => 'https://julie-monnier.wixsite.com/ressort-t-fauteuils',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'monnier@decoration.fr',
+        'siren'        => 788956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 56,
+        'name_society'       => 'L\'Atelier de Virginie',
+        'gerant'       => 'Mme  danier',
+        'adress'    => '6 Rue de la Grange du Temple',
+        'city'        => 'Épreville-prés-le-Neubourg',
+        'zip_code'        => '27110',
+        'phone'        => '0659438262',
+        'site_web'        => 'https://www.l-atelier-de-virgine.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'danier@decoration.fr',
+        'siren'        => 798956149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 57,
+        'name_society'       => 'Tapissier Vernon',
+        'gerant'       => 'Mr mongin',
+        'adress'    => 'bis, 7 Rue d\'Albufera',
+        'city'        => 'Vernon',
+        'zip_code'        => '27200',
+        'phone'        => '0964395109',
+        'site_web'        => 'http://l-irreverence-tapissier.over-blog.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'mongin@decoration.fr',
+        'siren'        => 400006149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 58,
+        'name_society'       => 'Cap Vert',
+        'gerant'       => 'Mr raunnin',
+        'adress'    => '2 Impasse de Launay',
+        'city'        => 'Neauphlette',
+        'zip_code'        => '78980',
+        'phone'        => '0134977332',
+        'site_web'        => 'http://www.capvert78.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'raunnin@decoration.fr',
+        'siren'        => 400016149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 59,
+        'name_society'       => 'Paysage Durable',
+        'gerant'       => 'Mr ninbus',
+        'adress'    => 'cour du pont',
+        'city'        => 'Quetteville',
+        'zip_code'        => '14130',
+        'phone'        => '0214095201',
+        'site_web'        => 'http://www.paysage-durable.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'ninbus@decoration.fr',
+        'siren'        => 400026149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 60,
+        'name_society'       => 'Gennetey Paysage',
+        'gerant'       => 'Mr gennetey',
+        'adress'    => '1176 Rue des Bucailles',
+        'city'        => 'Saint-Léger-du-Gennetey',
+        'zip_code'        => '27520',
+        'phone'        => '0232570619',
+        'site_web'        => 'http://www.paysagiste-eure-gennetey.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'gennetey@decoration.fr',
+        'siren'        => 400036149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 61,
+        'name_society'       => 'Marbrerie Perdrix',
+        'gerant'       => 'Mr perdrix',
+        'adress'    => '6 Rue de l\'Abbaye',
+        'city'        => 'Cormeilles',
+        'zip_code'        => '27260',
+        'phone'        => '0232578021',
+        'site_web'        => 'http://www.marbrerieperdrix.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'perdrix@decoration.fr',
+        'siren'        => 400046149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 62,
+        'name_society'       => 'Marbrerie Collin Tristan',
+        'gerant'       => 'Mr collin',
+        'adress'    => '7 Rue de la Gare',
+        'city'        => 'Nonancourt',
+        'zip_code'        => '27320',
+        'phone'        => '0232580150',
+        'site_web'        => 'http://www.marbreriecollin.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'collin@decoration.fr',
+        'siren'        => 400046150,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 63,
+        'name_society'       => 'Marbrerie Vaux',
+        'gerant'       => 'Mr vaux',
+        'adress'    => 'Les Mourgloires',
+        'city'        => 'Senonches',
+        'zip_code'        => '28250',
+        'phone'        => '0237378630',
+        'site_web'        => 'http://www.marbrerie-vaux.com/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'vaux@decoration.fr',
+        'siren'        => 400056149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 64,
+        'name_society'       => 'Miroiterie Vitrerie de Bernay',
+        'gerant'       => 'Mr gros',
+        'adress'    => '295 Rue de la Semaille',
+        'city'        => 'Bernay',
+        'zip_code'        => '27300',
+        'phone'        => '0232465135',
+        'site_web'        => 'http://www.mvb-bernay.fr/Miroiterie-Vitrerie-Bernay.php?page=Societe',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'gros@decoration.fr',
+        'siren'        => 400066149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 65,
+        'name_society'       => 'Miroiterie Franconville',
+        'gerant'       => 'Mr tros',
+        'adress'    => '86 Rue de Léry',
+        'city'        => 'Incarville',
+        'zip_code'        => '27400',
+        'phone'        => '0232406194',
+        'site_web'        => 'http://www.miroiterie-franconville.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'tros@decoration.fr',
+        'siren'        => 400076149,
+        'created_at'  => $date
+      );
+      $society[] = array(
+        'user_id'        => 66,
+        'name_society'       => 'MVA Véralu',
+        'gerant'       => 'Mr vraider',
+        'adress'    => 'Rue Henri Becquerel',
+        'city'        => 'evreux',
+        'zip_code'        => '27000',
+        'phone'        => '0232281952',
+        'site_web'        => 'http://www.mva-veralu-menuiserie-evreux.fr/',
+        'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
+        'email'        => 'vraider@decoration.fr',
+        'siren'        => 400086149,
+        'created_at'  => $date
+      );
 
       DB::table('society')->insert($society);
 
