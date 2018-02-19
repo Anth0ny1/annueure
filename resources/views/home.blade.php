@@ -1,6 +1,9 @@
 @extends('layouts/layout')
 
 @section('content')
+  <?php
+  
+  ?>
 <?php
   // require_once(asset('rss/magpiemod/rss_fetch.inc'));
 ?>

@@ -53,12 +53,13 @@ if ($mycountsociety == 0) {
 
     // $actual_id = Auth::id();
     // dd('fdsfdsf');
-    //
+    if (!empty($request->file('logo'))) {
+      # code...
+
     $path = new PathUpload($request->file('logo'), 'society');
     // dd($path);
 
     $request->file('logo')->move(public_path($path->path()), $path->imageName());
-
 
       Society::where('id', '=', $idSociety)
       ->update([
@@ -76,9 +77,28 @@ if ($mycountsociety == 0) {
           'original_name'  => $path->originalName(),
           'image_name'     => $path->imageName(),
         ]);
+    }
+    else {
+      Society::where('id', '=', $idSociety)
+      ->update([
+          'name_society' => $request->input('name_society'),
+          'gerant' => $request->input('gerant'),
+          'adress' => $request->input('adress'),
+          'city' => $request->input('city'),
+          'zip_code' => $request->input('zip_code'),
+          'phone' => $request->input('phone'),
+          'site_web' => $request->input('site_web'),
+          'skills' => $request->input('skills'),
+          'email' => $request->input('email'),
+          'siren' => $request->input('siren'),
+          // 'path'           => $path->path(),
+          // 'original_name'  => $path->originalName(),
+          // 'image_name'     => $path->imageName(),
+        ]);
+    }
 
         return redirect()
-          ->route('home')
+          ->route('mes-societes')
           ->with('success', 'Votre societe à bien été modifié');
   }
 
@@ -87,7 +107,7 @@ if ($mycountsociety == 0) {
 
     $societyDelete->delete();
 
-    return redirect()->route('home')->with('success', 'votre société vient d\'être supprimée.');
+    return redirect()->route('mes-societes')->with('success', 'votre société vient d\'être supprimée.');
 
   }
 }
