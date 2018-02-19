@@ -11,6 +11,11 @@ use App\Http\Requests\SelectRequest;
 class SearchController extends Controller
 {
 
+  public function __construct()
+  {
+      $this->middleware('user');
+  }
+  
   public function searchView()
   {
       return view('front/search');
@@ -21,7 +26,7 @@ class SearchController extends Controller
   {
         $search = $request->all();
 
-
+        // dd($request->user()->status);
 
         $categories = Categories::all();
         if (!empty($search['categorie_name']) && !empty($search['zip'])) {
@@ -54,8 +59,7 @@ class SearchController extends Controller
             ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
             ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
             ->where('categories_society.categories_id' ,'=',$id_categories )
-            ->select('society.*')
-
+            ->select('society.*', 'categories.*')
             ->get();
 
 
