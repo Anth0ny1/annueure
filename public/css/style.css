@@ -303,6 +303,11 @@ aside#flux-RSS {
   text-align: center;
   border-bottom: 2px dotted #c9c9c9;
 }
+.logopub{
+  /* margin-top: 30px; */
+  border: 1px solid #295173;
+  margin-left: 2%;
+}
 /* Styles du footer (bas de page) */
 
 #footer {

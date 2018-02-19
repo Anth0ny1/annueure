@@ -199,7 +199,7 @@
           </div>
           <div class="bloc-text">
             <h3>Conducteurs de travaux BTP</h3>
-            <p>Découvrir le métier de Conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
+            <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
         </div>
       </section>
@@ -210,7 +210,7 @@
     <aside id="flux-RSS">
 <div class="rss">
     	<?php
-      
+
 	try{
 		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
 			throw new Exception('Flux introuvable');
@@ -222,7 +222,7 @@
 				<p class="p_rss">'.(string)$fluxrss->channel->description.'</p>';
 
 		$i = 0;
-		$nb_affichage = 20;
+		$nb_affichage = 15;
 		echo '<ul>';
 		foreach($fluxrss->channel->item as $item){
 			echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'">'.(string)$item->title.'</a> </li>';
@@ -236,6 +236,7 @@
 	}
 
 ?>
+<img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt="">
 </div>
 <span></span>
       {{-- <div class="rss">

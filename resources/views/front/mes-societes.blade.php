@@ -65,8 +65,6 @@
           <p>Numéro siren : {{$mysoc->siren}}</p>
           <p>Description : <br>{{$mysoc->skills}}</p>
           <div class="link">
-
-
           <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
           {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
           {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
