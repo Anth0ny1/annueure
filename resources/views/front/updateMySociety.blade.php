@@ -1,11 +1,16 @@
 @extends('layouts/layout')
+@section('css')
+  <link rel="stylesheet" href="{{ asset('css/formulaire-societe.css') }}" />
 
+@endsection
 @section('title')
   Modifier ma societe
 @endsection
 
 @section('content')
-  OkUpdateView<br>
+  <div class="textePresentation">
+  <h2>Modification formulaire société</h2>
+  </div>
     {{-- {{ $soUp->siren }}<br> --}}
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -16,6 +21,19 @@
             </ul>
         </div>
     @endif
+
+    @if (session('success'))
+      <div class="alert alert-success">
+        {{ session('success') }}
+      </div>
+    @endif
+
+    @if (session('danger'))
+      <div class="alert alert-danger">
+        {{ session('danger') }}
+      </div>
+    @endif
+    
 @foreach ($societyUpdate as $soUp)
   <div class="container center_div">
   <div class="panel-body">
