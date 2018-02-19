@@ -31,6 +31,7 @@ recherche société
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
+          {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
           {{-- <p class="p"><i class="fas fa-map-signs"></i> : {{ $qq->zip_code}}</p> --}}
@@ -39,7 +40,7 @@ recherche société
           <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">{{$qq->site_web}}</a></p>
           <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
           {{-- <p class="p">Siren : {{$qq->siren}}</p> --}}
-          <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->society_id])}}">Voir la fiche</a>
+          <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->id])}}">Voir la fiche</a>
         </div>
       @endforeach
     </div>

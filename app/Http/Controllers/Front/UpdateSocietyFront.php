@@ -54,10 +54,10 @@ if ($mycountsociety == 0) {
     // $actual_id = Auth::id();
     // dd('fdsfdsf');
     //
-    // $path = new PathUpload($request->file('logo'), 'society');
-    // // dd($path);
-    //
-    // $request->file('logo')->move(public_path($path->path()), $path->imageName());
+    $path = new PathUpload($request->file('logo'), 'society');
+    // dd($path);
+
+    $request->file('logo')->move(public_path($path->path()), $path->imageName());
 
 
       Society::where('id', '=', $idSociety)
@@ -72,9 +72,9 @@ if ($mycountsociety == 0) {
           'skills' => $request->input('skills'),
           'email' => $request->input('email'),
           'siren' => $request->input('siren'),
-          // 'path'           => $path->path(),
-          // 'original_name'  => $path->originalName(),
-          // 'image_name'     => $path->imageName(),
+          'path'           => $path->path(),
+          'original_name'  => $path->originalName(),
+          'image_name'     => $path->imageName(),
         ]);
 
         return redirect()

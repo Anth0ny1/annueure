@@ -53,6 +53,7 @@
                       </div> --}}
 
 
+                      <?php $societies = App\Society::orderBy('created_at', 'desc')->limit(3)->get(); ?>
 
                       <div class="blocfooter1">
                         <p class="pfooter">3 dernieres sociétes inscrites : </p>
@@ -61,13 +62,14 @@
                             {{-- {{dd($societelimit3)}} --}}
                             {{-- @foreach ($societelimit3 as $societelim) --}}
                               <ul>
-                                <li><a href=""></a>Societe1</li>
-                                <li><a href=""></a>Societe2</li>
-                                <li><a href=""></a>Societe3</li>
+                                @foreach ($societies as $society)
+                                  <li><a href="">{{ $society->name_society }}</a></li>
+                                @endforeach
                               </ul>
                             {{-- @endforeach --}}
                           </li>
                         </ul>
+
                       </div>
                       <div class="Verbar"></div>
                       <div class="blocfooter1">
@@ -105,7 +107,7 @@
 
 
 <!-- start Javascript -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
 <!-- end Javascript -->
