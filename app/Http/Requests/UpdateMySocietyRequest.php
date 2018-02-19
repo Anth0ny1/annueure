@@ -29,7 +29,7 @@ class UpdateMySocietyRequest extends FormRequest
           'city'   => 'bail|between:5,30|alpha',
           'phone'   => 'phone:AUTO,FR',
           'zip_code'   => 'bail|numeric',
-          'site_web'   => 'bail|required|min:3|max:50',
+          'site_web'   => 'bail|min:3|max:50',
           // 'categorie_name'   => 'bail|required',
           'skills'   => 'bail|max:190',
           'email'   => 'bail|required|min:3|max:50',

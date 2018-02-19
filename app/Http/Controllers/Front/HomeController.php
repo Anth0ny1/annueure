@@ -54,14 +54,35 @@ class HomeController extends Controller
 
       $societelimit3 = Society::inRandomOrder()->limit(3)->get();
 
+
+      $url = 'http://www.lemonde.fr/m-actu/rss_full.xml';
+
+      $rss = simplexml_load_file($url);
+
+      $michel = json_encode($rss);
+
+      // dd($michel);
       // $urlFeed = "http://www.lemonde.fr/m-actu/rss_full.xml";
+      // $urlFeed2 = "https://www.lequipe.fr/rss/actu_rss_Football.xml";
+      //
       //         $rss = simplexml_load_file($urlFeed);
+      //         $rss2 = simplexml_load_file($urlFeed2);
+      //
       //         $tableauInfos = array();
+      //         $tableauInfos2 = array();
       //
       //         for($leCompteur=0; $leCompteur<2; $leCompteur++)
       //         {
-      //           $tableauInfos[$leCompteur]['title'] =  $rss->channel->item[$leCompteur]->title;
+      //           $tableauInfos[$leCompteur]['pubDate'] =  $rss->channel->item[$leCompteur]->pubDate;
       //           $tableauInfos[$leCompteur]['description'] =  $rss->channel->item[$leCompteur]->description;
+      //             // echo '<br>';
+      //             // $tableauInfos[$leCompteur]['Ancre'] =  substr($rss->channel->item[$leCompteur]->title, 0, $longueurMax-3);
+      //         }
+      //
+      //         for($leCompteur=0; $leCompteur<2; $leCompteur++)
+      //         {
+      //           $tableauInfos2[$leCompteur]['pubDate'] =  $rss2->channel->item[$leCompteur]->pubDate;
+      //           $tableauInfos2[$leCompteur]['description'] =  $rss2->channel->item[$leCompteur]->description;
       //             // echo '<br>';
       //             // $tableauInfos[$leCompteur]['Ancre'] =  substr($rss->channel->item[$leCompteur]->title, 0, $longueurMax-3);
       //         }
@@ -69,12 +90,30 @@ class HomeController extends Controller
       //           // dd($tableauInfos);
       //           foreach ($tableauInfos as $tableauInfo) {
       //             // print_r() $value
-      //             echo $tableauInfo['title'];
+      //             $tableauInfo['pubDate'];
       //             echo '<br>';
       //
       //             echo $tableauInfo['description'];
       //             echo '<br>';
       //           }
+      //
+      //           foreach ($tableauInfos2 as $tableauInfo2) {
+      //             // print_r() $value
+      //             $tableauInfo2['pubDate'];
+      //             echo '<br>';
+      //             // if ($tableauInfo2) {
+      //             //   # code...
+      //             // }
+      //             echo $tableauInfo2['description'];
+      //             echo '<br>';
+      //           }
+      //
+      //           $michel = array_merge($tableauInfo, $tableauInfo2);
+      //
+      //           dd($michel);
+
+
+                // usort($michel, $michel['pubDate']);
               // foreach ($tableauInfos as $key => $value) {
               // }
 
