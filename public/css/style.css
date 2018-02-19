@@ -420,7 +420,10 @@ aside#flux-RSS {
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
 }
+.dropdown-item:link {
 
+  line-height: 20px;
+}
 @media screen and (max-width: 790px)
 {
 
