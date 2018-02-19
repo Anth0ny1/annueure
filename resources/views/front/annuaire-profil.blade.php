@@ -44,22 +44,14 @@
       <hr>
       <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
     </div>
-    {{-- <div class="flexslider">
-    <ul class="slides">
-        <li><img src="https://dummyimage.com/300x300/000/00ffb7" alt="" /></li>
-        <li><img src="https://dummyimage.com/300x300/ff1cff/00ffb7" alt="" /></li>
-        <li><img src="https://dummyimage.com/300x300/ff1cff/00ffb7" alt="" /></li>
-    </ul>
-    </div> --}}
+
   </section>
 
 
-<div class="flexslider">
-<ul class="slides">
-    <li><img src="{{ asset('img/logos/pub_ici.jpg') }}" alt=""  /></li>
-    <li><img src="{{ asset('img/logos/pub_ici.jpg') }}" alt=""  /></li>
-</ul>
-</div>
+
+    <img class="img_annuaire_pub" src="{{ asset('img/logos/pub_ici.jpg') }}" alt=""  />
+
+
 
   </div>
 @endsection

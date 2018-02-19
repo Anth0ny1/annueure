@@ -61,7 +61,7 @@ class HomeController extends Controller
 
       $michel = json_encode($rss);
 
-      dd($michel);
+      // dd($michel);
       // $urlFeed = "http://www.lemonde.fr/m-actu/rss_full.xml";
       // $urlFeed2 = "https://www.lequipe.fr/rss/actu_rss_Football.xml";
       //
