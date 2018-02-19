@@ -7,13 +7,16 @@ body {
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
   color: #000;
-  background: #dcdcdc url('../img/picto/fd-pictos-outils-gris-clair.png');
+  background: #dcdcdc url('../img/picto/fd-pictos-outils-couleur-fd-blanc.png');
 }
 #wrapper {
   max-width: 1280px;
   min-width: 320px;
   margin: 0 auto;
   background: #fff;
+  border-right: #71767f 1px solid;
+  border-left: #71767f 1px solid;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.4);
 }
 #header {
   position: relative;
