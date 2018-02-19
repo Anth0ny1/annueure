@@ -181,7 +181,7 @@ class HomeController extends Controller
     // UPDATE D UNE CATEGORIE
 
     public function profilSociete($id){
-      $categorie = Categories::findOrFail($id);
+      // $categorie = Categories::findOrFail($id);
       $societies = Society::findOrFail($id);
 
       return view('/front/annuaire-profil', compact('categorie','societies'));

@@ -1,34 +1,116 @@
-.template-sct{
-background: white;
-max-width: 320px;
-width:100%;
-/* padding-bottom: 50px; */
-/* padding-left: 260px; */
 
+.template-sct{
+max-width: 300px;
+width:100%;
+margin: 5px;
 }
 .logo-sct{
 padding-top: 20px;
-  padding-left: 25px;
+}
+.logo{
+  text-align: center;
+  background:linear-gradient(#295173,#53b0ff);
+  border: 1px solid transparent;
+  padding-bottom: 30px;
+  border-radius: 10px 10px 0 0 ;
 }
 .presentation-profil-sct{
   background: lightgrey;
-  /* max-width: 800px; */
   width: 100%;
-  /* margin: auto; */
-}
-.link{
-  padding-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  /* margin: 6%; */
 
+}
+h5{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 200%;
+  text-align:center;
+  margin-bottom: 30px;
+  padding-bottom: 2px;
+}
+.txtpres2{
+  margin-bottom: 10px;
+}
+.p{
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 160%;
+  padding-left: 10px;
+  line-height: 7px;
+  margin-bottom: 10px;
+
+}
+.description{
+line-height: 20px;
+text-decoration:underline;
+}
+h2{
+  padding: 0px;
 }
 a{
   margin-bottom: 5px;
 }
 .display{
 display: flex;
-
 flex-wrap: wrap;
 justify-content: center;
+max-width: 1024px;
+width: 100%;
 }
 .btn-primary{
   margin-top: 20px;
+}
+.link {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.link a{
+margin:0px;
+}
+.fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
+  color: #2A5073;
+}
+
+
+.picto-img {
+  width: 10%;
+  height: auto;
+}
+.picto-box {
+}
+.picto-box a:hover svg #pictoannuaire {
+  fill: #204159 !important;
+}
+.picto-box a:hover svg #pictoinscription {
+  fill: #8dba1e !important;
+}
+.picto-box a:hover svg #pictorendezvous {
+  fill: #713527 !important;
+}
+.picto-box a:hover svg #picto-devis {
+  fill: #d14d19 !important;
+}
+a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
+a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
+a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
+a:hover #picto-annu-lum-9 {
+  fill: #fd9400 !important;
+  stroke: #fd9400 !important;
+  fill-opacity:1 !important;
+  stroke-opacity:1 !important;
+}
+.pictoPresentation {
+  /* padding-left: 20%; */
+  padding-left: 0%;
+}
+.pictoPresentation svg {
+  padding-bottom: 5%;
+  padding-top: 5%;
 }

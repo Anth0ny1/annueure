@@ -53,34 +53,32 @@
     @foreach ($mysociety as $mysoc)
 {{-- {{dd($mycategory2)}} --}}
 
-      <section class="template-sct">
+        <section class="template-sct">
           <div class="presentation-profil-sct">
-
-            @if (!empty($mysoc->path))
-            <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,50,50,array('crop','grayscale'))}}" alt="">
-            @else
-              <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',50,50,array('crop'))}}" alt="">
-            @endif
-            <hr>
-            <h2>{{$mysoc->name_society}}</h2>
-            {{-- @foreach ($mycategory2 as $mycat)
-              <h3>{{$mycat->categorie_name}}</h3>
-            @endforeach --}}
-          <p>Nom du gérant : {{$mysoc->gerant}}</p>
-          <p>Adresse : {{$mysoc->adress}}</p>
-          <p>Ville : {{$mysoc->city}}</p>
-          <p>Code postal : {{$mysoc->zip_code}}</p>
-          <p>Téléphone : {{$mysoc->phone}}</p>
-          <p>site_web : {{$mysoc->site_web}}</p>
-          <p>E-mail : {{$mysoc->email}}</p>
-          <p>Numéro siren : {{$mysoc->siren}}</p>
-          <p>Description : <br>{{$mysoc->skills}}</p>
+              <div class="logo">
+                @if (!empty($mysoc->path))
+                  <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                @else
+                  <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
+                @endif
+              </div>
+            <div class="textePresentation txtpres2">
+            <h5>{{$mysoc->name_society}}</h5>
+          </div>
+          <p class="p"><i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
+          <p class="p"><i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
+          <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
+          <p class="p"><i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
+          <p class="p"><i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
+          <p class="p"><i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
+          <p class="p">Siren : {{$mysoc->siren}}</p>
+          <p class="p description">Description : </p><p class="p">{{$mysoc->skills}}</p>
           <div class="link">
           <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
           {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
           {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
           {!! Form::close() !!}
-      </div>
+          </div>
         </div>
       </section>
 
@@ -89,4 +87,8 @@
   </div>
 
   </div>
+@endsection
+@section('js')
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 @endsection

@@ -21,6 +21,7 @@
   max-width: 400px;
   width: 100%;
   color: #99D420;
+  padding-top: 5px;
 }
 .btn-primary:hover{
   background: #F25C19;
@@ -34,4 +35,13 @@
 .btn-succes:hover{
   background: #99D420;
 	color:white;
+}
+.textePresentation{
+  padding: 10px 0 0 0;
+
+}
+h2
+{
+  color: white;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
