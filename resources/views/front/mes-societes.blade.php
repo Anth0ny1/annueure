@@ -15,7 +15,7 @@
       <h2>Aucune société d'enregistrée </h2>
 
     @elseif ($mycountsociety == 1)
-        <h2>Vous avez {{$mycountsociety}} sociétés d'inscrite</h2>
+        <h2>Vous avez {{$mycountsociety}} société d'inscrite</h2>
         @else
           <h2>Voici mes {{$mycountsociety}} sociétés inscrites</h2>
     @endif
