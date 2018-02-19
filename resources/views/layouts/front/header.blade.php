@@ -1,14 +1,12 @@
 <header id="header">
   <div id="logo-entete">
-    <a href="{{ route('home') }}"><img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="logo du site AnnuEure"></a>
+    <a href="{{ route('home') }}"><img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="AnnuEure, l'annuaire des professionnels du bâtiment en Normandie"></a>
   </div>
   <div id="menuhp">
     <nav id="navhp">
       <ul id="menuhptop">
           <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
-
           <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->
-
           <!-- <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li> -->
 
           <li class="{{Request::path() == '/' ? 'active' : ''}}">
@@ -57,7 +55,6 @@
                   {{ csrf_field() }}
               </form>
 
-
             {{-- @if ($mycountsociety != 0)
               <a href="{{ route('mes-societes') }}"
               class="dropdown-item">
@@ -72,9 +69,6 @@
 
             </div>
           </li>
-
-
-
 
           {{-- <ul class="dropdown-menu" role="menu"> --}}
           {{-- <li class="dropdown">
@@ -103,9 +97,9 @@
                   </li>
                 </li> --}}
                 {{-- </ul> --}}
-        @if (Auth::user()->role == 'admin')
+        {{-- @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
-        @endif
+        @endif --}}
 
         @if (Auth::user()->role == 'membre')
           <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>

@@ -1,6 +1,11 @@
 @extends('layouts/layout')
 
 @section('content')
+<?php
+  // require_once(asset('rss/magpiemod/rss_fetch.inc'));
+?>
+
+<!-- FLEXSLIDER -->
 
   <div class="flexslider">
     <!-- Compteur d'inscription (position absolue) -->
@@ -10,43 +15,39 @@
     </div>
     <ul class="slides">
       <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie" title="S'inscrire à l'Annu'Eure"></a><img src="{{ asset('img/photo/slide01a.jpg') }}" />
+        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide02a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide02a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide03a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide03a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide04a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide05a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide05a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide06a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide06a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide07a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide07a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide08a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide08a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide09a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide09a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide10a.jpg') }}" alt="" />
       </li>
       <li>
-        <img src="{{ asset('img/photo/slide10a.jpg') }}" />
-      </li>
-      <li>
-        <img src="{{ asset('img/photo/slide11a.jpg') }}" />
-      </li>
-      <li>
-        <img src="{{ asset('img/photo/slide12a.jpg') }}" />
+        <img src="{{ asset('img/photo/slide12a.jpg') }}" alt="" />
       </li>
     </ul>
   </div>
+
+<!-- FORMULAIRE DE RECHERCHE DES PROFESIONNELS -->
 
   @if (session('success'))
     <div class="alert alert-success">
@@ -96,37 +97,13 @@
     </div>
   </div>
 
+<!-- SERVICES AUX PROFESSIONNELS -->
+
   <main id="main-services">
       <section id="services">
-        <div class="">
-          <h1 class="titre">Bienvenue sur Annu'Eure, l'annuaire des professionnels du bâtiment dans l'Eure en Haute Normandie</h1>
-        </div>
-        <div class="service-box">
-          <div class="picto-box">
-            <a href="{{ route('annuaire') }}">
-              {!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
-            <h2>Annuaire des Pros.</h2>
-            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire !</p>
-          </div>
-        </div>
-          <div class="picto-box">
-            <a href="{{ route('register') }}">
-              {!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
-            <h2>Inscription des Pro.</h2>
-            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure ? Inscrivez-vous !</p>
-          </div>
 
-          <div class="picto-box">
-            <a href="#">
-              {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
-            </a>
-          </div>
+          <!-- Affichage des erreurs du formulaire -->
+
           @if ($errors->any())
               <div class="alert alert-danger">
                   <ul>
@@ -136,25 +113,133 @@
                   </ul>
               </div>
           @endif
-          <div class="bloc-text">
-            <h2>Prendre un rendez-vous.</h2>
-            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez prendre rendez-vous ? Envoyez-lui une notification !</p>
+
+          <!-- Fin affichage des erreurs du formulaire -->
+
+        <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+            “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
+        </h1>
+        <div id="first-service-box" class="service-box ">
+          <div class="picto-box">
+            <a href="{{ route('annuaire') }}">
+              {!! file_get_contents(asset('img/picto/picto-annuaire.svg')) !!}
+            </a>
           </div>
+          <div class="bloc-text">
+            <h3>Annuaire des Pro</h3>
+            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="{{ route('register') }}">
+              {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Inscription des Pro</h3>
+            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="picto-box">
+            <a href="#">
+              {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Prendre un rendez-vous</h3>
+            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+          </div>
+        </div>
+        <div class="service-box">
           <div class="picto-box">
             <a href="#">
               {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
             </a>
           </div>
           <div class="bloc-text">
-            <h2>Demander un devis.</h2>
-            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment ? Demandez un devis !</p>
+            <h3>Demander un devis</h3>
+            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
           </div>
-      </section>
-      <section id="actualites">
+        </div>
       </section>
 
+      <section id="actualites">
+        <h2 class="separation">
+            Focus : les métiers du jour
+        </h2>
+        <div id="first-actu-box" class="actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-01.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Paysagistes et jardiniers</h3>
+            <p>Découvrir le métier de jardinier / paysagiste dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+        <div class="actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-02.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Menuisiers et décorateurs</h3>
+            <p>Découvrir le métier de Menuisiers / décorateurs dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+        <div class="actu-box" id="last-actu-box">
+          <div class="img-actu-box">
+            <a href="{{ route('register') }}">
+              <img src="{{ asset('img/photo/metiers-du-jour-03.jpg') }}" alt="" />
+            </a>
+          </div>
+          <div class="bloc-text">
+            <h3>Conducteurs de travaux BTP</h3>
+            <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
+          </div>
+        </div>
+      </section>
+  </main>
+
+<!-- SIDEBAR A DROITE - FLUX RSS -->
+
     <aside id="flux-RSS">
-      <div class="rss">
+<div class="rss">
+    	<?php
+
+	try{
+		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
+			throw new Exception('Flux introuvable');
+		}
+		if(empty($fluxrss->channel->title) || empty($fluxrss->channel->description) || empty($fluxrss->channel->item->title))
+			throw new Exception('Flux invalide');
+
+		echo '<h3 class="h3_rss">'.(string)$fluxrss->channel->title.'</h3>
+				<p class="p_rss">'.(string)$fluxrss->channel->description.'</p>';
+
+		$i = 0;
+		$nb_affichage = 15;
+		echo '<ul>';
+		foreach($fluxrss->channel->item as $item){
+			echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'">'.(string)$item->title.'</a> </li>';
+			if(++$i>=$nb_affichage)
+				break;
+		}
+		echo '</ul>';
+	}
+	catch(Exception $e){
+		echo $e->getMessage();
+	}
+
+?>
+<img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt="">
+</div>
+<span></span>
+      {{-- <div class="rss">
         <h3>Titre du flux RSS</h3>
         <p>
           Ici un flux RSS sur les annonces d'emplois (à trouver sur Internet).
@@ -171,8 +256,11 @@
         <p>
           Ici un autre flux RSS sur les actualités du BTP en général (à trouver sur Internet).
         </p>
-      </div>
+      </div> --}}
     </aside>
+
+<!-- CONTENEUR AJAX JS -->
+
 {{-- <a href="# "id="btnafficheuser">Get users</a>
 <div id="afficheruser">
 <script type="text/javascript">
@@ -189,14 +277,16 @@
       }
     });
   });
-</script> --}}
-</div>
+</script>
+</div> --}}
+
     {{-- <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
-
+                    <div class="panel-heading">
+                      Dashboard
+                    </div>
                     <div class="panel-body">
                         @if (session('status'))
                             <div class="alert alert-success">
@@ -218,20 +308,21 @@
     --}}
 
     {{-- {{ dd($users)}} --}}
-      @foreach ($users as $user)
+      {{-- @foreach ($users as $user)
         {{ $user->name }}
       @endforeach
 
-      {{ $count }}
+      {{ $count }} --}}
 
-      @foreach ($categories as $categorie)
+      {{-- @foreach ($categories as $categorie)
         {{ $categorie->categorie_name }}
-      @endforeach
+      @endforeach --}}
 
-    @endsection
-  </main>
+@endsection
 
 @section('js')
+
+<!-- CONTENEUR & FONCTIONS JS -->
 
 <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 
@@ -246,4 +337,5 @@
     });
   });
 </script>
+
 @endsection

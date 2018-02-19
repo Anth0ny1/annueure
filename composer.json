@@ -11,7 +11,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "propaganistas/laravel-phone": "^3.0",
-        "folklore/image": "0.3.*"
+        "folklore/image": "0.3.*",
+        "roumen/feed": "2.10.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

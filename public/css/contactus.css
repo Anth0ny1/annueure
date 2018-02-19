@@ -25,4 +25,8 @@ form-group{
   max-width: 400px;
   width: 100%;
   margin: auto;
+  padding: 7px;
+}
+h2{
+  font-size: 250%;
 }

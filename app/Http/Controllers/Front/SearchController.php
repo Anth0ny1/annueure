@@ -21,6 +21,8 @@ class SearchController extends Controller
   {
         $search = $request->all();
 
+
+
         $categories = Categories::all();
         if (!empty($search['categorie_name']) && !empty($search['zip'])) {
 
@@ -52,6 +54,8 @@ class SearchController extends Controller
             ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
             ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
             ->where('categories_society.categories_id' ,'=',$id_categories )
+            ->select('society.*')
+
             ->get();
 
 
@@ -62,10 +66,15 @@ class SearchController extends Controller
         $societies = Society::where('zip_code','=',$zip_code)->get();
 
     }
+    else {
+      return redirect()->route('home')->with('danger', 'Veuillez entrez au moin un paramètre de recherche');
+    }
+
+    // dd($societies);
     // else {
     //
     // }
-
+    // dd($societies);
 
     // dd($societies);
 

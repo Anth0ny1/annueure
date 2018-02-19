@@ -1,5 +1,5 @@
 .bloc_content_cat{
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   /* background: lime; */
   margin: auto;
@@ -7,26 +7,54 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+h2{
+  font-size: 250%;
+}
 .bloc_cat{
-  width: 150px;
-
+  width: 190px;
+background:linear-gradient(#53b0ff ,#295173);
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
   /* background: lightgrey; */
   /* text-align: center; */
 }
+@keyframes move{
+  0%, 100%{transform:translateY(-10px);}
+  50%{transform:translateY(0);}
+}
+
 .dropdown-toggle{
   margin: 2px;
   padding-left: 5px;
-
+/* background:linear-gradient(#da4df8 ,#9b0db9); */
 }
 h6{
   line-height: 40px;
 }
 .dropdown-menu{
-      border-radius: 5px;
+    border-radius: 5px;
+    background:linear-gradient(#ffffff ,#a8a8a8);
+    color: black;
+    margin-top: 5px;
 }
+
+.dropdown-menu li a{
+  color:black;
+  font-size: 0.8em;
+  border-bottom:1px dotted black;
+  /* border-top:1px dotted black; */
+}
+
+.dropdown-menu li a:hover{
+  background: transparent;
+  color:#EB7900;
+}
+
 h5{
   text-align: center;
-  background: #295173;
+  /* background: #295173; */
   line-height: 50px;
   color: #F25C19;
   border-radius: 0 0 5px 5px;
@@ -64,9 +92,14 @@ a:hover #picto-annu-lum-9 {
   stroke-opacity:1 !important;
 }
 .pictoPresentation {
-  padding-left: 20%;
+  /* padding-left: 20%; */
+  padding-left: 0%;
 }
 .pictoPresentation svg {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+
+
+
+/* test dropdown */

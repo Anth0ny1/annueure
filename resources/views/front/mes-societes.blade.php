@@ -13,6 +13,7 @@
   <div class="textePresentation">  <!-- texte banniére verte de présentation -->
     @if ($mycountsociety == 0)
       <h2>Aucune société d'enregistrée </h2>
+
     @elseif ($mycountsociety == 1)
         <h2>Vous avez {{$mycountsociety}} sociétés d'inscrite</h2>
         @else
@@ -39,7 +40,7 @@
 <div class="display">
 
     @foreach ($mysociety as $mysoc)
-{{-- {{dd($mysoc)}} --}}
+{{-- {{dd($mycategory2)}} --}}
 
       <section class="template-sct">
           <div class="presentation-profil-sct">
@@ -51,6 +52,9 @@
             @endif
             <hr>
             <h2>{{$mysoc->name_society}}</h2>
+            {{-- @foreach ($mycategory2 as $mycat)
+              <h3>{{$mycat->categorie_name}}</h3>
+            @endforeach --}}
           <p>Nom du gérant : {{$mysoc->gerant}}</p>
           <p>Adresse : {{$mysoc->adress}}</p>
           <p>Ville : {{$mysoc->city}}</p>
@@ -61,8 +65,6 @@
           <p>Numéro siren : {{$mysoc->siren}}</p>
           <p>Description : <br>{{$mysoc->skills}}</p>
           <div class="link">
-
-
           <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
           {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
           {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}

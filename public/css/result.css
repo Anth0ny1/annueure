@@ -3,9 +3,30 @@
 }
 .bloc_societe{
 width: 200px;  /* Or whatever */
-height: 400px; /* Or whatever */
+/* height: 400px; /* Or whatever */ */
 margin: 10px;  /* Magic! */
 background: white;
+border-radius: 10px 10px 10px 10px;
+border: 1px solid lightgrey;
+margin-bottom: 15px;
+padding-bottom: 50px;
+position: relative;
+margin-left: 10px;
+}
+
+.btn-success{
+  position :absolute;
+  left:20%;
+  background: #F25C19;
+	color:white;
+    border: none;
+}
+.btn-success:hover{
+  position :absolute;
+  left:20%;
+  background: #99D420;
+	color:white;
+    border: none;
 }
 .content_search{
   max-width: 1200px;
@@ -15,7 +36,7 @@ background: white;
 .display{
   display: flex;
   margin:  0px auto;
-  background: lightgrey;
+  /* background: rgb(224, 224, 224); */
   justify-content: center;
 }
 h4{
@@ -27,20 +48,32 @@ img{
 }
 .logo{
   text-align: center;
+  background:linear-gradient(#295173,#53b0ff);
+  border-radius: 10px 10px 0 0;
+  border: 1px solid transparent;
+}
+h2{
+  font-size: 250%;
 }
 h5{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: #295173;
-    font-size: 150%;
+  color: white;
+    font-size: 170%;
     text-align:center;
     text-decoration: underline;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+    background: grey;
+    padding-bottom: 2px;
 }
-p{
+.p{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
-  font-size: 120%;
+  font-size: 150%;
   padding-left: 10px;
-  line-height: 10px;
+  line-height: 7px;
+  margin-bottom: 10px;;
+}
+.fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
+  color: #2A5073;
 }

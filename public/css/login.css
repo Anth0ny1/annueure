@@ -16,6 +16,7 @@
   max-width: 400px;
   width: 100%;
   margin: auto;
+
 }
 .col-md-4{
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -28,3 +29,9 @@
 .btn-primary:hover{
   background: #F25C19;
   }
+.btn-primary{
+  margin-bottom: 10px;
+}
+h2{
+  font-size: 250%;
+}
