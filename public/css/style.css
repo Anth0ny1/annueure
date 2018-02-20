@@ -253,9 +253,11 @@ h2 {
   min-height: 30px;
   padding: 0 auto;
   vertical-align: middle;
+  margin-bottom: 30px;
 }
-#first-actu-box {
-  margin-left: 3%;
+.first-actu-box {
+  margin-left: 10%;
+  margin-top: 20px;
 }
 .actu-box {
   float: left;
@@ -280,6 +282,7 @@ div .bloc-text p {
 .img-actu-box img {
   width: 100%;
   height: auto;
+  /* margin: 10%; */
 }
 #last-actu-box {
   margin-right: 0 !important;
@@ -388,6 +391,33 @@ aside#flux-RSS {
 .pictoPresentation svg {
   padding-bottom: 5%;
   padding-top: 5%;
+}
+
+/*********** Structure + sidebar à gauche pour pages ***********/
+
+#mainContainerPage{
+  min-height: 100%;
+  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
+}
+.sidebarLeft {
+    float: left;
+    padding-top: 40px;
+    width: 20%;
+    min-height: 100vh;
+}
+p.labelPicto {
+  font-size: 0.85rem;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding:0px;
+  margin: 0px;
+}
+.mainContentRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  background: #fff;
 }
 
 /*********** Media Queries ***********/
