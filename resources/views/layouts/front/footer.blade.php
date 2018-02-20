@@ -46,7 +46,9 @@
                         <p class="pfooter">Liens utiles : </p>
                         <ul>
                           <li><a href="{{route('nous-contacter-view')}}">Nous contacter</a></li>
-                          <li><a href="{{route('register')}}">Nous rejoindre</a></li>
+                          @if (Auth::guest())
+                            <li><a href="{{route('register')}}">Nous rejoindre</a></li>
+                          @endif
                           <li><a href="{{route('annuaire')}}">Annuaire</a></li>
                           <li><a href="{{route('mentions-legales')}}">Mentions-legales</a></li>
                         </ul>
