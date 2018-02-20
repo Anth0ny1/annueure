@@ -10,6 +10,9 @@
 h2{
   font-size: 250%;
 }
+.textePresentation h2 {
+  color: white;
+}
 .bloc_cat{
   width: 190px;
 background:linear-gradient(#53b0ff ,#295173);

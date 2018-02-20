@@ -42,7 +42,7 @@
       <hr>
       <p class="p"><i class="fas fa-edit"></i>Description : <br>{{$societies->skills}}</p>
       <hr>
-      <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
+      
     </div>
 
   </section>

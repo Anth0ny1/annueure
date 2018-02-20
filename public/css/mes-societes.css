@@ -1,23 +1,6 @@
 /* Feuille de styles   */
 
-#mainContainerPage{
-  min-height: 100%;
-  background: #71767F;
-}
-.sidebarLeft {
-    float: left;
-    padding-top: 40px;
-    width: 20%;
-    min-height: 100vh;
-    background: #dcdcdc url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
-}
-.mainContentRight {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 80%;
-  background: #fff;
-}
+
 .SectionFichesSte {
 max-width: 300px;
 width:100%;

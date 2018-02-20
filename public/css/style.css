@@ -351,6 +351,15 @@ aside#flux-RSS {
   margin: 0 40px;
   display: inline;
 }
+.logosCCIEure {
+  margin-top: 10px;
+}
+.logosCCIEure img {
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 3%;
+  padding: 5px;
+}
 
 /* Styles page Présentation */
 
@@ -389,7 +398,24 @@ aside#flux-RSS {
   padding-bottom: 5%;
   padding-top: 5%;
 }
-
+/*********** Structure + Sidebar à gauche pour pages ***********/
+#mainContainerPage{
+  min-height: 100%;
+  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
+}
+.sidebarLeft {
+    float: left;
+    padding-top: 40px;
+    width: 20%;
+    min-height: 100vh;
+}
+.mainContentRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  background: #fff;
+}
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
