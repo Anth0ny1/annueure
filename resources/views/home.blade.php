@@ -175,6 +175,7 @@
 
 <div class="first-actu-box">
         @foreach ( $selectCategories1 as $categorie)
+            
           {{-- {{dd($categorie)}} --}}
           <div class="actu-box">
             <div class="img-actu-box">
