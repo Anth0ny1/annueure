@@ -348,7 +348,7 @@ class SocietyTableSeeder extends Seeder
         'site_web'        => 'https://www.cepsservicesvasseur.com/',
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'vasseur@gmail.com',
-        'siren'        => 039856237,
+        'siren'        => 359856237,
         'created_at'  => $date
       );
       $society[] = array(
