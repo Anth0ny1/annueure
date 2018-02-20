@@ -20,7 +20,18 @@ Formulaire inscription d'une société
       </div>
   @endif
 
+  @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
 
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif
+  
   <div class="container center_div">
   <div class="panel-body">
 {!! Form::open(['route' => 'formulaire-societe-action', 'method' => 'post', 'files' => true]) !!}

@@ -97,9 +97,9 @@
                   </li>
                 </li> --}}
                 {{-- </ul> --}}
-        {{-- @if (Auth::user()->role == 'admin')
+        @if (Auth::user()->role == 'admin')
           <li><a href="{{ route('dashboard') }}">admin</a></li>
-        @endif --}}
+        @endif
 
         @if (Auth::user()->role == 'membre')
           <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
@@ -108,9 +108,9 @@
       </ul>
     </nav>
   </div>
-  <div id="login">
+  <!-- <div id="login"> -->
     <!-- login aligne a droite dans la barre de nav -->
-    <ul class="nav navbar-nav navbar-right">
+    <!-- <ul class="nav navbar-nav navbar-right"> -->
         <!-- Authentication Links -->
         {{-- @if (Auth::guest())
             <li><a href="{{ route('login') }}">Login</a></li>
@@ -147,6 +147,6 @@
                 {{ csrf_field() }}
             </form>
         </li> --}}
-    </ul>
-  </div>
+    <!-- </ul>
+  </div> -->
 </header>

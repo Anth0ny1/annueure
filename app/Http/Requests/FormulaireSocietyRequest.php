@@ -30,11 +30,12 @@ class FormulaireSocietyRequest extends FormRequest
              'city'   => 'bail|between:5,30|alpha',
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|numeric',
-             'site_web'   => 'bail|required|min:3|max:50',
+             'site_web'   => 'bail|max:50',
              'categorie_name'   => 'bail|required',
-              'email'    => 'string|email|max:255|unique:society,email',
+             'email'    => 'string|email|max:255|unique:society,email',
+             'siren'    => 'bail|required|min:9|max:9|unique:society,siren',
              'skills'   => 'bail|max:190',
-             'siren'   => 'bail|required|min:9|max:9'
+             // 'siren'   => 'bail|required|min:9|max:9'
          ];
      }
      public function messages()
@@ -44,7 +45,6 @@ class FormulaireSocietyRequest extends FormRequest
              'adress.min' => 'Merci d\'indiquer votre adresse.',
              'city.min' => 'Merci d\'indiquer votre ville.',
              'zip_code.min' => 'Merci d\'indiquer votre code postal.',
-             'site_web.min' => 'Merci d\'indiquer votre site internet.',
              'categorie_name' => 'Merci d\'indiquer une categorie.',
              'skills.max' => 'Votre texte ne peut depasser 190 caractères ',
              'email.min' => 'Merci d\'indiquer votre email.',

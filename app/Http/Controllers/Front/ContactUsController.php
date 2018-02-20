@@ -8,6 +8,11 @@ use App\Http\Requests\ContactUsRequest;
 class ContactUsController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('user');
+    }
+
     public function contactView(){
       return view('front/contactUs');
     }

@@ -10,7 +10,29 @@ recherche société
 
 @section('content')
   <div class="textePresentation">
-    <h2>Liste des sociétés</h2>
+    {{-- {{ dd($societies)}} --}}
+    {{-- <h2 style="color:white;">Liste des Societés</h2> --}}
+    <main>
+      <div class="marker"></div>
+      <h1 class="l1">L</h1>
+      <h1 class="i1">i</h1>
+      <h1 class="s1">s</h1>
+      <h1 class="t1">t</h1>
+      <h1 class="e1">e</h1>
+      <h1 class="a1"> </h1>
+      <h1 class="d1">d</h1>
+      <h1 class="e2">e</h1>
+      <h1 class="s2">s</h1>
+      <h1 class="a2"> </h1>
+      <h1 class="s3">s</h1>
+      <h1 class="o1">o</h1>
+      <h1 class="c1">c</h1>
+      <h1 class="i2">i</h1>
+      <h1 class="e3">e</h1>
+      <h1 class="t2">t</h1>
+      <h1 class="e4">é</h1>
+      <h1 class="s4">s</h1>
+    </main>
 
   </div>
   <div class="content_search">
