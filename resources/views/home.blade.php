@@ -2,7 +2,7 @@
 
 @section('content')
   <?php
-  
+
   ?>
 <?php
   // require_once(asset('rss/magpiemod/rss_fetch.inc'));
@@ -173,7 +173,20 @@
             Focus : les métiers du jour
         </h2>
 
-        <div id="first-actu-box" class="actu-box">
+
+@foreach ( $selectCategories1 as $categorie)
+  {{-- {{dd($categorie)}} --}}
+    {{-- <div class="img-actu-box"> --}}
+<img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array())}}" alt="" />
+{{-- </div> --}}
+  {{-- <div class="bloc-text"> --}}
+    <h3>{{ $categorie->categorie_name}}</h3>
+    <p>ici description categorie{{ $categorie->description}}</p>
+  {{-- </div> --}}
+@endforeach
+
+
+        {{-- <div id="first-actu-box" class="actu-box">
           <div class="img-actu-box">
             <a href="{{ route('register') }}">
 
@@ -181,7 +194,7 @@
             </a>
 
           </div>
-          <div class="bloc-text">
+
             <h3>Paysagistes et jardiniers</h3>
             <p>Découvrir le métier de jardinier / paysagiste dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
@@ -207,7 +220,7 @@
             <h3>Conducteurs de travaux BTP</h3>
             <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
-        </div>
+        </div> --}}
       </section>
   </main>
 

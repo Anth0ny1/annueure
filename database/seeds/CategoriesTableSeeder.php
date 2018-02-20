@@ -41,7 +41,7 @@ class CategoriesTableSeeder extends Seeder
         $categories[] = array(
           'categorie_name' => 'Électricien',
           'path' => 'upload/categorie/2018/02',
-          'original_name' => '1355.jpg',
+          'original_name' => '230083-P1ZDYD-191.jpg',
           // 'description' => 'Découvrir le métier d\'Éléctricien dans l\'Eure. ',
         );
         $categories[] = array(
@@ -71,7 +71,7 @@ class CategoriesTableSeeder extends Seeder
         $categories[] = array(
           'categorie_name' => 'Plaquiste',
           'path' => 'upload/categorie/2018/02',
-          'original_name' => '230071-p1z-1519133818.jpg',
+          'original_name' => '230050-P1ZDV4-803.jpg',
           // 'description' => 'Découvrir le métier de Plaquiste dans l\'Eure. ',
         );
         $categories[] = array(
