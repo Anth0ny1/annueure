@@ -62,6 +62,7 @@ class HomeController extends Controller
 
       $societelimit3 = Society::inRandomOrder()->limit(3)->get();
 
+      
       $rs = new Rss();
       $array = $rs->Rss('http://www.lemonde.fr/m-actu/rss_full.xml', 2);
 

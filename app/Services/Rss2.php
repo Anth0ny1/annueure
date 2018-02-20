@@ -15,9 +15,24 @@ class Rss
 
   private $tableaudelien;
 
+  private $array = [];
+
+
+  // $tableaudelien = ['url1' => ['nbre'=> 12],'url2'];
+
   public function __construct($tableaudelien)
   {
         $this->tableaudelien = $tableaudelien;
+
+        foreach ($this->tableaudelien as $link) {
+          $dede = $this->Rss($link, 5);
+          $this->array = array_merge($this->array, $dede);
+        }
+
+        usort($this->array, array($this, 'cmp'));
+        return $this->array;
+
+
   }
 
   private static function cmp( $a, $b ) {
@@ -40,33 +55,11 @@ class Rss
     return $this->array;
   }
 
-  public function arrayMerge($arr1 = [], $arr2 = [], $arr3 = [], $arr4 = []){
-    $this->superArray = array_merge($arr1, $arr2, $arr3, $arr4);
+  // public function arrayMerge($arr1 = [], $arr2 = [], $arr3 = [], $arr4 = []){
+  //   $this->superArray = array_merge($arr1, $arr2, $arr3, $arr4);
+  //
+  //   usort($this->superArray, array($this, 'cmp'));
+  //   return $this->superArray;
+  // }
 
-    usort($this->superArray, array($this, 'cmp'));
-    return $this->superArray;
-  }
-  // public function getUrl($url){
-  //   $this->url = $url;
-  // }
-  //
-  // public function getRss(){
-  //   $this->rss = simplexml_load_file($this->url);
-  // }
-  //
-  // public function jsonEncode(){
-  //   $this->jsonEncode = json_encode($this->rss);
-  // }
-  //
-  // public function jsonDecode(){
-  //   $this->jsonDecode = json_decode($this->jsonEncode, true);
-  // }
-  //
-  // public function getLimits($nb){
-  //   $this->limits = array_slice($this->jsonDecode['channel']['item'], 0, $nb)
-  // }
-  //
-  // public function arrayMerge(){
-  //   $this->superArray
-  // }
 }
