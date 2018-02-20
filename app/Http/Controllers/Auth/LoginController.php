@@ -40,7 +40,8 @@ class LoginController extends Controller
       // if ($request->user()->status == 'inactif') {
       //   dd('tu es banni');
       // }
-        // $this->middleware('user');
-        $this->middleware('guest')->except('logout');
+      // $this->middleware('user');
+        //
+      $this->middleware('guest')->except('logout');
     }
 }

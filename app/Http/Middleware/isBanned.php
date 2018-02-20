@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Auth;
-class User
+class isBanned
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,7 @@ class User
         // dd(Auth::guard($guard)->check());
     if (!empty($request->user()->status)) {
       if ($request->user()->status == 'inactif'){
-        return redirect()->route('home')->with('danger', 'Votre compte à été désactiver contacter nous pour plus d\'information');
+        return redirect()->route('home')->with('danger', 'Votre compte à été désactivé contacter nous pour plus d\'information');
       }
     }
     return $next($request);
