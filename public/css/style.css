@@ -390,6 +390,33 @@ aside#flux-RSS {
   padding-top: 5%;
 }
 
+/*********** Structure + sidebar à gauche pour pages ***********/
+
+#mainContainerPage{
+  min-height: 100%;
+  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
+}
+.sidebarLeft {
+    float: left;
+    padding-top: 40px;
+    width: 20%;
+    min-height: 100vh;
+}
+p.labelPicto {
+  font-size: 0.85rem;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding:0px;
+  margin: 0px;
+}
+.mainContentRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  background: #fff;
+}
+
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
