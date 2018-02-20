@@ -253,9 +253,11 @@ h2 {
   min-height: 30px;
   padding: 0 auto;
   vertical-align: middle;
+  margin-bottom: 30px;
 }
-#first-actu-box {
-  margin-left: 3%;
+.first-actu-box {
+  margin-left: 10%;
+  margin-top: 20px;
 }
 .actu-box {
   float: left;
@@ -280,6 +282,7 @@ div .bloc-text p {
 .img-actu-box img {
   width: 100%;
   height: auto;
+  /* margin: 10%; */
 }
 #last-actu-box {
   margin-right: 0 !important;
