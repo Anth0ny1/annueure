@@ -41,6 +41,8 @@ class HomeController extends Controller
     public function index()
     {
       $selectCategories = Categories::get();
+      $selectCategories1 = Categories::inRandomOrder()->limit(3)->get();
+
 
       $selectZip = Society::get();
 
@@ -119,7 +121,7 @@ class HomeController extends Controller
 
       // $societies = Society::orderBy('created_at', 'desc')->limit(3)->get();
 
-        return view('home', compact('users', 'count', 'societies', 'selectCategories', 'selectZip', 'mycountsociety', 'societelimit3'));
+        return view('home', compact('users', 'count', 'societies', 'selectCategories', 'selectZip', 'mycountsociety', 'societelimit3', 'selectCategories1'));
     }
 
     public function annuaire()
