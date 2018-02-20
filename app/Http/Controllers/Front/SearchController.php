@@ -11,11 +11,11 @@ use App\Http\Requests\SelectRequest;
 class SearchController extends Controller
 {
 
-  public function __construct()
-  {
-      $this->middleware('user');
-  }
-  
+  // public function __construct()
+  // {
+  //     $this->middleware('user');
+  // }
+
   public function searchView()
   {
       return view('front/search');
@@ -59,7 +59,7 @@ class SearchController extends Controller
             ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
             ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
             ->where('categories_society.categories_id' ,'=',$id_categories )
-            ->select('society.*', 'categories.*')
+            ->select('society.*', 'categories.categorie_name')
             ->get();
 
 

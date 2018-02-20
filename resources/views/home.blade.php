@@ -177,6 +177,7 @@
 
 <div class="first-actu-box">
         @foreach ( $selectCategories1 as $categorie)
+          {{-- {{ dd($categorie) }} --}}
           {{-- {{dd($categorie)}} --}}
           <div class="actu-box">
             <div class="img-actu-box">
@@ -185,7 +186,7 @@
             </div>
             <div class="bloc-text">
               <h3>{{ $categorie->categorie_name}}</h3>
-              <p>ici description categorie{{ $categorie->description}}</p>
+              <p>{{ $categorie->description}}</p>
             </div>
           </div>
         @endforeach

@@ -13,7 +13,7 @@ class Categories extends Model
     // protected $hidden = ['_token'];
     protected $fillable = [
       'categorie_name',
-      'path',
+      'path_categorie',
       'original_name',
       'image_name',
       'description'

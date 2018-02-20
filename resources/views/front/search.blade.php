@@ -44,15 +44,18 @@ recherche société
 
       @foreach ($societies as $qq)
         {{-- {{dd($qq)}} --}}
+        {{-- {{dd($qq)}} --}}
         <div class="bloc_societe">
           <div class="logo">
-          @if (!empty($qq->path))
+            {{-- {{dd($qq)}} --}}
+          @if (!empty($qq->path) || !empty($qq->image_name))
           <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $qq->path . '/' . $qq->image_name,100,100,array('crop','grayscale'))}}" alt="">
           @else
             <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
+          <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
