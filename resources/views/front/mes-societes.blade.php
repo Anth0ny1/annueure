@@ -24,7 +24,7 @@
       </div>
   </aside>
 
-  <div class="mainContent">
+  <div class="mainContentRight">
       <!-- texte banniére verte de présentation -->
       <div class="titreContent">
         @if ($mycountsociety == 0)
@@ -36,7 +36,6 @@
               <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
       </div>
-
 
           @foreach ($mysociety as $mysoc)
       {{-- {{dd($mycategory2)}} --}}
@@ -70,9 +69,7 @@
 
           @endforeach
 
-
   </div>
-
 </main>
 
 @endsection
