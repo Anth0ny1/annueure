@@ -18,7 +18,7 @@ class UpdateSocietyFront extends Controller
   {
       $this->middleware('user');
   }
-  
+
   public function viewMySociety(){
     $id = Auth::id();
     // $mysociety = Society::findOrFail($id);
@@ -27,10 +27,11 @@ class UpdateSocietyFront extends Controller
     $mycountsociety = Society::where('user_id' ,  '=', $id)->count();
     // $mysociety2 = Society::All();
 
-if ($mycountsociety == 0) {
-  return redirect()->route('formulaire-societe');
-}else
-    return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety','mycategory'));
+    if ($mycountsociety == 0) {
+      return redirect()->route('formulaire-societe');
+    } else {
+      return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety','mycategory'));
+    }
   }
 
   public function updateMySociety($idSociety){

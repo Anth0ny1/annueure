@@ -15,7 +15,8 @@ class Categories extends Model
       'categorie_name',
       'path',
       'original_name',
-      'image_name'
+      'image_name',
+      'description'
     ];
 
     public function society()
