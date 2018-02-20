@@ -1,22 +1,5 @@
 /* Feuille de styles   */
 
-#mainContainerPage{
-  min-height: 100%;
-  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
-}
-.sidebarLeft {
-    float: left;
-    padding-top: 40px;
-    width: 20%;
-    min-height: 100vh;
-}
-.mainContentRight {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 80%;
-  background: #fff;
-}
 .SectionFichesSte {
 max-width: 300px;
 width:100%;
@@ -58,7 +41,7 @@ h2 {
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: capitalize;
   font-variant: small-caps;
-  color: white;
+  color: #000;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
@@ -66,7 +49,7 @@ h2 {
   padding: 10px;
   background: #99D420;
 }
-.p {
+.textFichSte {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
   font-size: 0.85rem;
@@ -81,22 +64,19 @@ h2 {
   line-height: 20px;
   text-decoration:underline;
 }
-a {
-  margin-bottom: 5px;
-}
-.link {
+.linkBtn {
   display: flex;
   justify-content: space-around;
   padding: 0px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  font-family:
-}
-.link a {
-  margin:0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.linkBtn a {
+  margin:0px;
   text-transform: uppercase;
 }
+/* Styles boutons fiches sociétés (modifier | supprimer) */
 .btn-primary {
   margin-top: 20px;
   background-color: #295173;
@@ -107,13 +87,14 @@ a {
   border-color: #ec5c1b;
   text-transform: uppercase;
 }
-.fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
+/* Styles des iônes des champs de sociétés */
+.fa-user,.fa-address-card,
+.fa-map-marker-alt,
+.fa-map-signs,.fa-phone-square,
+.fa-globe,.fa-envelope,.fa-edit{
   color: #2A5073;
 }
-.picto-img {
-  width: 10%;
-  height: auto;
-}
+/* Styles des pictos dans la sidebar */
 .picto-box {
 }
 .picto-box a:hover svg #pictoannuaire {
@@ -128,7 +109,7 @@ a {
 .picto-box a:hover svg #picto-devis {
   fill: #d14d19 !important;
 }
-a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
+/* a:hover #picto-annu-lum-1, a:hover #picto-annu-lum-2,
 a:hover #picto-annu-lum-3, a:hover #picto-annu-lum-4,
 a:hover #picto-annu-lum-5, a:hover #picto-annu-lum-6,
 a:hover #picto-annu-lum-7, a:hover #picto-annu-lum-8,
@@ -137,12 +118,9 @@ a:hover #picto-annu-lum-9 {
   stroke: #fd9400 !important;
   fill-opacity: 1 !important;
   stroke-opacity: 1 !important;
-}
-.pictoPresentation {
-  /* padding-left: 20%; */
-  padding-left: 0%;
-}
-.pictoPresentation svg {
-  padding-bottom: 5%;
-  padding-top: 5%;
+} */
+.pictoSidebarLeft svg {
+  padding-bottom: 0;
+  padding-top: 10%;
+  padding-left: 0;
 }
