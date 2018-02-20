@@ -11,7 +11,7 @@ class AdminListingSociety extends Controller
 {
     public function listingSociety()
     {
-      $societies = Society::orderBy('created_at', 'desc')->paginate(5);
+      $societies = Society::orderBy('created_at', 'desc')->paginate(10);
       $societiesbyid = Society::All();
       $categories = Categories::All();
       $categoriesby = Categories::orderBy('created_at', 'desc')->get();

@@ -4,7 +4,7 @@ namespace App\Services;
 /**
  *
  */
-class Rss
+class Rss2
 {
 
   private $url;

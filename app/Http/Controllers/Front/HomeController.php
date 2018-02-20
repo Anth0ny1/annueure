@@ -62,20 +62,20 @@ class HomeController extends Controller
 
       $societelimit3 = Society::inRandomOrder()->limit(3)->get();
 
-      
-      $rs = new Rss();
-      $array = $rs->Rss('http://www.lemonde.fr/m-actu/rss_full.xml', 2);
 
-      $rs2 = new Rss();
-      $array2 = $rs2->Rss('https://www.lequipe.fr/rss/actu_rss_Football.xml', 3);
-
-      $rs3 = new Rss();
-      $array3 = $rs3->Rss('http://www.batiweb.com/rss', 2);
-
-      $rs4 = new Rss();
-      $array4 = $rs4->Rss('http://rss.maxifoot.com/football-general.xml', 15);
-
-      $supermichel = $rs4->arrayMerge($array,$array2,$array3,$array4);
+      // $rs = new Rss();
+      // $array = $rs->Rss('http://www.lemonde.fr/m-actu/rss_full.xml', 2);
+      //
+      // $rs2 = new Rss();
+      // $array2 = $rs2->Rss('https://www.lequipe.fr/rss/actu_rss_Football.xml', 3);
+      //
+      // $rs3 = new Rss();
+      // $array3 = $rs3->Rss('http://www.batiweb.com/rss', 2);
+      //
+      // $rs4 = new Rss();
+      // $array4 = $rs4->Rss('http://rss.maxifoot.com/football-general.xml', 15);
+      //
+      // $supermichel = $rs4->arrayMerge($array,$array2,$array3,$array4);
       // $supermichel = $rs4->arrayMerge($array, $array2, $array3, $array4);
 
       // dd($supermichel);
