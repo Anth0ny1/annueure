@@ -6,69 +6,75 @@
 @endsection
 
 @section('title')
-  Profil société
+  Profil : vos sociétés
 @endsection
 
 @section('content')
-  <div class="textePresentation">  <!-- texte banniére verte de présentation -->
-    @if ($mycountsociety == 0)
-      <h2>Aucune société d'enregistrée </h2>
 
-    @elseif ($mycountsociety == 1)
-        <h2>Vous avez {{$mycountsociety}} société d'inscrite</h2>
-        @else
-          <h2>Voici mes {{$mycountsociety}} sociétés inscrites</h2>
-    @endif
-  </div>
-  <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
-    <div class="pictoPresentation picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
-      <ul>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
-      </ul>
-    </div>
+<main id="mainContainerPage">
+  <!-- Sidebar left (gauche) à mettre dans le header commun pour les pages-->
+  <aside class="sidebarLeft">
+      <div class="pictoPresentation picto-box">
+        <ul>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
+          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
+        </ul>
+      </div>
   </aside>
-<div class="display">
 
-    @foreach ($mysociety as $mysoc)
-{{-- {{dd($mycategory2)}} --}}
+  <div class="mainContent">
+      <!-- texte banniére verte de présentation -->
+      <div class="titreContent">
+        @if ($mycountsociety == 0)
+          <h1>Aucune société enregistrée dans votre profil</h1>
 
-        <section class="template-sct">
-          <div class="presentation-profil-sct">
-              <div class="logo">
-                @if (!empty($mysoc->path))
-                  <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
-                @else
-                  <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
-                @endif
-              </div>
-            <div class="textePresentation txtpres2">
-            <h5>{{$mysoc->name_society}}</h5>
-          </div>
-          <p class="p"><i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
-          <p class="p"><i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
-          <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
-          <p class="p"><i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
-          <p class="p"><i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
-          <p class="p"><i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
-          <p class="p">Siren : {{$mysoc->siren}}</p>
-          <p class="p description">Description : </p><p class="p">{{$mysoc->skills}}</p>
-          <div class="link">
-          <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
-          {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
-          {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
-          {!! Form::close() !!}
-          </div>
-        </div>
-      </section>
+        @elseif ($mycountsociety == 1)
+            <h1>Vous avez {{$mycountsociety}} société inscrite</h1>
+            @else
+              <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
+        @endif
+      </div>
 
-    @endforeach
+
+          @foreach ($mysociety as $mysoc)
+      {{-- {{dd($mycategory2)}} --}}
+
+              <section class="SectionFichesSte">
+                <div class="fichePresentSte">
+                  <div class="logoBoxSte">
+                      @if (!empty($mysoc->path))
+                        <img class="ImglogoSte" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                      @else
+                        {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
+                      @endif
+                  </div>
+                    <h2>{{$mysoc->name_society}}</h2>
+                  <p class="p"><i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
+                  <p class="p"><i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
+                  <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
+                  <p class="p"><i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
+                  <p class="p"><i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
+                  <p class="p"><i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
+                  <p class="p">Siren : {{$mysoc->siren}}</p>
+                  <p class="p description">Description : </p><p class="p">{{$mysoc->skills}}</p>
+                  <div class="link">
+                    <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
+                    {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
+                    {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
+                    {!! Form::close() !!}
+                  </div>
+                </div>
+              </section>
+
+          @endforeach
+
 
   </div>
 
-  </div>
+</main>
+
 @endsection
 @section('js')
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

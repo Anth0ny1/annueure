@@ -20,6 +20,17 @@ Formulaire inscription d'une société
       </div>
   @endif
 
+  @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif
 
   <div class="container center_div">
   <div class="panel-body">
@@ -50,7 +61,7 @@ Formulaire inscription d'une société
 </div>
 
 <div class="form-group">
-    {!! Form::label('city', 'Entrez la ville du siége : ',['class' =>'col-md-4 control-label']) !!}
+    {!! Form::label('city', 'Entrez la ville du siège social : ',['class' =>'col-md-4 control-label']) !!}
     <div class="col-md-6">
     {!! Form::text('city', null, ['class' => 'form-control','placeholder' => 'Ville du siège']) !!}
     {!! $errors->first('city', '<small class="help-block">:message</small>') !!}

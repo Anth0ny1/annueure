@@ -27,14 +27,15 @@ class FormulaireSocietyRequest extends FormRequest
              'name_society'   => 'bail|required|between:5,50',
              'gerant'   => 'bail|required|between:5,50',
              'adress'   => 'bail|required|between:5,150',
-             'city'   => 'bail|between:5,30|alpha',
+             'city'   => 'bail|between:5,30|alpha_dash',
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|numeric',
              'site_web'   => 'bail|max:50',
              'categorie_name'   => 'bail|required',
-              'email'    => 'string|email|max:255|unique:society,email',
+             'email'    => 'string|email|max:255|unique:society,email',
+             'siren'    => 'bail|required|min:9|max:9|unique:society,siren',
              'skills'   => 'bail|max:190',
-             'siren'   => 'bail|required|min:9|max:9'
+             // 'siren'   => 'bail|required|min:9|max:9'
          ];
      }
      public function messages()

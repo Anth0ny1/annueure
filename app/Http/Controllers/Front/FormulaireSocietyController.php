@@ -14,6 +14,11 @@ use App\Services\PathUpload;
 
 class FormulaireSocietyController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('user');
+  }
+  
     public function createSociety()
     {
       // $categories = Categories::All();
@@ -64,18 +69,9 @@ class FormulaireSocietyController extends Controller
              'user_id' => Auth::id(),
            ]
          );
-
-         // $society = Society::findOrFail($id);
-         // $society->categories()->sync($ids);
-       //
-       //
        }
        else {
-         // $post = $request->all();
-         //
-         // $ids = array();
 
-         // foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
 
          $id = \DB::table('society')->insertGetId(
              [
@@ -99,37 +95,8 @@ class FormulaireSocietyController extends Controller
 
        $society = Society::findOrFail($id);
        $society->categories()->sync($ids);
-       //
-       // Categories::insert($do);
-        // $post = $request->all();
-        //
-        // $ids = array();
-        //
-        // foreach($post['categorie_name'] as $idCat) { $ids[] = $idCat; }
-        //
-        // $id = Society::insertGetId(
-        //     [
-        //       "name_society" => $post['name_society'],
-        //       "gerant" => $post['gerant'],
-        //       "adress" => $post['adress'],
-        //       "city" => $post['city'],
-        //       "phone" => $post['phone'],
-        //       "zip_code" => $post['zip_code'],
-        //       "email" => $post['email'],
-        //       "site_web" => $post['site_web'],
-        //       "skills" => $post['skills'],
-        //       "siren" => $post['siren'],
-        //       'created_at' => Carbon::now(),
-        //       'path'           => $path->path(),
-        //       'original_name'  => $path->originalName(),
-        //       'image_name'     => $path->imageName(),
-        //       'user_id' => Auth::id(),
-        //     ]
-        //   );
-        //   $society = Society::findOrFail($id);
-        //   $society->categories()->sync($ids);
-        //
-          return redirect()->route('home')->with('success', 'Merci votre société vient d\'être ajoutée ..');
+
+          return redirect()->route('mes-societes')->with('success', 'Merci votre société vient d\'être ajoutée ..');
     }
 
 }

@@ -10,7 +10,8 @@ recherche société
 
 @section('content')
   <div class="textePresentation">
-    <h2>Liste des sociétés</h2>
+    {{-- {{ dd($societies)}} --}}
+    <h2>Liste des Societés</h2>
 
   </div>
   <div class="content_search">
