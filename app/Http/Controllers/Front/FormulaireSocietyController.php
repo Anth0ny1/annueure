@@ -14,11 +14,11 @@ use App\Services\PathUpload;
 
 class FormulaireSocietyController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('user');
-  }
-  
+  // public function __construct()
+  // {
+  //     $this->middleware('user');
+  // }
+
     public function createSociety()
     {
       // $categories = Categories::All();

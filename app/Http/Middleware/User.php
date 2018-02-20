@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Auth;
 class User
 {
     /**
@@ -18,11 +18,14 @@ class User
       // if (!empty($request)) {
         # code...
         // dd($request->user());
-      if ($request->user()->status == 'actif'){
-          return $next($request);
+        // dd(Auth::guard($guard)->check());
+    if (!empty($request->user()->status)) {
+      if ($request->user()->status == 'inactif'){
+        return redirect()->route('home')->with('danger', 'Votre compte à été désactiver contacter nous pour plus d\'information');
       }
+    }
+    return $next($request);
 
-      return redirect('/');
     }
   // }
 

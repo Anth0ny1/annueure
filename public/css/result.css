@@ -74,10 +74,12 @@ body {
   background-size: cover;
 } */
 
-main {
+/* background-color: black; */
+/* background-position: 50% 15%; */
+
+/* main {
   position: relative;
   display: flex;
-  /* background-position: 50% 15%; */
 
 }
 
@@ -92,7 +94,6 @@ h1 { margin: 0; }
 .marker {
   position: absolute; top: 2rem;
   height: 3rem; width: 10rem;
-  /* background-color: black; */
   animation-name: marker;
 }
 
@@ -190,7 +191,7 @@ h1 { margin: 0; }
 @keyframes marker {
   0%, 0% { transform: translateX(0); }
   0%, 0% { transform: translateX(0rem); }
-}
+} */
 
 /*---------  <<end>>   animation css title h1 of search.blade.php
 /*----------------------------------------------------------------------------*/

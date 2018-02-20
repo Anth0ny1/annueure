@@ -11,11 +11,11 @@ use App\Http\Requests\SelectRequest;
 class SearchController extends Controller
 {
 
-  public function __construct()
-  {
-      $this->middleware('user');
-  }
-  
+  // public function __construct()
+  // {
+  //     $this->middleware('user');
+  // }
+
   public function searchView()
   {
       return view('front/search');

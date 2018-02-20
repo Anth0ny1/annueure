@@ -46,8 +46,8 @@ Route::group(['namespace' => 'Front'], function(){
 
   // INSCRIPTION SOCIETE
   //
-  Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe');
-  Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action');
+  Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe')->middleware('user');
+  Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action')->middleware('user');
 
 
   // Route::get('/newsrss', 'NewRssController')->name('new-rss');
@@ -65,10 +65,10 @@ Route::group(['namespace' => 'Front'], function(){
   Route::get('/annuaire', 'HomeController@annuaire')->name('annuaire');
 
 // MODIFICATION SOCIETES ROUTING
-  Route::get('/mes-societes', 'UpdateSocietyFront@viewMySociety')->name('mes-societes');
+  Route::get('/mes-societes', 'UpdateSocietyFront@viewMySociety')->name('mes-societes')->middleware('user');
 
-  Route::get('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySociety')->name('update-societes');
-  Route::put('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySocietyAction')->name('update-societes-action');
+  Route::get('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySociety')->name('update-societes')->middleware('user');
+  Route::put('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySocietyAction')->name('update-societes-action')->middleware('user');
 
   Route::delete('/mes-societes/delete/{idSociety}', 'UpdateSocietyFront@deleteMySociety')->name('delete-societes');
 
