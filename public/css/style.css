@@ -251,7 +251,7 @@ h2 {
   color: #000;
   text-align: center;
   min-height: 30px;
-  padding: 10px 25px 10px 0;
+  padding: 0 auto;
   vertical-align: middle;
 }
 #first-actu-box {

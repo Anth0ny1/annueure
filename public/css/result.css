@@ -56,6 +56,144 @@ img{
 h2{
   font-size: 250%;
 }
+/*----------------------------------------------------------------------------*/
+/*---------  animation css title h1 of search.blade.php
+/*----------------------------------------------------------------------------*/
+
+/* html { font-size: 1px; }
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url(http://alluretouch.com/wp-content/uploads/2015/09/minimalist-art.jpg);
+  background-position: 50% 15%;
+  background-size: cover;
+} */
+
+main {
+  position: relative;
+  display: flex;
+  /* background-position: 50% 15%; */
+
+}
+
+h1 { margin: 0; }
+.marker, .l1, .i1, .s1, .t1, .e1, .a1, .d1, .e2, .s2, .a2, .s3, .o1, .c1, .i2, .e3, .t2, .e4, .s4 {
+  animation-timing-function: cubic-bezier(0.15,-0.01, 0.58, 1);
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.marker {
+  position: absolute; top: 2rem;
+  height: 3rem; width: 10rem;
+  /* background-color: black; */
+  animation-name: marker;
+}
+
+.l1 { margin-left: 0.5rem;   animation-name: l1; }
+.i1 { margin-left: 0.5rem;   animation-name: i1; }
+.s1 { margin-left: 0.5rem;   animation-name: s1; }
+.t1 { margin-left: 0.5rem;   animation-name: t1; }
+.e1 { margin-left: 0.5rem;   animation-name: e2; }
+.a1 { margin-left: 1.2rem;   animation-name: a1; }
+.d1 { margin-left: 0.5rem;   animation-name: d1; }
+.e2 { margin-left: 0.5rem;   animation-name: e2; }
+.s2 { margin-left: 0.5rem;   animation-name: s2; }
+.a2 { margin-left: 1.2rem;   animation-name: a2; }
+.s3 { margin-left: 0.5rem;   animation-name: s3; }
+.o1 { margin-left: 0.5rem;   animation-name: o1; }
+.c1 { margin-left: 0.5rem;   animation-name: c1; }
+.i2 { margin-left: 0.5rem;   animation-name: i2; }
+.e3 { margin-left: 0.5rem;   animation-name: e3; }
+.t2 { margin-left: 0.5rem;   animation-name: t2; }
+.e4 { margin-left: 0.5rem;   animation-name: e4; }
+.s4 { margin-left: 0.5rem;   animation-name: s4; }
+
+@keyframes l1 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes i1 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes s1 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes t1 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes e1 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes a1 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes d1 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes e2 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes s2 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes a2 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes s3 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes o1 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes c1 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes i2 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes e3 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes t2 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes e4 {
+  0%, 20% { transform: translateX(10rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes s4 {
+  0%, 20% { transform: translateX(30rem); }
+  50%, 70% { transform: translateX(20rem); }
+}
+@keyframes marker {
+  0%, 0% { transform: translateX(0); }
+  0%, 0% { transform: translateX(0rem); }
+}
+
+/*---------  <<end>>   animation css title h1 of search.blade.php
+/*----------------------------------------------------------------------------*/
 h5{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
