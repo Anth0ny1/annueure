@@ -11,21 +11,36 @@
 
 @section('content')
 
-<main id="profilSociete">
+<main id="mainContainerPage">
   <!-- Sidebar left (gauche) à mettre dans le header commun pour les pages-->
-  <aside class="sidebarContent">
-    <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
-      <div class="pictoPresentation picto-box">
+  <aside class="sidebarLeft">
+      <div class="pictoSidebarLeft picto-box">
         <ul>
-          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
-          <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
+          <li>
+            <a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}
+            </a>
+            <p class="labelPicto">Annuaire des Pro</p>
+          </li>
+          <li>
+            <a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
+            </a>
+            <p class="labelPicto">Inscription des Pro</p>
+          </li>
+          <li>
+            <a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+            <p class="labelPicto">Prendre un rendez-vous</p>
+          </li>
+          <li>
+            <a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
+            </a>
+            <p class="labelPicto">Demander un devis</p>
+          </li>
         </ul>
       </div>
   </aside>
 
-  <div class="pageSociete">
+  <div class="mainContentRight">
       <!-- texte banniére verte de présentation -->
       <div class="titreContent">
         @if ($mycountsociety == 0)
@@ -37,32 +52,36 @@
               <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
       </div>
-      <div class="mainContent">
 
           @foreach ($mysociety as $mysoc)
       {{-- {{dd($mycategory2)}} --}}
 
-              <section class="template-sct">
-                <div class="presentation-profil-sct">
-                  <div class="logo">
+              <section class="SectionFichesSte">
+                <div class="fichePresentSte">
+                  <div class="logoBoxSte">
                       @if (!empty($mysoc->path))
-                        <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                        <img class="ImglogoSte" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
                       @else
-                        <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
+                        {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
                   </div>
-                  <div class="textePresentation txtpres2">
-                    <h5>{{$mysoc->name_society}}</h5>
-                  </div>
-                  <p class="p"><i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
-                  <p class="p"><i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
-                  <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
-                  <p class="p"><i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
-                  <p class="p"><i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
-                  <p class="p"><i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
-                  <p class="p">Siren : {{$mysoc->siren}}</p>
-                  <p class="p description">Description : </p><p class="p">{{$mysoc->skills}}</p>
-                  <div class="link">
+                    <h2>{{$mysoc->name_society}}</h2>
+                  <p class="textFichSte">
+                    <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
+                  <p class="textFichSte">
+                    <i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
+                  <p class="textFichSte">
+                    <i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
+                  <p class="textFichSte">
+                    <i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
+                  <p class="textFichSte">
+                    <i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
+                  <p class="textFichSte">
+                    <i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
+                  <p class="textFichSte">Siren : {{$mysoc->siren}}</p>
+                  <p class="textFichSte description">Description : </p>
+                  <p class="textFichSte">{{$mysoc->skills}}</p>
+                  <div class="linkBtn">
                     <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
                     {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
                     {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
@@ -73,9 +92,7 @@
 
           @endforeach
 
-      </div>
   </div>
-
 </main>
 
 @endsection

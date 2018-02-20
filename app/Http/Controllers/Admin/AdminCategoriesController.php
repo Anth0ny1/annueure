@@ -34,9 +34,10 @@ class AdminCategoriesController extends Controller
 
         $do = [
           'categorie_name' => $post['categorie_name'],
-          'path'           => $path->path(),
+          'path_categorie'           => $path->path(),
           'original_name'  => $path->originalName(),
           'image_name'     => $path->imageName(),
+          'description'     => $path->description(),
           'created_at'     => Carbon::now(),
         ];
         $post = $request->all();

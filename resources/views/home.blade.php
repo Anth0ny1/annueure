@@ -2,7 +2,7 @@
 
 @section('content')
   <?php
-  
+
   ?>
 <?php
   // require_once(asset('rss/magpiemod/rss_fetch.inc'));
@@ -169,16 +169,39 @@
       </section>
 
       <section id="actualites">
-        <h2 class="separation">
+        <!-- separateur de section -->
+        <div class="separator"></div>
+        <h2>
             Focus : les métiers du jour
         </h2>
-        <div id="first-actu-box" class="actu-box">
+
+<div class="first-actu-box">
+        @foreach ( $selectCategories1 as $categorie)
+
+
+          {{-- {{dd($categorie)}} --}}
+          <div class="actu-box">
+            <div class="img-actu-box">
+              {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
+              <img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
+            </div>
+            <div class="bloc-text">
+              <h3>{{ $categorie->categorie_name}}</h3>
+              <p>{{ $categorie->description}}</p>
+            </div>
+          </div>
+        @endforeach
+</div>
+
+        {{-- <div id="first-actu-box" class="actu-box">
           <div class="img-actu-box">
             <a href="{{ route('register') }}">
+
               <img src="{{ asset('img/photo/metiers-du-jour-01.jpg') }}" alt="" />
             </a>
+
           </div>
-          <div class="bloc-text">
+
             <h3>Paysagistes et jardiniers</h3>
             <p>Découvrir le métier de jardinier / paysagiste dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
@@ -204,7 +227,7 @@
             <h3>Conducteurs de travaux BTP</h3>
             <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
           </div>
-        </div>
+        </div> --}}
       </section>
   </main>
 
@@ -216,6 +239,7 @@
     <?php
 
   	try{
+
   		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
   			throw new Exception('Flux introuvable');
   		}
@@ -240,7 +264,7 @@
   	}
 
   ?>
-  
+
   <img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt="">
   </div>
   <span></span>
@@ -322,6 +346,7 @@
       {{-- @foreach ($categories as $categorie)
         {{ $categorie->categorie_name }}
       @endforeach --}}
+{{-- {{dd($selectCategories)}} --}}
 
 @endsection
 

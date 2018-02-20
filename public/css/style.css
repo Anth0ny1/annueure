@@ -4,6 +4,7 @@ html {
   font-size: 100%;
 }
 body {
+  min-height: 100%;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
   color: #000;
@@ -233,15 +234,16 @@ a:hover #picto-annu-lum-9 {
 /* Styles pour la Section actualités */
 
 section#actualites {
-  width: 98%;
-  margin: 10px auto;
+  width: 100%;
+  margin: 10px 10px;
   clear: left;
   float: left;
 }
-.separation{
+.separator{
   width: 100%;
   border-top: 2px solid #c9c9c9;
-  margin-left:25px;
+  padding:0.5% 1%;
+
 }
 h2 {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -250,11 +252,13 @@ h2 {
   color: #000;
   text-align: center;
   min-height: 30px;
-  padding: 10px 25px 10px 0;
+  padding: 0 auto;
   vertical-align: middle;
+  margin: 10px 0;
 }
-#first-actu-box {
-  margin-left: 3%;
+.first-actu-box {
+  margin-left: 2.5%;
+  /* margin-top: 5px; */
 }
 .actu-box {
   float: left;
@@ -266,7 +270,7 @@ h2 {
   margin-top: 10px;
 }
 div .bloc-text p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .img-actu-box {
@@ -279,6 +283,8 @@ div .bloc-text p {
 .img-actu-box img {
   width: 100%;
   height: auto;
+  border: 1px solid #9EA5B2;
+  border-radius: 3%;
 }
 #last-actu-box {
   margin-right: 0 !important;
@@ -387,6 +393,33 @@ aside#flux-RSS {
 .pictoPresentation svg {
   padding-bottom: 5%;
   padding-top: 5%;
+}
+
+/*********** Structure + sidebar à gauche pour pages ***********/
+
+#mainContainerPage{
+  min-height: 100%;
+  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
+}
+.sidebarLeft {
+    float: left;
+    padding-top: 40px;
+    width: 20%;
+    min-height: 100vh;
+}
+p.labelPicto {
+  font-size: 0.85rem;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding:0px;
+  margin: 0px;
+}
+.mainContentRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  background: #fff;
 }
 
 /*********** Media Queries ***********/

@@ -10,6 +10,11 @@
     {!! Form::text('categorie_name', $categorie->categorie_name) !!}
     {!! $errors->first('categorie_name', '<span class="help-block">:message</span>') !!}
 
+    {!! Form::label('description', 'Description : ') !!}
+
+    {!! Form::text('description', null,['class' => 'categories_name', 'placeholder' => 'Description de la catégorie']) !!}
+    {!! $errors->first('description', '<small class="help-block">:message</small>') !!}
+
     {!! Form::label('image','Image de la catégorie') !!}
 
     {!! Form::file('image') !!}
