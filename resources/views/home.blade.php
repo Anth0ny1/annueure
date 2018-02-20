@@ -169,7 +169,9 @@
       </section>
 
       <section id="actualites">
-        <h2 class="separation">
+        <!-- separateur de section -->
+        <div class="separator"></div>
+        <h2>
             Focus : les métiers du jour
         </h2>
 
