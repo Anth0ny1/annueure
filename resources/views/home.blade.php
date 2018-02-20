@@ -183,7 +183,7 @@
             </div>
             <div class="bloc-text">
               <h3>{{ $categorie->categorie_name}}</h3>
-              <p>ici description categorie{{ $categorie->description}}</p>
+              <p>{{ $categorie->description}}</p>
             </div>
           </div>
         @endforeach
