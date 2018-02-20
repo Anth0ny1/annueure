@@ -4,6 +4,7 @@ html {
   font-size: 100%;
 }
 body {
+  min-height: 100%;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
   color: #000;

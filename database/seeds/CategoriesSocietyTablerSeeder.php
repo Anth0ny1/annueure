@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class CategoriesSocietyTableSeeder extends Seeder
 {
     /**
@@ -342,9 +340,6 @@ class CategoriesSocietyTableSeeder extends Seeder
         'society_id' => 66,
         'categories_id' => 18
       );
-
-
-
 
       DB::table('categories_society')->insert($categories_society);
     }

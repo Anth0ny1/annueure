@@ -27,9 +27,13 @@ class FormulaireSocietyRequest extends FormRequest
              'name_society'   => 'bail|required|between:5,50',
              'gerant'   => 'bail|required|between:5,50',
              'adress'   => 'bail|required|between:5,150',
-             'city'   => 'bail|between:5,30|alpha',
+<<<<<<< HEAD
+             'city'   => 'required|between:5,30',
+=======
+             'city'   => 'bail|required|between:5,30',
+>>>>>>> c1306fcf1a065baf53b562bfd802c85141b9d460
              'phone'   => 'phone:AUTO,FR',
-             'zip_code'   => 'bail|numeric',
+             'zip_code'   => 'bail|required|numeric',
              'site_web'   => 'bail|max:50',
              'categorie_name'   => 'bail|required',
              'email'    => 'string|email|max:255|unique:society,email',

@@ -59,5 +59,7 @@
 
   </tbody>
   </table>
+  
+  {{ $societies->links() }}
 
 @endsection

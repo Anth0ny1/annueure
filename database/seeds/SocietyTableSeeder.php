@@ -138,7 +138,7 @@ class SocietyTableSeeder extends Seeder
         'site_web'        => 'http://www.charpente-menuiserie-leroypascal.fr/',
         'skills'        => 'Depuis 1985 Pascal Leroy exerce le métier de charpentier et menuisier d\'extérieur.',
         'email'        => 'leroy.pascal@gmail.com',
-        'siren'        => 098456787,
+        'siren'        => 198456787,
         'created_at'  => $date
       );
       $society[] = array(

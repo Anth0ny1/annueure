@@ -15,6 +15,7 @@
       <tr>
         <th>#</th>
         <th>Nom de la catégorie</th>
+        <th>description</th>
         <th>Modification</th>
         <th>Effacer</th>
       </tr>
@@ -24,6 +25,7 @@
         <tr>
           <td>{{ $categorie->id }}</td>
           <td>{{ $categorie->categorie_name }}</td>
+          <td>{{ $categorie->description }}</td>
           <td><a class="btn btn-round btn-primary" href="{{ route('update-categories',['id' => $categorie->id])}}">modifier</a></td>
           <td>
             {!! Form::open(['route' => ['delete-categories', $categorie->id], 'method' => 'delete']) !!}

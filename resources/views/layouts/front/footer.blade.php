@@ -27,14 +27,7 @@
       <li>
         {{-- {{dd($societelimit3)}} --}}
         {{-- @foreach ($societelimit3 as $societelim) --}}
-        <ul>
-          @foreach ($societies as $society)
-            <li><a href="">{{ $society->name_society }}</a></li>
-          @endforeach
-        </ul>
-        {{-- @endforeach --}}
-      </li>
-    </ul> --}}
+
 
   {{-- </div>
   <div class="Verbar"></div>

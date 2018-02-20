@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->char('path',190)->nullable();
             $table->string('original_name')->nullable();
             $table->char('image_name',190)->nullable();
+            $table->char('description',190)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

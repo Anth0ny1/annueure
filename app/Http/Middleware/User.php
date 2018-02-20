@@ -15,11 +15,15 @@ class User
      */
     public function handle($request, Closure $next)
     {
-      // dd($request);
+      // if (!empty($request)) {
+        # code...
+        // dd($request->user());
       if ($request->user()->status == 'actif'){
           return $next($request);
       }
 
       return redirect('/');
     }
+  // }
+
 }
