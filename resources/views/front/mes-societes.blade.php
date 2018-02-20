@@ -11,10 +11,9 @@
 
 @section('content')
 
-<main id="profilSociete">
+<main id="mainContainerPage">
   <!-- Sidebar left (gauche) à mettre dans le header commun pour les pages-->
-  <aside class="sidebarContent">
-    <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
+  <aside class="sidebarLeft">
       <div class="pictoPresentation picto-box">
         <ul>
           <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
@@ -25,7 +24,7 @@
       </div>
   </aside>
 
-  <div class="pageSociete">
+  <div class="mainContent">
       <!-- texte banniére verte de présentation -->
       <div class="titreContent">
         @if ($mycountsociety == 0)
@@ -37,23 +36,21 @@
               <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
       </div>
-      <div class="mainContent">
+
 
           @foreach ($mysociety as $mysoc)
       {{-- {{dd($mycategory2)}} --}}
 
-              <section class="template-sct">
-                <div class="presentation-profil-sct">
-                  <div class="logo">
+              <section class="SectionFichesSte">
+                <div class="fichePresentSte">
+                  <div class="logoBoxSte">
                       @if (!empty($mysoc->path))
-                        <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                        <img class="ImglogoSte" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
                       @else
-                        <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
+                        {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
                   </div>
-                  <div class="textePresentation txtpres2">
-                    <h5>{{$mysoc->name_society}}</h5>
-                  </div>
+                    <h2>{{$mysoc->name_society}}</h2>
                   <p class="p"><i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
                   <p class="p"><i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
                   <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
@@ -73,7 +70,7 @@
 
           @endforeach
 
-      </div>
+
   </div>
 
 </main>

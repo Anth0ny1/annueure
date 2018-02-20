@@ -26,7 +26,7 @@ class UpdateMySocietyRequest extends FormRequest
         return [
           'name_society'   => 'bail|required|between:5,50',
           'adress'   => 'bail|required|between:5,150',
-          'city'   => 'bail|between:5,30|alpha',
+          'city'   => 'bail|between:5,30|alpha_dash',
           'phone'   => 'phone:AUTO,FR',
           'zip_code'   => 'bail|numeric',
           'site_web'   => 'bail|max:50',

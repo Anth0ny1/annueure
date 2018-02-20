@@ -1,27 +1,26 @@
-
-.template-sct {
+#mainContainerPage{
+  min-height: 100%;
+}
+.SectionFichesSte {
 max-width: 300px;
 width:100%;
 margin: 5px;
 }
-.logo-sct {
-padding-top: 20px;
-}
-.logo {
-  text-align: center;
-  background:linear-gradient(#295173,#53b0ff);
-  border: 1px solid transparent;
-  padding-bottom: 30px;
-  border-radius: 10px 10px 0 0 ;
-}
-.presentation-profil-sct {
+.fichePresentSte {
   background: lightgrey;
   width: 100%;
   border-radius: 10px;
   margin-bottom: 50px;
 }
-.pageSociete {
-  width: 100%;
+.logoBoxSte {
+  text-align: center;
+  background:linear-gradient(#295173,#53b0ff);
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 10px 10px 0 0 ;
+}
+.ImglogoSte {
+padding-top: 20px;
 }
 h1 {
   min-height: 50px;
@@ -37,18 +36,19 @@ h1 {
 
 }
 h2 {
+  width: 100%;
   min-height: 30px;
+  display: inline-table;
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-variant: small-caps;
   color: white;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
-  /* margin-bottom: 30px;
-  padding: 10px 25px 10px 0; */
-}
-.txtpres2 {
-  margin-bottom: 10px;
+  /* margin-bottom: 30px; */
+  padding: 10px;
+  background: #99D420;
 }
 .p {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -67,15 +67,13 @@ h2 {
   justify-content: center;
   width: 80%;
 }
-.sidebarContent {
+.sidebarLeft {
     float: left;
     padding-top: 40px;
     background: #a4a4a4;
     width: 20%;
+    min-height: 100vh;
     height: 100%;
-}
-.btn-primary {
-  margin-top: 20px;
 }
 .description {
   line-height: 20px;
@@ -97,13 +95,15 @@ a {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
+.btn-primary {
+  margin-top: 20px;
+  background-color: #295173;
+  border-color: #295173;
+}
 .btn-danger {
   background-color: #ec5c1b;
   border-color: #ec5c1b;
-}
-.btn-primary {
-  background-color: #295173;
-  border-color: #295173;
+  text-transform: uppercase;
 }
 .fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
   color: #2A5073;
