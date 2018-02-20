@@ -173,18 +173,21 @@
             Focus : les métiers du jour
         </h2>
 
-
-@foreach ( $selectCategories1 as $categorie)
-  {{-- {{dd($categorie)}} --}}
-    {{-- <div class="img-actu-box"> --}}
-<img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array())}}" alt="" />
-{{-- </div> --}}
-  {{-- <div class="bloc-text"> --}}
-    <h3>{{ $categorie->categorie_name}}</h3>
-    <p>ici description categorie{{ $categorie->description}}</p>
-  {{-- </div> --}}
-@endforeach
-
+<div class="first-actu-box">
+        @foreach ( $selectCategories1 as $categorie)
+          {{-- {{dd($categorie)}} --}}
+          <div class="actu-box">
+            <div class="img-actu-box">
+              {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
+              <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
+            </div>
+            <div class="bloc-text">
+              <h3>{{ $categorie->categorie_name}}</h3>
+              <p>ici description categorie{{ $categorie->description}}</p>
+            </div>
+          </div>
+        @endforeach
+</div>
 
         {{-- <div id="first-actu-box" class="actu-box">
           <div class="img-actu-box">
