@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class User
+class isLogged
 {
     /**
      * Handle an incoming request.
@@ -15,15 +15,10 @@ class User
      */
     public function handle($request, Closure $next)
     {
-      // if (!empty($request)) {
-        # code...
-        // dd($request->user());
-      if ($request->user()->status == 'actif'){
-          return $next($request);
+      if (!empty($request->user())) {
+        return $next($request);
       }
 
       return redirect('/');
     }
-  // }
-
 }

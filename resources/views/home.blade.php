@@ -175,12 +175,13 @@
 
 <div class="first-actu-box">
         @foreach ( $selectCategories1 as $categorie)
-            
+
+
           {{-- {{dd($categorie)}} --}}
           <div class="actu-box">
             <div class="img-actu-box">
               {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
-              <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
+              <img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
             </div>
             <div class="bloc-text">
               <h3>{{ $categorie->categorie_name}}</h3>

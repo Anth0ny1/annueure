@@ -78,11 +78,13 @@ body {
   background-size: cover;
 } */
 
+/* background-color: black; */
+/* background-position: 50% 15%; */
+
 /* main {
   position: relative;
-  display: flex; */
-  /* background-position: 50% 15%; */
-/*
+  display: flex;
+
 }
 
 h1 { margin: 0; }

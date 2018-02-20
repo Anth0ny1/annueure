@@ -44,6 +44,7 @@ recherche société
 
       @foreach ($societies as $qq)
         {{-- {{dd($qq)}} --}}
+        {{-- {{dd($qq)}} --}}
         <div class="bloc_societe">
           <div class="logo">
             {{-- {{dd($qq)}} --}}
@@ -55,6 +56,7 @@ recherche société
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
+          <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
