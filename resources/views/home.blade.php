@@ -172,11 +172,14 @@
         <h2 class="separation">
             Focus : les métiers du jour
         </h2>
+
         <div id="first-actu-box" class="actu-box">
           <div class="img-actu-box">
             <a href="{{ route('register') }}">
+
               <img src="{{ asset('img/photo/metiers-du-jour-01.jpg') }}" alt="" />
             </a>
+
           </div>
           <div class="bloc-text">
             <h3>Paysagistes et jardiniers</h3>
@@ -216,6 +219,7 @@
     <?php
 
   	try{
+
   		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
   			throw new Exception('Flux introuvable');
   		}
@@ -240,7 +244,7 @@
   	}
 
   ?>
-  
+
   <img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt="">
   </div>
   <span></span>
@@ -322,6 +326,7 @@
       {{-- @foreach ($categories as $categorie)
         {{ $categorie->categorie_name }}
       @endforeach --}}
+{{-- {{dd($selectCategories)}} --}}
 
 @endsection
 
