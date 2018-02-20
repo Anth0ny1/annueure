@@ -2,14 +2,13 @@
 
 #mainContainerPage{
   min-height: 100%;
-  background: #71767F;
+  background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
 }
 .sidebarLeft {
     float: left;
     padding-top: 40px;
     width: 20%;
     min-height: 100vh;
-    background: #dcdcdc url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
 }
 .mainContentRight {
   display: flex;
