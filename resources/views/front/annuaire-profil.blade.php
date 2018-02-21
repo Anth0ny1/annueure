@@ -71,3 +71,19 @@
   });
   </script>
 @endsection
+{{-- <iframe width="600" height="450" frameborder="0" style="border:0" --}}
+{{-- src="https://www.google.com/maps/embed/v1/place?q={{$societies->zip_code}}+{{$societies->city}}+france:ChIJNSMCIJQk4UcRkJ27T0gUDAQ&key=AIzaSyABt92V3M0BfIPmUVUxWgfhTNpnckwDp_c" allowfullscreen></iframe> --}}
+{{-- {{dd($societies->zip_code)}} --}}
+<iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q={{$societies->adress}}.''.{{$societies->city}}&key=AIzaSyABt92V3M0BfIPmUVUxWgfhTNpnckwDp_c" allowfullscreen></iframe>
+
+
+
+
+{{-- AIzaSyABt92V3M0BfIPmUVUxWgfhTNpnckwDp_c --}}
+
+
+
+{{--
+api key google maps javascript :
+AIzaSyBIwOEI8lL_e6O9r5VopMIeC2P2eLuArc8 --}}
