@@ -50,10 +50,10 @@ class FormulaireSocietyRequest extends FormRequest
              'adress.min' => 'Merci d\'indiquer votre adresse.',
              'city.min' => 'Merci d\'indiquer votre ville.',
              'zip_code.min' => 'Merci d\'indiquer votre code postal.',
-             'categorie_name' => 'Merci d\'indiquer une categorie.',
-             'skills.max' => 'Votre texte ne peut depasser 190 caractères ',
+             'categorie_name' => 'Merci d\'indiquer une catégorie.',
+             'skills.max' => 'Votre texte ne peut pas dépasser 190 caractères ',
              'email.min' => 'Merci d\'indiquer votre email.',
-             'siren.min' => 'Merci d\'indiquer un numéro de siren avec 9 chiffres.',
+             'siren.min' => 'Merci d\'indiquer un numéro de Siren à 9 chiffres.',
            ];
      }
 

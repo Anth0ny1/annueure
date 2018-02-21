@@ -6,6 +6,15 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+<<<<<<< HEAD
+=======
+h2{
+  font-size: 250%;
+}
+.textePresentation h2 {
+  color: white;
+}
+>>>>>>> 2807132ea1236c70308862ab8878ffc303c4d75b
 .bloc_cat{
   background:linear-gradient(#53b0ff ,#295173);
   margin: 5px;

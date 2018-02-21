@@ -336,6 +336,13 @@ aside#flux-RSS {
   font-size: 0.8rem;
   float: left;
 }
+<<<<<<< HEAD
+/* .footerPresentation1 {
+  width: 100%;
+  background: #2A5073;
+} */
+.footerPresentation1 ul li a {
+=======
 .footerOneColText {
   float: left;
   width: 32%;
@@ -345,8 +352,20 @@ aside#flux-RSS {
 .footerOneColTitle {
   font-size: 0.9rem;
   color: #99D420;
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
 }
+<<<<<<< HEAD
+.footerPresentation1 ul {
+  list-style: none outside none;
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+.footerPresentation1 li {
+  margin: 0 40px;
+  display: inline;
+=======
 .footerLinkText {
   color: #CCCCCC;
   line-height: 1.0rem;
@@ -396,6 +415,16 @@ aside#flux-RSS {
   background-color: #fff;
   border-radius: 3%;
   padding: 4%;
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
+}
+.logosCCIEure {
+  margin-top: 10px;
+}
+.logosCCIEure img {
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 3%;
+  padding: 5px;
 }
 
 /* Styles page Présentation */
@@ -435,6 +464,9 @@ aside#flux-RSS {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+
+/*********** Structure + Sidebar à gauche pour pages ***********/
+
 
 /*********** Structure + sidebar à gauche pour pages ***********/
 
@@ -506,7 +538,13 @@ p.labelPicto {
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
 }
+<<<<<<< HEAD
+.dropdown-item:link {
+  line-height: 20px;
+}
+=======
 
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
 @media screen and (max-width: 790px)
 {
 
