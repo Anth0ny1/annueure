@@ -48,7 +48,8 @@ recherche société
         <div class="bloc_societe">
           <div class="logo">
             {{-- {{dd($qq)}} --}}
-          @if (!empty($qq->path) || !empty($qq->image_name))
+          @if (!empty($qq->path))
+        
           <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $qq->path . '/' . $qq->image_name,100,100,array('crop','grayscale'))}}" alt="">
           @else
             <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">

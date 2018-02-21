@@ -169,13 +169,16 @@
       </section>
 
       <section id="actualites">
-        <h2 class="separation">
+        <!-- separateur de section -->
+        <div class="separator"></div>
+        <h2>
             Focus : les métiers du jour
         </h2>
 
 <div class="first-actu-box">
         @foreach ( $selectCategories1 as $categorie)
-          {{-- {{ dd($categorie) }} --}}
+
+
           {{-- {{dd($categorie)}} --}}
           <div class="actu-box">
             <div class="img-actu-box">
