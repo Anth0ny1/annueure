@@ -86,7 +86,7 @@
         <div class="form-group row">
 
           <!-- Formulaire de recherche -->
-          {!! Form::select('categorie_name',$arrayCat,'',['class' => 'form-control col-md-5','placeholder' => 'Choisisez votre métier']) !!}
+          {!! Form::select('categorie_name',$arrayCat,'',['class' => 'form-control col-md-5','placeholder' => 'Choisissez votre métier']) !!}
           {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
           {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
@@ -119,7 +119,7 @@
 
           <!-- Fin affichage des erreurs du formulaire -->
 
-        <h1 style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+        <h1 id="baseline" style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
             “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
         </h1>
         <div id="first-service-box" class="service-box ">
@@ -238,6 +238,7 @@
 
     <?php
 
+    // Flux RSS N° 1 - Actualités Batiweb *****************************
   	try{
 
   		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
@@ -250,7 +251,7 @@
   				<p class="p_rss">'.(string)$fluxrss->channel->description.'</p>';
 
   		$i = 0;
-  		$nb_affichage = 15;
+  		$nb_affichage = 5;
   		echo '<ul>';
   		foreach($fluxrss->channel->item as $item){
   			echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
@@ -263,9 +264,61 @@
   		echo $e->getMessage();
   	}
 
+    // Flux RSS N° 2 - Actualité Le Moniteur *****************************
+    try{
+
+      if(!@$fluxrss2=simplexml_load_file('https://www.lemoniteur.fr/cache/X_articles_rss2_119.xml')){
+        throw new Exception('Flux introuvable');
+      }
+      if(empty($fluxrss2->channel->title) || empty($fluxrss2->channel->description) || empty($fluxrss2->channel->item->title))
+        throw new Exception('Flux invalide');
+
+      echo '<h3 class="h3_rss">'.(string)$fluxrss2->channel->title.'</h3>
+          <p class="p_rss">'.(string)$fluxrss2->channel->description.'</p>';
+
+      $i = 0;
+      $nb_affichage = 5;
+      echo '<ul>';
+      foreach($fluxrss2->channel->item as $item){
+        echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
+        if(++$i>=$nb_affichage)
+          break;
+      }
+      echo '</ul>';
+    }
+    catch(Exception $e){
+      echo $e->getMessage();
+    }
+
+    // Flux RSS N° 3 - Offre d'emplois  *****************************
+    try{
+
+      if(!@$fluxrss3=simplexml_load_file('https://www.loffredemploi.fr/offre-emploi/haute-normandie/construction-btp-batiment/eure/0/1000/fluxrss.xml')){
+        throw new Exception('Flux introuvable');
+      }
+      if(empty($fluxrss3->channel->title) || empty($fluxrss3->channel->description) || empty($fluxrss3->channel->item->title))
+        throw new Exception('Flux invalide');
+
+      echo '<h3 class="h3_rss">'.(string)$fluxrss3->channel->title.'</h3>
+          <p class="p_rss">'.(string)$fluxrss3->channel->description.'</p>';
+
+      $i = 0;
+      $nb_affichage = 5;
+      echo '<ul>';
+      foreach($fluxrss3->channel->item as $item){
+        echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
+        if(++$i>=$nb_affichage)
+          break;
+      }
+      echo '</ul>';
+    }
+    catch(Exception $e){
+      echo $e->getMessage();
+    }
+
   ?>
 
-  <img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt="">
+  <!-- <img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt=""> -->
   </div>
   <span></span>
         {{-- <div class="rss">
