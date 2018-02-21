@@ -27,12 +27,14 @@ body {
   line-height:100px;
   text-align:center; /* centrage horizontal */ }
 }
-#titrecursive {
+h1#baseline {
   font-family: 'pattayaregular', sans-serif;
+  font-size: 1.8rem;
   text-align: center;
   min-height: 30px;
-  padding-top: 10px;
-  font-size: 1.8rem;
+  padding: 20px 5px;
+  vertical-align: middle;
+  color: #9EA5B2;
 }
 #logo-entete {
   position: absolute;
@@ -302,11 +304,11 @@ aside#flux-RSS {
   margin-top: 15px;
   border-left: 2px solid #c9c9c9;
 }
-.h3_rss{
+.h3_rss {
+  font-size:1.0rem;
   background:#295173;
   color:white;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 .p_rss{
   font-size:110%;
@@ -318,34 +320,42 @@ aside#flux-RSS {
   border: 1px solid #295173;
   margin-left: 2%;
 }
+
 /* Styles du footer (bas de page) */
 
 #footer {
   clear:both; /* forcer l’affichage sous le contenu et la colonne */
   background: #295173;
-  color:#fff;
-  min-height:50px;
-  padding:25px;
-  /* text-align:center; */
+  min-height: 100px;
+  padding: 25px;
+  width: 100%;
 }
-.footerContainerBox{
-  height: 150px;
+.footerLinks {
+  width: 50%;
+  font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
   float: left;
-  width: 15%;
-  margin-left: 30px;
 }
+<<<<<<< HEAD
 /* .footerPresentation1 {
   width: 100%;
   background: #2A5073;
 } */
 .footerPresentation1 ul li a {
-  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
-  color:#99D420;
-  font-size: 1.2em;
-  position: relative;
+=======
+.footerOneColText {
   float: left;
-  margin: 5px 25px;
+  width: 32%;
+  border-right: #33668C 1px solid;
+  margin-right: 1%;
 }
+.footerOneColTitle {
+  font-size: 0.9rem;
+  color: #99D420;
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+}
+<<<<<<< HEAD
 .footerPresentation1 ul {
   list-style: none outside none;
   margin:0;
@@ -355,6 +365,57 @@ aside#flux-RSS {
 .footerPresentation1 li {
   margin: 0 40px;
   display: inline;
+=======
+.footerLinkText {
+  color: #CCCCCC;
+  line-height: 1.0rem;
+  margin-bottom: 0.5rem;
+}
+.footerLinkText a {
+  color: #CCCCCC;
+  line-height: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.footerLinkText a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Carte de l'Eure du footer */
+
+#footerMap {
+  width: 50%;
+  float:right;
+  height: 220px;
+  min-width: 320px;
+  margin-bottom: 20px;
+}
+#footerIframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* styles des logos du footer */
+
+.footerLogos {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* flex-direction: row; */
+}
+.footerLogos img {
+  /* height: 100%; */
+  height: 60px;
+  width: auto;
+  /* width: auto; */
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 3%;
+  padding: 4%;
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
 }
 .logosCCIEure {
   margin-top: 10px;
@@ -433,7 +494,15 @@ p.labelPicto {
   width: 80%;
   background: #fff;
 }
-
+/********** STYLES SPECIAUX **********/
+.clearfix {
+  content: ""; /* Important pour générer la séparation. */
+  display: table;
+  clear: both;
+}
+.dropdown-item:link {
+  line-height: 20px;
+}
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
@@ -469,9 +538,13 @@ p.labelPicto {
       text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
     }
 }
+<<<<<<< HEAD
 .dropdown-item:link {
   line-height: 20px;
 }
+=======
+
+>>>>>>> 7360ff61e034cef565a4be872a1fa2e0b96c2450
 @media screen and (max-width: 790px)
 {
 

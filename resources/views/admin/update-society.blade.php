@@ -3,9 +3,8 @@
 @section('content')
   <div class="" style="color:tomato; text-align: center;">
   <h1>Modification d'une société</h1>
-    <h5>cette page vous permettra de modifier les informations de votre entreprise</h5><br />
+    <h5>cette page vous permettra de modifier les informations de votre entreprise</h4><br />
     </div>
-
   @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -33,7 +32,7 @@
       <div class="form-group">
         {!! Form::label('gerant', 'Entrez le nom du gérant : ',['class' =>'col-md-4 control-label']) !!}
         <div class="col-md-6">
-          {!! Form::text('gerant', $society->gerant, ['class' => 'form-control col-md-7 col-xs-12','placeholder' => 'Nom du gérant']) !!}
+          {!! Form::text('gerant', $society->gerant, ['class' => 'form-control','placeholder' => 'Nom du gérant']) !!}
           {!! $errors->first('gerant', '<small class="help-block">:message</small>') !!}
         </div>
       </div>
@@ -128,6 +127,6 @@
       </div>
 
     </form>
-  </div>      <!--  Fermeture / de x_content page update-society  -->
+  </div>      <!--  Fermeture de x_content page update-society  -->
 
 @endsection

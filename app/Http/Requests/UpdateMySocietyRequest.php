@@ -28,7 +28,7 @@ class UpdateMySocietyRequest extends FormRequest
     {
 
     $d = $request->route()->parameters();
- // dd($request);
+ // dd($d);
  //
  // siren
 //       $society = Society::find($this->society);
@@ -42,9 +42,9 @@ class UpdateMySocietyRequest extends FormRequest
           'site_web'   => 'bail|max:50',
           // 'categorie_name'   => 'bail|required',
           'skills'   => 'bail|max:190',
-          'email'   => 'bail|required|min:3|max:50',
+          'email'   => 'bail|required|min:3|max:50|unique:society,email,'.$d['idSociety'],
           // 'siren'   => 'bail|required|min:9|max:9',
-          'siren'    => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety']
+          'siren'    => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety'],
 
           //
           // 'logo' => 'optional',

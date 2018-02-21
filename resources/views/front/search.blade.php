@@ -68,7 +68,7 @@ recherche société
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
-          <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p>
+          <p class="p"><i class="fas fa-briefcase"></i> : {{ $qq->categorie_name}}</p>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
