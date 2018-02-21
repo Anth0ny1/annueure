@@ -34,6 +34,7 @@ class CreateSocietyTable extends Migration
             $table->char('path',190)->nullable();
             $table->string('original_name')->nullable();
             $table->char('image_name',190)->nullable();
+            $table->enum('moderation', ['ok', 'pasok'])->default('ok');
             $table->timestamps();
             $table->softDeletes();
         });
