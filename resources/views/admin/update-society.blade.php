@@ -98,7 +98,7 @@
 <div class="form-group">
   {!! Form::label('moderation', 'Status de la societé') !!}
   <div class="col-md-6">
-    {!! Form::select('moderation', array('ok' => 'Ok', 'pasok' => 'Pas ok'), $society->moderation) !!}
+    {!! Form::select('moderation', array('new' => 'new', 'valide' => 'valide','non conforme' => 'non conforme'), $society->moderation) !!}
     {!! $errors->first('moderation', '<span class="help-block">:message</span>') !!}
   </div>
 </div>
