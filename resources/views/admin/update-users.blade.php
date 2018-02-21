@@ -1,6 +1,10 @@
 @extends('layouts/appback')
 
 @section('content')
+  <div class="" style="color:tomato; text-align:center;">
+    <h1>Modifier un utilisateur</h1>
+    <h5>Cette page vous permettra de modifier vos informations utilisateur</h5><br />
+  </div>
 
   @if ($errors->any())
     <div class="alert alert-danger">
@@ -12,46 +16,69 @@
     </div>
 @endif
 
-  <h1>Formulaire pour modifier un utilisateur</h1>
-  {!! Form::open(['route' => ['update-users-action', $user->id], 'method' => 'put']) !!}
+<div class="x_content">   <!--  Ouverture de x_content page update-users  -->
+                        <!--  Backoffice page => Modification d'un utilisateur  -->
 
-      {{-- Champ Titre --}}
-      {!! Form::label('name', 'Votre prénom') !!}
+  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;">
+      {!! Form::open(['route' => ['update-users-action', $user->id], 'method' => 'put']) !!}
 
-      {!! Form::text('name', $user->name) !!}
+    <div class="form-group">
+      {!! Form::label('name', 'Votre prénom : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::text('name', $user->name, ['class' => 'form-control col-md-7 col-xs-12']) !!}
       {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
-      {{-- Champ Titre --}}
-      {!! Form::label('lastname', 'Votre nom') !!}
-
-      {!! Form::text('lastname', $user->lastname) !!}
+    <div class="form-group">
+      {!! Form::label('lastname', 'Votre nom : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::text('lastname', $user->lastname, ['class' => 'form-control col-md-7 col-xs-12']) !!}
       {!! $errors->first('lastname', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
-      {{-- Champ Titre --}}
-      {!! Form::label('city', 'Votre ville') !!}
-
-      {!! Form::text('city', $user->city) !!}
+    <div class="form-group">
+      {!! Form::label('city', 'Votre ville : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::text('city', $user->city, ['class' => 'form-control col-md-7 col-xs-12']) !!}
       {!! $errors->first('city', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
-      {{-- Champ Titre --}}
-      {!! Form::label('email', 'Votre email') !!}
-
-      {!! Form::text('email', $user->email, array('disabled')) !!}
+    <div class="form-group">
+      {!! Form::label('email', 'Votre email : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::text('email', $user->email, ['class' => 'form-control col-md-7 col-xs-12'], array('disabled')) !!}
       {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
-      {{-- Champ Titre --}}
-      {!! Form::label('status', 'Status de l\'utilisateur') !!}
-
-      {!! Form::select('status', array('actif' => 'Actif', 'inactif' => 'Inactif'), $user->status) !!}
+    <div class="form-group">
+      {!! Form::label('status', 'Status de l\'utilisateur : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::select('status', array('actif' => 'Actif', 'inactif' => 'Inactif'), $user->status, ['class' => 'form-control col-md-7 col-xs-12']) !!}
       {!! $errors->first('status', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
-      {!! Form::label('role', 'Role de l\'utilisateur') !!}
-
-      {!! Form::select('role', array('membre' => 'Membre', 'admin' => 'Admin'), $user->role) !!}
+      <div class="form-group">
+      {!! Form::label('role', 'Role de l\'utilisateur : ',['class' =>'col-md-4 control-label']) !!}
+      <div class="col-md-6">
+      {!! Form::select('role', array('membre' => 'Membre', 'admin' => 'Admin'), $user->role, ['class' => 'form-control col-md-7 col-xs-12']) !!}
       {!! $errors->first('role', '<span class="help-block">:message</span>') !!}
+    </div>
+  </div>
 
 
-      {!! Form::submit('envoyer') !!}
-  {!! Form::close() !!}
+  <div class="form-group">
+    <div class="col-md-12" style="text-align:center;">
+      {!! Form::submit('envoyer',['class' => ' btn btn-success']) !!}
+      {!! Form::close() !!}
+    </div>
+  </div>
+
+  </form>
+</div>      <!--  Fermeture / de x_content page update-users  -->
 
 @endsection

@@ -1,3 +1,4 @@
+
 <footer id="footer">
 
 
@@ -50,15 +51,15 @@
     </div>
 
 
-    <div class="logosCCIEure">
 
-      <img src="img/logos/286px-Logo_Région_Normandie.png" alt="" style="height:60px;">
-      <img src="img/logos/bd464ab0c6bcd31872784ab8e404292bc2868788.jpg" alt="" style="height:60px;">
-      <img src="img/logos/logo_opquast.png" alt="" style="height:60px;">
-      <img src="img/logos/logo-webforce3.svg" alt="" style="height:60px;">
-      <img src="img/logos/weblitzer.png" alt="" style="height:60px;">
-      <img src="img/logos/fredericnoel.png" alt="" style="height:60px;">
-      <img src="img/logos/Pôle-Emploi.png" alt="" style="height:60px;">
+    <div class="logosCCIEure">
+      <img src="{{ asset('img/logos/logo_region_normandie_286px.png') }}" alt="" style="height:60px;" />
+      <img src="{{ asset('img/logos/logo_cci_formation_eure.jpg') }}" alt="" style="height:60px;" />
+      <img src="{{ asset('img/logos/logo_opquast.png') }}" alt="" style="height:60px;">
+      <img src="{{ asset('img/logos/logo-webforce3.svg') }}" alt="" style="height:60px;">
+      <img src="{{ asset('img/logos/weblitzer.png') }}" alt="" style="height:60px;">
+      <img src="{{ asset('img/logos/fredericnoel.png') }}" alt="" style="height:60px;">
+      <img src="{{ asset('img/logos/logo_pole_emploi.png') }}" alt="" style="height:60px;">
     </div>
 
 

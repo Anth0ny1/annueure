@@ -23,35 +23,31 @@
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{route('home') }}" class="site_title"><i class="fas fa-wrench"></i> <span style="color:tomato;">Annu'Eure</span></a>
             </div>
-
             <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
+                                              <!-- menu profile quick info -->
+                              <!-- placé à gauche du backoffice + container principal du backoffice -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="admin/img/img.jpg" alt="..." class="img-circle profile_img">
+                <!--  image du profil qui s'affiche à gauche de "Bonjour,""-->
+{{-- <img src="admin/img/img.jpg" alt="..." class="img-circle profile_img"> --}}
               </div>
               <div class="profile_info">
-                <span>Bonjour,</span>
+                <span><h4 style="color:tomato;">Bonjour,</h4></span>
                 <h2>{{ Auth::user()->name }}</h2>
               </div>
               <div class="clearfix"></div>
             </div>
-            <!-- /menu profile quick info -->
-
+                                              <!-- Fin /menu profile quick info -->
             <br />
-
-            <!-- sidebar menu -->
+                                                   <!-- sidebar menu -->
             @include('layouts.back.menu-sidebar')
-            <!-- /sidebar menu -->
-
-
+                                                   <!-- Fin /sidebar menu -->
           </div>
         </div>
 
         @include('layouts.back.menu-top')
 
-        <!-- page content -->
+                                                  <!-- page content -->
         <div class="right_col" role="main">
 
             <div class="row">
@@ -70,19 +66,18 @@
                 @yield('content')
               </div>
             </div>
-        </div>
-        <!-- /page content -->
+        </div>                             <!-- Fin /page content -->
 
-        <!-- footer content -->
-        <footer>
+        <footer>                           <!-- footer content -->
           <div class="pull-right">
-            Gentelella
+            {{-- Gentelella --}}
           </div>
           <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+        </footer>                          <!-- Fin /footer content -->
+
       </div>
     </div>
+                             <!--  javascript  -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
