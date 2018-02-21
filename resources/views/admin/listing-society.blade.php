@@ -1,6 +1,7 @@
 @extends('layouts/appback')
 
 @section('content')
+
   <h1>listing des Sociétés</h1>
 
   {{-- {{dd($societiesbyid)}} --}}
