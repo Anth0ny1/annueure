@@ -61,7 +61,7 @@
       @endif
           @foreach ($mysociety as $mysoc)
 
-            @if ($mysoc->moderation == 'ok')
+            @if ($mysoc->moderation == 'valide')
               <section class="SectionFichesSte">
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
