@@ -20,16 +20,7 @@ class AdminSocietyController extends Controller
       return view('admin/update-society', compact('society', 'categories'));
     }
 
-
-
-
-
-
-
-
-
-
-    public function updateSocietyAction(FormulaireSocietyRequest $request,$id )
+    public function updateSocietyAction(FormulaireSocietyRequest $request, $id )
     {
 
       $post = $request->all();
