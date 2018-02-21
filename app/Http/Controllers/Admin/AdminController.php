@@ -27,8 +27,14 @@ class AdminController extends Controller
     return view('admin.dashboard', compact('societies'));
   }
 
-  public function valideModeration(){
-    dd('gfdgfdgfd')
+  public function valideModeration(Request $request, $idSociety){
+    // $society = findOrFail($idSociety);
+
+    dd($request);
+    // dd($post);
+    // $society->update([
+    //
+    // ])
   }
 
   public function nonConformeModeration(){

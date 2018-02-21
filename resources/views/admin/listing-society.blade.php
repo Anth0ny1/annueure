@@ -40,6 +40,9 @@
             {{ $societie->moderation }}
 
             {!! Form::open(['route' => ['valide-moderation',$societie->id], 'method' => 'post']) !!}
+
+                {!! Form::hidden('moderation', 'valide') !!}
+
                 {!! Form::submit('Valide',['class' => ' btn btn-succes']) !!}
             {!! Form::close() !!}
 
