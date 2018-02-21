@@ -21,14 +21,6 @@ class AdminSocietyController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
     public function updateSocietyAction(FormulaireSocietyRequest $request,$id )
     {
 
