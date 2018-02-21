@@ -36,19 +36,22 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
-          <td>
-            {{ $societie->moderation }}
+          <td @if ($societie->moderation == 'new')
+                style="color:green;"
+              @elseif ($societie->moderation == 'valide')
+                style="color:blue;"
+              @else
+                style="color:red;"
+              @endif>{{ $societie->moderation }}
 
             {!! Form::open(['route' => ['valide-moderation',$societie->id], 'method' => 'post']) !!}
-
-                {!! Form::hidden('moderation', 'valide') !!}
-
-                {!! Form::submit('Valide',['class' => ' btn btn-succes']) !!}
+                {!! Form::submit('Valide',['class' => ' btn btn-round btn-success']) !!}
             {!! Form::close() !!}
 
             {!! Form::open(['route' => ['non-conforme-moderation',$societie->id], 'method' => 'post']) !!}
-                {!! Form::submit('Invalide',['class' => ' btn btn-succes']) !!}
+                {!! Form::submit('Invalide',['class' => ' btn btn-round btn-danger']) !!}
             {!! Form::close() !!}
+
           </td>
           {{-- <td> '$societie->categories->categorie_name' </td> --}}
           {{-- <td> @foreach ($societies->category as $a)
