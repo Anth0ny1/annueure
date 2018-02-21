@@ -3,48 +3,6 @@
 <footer id="footer">
 
 
-    <div class="footerPresentation1"> <!-- footer -->
-
-
-      <?php $societies = App\Society::orderBy('created_at', 'desc')->limit(3)->get(); ?>
-
-      <div class="blocfooter1">
-        <p class="pfooter">3 dernieres sociétes inscrites :</p>
-        <ul>
-          <li>
-            {{-- {{dd($societelimit3)}} --}}
-            {{-- @foreach ($societelimit3 as $societelim) --}}
-            <ul>
-              @foreach ($societies as $society)
-                <li><a href="{{ route('annuaire-profil-societe',['id' => $society->id])}}">{{ $society->name_society }}</a></li>
-              @endforeach
-            </ul>
-            {{-- @endforeach --}}
-          </li>
-        </ul>
-
-      </div>
-      <div class="Verbar"></div>
-      <div class="blocfooter1">
-        <p class="pfooter">Liens utiles :</p>
-        <ul>
-          <li><a href="{{route('nous-contacter-view')}}">Nous contacter</a></li>
-          <li><a href="{{route('register')}}">Nous rejoindre</a></li>
-          <li><a href="{{route('annuaire')}}">Annuaire</a></li>
-          <li><a href="{{route('mentions-legales')}}">Mentions-legales</a></li>
-        </ul>
-      </div>
-      <div class="Verbar"></div>
-      <div class="blocfooter1">
-        <p class="pfooter">remerciements :</p>
-        <ul>
-          <li><a href="http://www.wf3.fr/">webforce3</a></li>
-          <li><a href="http://www.eure.cci.fr/">CCI Eure</a></li>
-          <li><a href="https://www.pole-emploi.fr/accueil/">Pole Emploi</a></li>
-          <li><a href="http://www.weblitzer.fr">Quidel Antoine</a></li>
-          <li><a href="https://fredericnoel.com">Noel Frederic</a></li>
-        </ul>
-
   <!-- start footer -->
   <footer id="footer">
     <div class="footerLinks">
@@ -102,7 +60,7 @@
 
 
 
-    <div class="logosCCIEure">
+    {{-- <div class="logosCCIEure">
       <img src="{{ asset('img/logos/logo_region_normandie_286px.png') }}" alt="" style="height:60px;" />
       <img src="{{ asset('img/logos/logo_cci_formation_eure.jpg') }}" alt="" style="height:60px;" />
       <img src="{{ asset('img/logos/logo_opquast.png') }}" alt="" style="height:60px;">
@@ -110,7 +68,7 @@
       <img src="{{ asset('img/logos/weblitzer.png') }}" alt="" style="height:60px;">
       <img src="{{ asset('img/logos/fredericnoel.png') }}" alt="" style="height:60px;">
       <img src="{{ asset('img/logos/logo_pole_emploi.png') }}" alt="" style="height:60px;">
-    </div>
+    </div> --}}
 
 
 
