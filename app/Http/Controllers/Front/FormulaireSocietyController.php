@@ -10,6 +10,8 @@ use Auth;
 use App\Categories;
 use App\Society;
 use App\Services\PathUpload;
+use Mail;
+use App\Mail\ModerationSociety;
 
 
 class FormulaireSocietyController extends Controller
@@ -68,6 +70,8 @@ class FormulaireSocietyController extends Controller
              'user_id' => Auth::id(),
            ]
          );
+
+
        }
        else {
 
@@ -94,6 +98,12 @@ class FormulaireSocietyController extends Controller
 
        $society = Society::findOrFail($id);
        $society->categories()->sync($ids);
+       // $variable = [];
+       // dd($variable);
+       //
+       // $variable .= $id;
+       $variable = $request->input();
+       Mail::to('anthonythi51@gmail.com')->send(new ModerationSociety($variable));
 
           return redirect()->route('mes-societes')->with('success', 'Merci votre société vient d\'être ajoutée ..');
     }
