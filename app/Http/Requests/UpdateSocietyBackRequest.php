@@ -12,6 +12,11 @@ class UpdateSocietyBackRequest extends FormRequest
      *
      * @return bool
      */
+     public function authorize()
+     {
+         return true;
+     }
+
      public function rules(Request $request)
      {
        $d = $request->route()->parameters();
@@ -26,7 +31,7 @@ class UpdateSocietyBackRequest extends FormRequest
              'zip_code'   => 'bail|required|numeric',
              'site_web'   => 'bail|max:50',
              // 'categorie_name'   => 'bail|required',
-             'email'    => 'string|email|max:255|unique:society,email',
+             'email'   => 'required|min:3|max:50|unique:society,email,'.$d['id'],
              'siren'    => 'required|min:9|max:9|unique:society,siren,'.$d['id'],
              // 'siren'    => 'bail|required|min:9|max:9|unique:society,siren',
              'skills'   => 'bail|max:190',

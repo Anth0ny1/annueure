@@ -112,9 +112,8 @@
           $arrayCat[$cat->id] = $cat->categorie_name;
     } ?>
 
-    {{-- {!! Form::select('categorie_name',$arrayCat,null,array()) !!} --}}
     {{Form::label('categorie_name', 'metier')}}
-    {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
+    {{Form::select('categorie_name[]',$arrayCat,$cat->id,array('multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
   </div>
 </div>
 

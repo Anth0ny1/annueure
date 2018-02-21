@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FormulaireSocietyRequest;
+use App\Http\Requests\UpdateSocietyBackRequest;
 use App\Society;
 use App\Categories;
 use Carbon\Carbon;
@@ -20,7 +20,7 @@ class AdminSocietyController extends Controller
       return view('admin/update-society', compact('society', 'categories'));
     }
 
-    public function updateSocietyAction(FormulaireSocietyRequest $request, $id )
+    public function updateSocietyAction(UpdateSocietyBackRequest $request, $id)
     {
 
       $post = $request->all();
