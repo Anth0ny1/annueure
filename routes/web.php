@@ -85,9 +85,9 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth','admin']], functio
   Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
   // BACK MODERATION ROUTING
-  Route::get('/dashboard/moderation/valide/{idSociety}', 'AdminController@valideModeration')->name('valide-moderation');
+  Route::post('/dashboard/moderation/valide/{idSociety}', 'AdminController@valideModeration')->name('valide-moderation');
 
-  Route::get('/dashboard/moderation/non-conforme/{idSociety}', 'AdminController@nonConformeModeration')->name('non-conforme-moderation');
+  Route::post('/dashboard/moderation/non-conforme/{idSociety}', 'AdminController@nonConformeModeration')->name('non-conforme-moderation');
   // BACK USERS ROUTING
 
   Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('delete-users');
