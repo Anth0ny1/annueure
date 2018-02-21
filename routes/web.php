@@ -84,6 +84,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth','admin']], functio
 
   Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
+  // BACK MODERATION ROUTING
+  Route::get('/dashboard/moderation/valide/{idSociety}', 'AdminController@valideModeration')->name('valide-moderation');
+
+  Route::get('/dashboard/moderation/non-conforme/{idSociety}', 'AdminController@nonConformeModeration')->name('non-conforme-moderation');
   // BACK USERS ROUTING
 
   Route::delete('/dashboard/users/delete/{id}', 'AdminUsersController@deleteUsers')->name('delete-users');
@@ -98,7 +102,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth','admin']], functio
   Route::delete('/dashboard/society/delete/{id}', 'AdminSocietyController@deleteSociety')->name('delete-society');
 
   Route::get('/dashboard/society/update/{id}', 'AdminSocietyController@updateSociety')->name('update-society');
-  Route::put('/dashboard/society/update/action/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society-action');
+  Route::put('/dashboard/society/update/{id}', 'AdminSocietyController@updateSocietyAction')->name('update-society-action');
 
   Route::get('/dashboard/listing/society', 'AdminListingSociety@listingSociety')->name('listing-society');
 

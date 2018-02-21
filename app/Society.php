@@ -25,6 +25,7 @@ class Society extends Model
         'path',
         'original_name',
         'image_name',
+        'moderation'
     ];
     public function categories()
     {

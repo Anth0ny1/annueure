@@ -5,26 +5,21 @@ use Illuminate\Http\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FormulaireSocietyRequest extends FormRequest
+class UpdateSocietyBackRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
-        return true;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-     public function rules()
+     public function authorize()
      {
-       // $d = $request;
+         return true;
+     }
+
+     public function rules(Request $request)
+     {
+       $d = $request->route()->parameters();
        // dd($d);
          return [
              'name_society'   => 'bail|required|between:5,50',
@@ -35,9 +30,9 @@ class FormulaireSocietyRequest extends FormRequest
              'phone'   => 'phone:AUTO,FR',
              'zip_code'   => 'bail|required|numeric',
              'site_web'   => 'bail|max:50',
-             'categorie_name'   => 'bail|required',
-             'email'    => 'string|email|max:255|unique:society,email',
-             'siren'    => 'required|min:9|max:9|unique:society,siren',
+             // 'categorie_name'   => 'bail|required',
+             'email'   => 'required|min:3|max:50|unique:society,email,'.$d['id'],
+             'siren'    => 'required|min:9|max:9|unique:society,siren,'.$d['id'],
              // 'siren'    => 'bail|required|min:9|max:9|unique:society,siren',
              'skills'   => 'bail|max:190',
              // 'siren'   => 'bail|required|min:9|max:9'
@@ -56,5 +51,4 @@ class FormulaireSocietyRequest extends FormRequest
              'siren.min' => 'Merci d\'indiquer un numéro de siren avec 9 chiffres.',
            ];
      }
-
 }
