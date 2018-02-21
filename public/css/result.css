@@ -2,7 +2,7 @@
   text-align: center;
 }
 .bloc_societe{
-width: 200px;  /* Or whatever */
+width: 260px;  /* Or whatever */
 /* height: 400px; /* Or whatever */ */
 margin: 10px;  /* Magic! */
 background: white;
@@ -56,6 +56,10 @@ img{
 h2{
   font-size: 250%;
 }
+a{
+  line-height: 17px;
+}
+
 /*----------------------------------------------------------------------------*/
 /*---------  animation css title h1 of search.blade.php
 /*----------------------------------------------------------------------------*/
@@ -74,10 +78,12 @@ h2{
   background-size: cover;
 }
 
-main {
+/* background-color: black; */
+/* background-position: 50% 15%; */
+
+/* main {
   position: relative;
   display: flex;
-  /* background-position: 50% 15%; */
 
 }
 
@@ -93,7 +99,7 @@ h1 { margin: 0; }
   position: absolute; top: 2rem;
   height: 3rem; width: 10rem;
   /* background-color: black; */
-  animation-name: marker;
+  /* animation-name: marker;
 }
 
 .l1 { margin-left: 0.5rem;   animation-name: l1; }
@@ -188,22 +194,37 @@ h1 { margin: 0; }
   50%, 70% { transform: translateX(20rem); }
 }
 @keyframes marker {
+<<<<<<< HEAD
   0%, 0% { transform: translateX(10rem); }
   0%, 0% { transform: translateX(10rem); }
 }
+=======
+  0%, 0% { transform: translateX(0); }
+  0%, 0% { transform: translateX(0rem); }
+} */
+
 
 /*---------  <<end>>   animation css title h1 of search.blade.php
 /*----------------------------------------------------------------------------*/
+
 h5{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: white;
-    font-size: 170%;
+  color: black !important ;
+    font-size: 190%;
     text-align:center;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-bottom: 30px;
     background: grey;
     padding-bottom: 2px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    color: white;
+    text-align:center;
+    vertical-align: middle;
+    /* margin-bottom: 30px; */
+    padding: 10px;
+    background: #99D420;
 }
 .p{
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;

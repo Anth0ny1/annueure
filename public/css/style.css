@@ -253,9 +253,11 @@ h2 {
   min-height: 30px;
   padding: 0 auto;
   vertical-align: middle;
+  margin-bottom: 30px;
 }
-#first-actu-box {
-  margin-left: 3%;
+.first-actu-box {
+  margin-left: 10%;
+  margin-top: 20px;
 }
 .actu-box {
   float: left;
@@ -280,6 +282,7 @@ div .bloc-text p {
 .img-actu-box img {
   width: 100%;
   height: auto;
+  /* margin: 10%; */
 }
 #last-actu-box {
   margin-right: 0 !important;
@@ -329,11 +332,11 @@ aside#flux-RSS {
   width: 15%;
   margin-left: 30px;
 }
-.footerPresentation {
+/* .footerPresentation1 {
   width: 100%;
   background: #2A5073;
-}
-.footerPresentation ul li a {
+} */
+.footerPresentation1 ul li a {
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   color:#99D420;
   font-size: 1.2em;
@@ -341,13 +344,13 @@ aside#flux-RSS {
   float: left;
   margin: 5px 25px;
 }
-.footerPresentation ul {
+.footerPresentation1 ul {
   list-style: none outside none;
   margin:0;
   padding: 0;
   text-align: center;
 }
-.footerPresentation li {
+.footerPresentation1 li {
   margin: 0 40px;
   display: inline;
 }
@@ -398,7 +401,13 @@ aside#flux-RSS {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+
 /*********** Structure + Sidebar à gauche pour pages ***********/
+
+
+/*********** Structure + sidebar à gauche pour pages ***********/
+
+
 #mainContainerPage{
   min-height: 100%;
   background: #71767F url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
@@ -409,6 +418,13 @@ aside#flux-RSS {
     width: 20%;
     min-height: 100vh;
 }
+p.labelPicto {
+  font-size: 0.85rem;
+  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding:0px;
+  margin: 0px;
+}
 .mainContentRight {
   display: flex;
   flex-wrap: wrap;
@@ -416,6 +432,7 @@ aside#flux-RSS {
   width: 80%;
   background: #fff;
 }
+
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
@@ -452,7 +469,6 @@ aside#flux-RSS {
     }
 }
 .dropdown-item:link {
-
   line-height: 20px;
 }
 @media screen and (max-width: 790px)

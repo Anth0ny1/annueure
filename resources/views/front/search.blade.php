@@ -11,9 +11,14 @@ recherche société
 @section('content')
   <div class="textePresentation">
     {{-- {{ dd($societies)}} --}}
+
     {{-- <h2 style="color:white;">Liste des Societés</h2> --}}
     <div class="bodykey">
     <main>
+
+    {{-- <h2 style="color:white;">Liste des Societés</h2>
+     <main>
+
       <div class="marker"></div>
       <h1 class="l1">L</h1>
       <h1 class="i1">i</h1>
@@ -33,8 +38,13 @@ recherche société
       <h1 class="t2">t</h1>
       <h1 class="e4">é</h1>
       <h1 class="s4">s</h1>
+
     </main>
     </div>
+
+
+    </main> --}}
+<h1>Liste des sociétés</h1>
 
   </div>
   <div class="content_search">
@@ -46,15 +56,18 @@ recherche société
 
       @foreach ($societies as $qq)
         {{-- {{dd($qq)}} --}}
+        {{-- {{dd($qq)}} --}}
         <div class="bloc_societe">
           <div class="logo">
-          @if (!empty($qq->path))
+            {{-- {{dd($qq)}} --}}
+          @if (!empty($qq->path) || !empty($qq->image_name))
           <img class="logo-sct" src="{{ Image::url(  route ('home') . '/' . $qq->path . '/' . $qq->image_name,100,100,array('crop','grayscale'))}}" alt="">
           @else
             <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',100,100,array('crop'))}}" alt="">
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
+          <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}

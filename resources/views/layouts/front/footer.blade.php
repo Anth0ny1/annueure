@@ -1,5 +1,5 @@
-<footer id="">
-  <div id="footer">
+<footer id="footer">
+
 
     <div class="footerPresentation1"> <!-- footer -->
 
@@ -50,9 +50,8 @@
     </div>
 
 
-    <div class="footerMap">
-    </div> <!-- end footer -->
     <div class="logosCCIEure">
+
       <img src="img/logos/286px-Logo_Région_Normandie.png" alt="" style="height:60px;">
       <img src="img/logos/bd464ab0c6bcd31872784ab8e404292bc2868788.jpg" alt="" style="height:60px;">
       <img src="img/logos/logo_opquast.png" alt="" style="height:60px;">
@@ -65,8 +64,4 @@
 
 
 
-
-
-
-
-  </footer> <!-- end footer -->
+</footer> <!-- end footer -->

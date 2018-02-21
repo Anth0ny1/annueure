@@ -14,10 +14,10 @@ use App\Services\PathUpload;
 class UpdateSocietyFront extends Controller
 {
 
-  public function __construct()
-  {
-      $this->middleware('user');
-  }
+  // public function __construct()
+  // {
+  //     $this->middleware('user');
+  // }
 
   public function viewMySociety(){
     $id = Auth::id();
