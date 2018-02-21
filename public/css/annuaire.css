@@ -36,11 +36,13 @@ h2{
   color: white;
   cursor: pointer;
 }
-
-.dropdown-menu{
+.bloc_cat .dropdown-item:link{
+line-height: 40px;
+}
+/* .dropdown-menu:hover{
   padding: 0;
   border-radius: 15px;
-}
+} */
 .dropdown-menu li a{
   color:black;
   font-size: 0.9em;
@@ -63,9 +65,9 @@ h2{
   text-align: center;
 
 }
-.dropdown-item:link{
+/* .dropdown-item:link{
   line-height: 40px;
-}
+} */
 h2{
   font-size: 250%;
 }
