@@ -16,6 +16,7 @@
         <th>Site Web</th>
         <th>E-Mail</th>
         <th>Siren</th>
+        <th>Status</th>
         {{-- <th>Métier</th> --}}
         <th>Société crée le</th>
         <th>Société modifié le</th>
@@ -35,6 +36,7 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
+          <td>{{ $societie->moderation }}</td>
           {{-- <td> '$societie->categories->categorie_name' </td> --}}
           {{-- <td> @foreach ($societies->category as $a)
           {{dd($a)}}
@@ -59,7 +61,7 @@
 
   </tbody>
   </table>
-  
+
   {{ $societies->links() }}
 
 @endsection

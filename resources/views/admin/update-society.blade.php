@@ -95,13 +95,13 @@
   </div>
 </div>
 
-{{-- <div class="form-group">
+<div class="form-group">
   {!! Form::label('moderation', 'Status de la societé') !!}
   <div class="col-md-6">
     {!! Form::select('moderation', array('ok' => 'Ok', 'pasok' => 'Pas ok'), $society->moderation) !!}
     {!! $errors->first('moderation', '<span class="help-block">:message</span>') !!}
   </div>
-</div> --}}
+</div>
 <div class="form-group">
   {{-- {!! Form::label('categorie_name', 'Choississez votre catégorie : ',['class' =>'col-md-4 control-label']) !!} --}}
   <div class="col-md-6">
