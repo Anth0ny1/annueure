@@ -67,7 +67,9 @@ class SearchController extends Controller
     }
     elseif(!empty($search['zip'])){
         $zip_code = $search['zip'];
-        $societies = Society::where('zip_code','=',$zip_code)->get();
+        $societies = Society::where('zip_code','=',$zip_code)
+          ->where('society.moderation','=','valide')
+          ->get();
 
     }
     else {
