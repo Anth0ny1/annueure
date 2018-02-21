@@ -45,27 +45,35 @@
       <div class="titreContent">
         @if ($mycountsociety == 0)
           <h1>Aucune société enregistrée dans votre profil</h1>
-
         @elseif ($mycountsociety == 1)
             <h1>Vous avez {{$mycountsociety}} société inscrite</h1>
             @else
               <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
       </div>
-
+      @if ($mycountsocietymoder == 0)
+      @elseif ($mycountsocietymoder == 1)
+          <h2>vous avez {{$mycountsocietymoder}} societé en attente de validation.</h2>
+        @elseif (($mycountsocietymoder > 1))
+          <h2>vous avez {{$mycountsocietymoder}} societés en attente de validation.</h2>
+      @endif
           @foreach ($mysociety as $mysoc)
-      {{-- {{dd($mycategory2)}} --}}
 
+            @if ($mysoc->moderation != 'new')
               <section class="SectionFichesSte">
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
                       @if (!empty($mysoc->path))
-                        <img class="ImglogoSte" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                        <img class="ImglogoSte" src="{{ Image::url( route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
                       @else
                         {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
                   </div>
+
                     <h2>{{$mysoc->name_society}}</h2>
+                    @if ($mysoc->moderation == 'non conforme')
+                      <h3 style="color:red;">non conforme</h3>
+                    @endif
                   <p class="textFichSte">
                     <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
                   <p class="textFichSte">
@@ -89,6 +97,8 @@
                   </div>
                 </div>
               </section>
+
+            @endif
 
           @endforeach
 

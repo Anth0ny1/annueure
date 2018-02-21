@@ -1,7 +1,7 @@
-.ResultatSearch{
+.ResultatSearch {
   text-align: center;
 }
-.bloc_societe{
+.bloc_societe {
 width: 260px;  /* Or whatever */
 /* height: 400px; /* Or whatever */ */
 margin: 10px;  /* Magic! */
@@ -13,50 +13,49 @@ padding-bottom: 50px;
 position: relative;
 margin-left: 10px;
 }
-
-.btn-success{
+.btn-success {
   position :absolute;
   left:20%;
   background: #F25C19;
 	color:white;
-    border: none;
+  border: none;
 }
-.btn-success:hover{
+.btn-success:hover {
   position :absolute;
   left:20%;
   background: #99D420;
 	color:white;
-    border: none;
+  border: none;
 }
-.content_search{
+.content_search {
   max-width: 1200px;
   width: 100%;
   margin: auto;
 }
-.display{
+.display {
   display: flex;
   margin:  0px auto;
   /* background: rgb(224, 224, 224); */
   justify-content: center;
   flex-wrap: wrap;
 }
-h4{
+h4 {
   margin-top: 15px;
 }
-img{
+img {
   padding: 10px 0 ;
   margin: auto;
 }
-.logo{
+.logo {
   text-align: center;
   background:linear-gradient(#295173,#53b0ff);
   border-radius: 10px 10px 0 0;
   border: 1px solid transparent;
 }
-h2{
+h2 {
   font-size: 250%;
 }
-a{
+a {
   line-height: 17px;
 }
 
@@ -64,19 +63,19 @@ a{
 /*---------  animation css title h1 of search.blade.php
 /*----------------------------------------------------------------------------*/
 
-/* html { font-size: 1px; }
-body {
+/* html { font-size: 1px; } */
+.bodykey {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-size: 30rem;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url(http://alluretouch.com/wp-content/uploads/2015/09/minimalist-art.jpg);
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url(http://alluretouch.com/wp-content/uploads/2015/09/minimalist-art.jpg); */
   background-position: 50% 15%;
   background-size: cover;
-} */
+}
 
 /* background-color: black; */
 /* background-position: 50% 15%; */
@@ -89,8 +88,8 @@ body {
 
 h1 { margin: 0; }
 .marker, .l1, .i1, .s1, .t1, .e1, .a1, .d1, .e2, .s2, .a2, .s3, .o1, .c1, .i2, .e3, .t2, .e4, .s4 {
-  animation-timing-function: cubic-bezier(0.15,-0.01, 0.58, 1);
-  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.15, 0.01, 18.58, 5.4);
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   will-change: transform;
 }
@@ -194,14 +193,16 @@ h1 { margin: 0; }
   50%, 70% { transform: translateX(20rem); }
 }
 @keyframes marker {
-  0%, 0% { transform: translateX(0); }
-  0%, 0% { transform: translateX(0rem); }
-} */
+  0%, 0% { transform: translateX(10rem); }
+  0%, 0% { transform: translateX(10rem); }
+}
+ */
+
 
 /*---------  <<end>>   animation css title h1 of search.blade.php
 /*----------------------------------------------------------------------------*/
 
-h5{
+h5 {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: black !important ;
@@ -220,7 +221,7 @@ h5{
     padding: 10px;
     background: #99D420;
 }
-.p{
+.p {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
   font-size: 150%;
@@ -228,6 +229,6 @@ h5{
   line-height: 7px;
   margin-bottom: 10px;;
 }
-.fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
+.fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit,.fa-briefcase{
   color: #2A5073;
 }

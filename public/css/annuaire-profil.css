@@ -6,11 +6,24 @@
 }
 .presentation-profil-sct{
   background: #F5F5F2;
-  max-width: 850px;
   width: 70%;
-  /* margin: auto; */
   padding: 20px;
   position: relative;
+    float:left;
+}
+.template-sct{
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+}
+.iframeMaps{
+  width: 30%;
+  float:left;
+  padding: 0.5%;
+}
+iframe{
+  width: 100%;
+    height: 400px;
 }
 .hrclass{
   max-width: 695px;
@@ -23,7 +36,7 @@ h2{
   padding: 0;
   margin: 0;
 }
-.p{
+.p {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
   font-size: 160%;
@@ -32,10 +45,13 @@ h2{
 hr{
   margin: auto;
 }
-.textePresentation{
+.textePresentation {
   text-transform: uppercase;
 }
-.texteretourAnnuaire{
+.textePresentation h2 {
+  color: white;
+}
+.texteretourAnnuaire {
   text-transform: uppercase;
   font-size: 150%;
   width: 100%;
@@ -49,20 +65,3 @@ hr{
 .fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
   color: #2A5073;
 }
-.template-sct{
-  position: relative;
-  max-width: 1280px;
-  width: 100%;
-}
-.img_annuaire_pub{
-  width: 30%;
-  height: auto;
-  position: absolute;
-  top:14px;
-  left:68%;
-}
-/* @media screen and (max-width: 1235px) {
-.img_annuaire_pub{
-  display:none;
-}
-} */

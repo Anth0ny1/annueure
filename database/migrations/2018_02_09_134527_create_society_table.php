@@ -34,6 +34,7 @@ class CreateSocietyTable extends Migration
             $table->char('path',190)->nullable();
             $table->string('original_name')->nullable();
             $table->char('image_name',190)->nullable();
+            $table->enum('moderation', ['new', 'valide','non conforme'])->default('new');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -16,6 +16,7 @@
         <th>Site Web</th>
         <th>E-Mail</th>
         <th>Siren</th>
+        <th>Status</th>
         {{-- <th>Métier</th> --}}
         <th>Société crée le</th>
         <th>Société modifié le</th>
@@ -35,6 +36,23 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
+          <td @if ($societie->moderation == 'new')
+                style="color:green;"
+              @elseif ($societie->moderation == 'valide')
+                style="color:blue;"
+              @else
+                style="color:red;"
+              @endif>{{ $societie->moderation }}
+
+            {!! Form::open(['route' => ['valide-moderation',$societie->id], 'method' => 'post']) !!}
+                {!! Form::submit('Valide',['class' => ' btn btn-round btn-success']) !!}
+            {!! Form::close() !!}
+
+            {!! Form::open(['route' => ['non-conforme-moderation',$societie->id], 'method' => 'post']) !!}
+                {!! Form::submit('Invalide',['class' => ' btn btn-round btn-danger']) !!}
+            {!! Form::close() !!}
+
+          </td>
           {{-- <td> '$societie->categories->categorie_name' </td> --}}
           {{-- <td> @foreach ($societies->category as $a)
           {{dd($a)}}
@@ -59,7 +77,7 @@
 
   </tbody>
   </table>
-  
+
   {{ $societies->links() }}
 
 @endsection

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FormulaireSocietyRequest;
+use App\Http\Requests\UpdateSocietyBackRequest;
 use App\Society;
 use App\Categories;
 use Carbon\Carbon;
@@ -21,15 +21,8 @@ class AdminSocietyController extends Controller
     }
 
 
+    public function updateSocietyAction(UpdateSocietyBackRequest $request, $id)
 
-
-
-
-
-
-
-
-    public function updateSocietyAction(FormulaireSocietyRequest $request,$id )
     {
 
       $post = $request->all();
@@ -50,6 +43,7 @@ class AdminSocietyController extends Controller
         "site_web" => $post['site_web'],
         "skills" => $post['skills'],
         "siren" => $post['siren'],
+        "moderation" => $post['moderation'],
         "updated_at" => Carbon::now(),
       ]);
 

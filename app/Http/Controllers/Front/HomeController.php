@@ -179,6 +179,12 @@ class HomeController extends Controller
       // $societies = Society::all();
       $categoriescount = \DB::table('categories')->count();
       $categories = Categories::with('society')->get();
+      // $categories = \DB::table('society')
+      // ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
+      // ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
+      //  ->where('society.moderation','=','valide')
+      // ->get();
+      // dd($categories);
       return view('/front/annuaire',compact('categories', 'categoriescount'));
     }
     // UPDATE D UNE CATEGORIE
