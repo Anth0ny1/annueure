@@ -26,11 +26,11 @@ class UpdateSocietyFront extends Controller
     // $mycategory = Categories::where('user_id' ,  '=', $id)->get();
     $mycountsociety = Society::where('user_id' ,  '=', $id)->count();
     // $mysociety2 = Society::All();
-
+$mycountsocietymoder = Society::where('moderation' ,  '=', 'pasok')->where('user_id' ,  '=', $id)->count();
     if ($mycountsociety == 0) {
       return redirect()->route('formulaire-societe');
     } else {
-      return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety','mycategory'));
+      return view('/front/mes-societes' ,compact('id','mysociety','mycountsociety','mycategory','mycountsocietymoder'));
     }
   }
 

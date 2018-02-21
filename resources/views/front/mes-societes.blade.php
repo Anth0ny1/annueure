@@ -44,6 +44,7 @@
       <!-- texte banniére verte de présentation -->
       <div class="titreContent">
         @if ($mycountsociety == 0)
+
           <h1>Aucune société enregistrée dans votre profil</h1>
 
         @elseif ($mycountsociety == 1)
@@ -52,10 +53,15 @@
               <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
       </div>
-
+      @if ($mycountsocietymoder == 0)
+      @elseif ($mycountsocietymoder == 1)
+          <h2>vous avez {{$mycountsocietymoder}} societé en attente de validation.</h2>
+        @elseif (($mycountsocietymoder > 1))
+          <h2>vous avez {{$mycountsocietymoder}} societés en attente de validation.</h2>
+      @endif
           @foreach ($mysociety as $mysoc)
-      {{-- {{dd($mycategory2)}} --}}
 
+            @if ($mysoc->moderation == 'ok')
               <section class="SectionFichesSte">
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
@@ -89,6 +95,7 @@
                   </div>
                 </div>
               </section>
+            @endif
 
           @endforeach
 
