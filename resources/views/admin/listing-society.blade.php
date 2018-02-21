@@ -36,7 +36,17 @@
           <td>{{ $societie->site_web }}</td>
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
-          <td>{{ $societie->moderation }}</td>
+          <td>
+            {{ $societie->moderation }}
+
+            {!! Form::open(['route' => ['valide-moderation',$societie->id], 'method' => 'post']) !!}
+                {!! Form::submit('Valide',['class' => ' btn btn-succes']) !!}
+            {!! Form::close() !!}
+
+            {!! Form::open(['route' => ['non-conforme-moderation',$societie->id], 'method' => 'post']) !!}
+                {!! Form::submit('Invalide',['class' => ' btn btn-succes']) !!}
+            {!! Form::close() !!}
+          </td>
           {{-- <td> '$societie->categories->categorie_name' </td> --}}
           {{-- <td> @foreach ($societies->category as $a)
           {{dd($a)}}

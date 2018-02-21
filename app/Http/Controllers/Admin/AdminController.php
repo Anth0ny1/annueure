@@ -25,6 +25,14 @@ class AdminController extends Controller
     // $user = User::
 
     return view('admin.dashboard', compact('societies'));
+  }
+
+  public function valideModeration(){
+    dd('gfdgfdgfd')
+  }
+
+  public function nonConformeModeration(){
+    return 'nonconf';
 
   }
 }
