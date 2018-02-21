@@ -11,7 +11,7 @@ h2{
   font-size: 250%;
 }
 .bloc_cat{
-  width: 190px;
+  /* width: 190px; */
 background:linear-gradient(#53b0ff ,#295173);
   margin: 5px;
   border-radius: 5px;
@@ -50,6 +50,10 @@ h6{
 .dropdown-menu li a:hover{
   background: transparent;
   color:#EB7900;
+}
+.dropdown-toggle{
+  padding:0px;
+  border-radius: 5px;
 }
 
 h5{

@@ -28,6 +28,7 @@
 
 
   <h5>{{$categoriescount}} catégories figure dans notre annuaire</h5>
+  <hr>
   {{-- <aside class="asidePresentation">
     <ul>
       <li></li>
@@ -43,6 +44,9 @@
     {{-- <div class="btn-group"> --}}
 @foreach ($categories as $cat)
       <div class="bloc_cat"  >
+
+
+        <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"src="{{ Image::url(  route ('home') . '/' . $cat->path_categorie . '/' . $cat->original_name,190,100,array())}}" alt="" />
         <h6 href="#" type="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
           <div class="dropdown-menu">
             @foreach ($cat->society as $soc)
