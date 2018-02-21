@@ -4,7 +4,7 @@
 
     <div class="footerPresentation1">
 
-      <?php $societies = AppSociety::orderBy('created_at', 'desc')->limit(3)->get(); ?>
+      <?php $societies = App\Society::orderBy('created_at', 'desc')->limit(3)->get(); ?>
 
       <div class="blocfooter1">
         <p class="pfooter">3 dernieres sociétés inscrites :</p>
