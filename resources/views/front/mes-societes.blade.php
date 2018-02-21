@@ -44,9 +44,7 @@
       <!-- texte banniére verte de présentation -->
       <div class="titreContent">
         @if ($mycountsociety == 0)
-
           <h1>Aucune société enregistrée dans votre profil</h1>
-
         @elseif ($mycountsociety == 1)
             <h1>Vous avez {{$mycountsociety}} société inscrite</h1>
             @else
@@ -61,7 +59,7 @@
       @endif
           @foreach ($mysociety as $mysoc)
 
-            @if ($mysoc->moderation == 'valide')
+            @if ($mysoc->moderation != 'new')
               <section class="SectionFichesSte">
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
@@ -71,7 +69,11 @@
                         {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
                   </div>
+
                     <h2>{{$mysoc->name_society}}</h2>
+                    @if ($mysoc->moderation == 'non conforme')
+                      <h3 style="color:red;">non conforme</h3>
+                    @endif
                   <p class="textFichSte">
                     <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
                   <p class="textFichSte">
@@ -95,6 +97,7 @@
                   </div>
                 </div>
               </section>
+
             @endif
 
           @endforeach
