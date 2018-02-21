@@ -60,7 +60,7 @@
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
                       @if (!empty($mysoc->path))
-                        <img class="ImglogoSte" src="{{ Image::url(  route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
+                        <img class="ImglogoSte" src="{{ Image::url( route ('home') . '/' . $mysoc->path . '/' . $mysoc->image_name,100,100,array('crop','grayscale'))}}" alt="">
                       @else
                         {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
