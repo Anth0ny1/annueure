@@ -90,7 +90,7 @@ ul#navhp {
   line-height: 1.15rem;
   height: 30px;
 }
-#login{
+#login {
   width: 14%;
   float: left;
 }
@@ -159,7 +159,7 @@ input {
 input.form-control.col-sm-5 {
   padding:5px;
 }
-.form-group{
+.form-group {
   margin-bottom:10px;
 }
 .metier {
@@ -606,6 +606,13 @@ p.txtPresent {
 .dropdown-item:link {
   line-height: 20px;
 }
+
+/*taille de la police message d'alert*/
+.alert-danger {
+  font-size: 1.2rem;
+  color: tomato;
+}
+/*  */
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 

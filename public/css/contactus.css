@@ -1,31 +1,24 @@
-.panel-body{
+.panel-body {
   max-width: 400px;
-  /* margin-top: 20px; */
   border-radius: 10px;
-  /* border: 2px solid black; */
-  /* margin-bottom: 50px; */
   background: #295173;
   margin: 20px auto 50px;
 }
-.col-md-6{
+.col-md-6 {
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   line-height:1.3rem;
   font-size: 130%;
   max-width: 400px;
   width: 100%;
   color: #99D420;
+  margin: auto;
+  padding: 7px;
 }
 form-group{
   padding: 20px auto
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background: #F25C19;
-  }
-.col-md-6 {
-  max-width: 400px;
-  width: 100%;
-  margin: auto;
-  padding: 7px;
 }
 h2{
   font-size: 250%;
