@@ -39,6 +39,7 @@ margin-left: 10px;
   background: rgb(224, 224, 224);
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 h4 {
   margin-top: 15px;
@@ -221,6 +222,16 @@ h5 {
     /* margin-bottom: 30px; */
     padding: 10px;
     background: #99D420;
+}
+.h6profil{
+  text-align: center;
+  font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-weight:bolder;
+  font-size: 1.9em;
+  text-transform: uppercase;
+  /* color: #99D420; */
+
 }
 .p {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
