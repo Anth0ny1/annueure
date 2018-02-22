@@ -16,7 +16,7 @@
 
 <div class="template-sct">
 
-{{-- 
+{{--
   <section>
       <div class="presentation-profil-sct">
         <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
@@ -77,7 +77,7 @@
           <hr>
           <p class="p">Siren : {{$societies->siren}}</p>
           <hr>
-          <p class="p"><i class="fas fa-edit"></i>Description : <br>{{$societies->skills}}</p>
+          <p class="p">Description : <br>{{$societies->skills}}</p>
           <hr>
           <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
         </div>
