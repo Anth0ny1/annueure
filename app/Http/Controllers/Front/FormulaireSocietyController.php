@@ -98,11 +98,18 @@ class FormulaireSocietyController extends Controller
 
        $society = Society::findOrFail($id);
        $society->categories()->sync($ids);
-       // $variable = [];
+
+       // $variable = array();
+       // $variable['id'] = $id;
+
+      $variable = $request->input();
+
+       // $request = $request->input();
+       // foreach ($request as $key => $value) {
+       //   $variable[$key] = $value;
+       // }
+
        // dd($variable);
-       //
-       // $variable .= $id;
-       $variable = $request->input();
        Mail::to('anthonythi51@gmail.com')->send(new ModerationSociety($variable));
 
           return redirect()->route('mes-societes')->with('success', 'Merci votre société vient d\'être ajoutée ..');
