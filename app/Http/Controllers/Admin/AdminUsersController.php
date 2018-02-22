@@ -9,32 +9,38 @@ use App\Http\Requests\UserUpdateRequest;
 
 class AdminUsersController extends Controller
 {
-    //
-    public function updateUsers($id){
-      $user = User::findOrFail($id);
 
-      return view('admin/update-users', compact('user'));
-    }
+  // AFFICHAGE DU FORMUALIRE DE MODIFICATION DES UTILISATEURS
+  //
+  public function updateUsers($id){
+    $user = User::findOrFail($id);
 
-    public function updateUsersAction(UserUpdateRequest $request, $id){
+    return view('admin/update-users', compact('user'));
+  }
 
-      $user = User::findOrFail($id);
-      // dd($request);
-      $user->update([
-        'name' => $request->input('name'),
-        'lastname' => $request->input('lastname'),
-        'city' => $request->input('city'),
-        // 'email' => $request->input('email'),
-        'status' => $request->input('status'),
-        'role' => $request->input('role'),
-      ]);
+  // ENREGISTREMENT DES DONNEES DU FORMULAIRE DE MODIFIATION UTILISATEURS EN BASE DE DONNEE
+  //
+  public function updateUsersAction(UserUpdateRequest $request, $id){
 
-      return redirect()
-        ->route('listing-users')
-        ->with('success', 'L\'utilisateur à bien été MODIFIE');
-    }
+    $user = User::findOrFail($id);
 
+    $user->update([
+      'name'     => $request->input('name'),
+      'lastname' => $request->input('lastname'),
+      'city'     => $request->input('city'),
+      'status'   => $request->input('status'),
+      'role'     => $request->input('role'),
+    ]);
+
+    return redirect()
+      ->route('listing-users')
+      ->with('success', 'L\'utilisateur à bien été MODIFIE');
+  }
+
+    // SOFT DELETE D UN UTILISATEURS TOUJOURS PRESENT EN BASE DE DONNEE MAIS PLUS VISIBLE
+    // 
     public function deleteUsers($id){
+
       $user = User::findOrFail($id);
 
       $user->delete();
