@@ -28,26 +28,17 @@ class UpdateMySocietyRequest extends FormRequest
     {
 
     $d = $request->route()->parameters();
- // dd($d);
- //
- // siren
-//       $society = Society::find($this->society);
-//       dd($society);
-        return [
-          'name_society'   => 'bail|required|between:5,50',
-          'adress'   => 'bail|required|between:5,150',
-          'city'   => 'bail|required|between:5,30',
-          'phone'   => 'phone:AUTO,FR',
-          'zip_code'   => 'bail|required|numeric',
-          'site_web'   => 'bail|max:50',
-          // 'categorie_name'   => 'bail|required',
-          'skills'   => 'bail|max:190',
-          'email'   => 'bail|required|min:3|max:50|unique:society,email,'.$d['idSociety'],
-          // 'siren'   => 'bail|required|min:9|max:9',
-          'siren'    => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety'],
 
-          //
-          // 'logo' => 'optional',
+        return [
+          'name_society'    => 'bail|required|between:5,50',
+          'adress'          => 'bail|required|between:5,150',
+          'city'            => 'bail|required|between:5,30',
+          'phone'           => 'phone:AUTO,FR',
+          'zip_code'        => 'bail|required|numeric',
+          'site_web'        => 'bail|max:50',
+          'skills'          => 'bail|max:190',
+          'email'           => 'bail|required|min:3|max:50|unique:society,email,'.$d['idSociety'],
+          'siren'           => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety'],  
         ];
     }
 }

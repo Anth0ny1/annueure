@@ -25,7 +25,6 @@ class SelectRequest extends FormRequest
     {
         return [
           'categorie_name' => 'required|numeric',
-          //'zip'  => 'required|numeric'
         ];
     }
 }

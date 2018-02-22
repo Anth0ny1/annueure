@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class PresentationController extends Controller
 {
-
+  // retourne la vue presentation
   public function presentation()
   {
     return view('front/presentation');
