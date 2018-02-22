@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <h1>listing des Sociétés</h1>
+  <h1 style="color:tomato; text-align:center;">listing des Sociétés</h1>
 
   {{-- {{dd($societiesbyid)}} --}}
   {{-- {{dd($categories)}} --}}

@@ -17,10 +17,10 @@
   <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
     <div class="pictoPresentation picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
       <ul>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
+        <li><a href="{{ route('annuaire') }}">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
+        <li><a href="{{ route('register') }}">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
+        <li><a href="{{ route('nous-contacter-view') }}">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
+        <li><a href="{{ route('nous-contacter-view') }}">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
       </ul>
     </div>
   </aside>
