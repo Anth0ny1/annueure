@@ -21,8 +21,7 @@
         {{-- <th>Métier</th> --}}
         <th>Société crée le</th>
         <th>Société modifié le</th>
-        <th>Modification</th>
-        <th>Delete</th>
+        <th>Modification / Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -66,8 +65,8 @@
       <td>{{ $societie->updated_at }}</td>
 
 
-      <td><a class="btn btn-round btn-primary" href="{{ route('update-society',['id' => $societie->id])}}">modifier</a></td>
-      <td>
+      <td><a class="btn btn-round btn-primary" href="{{ route('update-society',['id' => $societie->id])}}">modifier</a>
+
         {!! Form::open(['route' => ['delete-society', $societie->id],  'method' => 'delete']) !!}
         {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
         {!! Form::close() !!}
