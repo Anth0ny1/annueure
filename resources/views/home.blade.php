@@ -18,9 +18,15 @@
       <p>Professionnels</p>
     </div>
     <ul class="slides">
-      <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
-      </li>
+      @if (!empty(Auth::user()))
+        <li>
+          <img src="{{ asset('img/photo/slide01a.jpg') }}" />
+        </li>
+        @else
+          <li>
+            <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
+          </li>
+      @endif
       <li>
         <img src="{{ asset('img/photo/slide02a.jpg') }}" alt="" />
       </li>
