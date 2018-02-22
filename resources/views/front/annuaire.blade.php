@@ -10,7 +10,7 @@
 
 @section('content')
   <div class="textePresentation">
-    <h2>Annuaire des sociétés</h2>
+    <h1 id="titlePageInt">Annuaire des sociétés</h1>
 
   </div>
 <div class="div_annuaire">
