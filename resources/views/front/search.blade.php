@@ -11,8 +11,14 @@ recherche société
 @section('content')
   <div class="textePresentation">
     {{-- {{ dd($societies)}} --}}
+
+    {{-- <h2 style="color:white;">Liste des Societés</h2> --}}
+    {{-- <div class="bodykey"> --}}
+    <main>
+
     {{-- <h2 style="color:white;">Liste des Societés</h2>
      <main>
+
       <div class="marker"></div>
       <h1 class="l1">L</h1>
       <h1 class="i1">i</h1>
@@ -32,9 +38,15 @@ recherche société
       <h1 class="t2">t</h1>
       <h1 class="e4">é</h1>
       <h1 class="s4">s</h1>
+
+    </main>
+    </div>
+
+
     </main> --}}
-<h1>Liste des societès</h1>
-  </div>
+<h1>Liste des sociétés</h1>
+
+  {{-- </div> --}}
   <div class="content_search">
     <div class="ResultatSearch">
       {{-- <h4> {{$societies}} sociétés figure dans votre recherche.</h4> --}}

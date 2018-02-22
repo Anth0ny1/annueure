@@ -65,7 +65,7 @@
         <img src="{{ asset('img/logos/logo_opquast.png') }}" alt="logo Opquast" />
       </a>
       <a href="http://www.wf3.fr/" target="_blank">
-        <img src="{{ asset('img/logos/logo-webforce3.svg') }}" alt="logo Webforce 3" />
+        <img src="{{ asset('img/logos/logo-webforce3.png') }}" alt="logo Webforce 3" />
       </a>
       <a href="http://www.weblitzer.fr" target="_blank">
         <img src="{{ asset('img/logos/weblitzer.png') }}" alt="logo Weblitzer" />

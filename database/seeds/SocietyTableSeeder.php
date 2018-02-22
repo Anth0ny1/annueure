@@ -27,7 +27,8 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'notre activité s\'étend sur une partie de la Normandie pour la construction de maison en ossature bois, et la construction d\'extensions en bois pour votre habitation.',
         'email'        => 'example1@gmail.com',
         'siren'        => 384941860,
-        'created_at'  => $date
+        'created_at'  => $date,
+        'moderation' => 'valide',
       );
       $society[] = array(
         'user_id'        => 2,
@@ -41,6 +42,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'COHIN CONSTRUCTION est applicateur agréé par LAFARGE depuis 2005.',
         'email'        => 'example3@gmail.com',
         'siren'        => 523445723,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -55,6 +57,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Artisan Menuisier à St André de l\'Eure (27) depuis 1995, 20 années d\'expérience professionnelle.',
         'email'        => 'sarlsma@wanadoo.fr',
         'siren'        => 401640750,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -69,6 +72,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'charpentier à Courville-sur-Eure? Jean-Louis Rouvet vous propose ses services pour la construction de maison ossature en bois.',
         'email'        => 'contact@lacharpente-courvilloise.com',
         'siren'        => 411018864,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -83,6 +87,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Créée en 1983 sous l\'égide du groupe Treuil, la société TMB est spécialisée dans les travaux du bois.',
         'email'        => 'treuil@gmail.com',
         'siren'        => 456738901,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -97,6 +102,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Situés au Marais-Vernier près de Pont-Audemer.',
         'email'        => 'letac@gmail.com',
         'siren'        => 787456787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -111,6 +117,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Depuis 1954, ALAIN LAINE MENUISERIE charpentier ébéniste de père en fils.',
         'email'        => 'laine2@gmail.com',
         'siren'        => 703456787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -125,6 +132,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Entreprise du bâtiment de l\'Eure proche Evreux spécialisée dans la charpente traditionnelle',
         'email'        => 'charpente.jmtrois@gmail.com',
         'siren'        => 365456787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -139,6 +147,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Depuis 1985 Pascal Leroy exerce le métier de charpentier et menuisier d\'extérieur.',
         'email'        => 'leroy.pascal@gmail.com',
         'siren'        => 198456787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -153,6 +162,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Installés près de chez vous, c’est avec grand plaisir que nous participerons à l’élaboration de votre projet de fenêtres, de portes, de volets ou de portails.',
         'email'        => 'fresnais2@gmail.com',
         'siren'        => 835656321,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -167,6 +177,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'L\'Entreprise A2CM Masset se situe à Notre Dame de l\'Isle près de Vernon dans l\'Eure.',
         'email'        => 'masset@gmail.com',
         'siren'        => 906856787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -181,6 +192,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => '11 ans d\'expérience à votre service pour les professionnels et les particuliers. Nous vous conseillons pour répondre à vos attentes',
         'email'        => 'cipp2@gmail.com',
         'siren'        => 593656787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -195,6 +207,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Crée en 1978 la SARL Duchesne Electricité accompagne ses clients dans la réalisation et la maintenance de leurs installations électriques.',
         'email'        => 'duchesne2@gmail.com',
         'siren'        => 123451122,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -209,6 +222,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Entreprise d\'électricité, nous réaliserons vos devis',
         'email'        => 'cheveques@gmail.com',
         'siren'        => 658936787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -223,6 +237,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'En génie électrique, génie thermique et courants faibles, BRUNET assure l’installation, le dépannage et la maintenance.',
         'email'        => 'brunet@gmail.com',
         'siren'        => 167846787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -237,6 +252,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Nous disposons d’une équipe d’électriciens habiles et expérimentés. Nos prestations consistent à installer, dépanner ou rénover le réseau électrique de votre bâtiment.',
         'email'        => 'elecnormandie@gmail.com',
         'siren'        => 923456349,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -251,6 +267,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Artisan électricien intervenant dans un rayon de 30 kms autour d\'Evreux.Pas de doute ! Nous trouverons ensemble la solution adaptée à votre projet.',
         'email'        => 'example2@gmail.com',
         'siren'        => 746352787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -265,6 +282,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'L\'entreprise Aulney Fils est située à proximité de la mairie de la commune de La Haye-de-Calleville, dans le département de l\'Eure, en région Haute-Normandie.',
         'email'        => 'aulney@gmail.com',
         'siren'        => 923456782,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -279,6 +297,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Depuis 2002, la société Lebellois Électricité, située à St-Symphorien et possédant un atelier à Epaignes',
         'email'        => 'lebellois@gmail.com',
         'siren'        => 836456787,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -293,6 +312,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Depuis 2002, la société Gedibois Électricité, située à St-Symphorien et possédant un atelier à Epaignes',
         'email'        => 'gedibois@gmail.com',
         'siren'        => 836456237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -307,6 +327,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'deshaies@gmail.com',
         'siren'        => 836286237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -321,6 +342,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'peltier@gmail.com',
         'siren'        => 831856237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -335,6 +357,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'jp@gmail.com',
         'siren'        => 739856237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -348,7 +371,8 @@ class SocietyTableSeeder extends Seeder
         'site_web'        => 'https://www.cepsservicesvasseur.com/',
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'vasseur@gmail.com',
-        'siren'        => 359856237,
+        'siren'        => 39856237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -363,6 +387,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'ledein@gmail.com',
         'siren'        => 744856293,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -377,6 +402,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'gaz@gmail.com',
         'siren'        => 744856387,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -391,6 +417,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'jaffre@gmail.com',
         'siren'        => 744527237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -405,6 +432,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'scam@gmail.com',
         'siren'        => 744856237,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -419,6 +447,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'cognard.christophe@gmail.com',
         'siren'        => 744861337,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -433,6 +462,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'bance.philippe@gmail.com',
         'siren'        => 744856149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -447,6 +477,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'thierry.romero@gmail.com',
         'siren'        => 888056149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -461,6 +492,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'meslin@gmail.com',
         'siren'        => 888156149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -475,6 +507,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'leite@gmail.com',
         'siren'        => 888256149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -489,6 +522,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'banas.frederic@gmail.com',
         'siren'        => 888356149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -503,6 +537,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'guy.françois@gmail.com',
         'siren'        => 888456149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -517,6 +552,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'rotin@gmail.com',
         'siren'        => 888556149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -531,6 +567,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'defontaine@gmail.com',
         'siren'        => 888656149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -545,6 +582,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'steeve.saul@gmail.com',
         'siren'        => 888756149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -559,6 +597,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'lucas@gmail.com',
         'siren'        => 888856149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -573,6 +612,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'alain.rousselle@gmail.com',
         'siren'        => 888956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -587,6 +627,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'msb.sas@gmail.com',
         'siren'        => 188956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -601,6 +642,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'blin.marcel@gmail.com',
         'siren'        => 288956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -615,6 +657,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'simon@gmail.com',
         'siren'        => 388956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -629,6 +672,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'pimon@gmail.com',
         'siren'        => 488956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -643,6 +687,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'herdans@gmail.com',
         'siren'        => 588956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -657,6 +702,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'malheux@gmail.com',
         'siren'        => 718956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -671,6 +717,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'ssement@gmail.com',
         'siren'        => 728956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -685,6 +732,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'benard@gmail.com',
         'siren'        => 738956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -699,6 +747,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'medal@gmail.com',
         'siren'        => 748956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -713,6 +762,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'duthe@gmail.com',
         'siren'        => 758956151,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -727,6 +777,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'lapin@gmail.com',
         'siren'        => 758956150,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -741,6 +792,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'karmowski@gmail.com',
         'siren'        => 758956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -755,6 +807,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'prunier_julie@yahoo.fr',
         'siren'        => 768956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -769,6 +822,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'contact@clemence-decoration.fr',
         'siren'        => 778956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -783,6 +837,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'monnier@decoration.fr',
         'siren'        => 788956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -797,6 +852,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'danier@decoration.fr',
         'siren'        => 798956149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -811,6 +867,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'mongin@decoration.fr',
         'siren'        => 400006149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -825,6 +882,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'raunnin@decoration.fr',
         'siren'        => 400016149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -839,6 +897,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'ninbus@decoration.fr',
         'siren'        => 400026149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -853,6 +912,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'gennetey@decoration.fr',
         'siren'        => 400036149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -867,6 +927,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'perdrix@decoration.fr',
         'siren'        => 400046149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -881,6 +942,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'collin@decoration.fr',
         'siren'        => 400046150,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -895,6 +957,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'vaux@decoration.fr',
         'siren'        => 400056149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -909,6 +972,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'gros@decoration.fr',
         'siren'        => 400066149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -923,6 +987,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'tros@decoration.fr',
         'siren'        => 400076149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
       $society[] = array(
@@ -937,6 +1002,7 @@ class SocietyTableSeeder extends Seeder
         'skills'        => 'Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum',
         'email'        => 'vraider@decoration.fr',
         'siren'        => 400086149,
+        'moderation' => 'valide',
         'created_at'  => $date
       );
 

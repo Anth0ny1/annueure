@@ -1,56 +1,86 @@
-.bloc_content_cat{
+/* .bloc_content_cat{
   max-width: 1000px;
   width: 100%;
-  /* background: lime; */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+<<<<<<< HEAD
+=======
 h2{
   font-size: 250%;
 }
+.textePresentation h2 {
+  color: white;
+}
+>>>>>>> 2807132ea1236c70308862ab8878ffc303c4d75b
 .bloc_cat{
-  width: 190px;
-background:linear-gradient(#53b0ff ,#295173);
+  background:linear-gradient(#53b0ff ,#295173);
   margin: 5px;
   border-radius: 5px;
   color: white;
   cursor: pointer;
-  /* background: lightgrey; */
-  /* text-align: center; */
+} */
+
+.bloc_content_cat{
+  width: 80%;
+  float: left;
+  padding: 2%;
+}
+.bloc_cat{
+  float: left;
+  margin:1%;
+  background:linear-gradient(#53b0ff ,#295173);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.bloc_cat .dropdown-item:link{
+line-height: 40px;
+}
+/* .dropdown-menu:hover{
+  padding: 0;
+  border-radius: 15px;
+} */
+.dropdown-menu li a{
+  color:black;
+  font-size: 0.9em;
+  /* background: #F47942; */
+  border-radius: 10px;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid #EB7900;
+  /* border-bottom:1px dotted black; */
+}
+.dropdown-menu li a:hover{
+  background: transparent;
+  color:#EB7900;
+}
+.dropdown-toggle{
+  padding:0px;
+  border-radius: 5px;
+}
+.dropdown-toggle{
+  margin: 2px;
+  text-align: center;
+
+}
+/* .dropdown-item:link{
+  line-height: 40px;
+} */
+h2{
+  font-size: 250%;
 }
 @keyframes move{
   0%, 100%{transform:translateY(-10px);}
   50%{transform:translateY(0);}
 }
 
-.dropdown-toggle{
-  margin: 2px;
-  padding-left: 5px;
-/* background:linear-gradient(#da4df8 ,#9b0db9); */
-}
+
 h6{
   line-height: 40px;
 }
-.dropdown-menu{
-    border-radius: 5px;
-    background:linear-gradient(#ffffff ,#a8a8a8);
-    color: black;
-    margin-top: 5px;
-}
 
-.dropdown-menu li a{
-  color:black;
-  font-size: 0.8em;
-  border-bottom:1px dotted black;
-  /* border-top:1px dotted black; */
-}
-
-.dropdown-menu li a:hover{
-  background: transparent;
-  color:#EB7900;
-}
 
 h5{
   text-align: center;
