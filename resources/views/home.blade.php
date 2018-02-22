@@ -153,7 +153,7 @@
         </div>
         <div class="service-box">
           <div class="picto-box">
-            <a href="#">
+            <a href="{{ route('nous-contacter-view') }}">
               {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
             </a>
           </div>
@@ -164,7 +164,7 @@
         </div>
         <div class="service-box">
           <div class="picto-box">
-            <a href="#">
+            <a href="{{ route('nous-contacter-view') }}">
               {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
             </a>
           </div>
