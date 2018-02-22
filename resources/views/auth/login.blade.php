@@ -4,7 +4,7 @@
 @endsection
 @section('content')
   <div class="textePresentation">
-<h2>Se connecter</h2>
+<h1 id="titlePageInt">Se connecter</h1>
   </div>
 <div class="container">
     <div class="row">

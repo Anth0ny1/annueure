@@ -403,7 +403,7 @@ aside#flux-RSS {
   padding: 4%;
 }
 .footerLogos a {
-  max-width: 188px;
+  /* max-width: 188px; */
   text-align: center;
 }
 
@@ -424,8 +424,8 @@ aside#flux-RSS {
     width: 20%;
 }
 .mainContentRight {
-  min-height: 80%;
-  /* min-height: 685px; */
+  /* min-height: 80%; */
+  min-height: 685px !important;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
