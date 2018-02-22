@@ -101,7 +101,7 @@
           {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
           {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-          {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
+          {!! Form::submit('Go',['class' => 'col-md-1 btn btn-succes']) !!}
         </div>
       {!! Form::close() !!}
     </div>

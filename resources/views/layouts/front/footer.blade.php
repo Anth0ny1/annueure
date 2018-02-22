@@ -2,7 +2,7 @@
   <footer id="footer">
     <div class="footerLinks">
       <div class="footerOneColText">
-        <p class="footerOneColTitle">5 derniers inscrits :</p>
+        <p class="footerOneColTitle">5 derniers inscrits</p>
 
           <!-- affichage des 3 derniers inscrits dans l'annuaire -->
           <?php $societies = App\Society::orderBy('created_at', 'desc')->limit(5)->get(); ?>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="footerOneColText">
-        <p class="footerOneColTitle">Liens utiles :</p>
+        <p class="footerOneColTitle">Liens utiles</p>
         <p class="footerLinkText">
           <a href="{{route('nous-contacter-view')}}">Nous contacter</a>
         </p>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="footerOneColText">
-        <p class="footerOneColTitle">Remerciements :</p>
+        <p class="footerOneColTitle">Remerciements</p>
         <p class="footerLinkText">
           <a href="http://www.wf3.fr/" target="_blank">Webforce3</a>
         </p>
