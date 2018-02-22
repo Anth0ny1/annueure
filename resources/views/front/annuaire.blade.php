@@ -9,13 +9,15 @@
 @endsection
 
 @section('content')
-  <div class="textePresentation">
+  <main id="mainContainerPage">
+
+  {{-- <div class="textePresentation">
     <h1 id="titlePageInt">Annuaire des sociétés</h1>
 
-  </div>
-<div class="div_annuaire">
-  <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
-    <div class="pictoPresentation picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
+  </div> --}}
+{{-- <div class="div_annuaire"> --}}
+  <aside class="sidebarLeft"> <!-- left aside  a mettre dans le header commun pour les pages-->
+    <div class="pictoSidebarLeft picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
       <ul>
         <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
         <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
@@ -27,12 +29,14 @@
 {{-- {{dd($categories)}} --}}
 
 
-  <h5>{{$categoriescount}} catégories figure dans notre annuaire</h5>
-  <hr>
+  {{-- <hr> --}}
 
 
+  <section class="mainContentRight">
+    <h1 id="titlePageInt">Annuaire des sociétés</h1>
+    <h5 class="annuaireCountCategorie">{{$categoriescount}} catégories figure dans notre annuaire</h5>
 
-    <section class=" bloc_content_cat ">
+    {{-- <section class=" bloc_content_cat "> --}}
           @foreach ($categories as $cat)
                 <div class="bloc_cat"  >
                   <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"src="{{ Image::url(  route ('home') . '/' . $cat->path_categorie . '/' . $cat->original_name,190,100,array())}}" alt="" />
@@ -48,9 +52,9 @@
       {{-- </div> --}}
 
   </section>
-</div>
+{{-- </div> --}}
 <div class="clearfix"></div>
-
+</main>
       @endsection
 
       @section('js')
@@ -66,6 +70,6 @@ for (var i = 0; i < test; i++) {
 </script> --}}
 
 
-</script>
+{{-- </script> --}}
 
       @endsection

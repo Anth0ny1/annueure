@@ -81,7 +81,9 @@ h6{
   line-height: 40px;
 }
 
-
+h5.annuaireCountCategorie{
+  width: 100%;
+}
 h5{
   text-align: center;
   /* background: #295173; */
