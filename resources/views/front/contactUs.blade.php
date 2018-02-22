@@ -8,7 +8,7 @@
 
 @section('content')
   <div class="textePresentation">
-  <h2>Nous contacter</h2>
+  <h1 id="titlePageInt">Nous contacter</h1>
   </div>
   @if ($errors->any())
     <div class="alert alert-danger">
