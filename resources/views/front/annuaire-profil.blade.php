@@ -61,8 +61,11 @@
             @else
               <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',90,90,array('crop'))}}" alt="">
             @endif
-            {{-- {{dd($categoriessct)}} --}}
-            {{dd($societies)}}
+
+            @foreach ($categories as $cat)
+              <p>{{$cat->categorie_name}}</p>
+            @endforeach
+
           <p class="p"><i class="fas fa-user"></i> : {{$societies->gerant}}</p>
           <hr class="hrclass">
           <p class="p"><i class="fas fa-address-card"></i> : {{$societies->adress}}</p>
@@ -92,6 +95,7 @@
 
   </div>
   <div class="clear"></div>
+
 @endsection
 @section('js')
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

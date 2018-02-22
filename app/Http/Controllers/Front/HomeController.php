@@ -193,8 +193,16 @@ class HomeController extends Controller
       // $categoriessct = Categories::all();
 
 
+      $categories = \DB::table('society')
+        ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
+        ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
+        ->where('society.id', '=', $id)
+        ->get();
 
-      return view('/front/annuaire-profil', compact('categorie','societies','categoriessct'));
+      // dd($societies);
+
+      return view('/front/annuaire-profil', compact('societies', 'categories'));
+
     }
 
 }
