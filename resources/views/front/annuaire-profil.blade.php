@@ -64,7 +64,7 @@
 
             <div class="badgeSte">
               @foreach ($categories as $cat)
-                <a href="#" class="badge badge-primary">{{$cat->categorie_name}}</a>
+                <a href="{{ route('listing-by-categorie',['categorieName' => $cat->categorie_name])}}" class="badge badge-primary">{{$cat->categorie_name}}</a>
               @endforeach
             </div>
           <p class="p"><i class="fas fa-user"></i> : {{$societies->gerant}}</p>
