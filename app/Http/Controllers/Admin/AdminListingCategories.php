@@ -9,14 +9,12 @@ use App\Categories;
 
 class AdminListingCategories extends Controller
 {
-    //
+
+  // lISTING DE TOUTES LES CATEGORIES 
   public function listingCategories(){
 
-    $categories = Categories::orderBy('created_at', 'desc')->paginate(10);
+  $categories = Categories::orderBy('created_at', 'desc')->paginate(10);
 
     return view('admin/listing-categories', compact('categories'));
-
-
-
  }
 }

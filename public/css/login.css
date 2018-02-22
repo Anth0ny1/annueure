@@ -1,22 +1,20 @@
-.panel-body{
-  /* max-width: 500px; */
+.panel-body {
   margin-top: 20px;
   border-radius: 10px;
-  /* border: 2px solid black; */
   margin-bottom: 50px;
   background: #295173;
 }
-.col-md-8{
+.col-md-8 {
   max-width: 400px;
   width: 100%;
   margin: auto;
 }
-.col-md-6{
+.col-md-6 {
   max-width: 400px;
   width: 100%;
   margin: auto;
 }
-.col-md-4{
+.col-md-4 {
   padding-top: 10px;
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   line-height:1.3rem;
@@ -25,12 +23,12 @@
   width: 100%;
   color: #99D420;
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background: #F25C19;
   }
-.btn-primary{
+.btn-primary {
   margin-bottom: 10px;
 }
-h2{
+h2 {
   font-size: 250%;
 }

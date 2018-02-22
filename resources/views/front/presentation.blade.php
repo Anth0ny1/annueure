@@ -12,7 +12,8 @@
   <main id="mainContainerPage">
 
     <!-- Sidebar left (gauche) -->
-    <aside class="sidebarLeft">
+    @include('layouts.front.sidebarLeft')
+    {{-- <aside class="sidebarLeft">
         <div class="pictoSidebarLeft picto-box">
           <ul>
             <li>
@@ -37,7 +38,7 @@
             </li>
           </ul>
         </div>
-    </aside>
+    </aside> --}}
 
     <!-- section paragraphes -->
     <section class="mainContentRight">

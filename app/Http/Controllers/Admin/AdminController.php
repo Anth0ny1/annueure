@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use App\Society;
 use App\User;
 use App\Categories;
+use Mail;
+use App\Mail\ValideModeration;
 
 class AdminController extends Controller
 {
@@ -22,45 +24,50 @@ class AdminController extends Controller
 
 
   public function dashboard(){
-    // $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 
-    // $user = User::
-$sctcount = Society::all()->count();
-$usercount = User::all()->count();
-$catcount = Categories::all()->count();
-    return view('admin.dashboard', compact('societies','sctcount','usercount','catcount'));
+  // COUNT DES SOCIETES
+  // COUNT DES UTILISATEURS
+  // COUNT DES CATEGORIES
+
+  $sctcount = Society::all()->count();
+  $usercount = User::all()->count();
+  $catcount = Categories::all()->count();
+
+  return view('admin.dashboard', compact('sctcount','usercount','catcount'));
   }
 
+  // SI ON CLIQUE SUR LE BOUTON VALIDER ON ARRIVE SUR CETTE METHODE ET ON CHANGE LE STATUS DE MODERATION DE LA SOCIETE A VALIDE
+  //
   public function valideModeration(Request $request,$idSociety){
 
-
-
-$post = $request->all();
-
-
-// dd($request);
-// dd($post);
-
     $society = Society::findOrFail($idSociety);
-
-
-
     $society->update([
       "moderation" => 'valide',
     ]);
+    // dd($society);
+    $variable = (array)$society['attributes'];
+    // dd($variable);
 
+    // dd($variable);
 
+    Mail::to($society->email)->send(new ValideModeration($variable));
 
-
-  return redirect()->route('listing-society')->with('success','société validée');
+    return redirect()
+      ->route('listing-society')
+      ->with('success','société validée');
   }
-  public function nonConformeModeration(Request $request,$idSociety){
-        $post = $request->all();
-        $society = Society::findOrFail($idSociety);
-        $society->update([
-          "moderation" => 'non conforme',
-        ]);
 
-        return redirect()->route('listing-society')->with('danger','société non conforme');
-      }
+  // SI ON CLIQUE SUR LE BOUTON NON CONFORME ON ARRIVE SUR CETTE METHODE ET ON CHANGE LE STATUS DE MODERATION DE LA SOCIETE A NON CONFORME
+  //
+  public function nonConformeModeration(Request $request,$idSociety){
+
+    $society = Society::findOrFail($idSociety);
+    $society->update([
+      "moderation" => 'non conforme',
+    ]);
+
+    return redirect()
+      ->route('listing-society')
+      ->with('danger','société non conforme');
+  }
 }

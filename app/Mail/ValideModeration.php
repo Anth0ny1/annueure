@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendMail extends Mailable
+class ValideModeration extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -20,7 +20,8 @@ class SendMail extends Mailable
     public function __construct($variable)
     {
         //
-        $this->variable = $variable;
+
+      $this->variable = $variable;
     }
 
     /**
@@ -30,9 +31,10 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.sendemail')
-          ->with([
-            'variable' => $this->variable
+      return $this->view('mail.valideModeration')
+        ->with([
+          'variable' => $this->variable,
+          // 'id' => $this->id
       ]);
     }
 }
