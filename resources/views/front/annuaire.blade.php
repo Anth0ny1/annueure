@@ -19,10 +19,22 @@
   <aside class="sidebarLeft"> <!-- left aside  a mettre dans le header commun pour les pages-->
     <div class="pictoSidebarLeft picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
       <ul>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a></li>
-        <li><a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a></li>
+        <li>
+          <a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}</a>
+          <p class="labelPicto">Annuaire des Pro</p>
+        </li>
+        <li>
+          <a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}</a>
+          <p class="labelPicto">Inscription des Pro</p>
+        </li>
+        <li>
+          <a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}</a>
+          <p class="labelPicto">Prendre un rendez-vous</p>
+        </li>
+        <li>
+          <a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}</a>
+          <p class="labelPicto">Demander un devis</p>
+        </li>
       </ul>
     </div>
   </aside>
