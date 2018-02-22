@@ -1,6 +1,7 @@
 @extends('layouts/appback')
 
 @section('content')
+
   <h1>listing des Sociétés</h1>
 
   {{-- {{dd($societiesbyid)}} --}}
@@ -37,11 +38,11 @@
           <td>{{ $societie->email }}</td>
           <td>{{ $societie->siren }}</td>
           <td @if ($societie->moderation == 'new')
-                style="color:green;"
+                style="color:green;font-size:1.3em;text-align:center;"
               @elseif ($societie->moderation == 'valide')
-                style="color:blue;"
+                style="color:blue;font-size:1.3em;text-align:center;"
               @else
-                style="color:red;"
+                style="color:red;font-size:1.3em;text-align:center;"
               @endif>{{ $societie->moderation }}
 
             {!! Form::open(['route' => ['valide-moderation',$societie->id], 'method' => 'post']) !!}

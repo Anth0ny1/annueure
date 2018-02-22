@@ -16,7 +16,7 @@
 
 <div class="template-sct">
 
-
+{{-- 
   <section>
       <div class="presentation-profil-sct">
         <div class="textretour"><a class="texteretourAnnuaire" href="{{ route('annuaire') }}">Retour annuaire</a></div>
@@ -50,7 +50,7 @@
 
 
 
-    <img class="img_annuaire_pub" src="{{ asset('img/logos/pub_ici.jpg') }}" alt=""  />
+    <img class="img_annuaire_pub" src="{{ asset('img/logos/pub_ici.jpg') }}" alt=""  /> --}}
 
 
       <section>
