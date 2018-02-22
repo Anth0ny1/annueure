@@ -43,7 +43,7 @@
   </aside>
 
   <div class="mainContentRight">
-    
+
       <!-- texte banniére verte de présentation -->
         @if ($mycountsociety == 0)
           <h1 id="titlePageInt">Aucune société enregistrée dans votre profil</h1>
@@ -55,10 +55,11 @@
 
       @if ($mycountsocietymoder == 0)
       @elseif ($mycountsocietymoder == 1)
-          <div class="alert alert-success">vous avez {{$mycountsocietymoder}} societé en attente de validation.</div>
+          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societé en attente de validation.</div>
         @elseif (($mycountsocietymoder > 1))
-          <div class="alert alert-success">vous avez {{$mycountsocietymoder}} societés en attente de validation.</div>
+          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societés en attente de validation.</div>
       @endif
+
           @foreach ($mysociety as $mysoc)
 
             @if ($mysoc->moderation != 'new')

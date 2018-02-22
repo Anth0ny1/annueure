@@ -26,15 +26,10 @@ class UserUpdateRequest extends FormRequest
      */
     public function rules()
     {
-      // $user = User::find($this->user);
-      // $id = Route::current()->getParameter('users');
-// dd($user);
-// dd($this->route('update-users-action')->getParameter('id'));
         return [
           'name'     => 'required|min:3|max:50',
           'lastname' => 'required|min:3|max:50',
           'city'     => 'required|min:3|max:50',
-          // 'email'    => 'string|email|max:255|unique:users, email',
           'role'     => 'required|in:membre,admin',
           'status'   => 'required|in:actif,inactif',
         ];

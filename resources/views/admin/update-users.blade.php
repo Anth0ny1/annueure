@@ -19,8 +19,10 @@
 <div class="x_content">   <!--  Ouverture de x_content page update-users  -->
                         <!--  Backoffice page => Modification d'un utilisateur  -->
 
-  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;">
-      {!! Form::open(['route' => ['update-users-action', $user->id], 'method' => 'put']) !!}
+  {{-- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;"> --}}
+
+      {!! Form::open(['route' => ['update-users-action', $user->id], 'class' => 'form-horizontal form-label-left', 'id' => 'demo-form2', 'method' => 'put']) !!}
+
 
     <div class="form-group">
       {!! Form::label('name', 'Votre prénom : ',['class' =>'col-md-4 control-label']) !!}
@@ -78,7 +80,7 @@
     </div>
   </div>
 
-  </form>
+  {{-- </form> --}}
 </div>      <!--  Fermeture / de x_content page update-users  -->
 
 @endsection

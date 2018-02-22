@@ -567,6 +567,7 @@ h5.pgPresent {
   line-height: 40px;
   color:#99D420;
 }
+.width100{width:100%;text-align:center}
 .asidePresentation {
   float: left;
   background: #a4a4a4;
