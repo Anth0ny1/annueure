@@ -190,8 +190,19 @@ class HomeController extends Controller
     public function profilSociete($id){
       // $categorie = Categories::findOrFail($id);
       $societies = Society::findOrFail($id);
+      // $categoriessct = Categories::all();
 
-      return view('/front/annuaire-profil', compact('categorie','societies'));
+
+      $categories = \DB::table('society')
+        ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
+        ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
+        ->where('society.id', '=', $id)
+        ->get();
+
+      // dd($societies);
+
+      return view('/front/annuaire-profil', compact('societies', 'categories'));
+
     }
 
 }

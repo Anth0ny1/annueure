@@ -44,7 +44,7 @@ recherche société
 
 
     </main> --}}
-<h1>Liste des sociétés</h1>
+<h1 id="titlePageInt">Liste des sociétés</h1>
 
   {{-- </div> --}}
   <div class="content_search">
