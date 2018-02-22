@@ -62,10 +62,11 @@
               <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',90,90,array('crop'))}}" alt="">
             @endif
 
-            @foreach ($categories as $cat)
-              <p>{{$cat->categorie_name}}</p>
-            @endforeach
-
+            <div class="badgeSte">
+              @foreach ($categories as $cat)
+                <a href="#" class="badge badge-primary">{{$cat->categorie_name}}</a>
+              @endforeach
+            </div>
           <p class="p"><i class="fas fa-user"></i> : {{$societies->gerant}}</p>
           <hr class="hrclass">
           <p class="p"><i class="fas fa-address-card"></i> : {{$societies->adress}}</p>
