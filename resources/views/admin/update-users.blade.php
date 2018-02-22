@@ -1,9 +1,9 @@
 @extends('layouts/appback')
 
 @section('content')
-  <div class="" style="color:tomato; text-align:center;">
+  <div style="color:tomato; text-align:center;">
     <h1>Modifier un utilisateur</h1>
-    <h5>Cette page vous permettra de modifier vos informations utilisateur</h5><br />
+    <h5>Cette page vous permettra de modifier vos informations utilisateur.</h5><br />
   </div>
 
   @if ($errors->any())

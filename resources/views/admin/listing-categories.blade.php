@@ -4,7 +4,7 @@
   {{--  --}}
   {{-- VOIR IMAGE OUI OU NON--}}
   {{--  --}}
-  <h1>listing des Categories</h1>
+  <h1 style="color:tomato; text-align:center;">listing des Categories</h1>
 
 
   <a class="btn btn-info" href="{{ route('new-categories') }}">ajouter nouvelle catégorie</a>
