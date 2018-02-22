@@ -61,6 +61,8 @@
             @else
               <img class="logo-sct" src="{{ Image::url(  route ('home') . '/upload/logo-annueure-carre-simple-hp_preview.png',90,90,array('crop'))}}" alt="">
             @endif
+            {{-- {{dd($categoriessct)}} --}}
+            {{dd($societies)}}
           <p class="p"><i class="fas fa-user"></i> : {{$societies->gerant}}</p>
           <hr class="hrclass">
           <p class="p"><i class="fas fa-address-card"></i> : {{$societies->adress}}</p>

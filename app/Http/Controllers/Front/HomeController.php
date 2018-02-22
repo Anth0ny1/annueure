@@ -190,8 +190,11 @@ class HomeController extends Controller
     public function profilSociete($id){
       // $categorie = Categories::findOrFail($id);
       $societies = Society::findOrFail($id);
+      // $categoriessct = Categories::all();
 
-      return view('/front/annuaire-profil', compact('categorie','societies'));
+
+
+      return view('/front/annuaire-profil', compact('categorie','societies','categoriessct'));
     }
 
 }
