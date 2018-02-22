@@ -24,18 +24,18 @@ class FormulaireRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'   => 'required|min:3|max:50'
+            'name'       => 'required|min:3|max:50'
             'lastname'   => 'required|min:3|max:50'
-            'city'   => 'required|min:3|max:50'
-            'email'   => 'required|min:3|max:50'
+            'city'       => 'required|min:3|max:50'
+            'email'      => 'required|min:3|max:50'
         ];
     }
     public function messages()
       {
           return [
-            'name.required' => 'Merci de mettre votre nom svp',
-            'lastname.min' => 'Merci d\'indiquer un minimum de 3 caractères',
-            'city.min' => 'Merci d\'indiquer un minimum de 3 caractères',
+            'name.required'  => 'Merci de mettre votre nom svp',
+            'lastname.min'   => 'Merci d\'indiquer un minimum de 3 caractères',
+            'city.min'       => 'Merci d\'indiquer un minimum de 3 caractères',
           ];
     }
 }

@@ -10,12 +10,7 @@ use App\Http\Requests\SelectRequest;
 
 class SearchController extends Controller
 {
-
-  // public function __construct()
-  // {
-  //     $this->middleware('user');
-  // }
-
+  //retourne la vue Search
   public function searchView()
   {
       return view('front/search');
@@ -26,18 +21,13 @@ class SearchController extends Controller
   {
         $search = $request->all();
 
-        // dd($request->user()->status);
-
         $categories = Categories::all();
         if (!empty($search['categorie_name']) && !empty($search['zip'])) {
-
 
               $id_categories = $search['categorie_name'];
               $zip_code = $search['zip'];
 
-
               $societies = \DB::table('society')
-
 
                   ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
                   ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
@@ -46,16 +36,10 @@ class SearchController extends Controller
                   ->where('society.moderation','=', 'valide')
                   ->get();
 
-
-
     } elseif(!empty($search['categorie_name'])){
         $id_categories = $search['categorie_name'];
-      //  $categories = Categories::with('society')->where('id', '=', $id_categories)->get();
-
-        //$societies = Society::with('categories')->get();
 
         $societies = \DB::table('society')
-
 
             ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
             ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
@@ -63,8 +47,6 @@ class SearchController extends Controller
             ->where('society.moderation','=', 'valide')
             ->select('society.*', 'categories.categorie_name')
             ->get();
-
-
 
     }
     elseif(!empty($search['zip'])){
@@ -80,52 +62,7 @@ class SearchController extends Controller
       return redirect()->route('home')->with('danger', 'Veuillez entrez au moin un paramètre de recherche');
     }
 
-    // dd($societies);
-    // else {
-    //
-    // }
-    // dd($societies);
-
-    // dd($societies);
-
-    // dd($search);
-    // if (!empty($search['zip'])) {
-    //   // $id_zip = $search['zip'];
-    //
-    //   $zips = Society::where('zip_code', '=', $search['zip'])->get();
-    //   // dd($zip);
-    // }
-      // $zipCode = Society::('society')->where('zip_code', '=', );
-      // $count = \DB::table('categories')
-      //                     ->where('categorie_name', 'like','%'.$search['categorie_name'].'%')
-      //                     // ->where('zip_code','like', '%'.$search['ou'].'%')
-      //                     ->count();
-      // dd($search);
-      //
-      // $categories = \DB::table('categories')
-      //                     ->where('id', '=', $search['categorie_name'])
-      //                     // ->where('zip_code','like', '%'.$search['ou'].'%')
-      //                     ->get();
-      //
-      //                     dd($categories);
-
-
-                          // SELECT tout dans la table societe ou l'id
-      // $society = \DB::table('society')
-      //               ->where('')
-    //
-    // if (!empty($search['quiquoi'])) {
-    //   $count = Society::where('name_society','like','%'.$search['quiquoi'].'%')->count();
-    //   $quiquoiou = Society::where('name_society','like','%'.$search['quiquoi'].'%')->get();
-    // }
-    // elseif (!empty($search['ou'])) {
-    //   $count = Society::where('zip_code','like','%'.$search['ou'].'%')->count();
-    //   $quiquoiou = Society::where('zip_code','like','%'.$search['ou'].'%')->get();
-    // }
-
-
     return view('front/search' ,compact('categories', 'societies'));
 
-      // $quiquoi = Society::
   }
 }

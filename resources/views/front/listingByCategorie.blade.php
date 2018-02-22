@@ -5,45 +5,14 @@
 @endsection
 
 @section('title')
-recherche société
+  Listing par catégorie
 @endsection
 
 @section('content')
+
   <div class="textePresentation">
-    {{-- {{ dd($societies)}} --}}
-
-    {{-- <h2 style="color:white;">Liste des Societés</h2> --}}
-    {{-- <div class="bodykey"> --}}
-    <main>
-
-    {{-- <h2 style="color:white;">Liste des Societés</h2>
-     <main>
-
-      <div class="marker"></div>
-      <h1 class="l1">L</h1>
-      <h1 class="i1">i</h1>
-      <h1 class="s1">s</h1>
-      <h1 class="t1">t</h1>
-      <h1 class="e1">e</h1>
-      <h1 class="a1"> </h1>
-      <h1 class="d1">d</h1>
-      <h1 class="e2">e</h1>
-      <h1 class="s2">s</h1>
-      <h1 class="a2"> </h1>
-      <h1 class="s3">s</h1>
-      <h1 class="o1">o</h1>
-      <h1 class="c1">c</h1>
-      <h1 class="i2">i</h1>
-      <h1 class="e3">e</h1>
-      <h1 class="t2">t</h1>
-      <h1 class="e4">é</h1>
-      <h1 class="s4">s</h1>
-
-    </main>
-    </div>
 
 
-    </main> --}}
 <h1 id="titlePageInt">Liste des sociétés</h1>
 
   {{-- </div> --}}
@@ -54,7 +23,7 @@ recherche société
     </div>
     <div class="display">
 
-      @foreach ($societies as $qq)
+      @foreach ($categorie as $qq)
         {{-- {{dd($qq)}} --}}
         {{-- {{dd($qq)}} --}}
         <div class="bloc_societe">
@@ -68,7 +37,7 @@ recherche société
           @endif
         </div>
           <h5>{{ $qq->name_society}}</h5>
-          <p class="p"><i class="fas fa-briefcase"></i> : {{ $qq->categorie_name}}</p>
+          <h6 class="h6profil">{{ $qq->categorie_name}}</h6>
           {{-- <p class="p"><i class="fas fa-user"></i> : {{ $qq->categorie_name}}</p> --}}
           <p class="p"><i class="fas fa-user"></i> : {{ $qq->gerant}}</p>
           {{-- <p class="p"><i class="fas fa-address-card"></i> : {{ $qq->adress}}</p> --}}
@@ -86,8 +55,8 @@ recherche société
   {{-- @foreach ($categories as $categorie)
     {{ $categorie->categorie_name }}
   @endforeach --}}
-
 @endsection
+
 @section('js')
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 

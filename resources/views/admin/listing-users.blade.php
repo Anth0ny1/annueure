@@ -4,7 +4,7 @@
 {{--  --}}
 {{-- DON'T TOUCH --}}
 {{--  --}}
-  <h1>listing des Utilisateurs</h1>
+  <h1 style="color:tomato; text-align:center;">listing des Utilisateurs</h1>
   <table class="table table-striped">
     <thead>
       <tr>

@@ -18,9 +18,15 @@
       <p>Professionnels</p>
     </div>
     <ul class="slides">
-      <li>
-        <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
-      </li>
+      @if (!empty(Auth::user()))
+        <li>
+          <img src="{{ asset('img/photo/slide01a.jpg') }}" />
+        </li>
+        @else
+          <li>
+            <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
+          </li>
+      @endif
       <li>
         <img src="{{ asset('img/photo/slide02a.jpg') }}" alt="" />
       </li>
@@ -95,7 +101,7 @@
           {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
           {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-          {!! Form::submit('Trouver',['class' => 'col-md-1 btn btn-succes']) !!}
+          {!! Form::submit('Go',['class' => 'col-md-1 btn btn-succes']) !!}
         </div>
       {!! Form::close() !!}
     </div>
@@ -147,7 +153,7 @@
         </div>
         <div class="service-box">
           <div class="picto-box">
-            <a href="#">
+            <a href="{{ route('nous-contacter-view') }}">
               {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
             </a>
           </div>
@@ -158,7 +164,7 @@
         </div>
         <div class="service-box">
           <div class="picto-box">
-            <a href="#">
+            <a href="{{ route('nous-contacter-view') }}">
               {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
             </a>
           </div>
@@ -184,7 +190,7 @@
           <div class="actu-box">
             <div class="img-actu-box">
               {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
-              <img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
+              <a href="{{ route('listing-by-categorie',['categorieName' => $categorie->categorie_name])}}"><img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" /></a>
             </div>
             <div class="bloc-text">
               <h3>{{ $categorie->categorie_name}}</h3>

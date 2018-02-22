@@ -8,7 +8,7 @@ Formulaire inscription d'une société
 
 @section('content')
   <div class="textePresentation">
-  <h2>Formulaire inscription société</h2>
+  <h1 id="titlePageInt">Formulaire inscription société</h1>
   </div>
   @if ($errors->any())
       <div class="alert alert-danger">

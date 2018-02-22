@@ -228,12 +228,13 @@
             <!-- 1 Column Text + Button : BEGIN -->
             <tr>
                 <td bgcolor="#ffffff" style="padding: 40px 40px 20px; text-align: center;">
-                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Modération d'entreprise</h1>
+                    <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">Non conformité de votre entreprise</h1>
                 </td>
             </tr>
             <tr>
                 <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; text-align: center;">
-                      <p style="margin: 0;">Vous avez une entreprise en attente de modération</p>
+                      <p style="margin: 0;">Votre societe {{ $variable['name_society'] }} n'a pas été validé car celle çi est invalide</p>
+
                       <p>Nom de l'entreprise : {{ $variable['name_society'] }}</p>
                       <p>Gerant : {{ $variable['name_society'] }}</p>
                       <p>Adresse : {{ $variable['adress'] }}</p>
@@ -251,7 +252,7 @@
             <tr>
                 <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
                     <!-- Button : BEGIN -->
-		    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+		    {{-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                         <tr>
                             <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
                                 <a href="http://localhost/annueure/public/dashboard/listing/society" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
@@ -259,7 +260,7 @@
                                 </a>
                             </td>
                         </tr>
-                    </table>
+                    </table> --}}
                     <!-- Button : END -->
                 </td>
             </tr>

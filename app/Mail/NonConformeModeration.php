@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ModerationSociety extends Mailable
+class NonConformeModeration extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,27 +17,24 @@ class ModerationSociety extends Mailable
      * @return void
      */
      protected $variable;
-     // protected $id;
-
      public function __construct($variable)
      {
          //
-         $this->variable = $variable;
-         // $this->variable = $id;
+
+       $this->variable = $variable;
      }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+     /**
+      * Build the message.
+      *
+      * @return $this
+      */
      public function build()
      {
-         // return $this->view('mail.sendemail');
-         return $this->view('mail.ModerationSociety')
-           ->with([
-             'variable' => $this->variable,
-             // 'id' => $this->id
+       return $this->view('mail.nonConformeModeration')
+         ->with([
+           'variable' => $this->variable,
+           // 'id' => $this->id
        ]);
      }
 }

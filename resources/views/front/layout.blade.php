@@ -50,7 +50,7 @@
         <div class="search">
           {!! Form::open(['route' => 'search-action', 'method' => 'post']) !!}
 
-            {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Metier ou nom de la societe']) !!}
+            {!! Form::search('quiquoi', null, ['class' => 'form-control','placeholder' => 'Métier ou nom de la société']) !!}
             {!! $errors->first('name_society', '<small class="help-block">:message</small>') !!}
 
             {!! Form::search('ou', null, ['class' => 'form-control','placeholder' => 'Ville ou code postal']) !!}

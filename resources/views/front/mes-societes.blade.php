@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/mes-societes.css') }}" />
+{{-- <link rel="stylesheet" href="{{ asset('css/mes-societes.css') }}" /> --}}
 {{-- <link rel="stylesheet" href="{{ asset('css/annuaire-profil.css') }}" /> --}}
 @endsection
 
@@ -11,8 +11,11 @@
 
 @section('content')
 
+
+<!-- Container principal -->
 <main id="mainContainerPage">
-  <!-- Sidebar left (gauche) à mettre dans le header commun pour les pages-->
+
+  <!-- Sidebar left (gauche) -->
   <aside class="sidebarLeft">
       <div class="pictoSidebarLeft picto-box">
         <ul>
@@ -41,22 +44,35 @@
   </aside>
 
   <div class="mainContentRight">
+
       <!-- texte banniére verte de présentation -->
-      <div class="titreContent">
         @if ($mycountsociety == 0)
-          <h1>Aucune société enregistrée dans votre profil</h1>
+          <h1 id="titlePageInt">Aucune société enregistrée dans votre profil</h1>
         @elseif ($mycountsociety == 1)
-            <h1>Vous avez {{$mycountsociety}} société inscrite</h1>
+            <h1 id="titlePageInt">Vous avez {{$mycountsociety}} société inscrite</h1>
             @else
-              <h1>Vous avez {{$mycountsociety}} sociétés inscrites</h1>
+              <h1 id="titlePageInt">Vous avez {{$mycountsociety}} sociétés inscrites</h1>
         @endif
-      </div>
+
+        @if (session('success'))
+          <div class="alert alert-success clearfix width100">
+            {{ session('success') }}
+          </div>
+        @endif
+
+        @if (session('danger'))
+          <div class="alert alert-danger clearfix width100">
+            {{ session('danger') }}
+          </div>
+        @endif
+
       @if ($mycountsocietymoder == 0)
       @elseif ($mycountsocietymoder == 1)
-          <h2>vous avez {{$mycountsocietymoder}} societé en attente de validation.</h2>
+          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societé en attente de validation.</div>
         @elseif (($mycountsocietymoder > 1))
-          <h2>vous avez {{$mycountsocietymoder}} societés en attente de validation.</h2>
+          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societés en attente de validation.</div>
       @endif
+
           @foreach ($mysociety as $mysoc)
 
             @if ($mysoc->moderation != 'new')

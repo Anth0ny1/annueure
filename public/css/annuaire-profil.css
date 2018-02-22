@@ -65,3 +65,15 @@ hr{
 .fa-user,.fa-address-card,.fa-map-marker-alt,.fa-map-signs,.fa-phone-square,.fa-globe,.fa-envelope,.fa-edit{
   color: #2A5073;
 }
+.badgeSte{
+  margin:3px;
+  font-size: 1.7em;
+  width: 80%;
+  margin-bottom: 15px;
+}
+.badge-primary{
+  background: #295173;
+}
+.badge-primary[href]:hover{
+  background: #F25C19;
+}
