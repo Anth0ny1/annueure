@@ -9,6 +9,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Society;
+use App\User;
+use App\Categories;
 
 class AdminController extends Controller
 {
@@ -20,11 +22,13 @@ class AdminController extends Controller
 
 
   public function dashboard(){
-    $societies = Society::orderBy('created_at', 'desc')->paginate(5);
+    // $societies = Society::orderBy('created_at', 'desc')->paginate(5);
 
     // $user = User::
-
-    return view('admin.dashboard', compact('societies'));
+$sctcount = Society::all()->count();
+$usercount = User::all()->count();
+$catcount = Categories::all()->count();
+    return view('admin.dashboard', compact('societies','sctcount','usercount','catcount'));
   }
 
   public function valideModeration(Request $request,$idSociety){
