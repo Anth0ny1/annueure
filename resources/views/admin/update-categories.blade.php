@@ -1,6 +1,7 @@
 @extends('layouts/appback')
 
 @section('content')
+
   <div class="" style="color:tomato; text-align:center;">
     <h1>Modifier une categorie</h1>
     <h5>Cette page vous permettra de modifier une catégorie.</h5><br />
@@ -44,4 +45,5 @@
 
   </form>
 </div>      <!--  Fermeture / de x_content page update-categorie  -->
+
 @endsection
