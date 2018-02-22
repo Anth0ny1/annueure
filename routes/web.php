@@ -49,9 +49,6 @@ Route::group(['namespace' => 'Front'], function(){
   Route::get('/formulaire-societe', 'FormulaireSocietyController@createSociety')->name('formulaire-societe')->middleware('auth','user');
   Route::post('/formulaire-societe', 'FormulaireSocietyController@createSocietyAction')->name('formulaire-societe-action')->middleware('auth','user');
 
-
-  // Route::get('/newsrss', 'NewRssController')->name('new-rss');
-
   // SEARCH ROUTING
   //
   Route::get('/search', 'SearchController@searchView')->name('search-view');
@@ -61,10 +58,12 @@ Route::group(['namespace' => 'Front'], function(){
   //
   Route::get('/mentions-legales', 'MentionsController@mentions')->name('mentions-legales');
 
-// ANNUAIRE ROUTING
+  // ANNUAIRE ROUTING
+  //
   Route::get('/annuaire', 'HomeController@annuaire')->name('annuaire');
 
-// MODIFICATION SOCIETES ROUTING
+  // MODIFICATION SOCIETES ROUTING
+  //
   Route::get('/mes-societes', 'UpdateSocietyFront@viewMySociety')->name('mes-societes')->middleware('auth','user');
 
   Route::get('/mes-societes/update/{idSociety}', 'UpdateSocietyFront@updateMySociety')->name('update-societes')->middleware('auth','user');
@@ -72,8 +71,10 @@ Route::group(['namespace' => 'Front'], function(){
 
   Route::delete('/mes-societes/delete/{idSociety}', 'UpdateSocietyFront@deleteMySociety')->name('delete-societes')->middleware('auth','user');
 
-// RSS ROUTING
-  // Route::get('')
+  // LISTING SOCIETES PAR CATEGORIES FRONT ROUTING
+  //
+  Route::get('/search/categorie/{categorieName}', 'HomeController@listingByCategorie')->name('listing-by-categorie');
+
 
 });
 

@@ -202,7 +202,23 @@ class HomeController extends Controller
       // dd($societies);
 
       return view('/front/annuaire-profil', compact('societies', 'categories'));
+    }
 
+    public function listingByCategorie($categorieName){
+
+      // $societies = Categories::findOrFail($categorieName);
+      // dd($societies);
+
+      $categorie = \DB::table('society')
+        ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
+        ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
+        ->where('categorie_name','=',$categorieName)
+        ->get();
+      // $categorie = Categories::findOrFail($categorieName);
+
+      // dd($categorie);
+
+      return view('front/listingByCategorie', compact('categorie'));
     }
 
 }

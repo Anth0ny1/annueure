@@ -190,7 +190,7 @@
           <div class="actu-box">
             <div class="img-actu-box">
               {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
-              <a href="{{ route('search-view',['id' => $categorie->id])}}"><img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" /></a>
+              <a href="{{ route('listing-by-categorie',['categorieName' => $categorie->categorie_name])}}"><img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" /></a>
             </div>
             <div class="bloc-text">
               <h3>{{ $categorie->categorie_name}}</h3>
