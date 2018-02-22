@@ -1,6 +1,16 @@
 @extends('layouts/appback')
 
 @section('content')
+  @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
+  
 <h1>Formulaire pour modifier une categorie</h1>
 {!! Form::open(['route' => ['update-categories-action', $categorie->id], 'method' => 'put', 'files' => true]) !!}
 
