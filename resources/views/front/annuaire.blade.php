@@ -13,7 +13,7 @@
     <h2>Annuaire des sociétés</h2>
 
   </div>
-
+<div class="div_annuaire">
   <aside class="asidePresentation"> <!-- left aside  a mettre dans le header commun pour les pages-->
     <div class="pictoPresentation picto-box">               <!-- annuaire, presentation, nous contacter, nous rejoindre, login -->
       <ul>
@@ -28,63 +28,28 @@
 
 
   <h5>{{$categoriescount}} catégories figure dans notre annuaire</h5>
-  {{-- <aside class="asidePresentation">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </aside> --}}
-
-<section class=" bloc_content_cat ">
+  <hr>
 
 
-    {{-- <div class="btn-group"> --}}
-@foreach ($categories as $cat)
-      <div class="bloc_cat"  >
-        <h6 href="#" type="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
-          <div class="dropdown-menu">
+
+    <section class=" bloc_content_cat ">
+          @foreach ($categories as $cat)
+                <div class="bloc_cat"  >
+                  <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"src="{{ Image::url(  route ('home') . '/' . $cat->path_categorie . '/' . $cat->original_name,190,100,array())}}" alt="" />
+                  <h6 href="#" type="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{$cat->categorie_name}}</h6>
+                <div class="dropdown-menu">
+                  {{-- {{dd($cat->society)}} --}}
             @foreach ($cat->society as $soc)
               <li><a class="dropdown-item" href="{{ route('annuaire-profil-societe',['id' => $soc->id])}}">{{ $soc->name_society }}</a></li>
             @endforeach
           </div>
-
         </div>
         @endforeach
       {{-- </div> --}}
 
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="clear"></div>
+</div>
+<div class="clearfix"></div>
 
       @endsection
 

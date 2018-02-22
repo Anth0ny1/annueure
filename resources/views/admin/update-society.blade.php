@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="" style="color:tomato; text-align: center;">
-  <h1>Modification d'une société</h1>
-    <h5>cette page vous permettra de modifier les informations de votre entreprise</h4><br />
+  <h1>Modifier une société</h1>
+    <h5>cette page vous permettra de modifier les informations de votre entreprise.</h4><br />
     </div>
   @if ($errors->any())
     <div class="alert alert-danger">

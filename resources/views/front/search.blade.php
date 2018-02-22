@@ -13,7 +13,7 @@ recherche société
     {{-- {{ dd($societies)}} --}}
 
     {{-- <h2 style="color:white;">Liste des Societés</h2> --}}
-    <div class="bodykey">
+    {{-- <div class="bodykey"> --}}
     <main>
 
     {{-- <h2 style="color:white;">Liste des Societés</h2>
@@ -46,7 +46,7 @@ recherche société
     </main> --}}
 <h1>Liste des sociétés</h1>
 
-  </div>
+  {{-- </div> --}}
   <div class="content_search">
     <div class="ResultatSearch">
       {{-- <h4> {{$societies}} sociétés figure dans votre recherche.</h4> --}}

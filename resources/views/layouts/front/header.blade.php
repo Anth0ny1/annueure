@@ -61,7 +61,6 @@
                   Ma/Mes société(s)
               </a>
             @endif --}}
-
             <a href="{{ route('mes-societes') }}"
             class="dropdown-item">
                 Ma/Mes société(s)
@@ -101,7 +100,7 @@
           <li><a href="{{ route('dashboard') }}">admin</a></li>
         @endif
 
-        @if (Auth::user()->role == 'membre')
+        @if (Auth::user()->role == 'membre' || Auth::user()->role == 'admin')
           <li><a href="{{ route('formulaire-societe') }}">inscrire votre societe</a></li>
         @endif
       @endif
