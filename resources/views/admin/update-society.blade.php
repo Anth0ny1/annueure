@@ -18,9 +18,9 @@
   <div class="x_content">   <!--  Ouverture de x_content page update-society  -->
                           <!--  Backoffice page => Modification d'une société  -->
 
-    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;">
+    {{-- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;"> --}}
       {!! Form::open(['route' => ['update-society-action',$society->id ], 'method' => 'put']) !!}
-
+{{-- {{dd($society)}} --}}
       <div class="form-group">
         {!! Form::label('name_society', 'Entrez le nom de votre société : ',['class' =>'col-md-4 control-label']) !!}
         <div class="col-md-6">
@@ -115,7 +115,8 @@
           {{-- {!! Form::select('categorie_name',$arrayCat,null,array()) !!} --}}
 
           {{Form::label('categorie_name', 'metier : ',['class' =>'col-md-4 control-label'])}}
-          {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('class' => 'col-md-6 control-label','multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
+          {{Form::select('categorie_name[]',$arrayCat,$cat->id
+            ,array('class' => 'col-md-6 control-label','multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
         </div>
       </div>
 
@@ -126,7 +127,7 @@
         </div>
       </div>
 
-    </form>
+    {{-- </form> --}}
   </div>      <!--  Fermeture de x_content page update-society  -->
 
 @endsection

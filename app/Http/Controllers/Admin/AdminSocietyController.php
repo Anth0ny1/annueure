@@ -26,6 +26,7 @@ class AdminSocietyController extends Controller
     {
 
       $post = $request->all();
+      // dd($post);
       $society = Society::findOrFail($id);
 
       $ids = array();
@@ -43,7 +44,7 @@ class AdminSocietyController extends Controller
         "site_web" => $post['site_web'],
         "skills" => $post['skills'],
         "siren" => $post['siren'],
-        "moderation" => $post['moderation'],
+        // "moderation" => $post['moderation'],
         "updated_at" => Carbon::now(),
       ]);
 

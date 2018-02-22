@@ -9,7 +9,7 @@
 
   <div class="x_content">   <!--  Ouverture de x_content page update-categorie  -->
                           <!--  Backoffice page => Modification d'une catégorie  -->
-  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;">
+  {{-- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" novalidate style="text-align: center;"> --}}
       {!! Form::open(['route' => ['update-categories-action', $categorie->id], 'method' => 'put', 'files' => true]) !!}
 
     <div class="form-group">
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-  </form>
+  {{-- </form> --}}
 </div>      <!--  Fermeture / de x_content page update-categorie  -->
 
 @endsection
