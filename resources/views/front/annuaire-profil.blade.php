@@ -10,8 +10,7 @@
 
 @section('content')
   <div class="textePresentation">
-    <h2>{{$societies->name_society}}</h2>
-
+    <h1 id="titlePageInt">{{$societies->name_society}}</h1>
   </div>
 
 <div class="template-sct">

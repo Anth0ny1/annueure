@@ -17,10 +17,13 @@ class ModerationSociety extends Mailable
      * @return void
      */
      protected $variable;
+     // protected $id;
+
      public function __construct($variable)
      {
          //
          $this->variable = $variable;
+         // $this->variable = $id;
      }
 
     /**
@@ -33,7 +36,8 @@ class ModerationSociety extends Mailable
          // return $this->view('mail.sendemail');
          return $this->view('mail.ModerationSociety')
            ->with([
-             'variable' => $this->variable
+             'variable' => $this->variable,
+             // 'id' => $this->id
        ]);
      }
 }

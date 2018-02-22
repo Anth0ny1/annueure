@@ -245,6 +245,7 @@
                       <p>Site Web : {{ $variable['site_web'] }}</p>
                       <p>N° Siren : {{ $variable['siren'] }}</p>
                       <p>Compétences : {{ $variable['skills'] }}</p>
+                      {{-- <p>{{ $id }}</p> --}}
                 </td>
             </tr>
             <tr>
@@ -253,7 +254,7 @@
 		    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                         <tr>
                             <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+                                <a href="http://localhost/annueure/public/dashboard/listing/society" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
                                     &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff;">Acceder directement a cette société</span>&nbsp;&nbsp;&nbsp;&nbsp;
                                 </a>
                             </td>
