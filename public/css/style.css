@@ -540,7 +540,7 @@ h5.PgAnnu {
 
 .SectionFichesSte {
   width: 96%;
-  min-height: 600px;
+  min-height: 540px;
   margin: auto auto;
   padding-bottom: 20px;
   display: flex;
@@ -549,19 +549,25 @@ h5.PgAnnu {
   align-content: space-around;
 }
 .fichePresentSte {
+  position: relative;
   background: lightgrey;
-  width: 300px;
-  /* width: 20%; */
+  max-width: 300px;
   margin: 1%;
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  /* clear: both;
+  overflow: hidden; */
 }
 .logoBoxSte {
   text-align: center;
   background:linear-gradient(#295173,#53b0ff);
   border: 1px solid transparent;
   padding: 10px;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
+}
+#ficheBoxSte {
+  width: 100%;
+  margin-bottom: 80px;
 }
 .ImglogoSte {
 padding-top: 20px;
@@ -574,29 +580,30 @@ padding-top: 20px;
   line-height: 1.0rem;
   margin-bottom: 10px;
 }
-/* .titreContent {
-  width: 100%;
-} */
 .description {
   line-height: 20px;
   text-decoration:underline;
 }
 .linkBtn {
+  min-width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin-top: 30px;
 }
 .linkBtn a {
-  margin:0px;
+  margin: 0px;
   text-transform: uppercase;
 }
 .fa-user,.fa-address-card,
 .fa-map-marker-alt,
 .fa-map-signs,.fa-phone-square,
-.fa-globe,.fa-envelope,.fa-edit{
+.fa-globe,.fa-envelope,.fa-edit {
   color: #2A5073;
 }
 

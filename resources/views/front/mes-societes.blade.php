@@ -85,32 +85,33 @@
                         {!! file_get_contents( asset('img/logo/logo-annueure-temporaire.svg')) !!}
                       @endif
                   </div>
-
+                  <div id="ficheBoxSte">
                     <h2>{{$mysoc->name_society}}</h2>
-                      @if ($mysoc->moderation == 'non conforme')
-                      <h3 style="color:red;">non conforme</h3>
-                      @endif
-                        <p class="textFichSte">
-                          <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
-                        <p class="textFichSte">
-                          <i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
-                        <p class="textFichSte">
-                          <i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
-                        <p class="textFichSte">
-                          <i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
-                        <p class="textFichSte">
-                          <i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
-                        <p class="textFichSte">
-                          <i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
-                        <p class="textFichSte">Siren : {{$mysoc->siren}}</p>
-                        <p class="textFichSte description">Description : </p>
-                        <p class="textFichSte">{{$mysoc->skills}}</p>
-                        <div class="linkBtn">
-                        <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
-                        {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
-                        {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
-                        {!! Form::close() !!}
-                      </div>
+                    @if ($mysoc->moderation == 'non conforme')
+                    <h3 style="color:red;">non conforme</h3>
+                    @endif
+                      <p class="textFichSte">
+                        <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
+                      <p class="textFichSte">
+                        <i class="fas fa-address-card"></i> : {{$mysoc->adress}}</p>
+                      <p class="textFichSte">
+                        <i class="fas fa-map-marker-alt"></i> : {{$mysoc->zip_code}} - @php echo ucfirst( $mysoc->city)@endphp</p>
+                      <p class="textFichSte">
+                        <i class="fas fa-phone-square"></i> : {{$mysoc->phone}}</p>
+                      <p class="textFichSte">
+                        <i class="fas fa-globe"></i> : {{$mysoc->site_web}}</p>
+                      <p class="textFichSte">
+                        <i class="fas fa-envelope"></i> : {{$mysoc->email}}</p>
+                      <p class="textFichSte">Siren : {{$mysoc->siren}}</p>
+                      <p class="textFichSte description">Description : </p>
+                      <p class="textFichSte">{{$mysoc->skills}}</p>
+                    </div>
+                    <div class="linkBtn">
+                      <a class="btn btn-round btn-primary" href="{{ route('update-societes',['id' => $mysoc->id])}}">modifier</a>
+                      {!! Form::open(['route' => ['delete-societes', $mysoc->id],  'method' => 'delete']) !!}
+                      {!! Form::submit('Delete',['class' => 'btn btn-round btn-danger']) !!}
+                      {!! Form::close() !!}
+                    </div>
                 </div>
 
             @endif
