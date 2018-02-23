@@ -405,6 +405,7 @@ aside#flux-RSS {
 .footerLogos a {
   /* max-width: 188px; */
   text-align: center;
+  max-width: 190px;
 }
 
 /****************************/
@@ -415,7 +416,6 @@ aside#flux-RSS {
 
 #mainContainerPage{
   overflow: auto;
-  /* min-height: 80%; */
   background: #fff url('../img/motif/motif-sidebar-left-bleu-300px.png') repeat-y;
 }
 .sidebarLeft {
@@ -424,13 +424,10 @@ aside#flux-RSS {
     width: 20%;
 }
 .mainContentRight {
-  /* min-height: 80%; */
-  min-height: 685px !important;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
+  float: right;
+  min-height: 685px;
   background: #fff;
+  width: 80%;
 }
 
 /* Pictos dans la sidebar left */
@@ -490,9 +487,56 @@ h2#titlePageInt {
   background: #99D420;
 }
 
-/* STYLES PAGE PROFIL VOS SOCIETES */
+/* PAGE ANNUAIRE DES SOCIETES */
 
-/* Styles des iônes des champs de sociétés */
+h5.PgAnnu {
+  width: 100%;
+  text-align: center;
+  /* line-height: 1.2rem; */
+  color: #F25C19;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.FlexBoxPgAnnu {
+  width: 96%;
+  min-height: 600px;
+  margin: auto auto;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+.PgAnnuBlocCat {
+  float: left;
+  margin:1%;
+  background:linear-gradient(#53b0ff ,#295173);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.PgAnnuBlocCat .dropdown-item:link {
+  line-height: 30px;
+}
+.dropdown-menu li a {
+  color: #000;
+  font-size: 0.9em;
+  border-radius: 10px;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid #EB7900;
+}
+.dropdown-menu li a:hover {
+  background: transparent;
+  color:#EB7900;
+}
+.dropdown-toggle {
+  padding:0px;
+  border-radius: 5px;
+  margin: 2px;
+  text-align: center;
+}
+/* PAGE PROFIL VOS SOCIETES */
+
+/* Icônes des champs de sociétés */
 
 .SectionFichesSte {
 max-width: 300px;
@@ -550,46 +594,55 @@ padding-top: 20px;
 }
 
 /* STYLES PAGE PRESENTATION */
-/* h2.pgPresent {
-  color: white;
-  height: 70px;
-  width: 100%;
-  background: #99D420;
-  text-align: center;
-  font-size: 250%;
-  color: white;
-  padding-top: 20px;
-  font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
-} */
+
 h5.pgPresent {
   background: #295173;
   padding-left: 10px;
   line-height: 40px;
   color:#99D420;
 }
-.width100{width:100%;text-align:center}
-.asidePresentation {
+/* .asidePresentation {
   float: left;
   background: #a4a4a4;
   width: 20%;
   height: auto;
-}
-.sectionPresent {
+} */
+/* .sectionPresent {
   float: left;
   width: 80%;
   padding-left: 0;
   background:#E6E6E6;
   font-size:1.6em;
   height: auto;
-}
+} */
 .boxPresent {
-  padding-top: 15px;
-  position: relative;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 p.txtPresent {
   padding: 0 15px;
-  font-size:1.6em;
+  font-size:1.05rem;
+}
+em.italic {
+  font-style: italic;
+}
+ul.listPgPresent {
+ list-style: square inside url('../img/picto/puce-fleche.png');
+ padding-left: 2.5%;
+ font-size:1.05rem;
+}
+ul.listPgPresent a, p.txtPresent a {
+  background: #E5E5E5;
+  border-radius: 3px;
+  padding: 0px 3px;
+  color: #000;
+  text-decoration: none;
+}
+ul.listPgPresent a:hover, p.txtPresent a:hover {
+  background: #B3ED26;
+  border-radius: 3px;
+  padding: 0px 3px;
+  color: #000;
 }
 .pictoPresentation {
   padding-left: 20%;
@@ -599,27 +652,41 @@ p.txtPresent {
 }
 
 /********** STYLES SPECIAUX **********/
+
 .clearfix {
   content: ""; /* Important pour générer la séparation. */
   display: table;
   clear: both;
 }
-.dropdown-item:link {
+
+/* Surcharges Bootstrap */
+
+.dropdown-item:link { /* hauteur des interlignes des boîtes à liste */
   line-height: 20px;
 }
-
-/*taille de la police message d'alert*/
-.alert-danger {
+.width100 { /* largeur des alertes à 100% */
+  width:100%;
+  text-align:center
+}
+.alert-danger { /* Taille de la police message d'alert */
   font-size: 1.2rem;
   color: tomato;
 }
-/*  */
+
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
 
+    #header {
+      position: relative;
+      height: 170px;
+      width: 100%;
+      line-height: 100px;
+      text-align: center;
+    }
+
     #logo-entete {
       position: absolute;
-      width: 16%;
+      width: 25%;
       z-index: 10;
       overflow: visible;
       top: 15px;

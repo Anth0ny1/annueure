@@ -179,7 +179,7 @@
         <!-- separateur de section -->
         <div class="separator"></div>
         <h2>
-            Focus : les métiers du jour
+            Focus : les métiers du bâtiment
         </h2>
 
 <div class="first-actu-box">
