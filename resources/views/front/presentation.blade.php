@@ -49,7 +49,7 @@
           <h5 class="pgPresent">
             <strong>Pourquoi Annu'Eure ?</strong>
           </h5>
-          <p class="txtPresent">Le site Internet <strong>Annu'Eure</strong> a été développé dans le cadre d'un' projet de soutenance présenté à la fin de la formation professionnelle <em class="italic">"Codeur développeur"</em> de <a href="http://www.wf3.fr/" target="_blank">WebForce3</a> à Épaignes, en partenariat avec la <a href="http://www.eure.cci.fr/" target="_blank">Chambre de Commerce et d'Industrie (CCI) de l'Eure</a>.</p>
+          <p class="txtPresent">Le site Internet <strong>Annu'Eure</strong> a été développé dans le cadre d'un projet de soutenance présenté à la fin de la formation professionnelle <em class="italic">"Codeur développeur"</em> de <a href="http://www.wf3.fr/" target="_blank">WebForce3</a> à Épaignes, en partenariat avec la <a href="http://www.eure.cci.fr/" target="_blank">Chambre de Commerce et d'Industrie (CCI) de l'Eure</a>.</p>
           <p class="txtPresent">Les apprenants ont présenté un projet de réalisation d'un site web développé avec le frameworks <a href="https://laravel.com/" target="_blank">Laravel</a>.</p>
           <p class="txtPresent">L'objectif au terme de cet examen est l'obtention de la certification <em class="italic">"web développeur junior"</em> par l'apprentissage de techniques et d'outils qui permettent de mener à bien le développement d'un projet Web complexe et d'en comprendre toutes les subtilités.</p>
           <h5 class="pgPresent">
