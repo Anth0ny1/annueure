@@ -16,8 +16,10 @@
 // });
 
 Auth::routes();
+Route::get('/contactus', 'Ajax\AjaxController@contactUs')->name('nous-contacter');
 
 Route::group(['namespace' => 'Front'], function(){
+
   // NON CONFORMME VERIF
   // Route::get('/')
   // FRONT ROUTING
