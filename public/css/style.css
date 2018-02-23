@@ -6,8 +6,6 @@ html {
 }
 
 body {
-  /* min-height: 100%; */
-  /* min-height: 100vh; */
   min-height: 100%;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 0.65rem;
@@ -25,20 +23,11 @@ body {
 }
 #header {
   position: relative;
-  height:100px;
-  width:100%;
+  height: 100px;
+  width: 100%;
   background: #e6e6e6;
-  line-height:100px;
-  text-align:center; /* centrage horizontal */ }
-}
-h1#baseline {
-  font-family: 'pattayaregular', sans-serif;
-  font-size: 1.8rem;
-  text-align: center;
-  min-height: 30px;
-  padding: 20px 5px;
-  vertical-align: middle;
-  color: #9EA5B2;
+  line-height: 100px;
+  text-align: center; /* centrage horizontal */
 }
 #logo-entete {
   position: absolute;
@@ -46,7 +35,7 @@ h1#baseline {
   z-index: 10;
   overflow: visible;
   top: 25px;
-  left:25px;
+  left: 25px;
 }
 #logo {
   border: #e6e6e6 4px solid;
@@ -67,8 +56,8 @@ h1#baseline {
 #navhp {
   width: 100%;
   height: 100px;
-  vertical-align:middle;
-  display:inline-block;
+  vertical-align: middle;
+  display: inline-block;
 }
 #menuhptop {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -139,7 +128,7 @@ ul#navhp {
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
 }
 
-/* Styles pour le formulaire de recherche sur HP */
+/* Home -> Styles pour formulaire de recherche */
 
 div#search-box {
   width: 100%;
@@ -166,7 +155,17 @@ input.form-control.col-sm-5 {
   float: left;
 }
 
-/* Styles des blocs services */
+/* Home -> Styles blocs services */
+
+h1#baseline {
+  font-family: 'pattayaregular', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  min-height: 30px;
+  padding: 20px 5px;
+  vertical-align: middle;
+  color: #9EA5B2;
+}
 
 #main-services {
   width: 76%;
@@ -615,20 +614,6 @@ h5.pgPresent {
   line-height: 40px;
   color:#99D420;
 }
-/* .asidePresentation {
-  float: left;
-  background: #a4a4a4;
-  width: 20%;
-  height: auto;
-} */
-/* .sectionPresent {
-  float: left;
-  width: 80%;
-  padding-left: 0;
-  background:#E6E6E6;
-  font-size:1.6em;
-  height: auto;
-} */
 .boxPresent {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -679,7 +664,7 @@ ul.listPgPresent a:hover, p.txtPresent a:hover {
   line-height: 20px;
 }
 .width100 { /* largeur des alertes à 100% */
-  width:100%;
+  width: 100%;
   text-align:center
 }
 .alert-danger { /* Taille de la police message d'alert */
@@ -692,27 +677,33 @@ ul.listPgPresent a:hover, p.txtPresent a:hover {
 
     #header {
       position: relative;
-      height: 170px;
+      height: 230px;
       width: 100%;
-      line-height: 100px;
+      /* line-height: 1.2rem; */
       text-align: center;
     }
-
     #logo-entete {
-      position: absolute;
-      width: 25%;
-      z-index: 10;
-      overflow: visible;
-      top: 15px;
-      left:15px;
-    }
+      /* position: absolute; */
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 300px;
 
+    }
+    #menuhp {
+      height: 40px;
+      width: 100%;
+      /* float: left; */
+      margin-left: 0%;
+      clear: both;
+      /* float: auto; */
+
+    }
     #navhp li {
       margin: 6px 6px;
       font-size: 0.75rem;
       height: 25px;
     }
-
     #compteur {
       top : 20px;
       right: 20px;

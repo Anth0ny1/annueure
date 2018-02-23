@@ -1,13 +1,12 @@
 <header id="header">
   <div id="logo-entete">
-    <a href="{{ route('home') }}"><img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="AnnuEure, l'annuaire des professionnels du bâtiment en Normandie"></a>
+    <a href="{{ route('home') }}">
+      <img id="logo" src="{{ asset('img/logo/logo-annueure-rectangle-baseline-vector.svg') }}" alt="AnnuEure, l'annuaire des professionnels du bâtiment en Normandie">
+    </a>
   </div>
   <div id="menuhp">
     <nav id="navhp">
       <ul id="menuhptop">
-          <!-- <li><a href="{{ route('home') }}">Accueil</a></li> -->
-          <!-- <li><a href="{{ route('presentation') }}">Présentation</a></li> -->
-          <!-- <li><a href="{{ route('nous-contacter-view') }}">Nous contacter</a></li> -->
 
           <li class="{{Request::path() == '/' ? 'active' : ''}}">
             <a href="{{ route('home') }}">Accueil</a>
