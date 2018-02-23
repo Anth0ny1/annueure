@@ -539,13 +539,20 @@ h5.PgAnnu {
 /* Icônes des champs de sociétés */
 
 .SectionFichesSte {
-max-width: 300px;
-width:100%;
-margin: 5px;
+  width: 96%;
+  min-height: 600px;
+  margin: auto auto;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
 }
 .fichePresentSte {
   background: lightgrey;
-  width: 100%;
+  width: 300px;
+  /* width: 20%; */
+  margin: 1%;
   border-radius: 10px;
   margin-bottom: 50px;
 }
