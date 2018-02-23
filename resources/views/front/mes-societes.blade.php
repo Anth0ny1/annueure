@@ -11,6 +11,7 @@
 
 @section('content')
 
+
 <!-- Container principal -->
 <main id="mainContainerPage">
 
@@ -51,6 +52,18 @@
             <h1 id="titlePageInt">Vous avez {{$mycountsociety}} société inscrite</h1>
             @else
               <h1 id="titlePageInt">Vous avez {{$mycountsociety}} sociétés inscrites</h1>
+        @endif
+
+        @if (session('success'))
+          <div class="alert alert-success clearfix width100">
+            {{ session('success') }}
+          </div>
+        @endif
+
+        @if (session('danger'))
+          <div class="alert alert-danger clearfix width100">
+            {{ session('danger') }}
+          </div>
         @endif
 
       @if ($mycountsocietymoder == 0)

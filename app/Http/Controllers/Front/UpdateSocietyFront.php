@@ -9,6 +9,9 @@ use Auth;
 use App\Categories;
 use App\Http\Requests\UpdateMySocietyRequest;
 use App\Services\PathUpload;
+use Mail;
+use App\Mail\ModerationSociety;
+
 
 
 class UpdateSocietyFront extends Controller
@@ -47,6 +50,7 @@ class UpdateSocietyFront extends Controller
 
     $societyUpdaAction = Society::findOrFail($idSociety);
 
+    $moderation = Society::where('id', '=', $idSociety)->get();
     if (!empty($request->file('logo'))) {
 
     $path = new PathUpload($request->file('logo'), 'society');
@@ -84,6 +88,19 @@ class UpdateSocietyFront extends Controller
           'email'             => $request->input('email'),
           'siren'             => $request->input('siren'),
         ]);
+    }
+    // dd($moderation);
+    foreach ($moderation as $value) {
+      if ($value->moderation == 'non conforme') {
+
+        $variable = $request->input();
+
+        Mail::to('anthonythi51@gmail.com')->send(new ModerationSociety($variable));
+
+        return redirect()
+          ->route('mes-societes')
+          ->with('success', 'Votre societe à bien été soumise a la modération');
+      }
     }
 
         return redirect()

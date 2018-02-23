@@ -13,6 +13,7 @@ use App\User;
 use App\Categories;
 use Mail;
 use App\Mail\ValideModeration;
+use App\Mail\NonConformeModeration;
 
 class AdminController extends Controller
 {
@@ -65,6 +66,13 @@ class AdminController extends Controller
     $society->update([
       "moderation" => 'non conforme',
     ]);
+
+    $variable = (array)$society['attributes'];
+    // dd($variable);
+
+    // dd($variable);
+
+    Mail::to($society->email)->send(new nonConformeModeration($variable));
 
     return redirect()
       ->route('listing-society')

@@ -18,6 +18,8 @@
 Auth::routes();
 
 Route::group(['namespace' => 'Front'], function(){
+  // NON CONFORMME VERIF
+  // Route::get('/')
   // FRONT ROUTING
   //
   // HOME ROUTING

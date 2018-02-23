@@ -119,9 +119,22 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+    'stream' => [
+    'ssl' => [
+        'allow_self_signed' => true,
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+    ],
+    ],
 
-    // 'to' => [
-    //   'address' => 'anthonythi51@gmail.com',
-    //   'name' => 'Anthony',
-    // ]
+    'from' => [
+      'address' => 'annueure@gmail.com',
+      'name' => 'Annu\'Eure'
+    ],
+
+
+    'to' => [
+      'address' => 'anthonythi51@gmail.com',
+      'name' => 'Anthony',
+    ]
 ];
