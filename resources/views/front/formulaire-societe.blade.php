@@ -1,15 +1,17 @@
 @extends('layouts/layout')
+
 @section('css')
   <link rel="stylesheet" href="{{ asset('css/formulaire-societe.css') }}" />
 @endsection
+
 @section('title')
-Formulaire inscription d'une société
+  Formulaire inscription d'une société
 @endsection
 
 @section('content')
-  <div class="textePresentation">
+
   <h1 id="titlePageInt">Formulaire inscription société</h1>
-  </div>
+
   @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
