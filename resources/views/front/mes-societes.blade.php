@@ -73,11 +73,10 @@
           <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societés en attente de validation.</div>
       @endif
 
-            <section class="SectionFichesSte">
+      <section class="SectionFichesSte">
           @foreach ($mysociety as $mysoc)
 
             @if ($mysoc->moderation != 'new')
-
                 <div class="fichePresentSte">
                   <div class="logoBoxSte">
                       @if (!empty($mysoc->path))
@@ -118,6 +117,7 @@
             @endif
 
           @endforeach
+        </section>
 
         </section>
   </div>

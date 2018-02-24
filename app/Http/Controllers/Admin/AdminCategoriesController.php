@@ -113,7 +113,7 @@ class AdminCategoriesController extends Controller
     }
 
     // SOFT DELETE D UNE CATEGORIE (TOUJOURS EN BASE DE DONNE MAIS PLUS VISIBLE)
-    // 
+    //
     public function deleteCategories($id){
       $categories = Categories::findOrFail($id);
 
