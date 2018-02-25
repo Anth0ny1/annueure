@@ -2,19 +2,9 @@
 @extends('layouts/layout')
 
 @section('content')
-  <?php
-
-  ?>
-<?php
-  // require_once(asset('rss/magpiemod/rss_fetch.inc'));
-?>
 
 <!-- FLEXSLIDER -->
-{{-- <a href="#" id="btnAfficheUser">Get users</a>
 
-<div id="afficherUser">
-
-</div> --}}
   <div class="flexslider">
     <!-- Compteur d'inscription (position absolue) -->
     <div id="compteur">
@@ -22,15 +12,17 @@
       <p>Professionnels</p>
     </div>
     <ul class="slides">
+
       @if (!empty(Auth::user()))
-        <li>
-          <img src="{{ asset('img/photo/slide01a.jpg') }}" />
-        </li>
-        @else
-          <li>
-            <a href="{{ route('register') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" /></a>
-          </li>
+      <li>
+        <img src="{{ asset('img/photo/slide01.jpg') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" />
+      </li>
+      @else
+      <li>
+        <a href="{{ route('register') }}" title="S'inscrire à l'Annu'Eure. Rejoignez-nous !"><img src="{{ asset('img/photo/slide01a.jpg') }}" alt="L’annuaire des professionnels du bâtiment en Normandie est une idée originale des étudiants de Webforce 3 avec la CCI de l'Eure" /></a>
+      </li>
       @endif
+
       <li>
         <img src="{{ asset('img/photo/slide02a.jpg') }}" alt="" />
       </li>
@@ -94,19 +86,19 @@
   <div id="search-box">
     <div id="form-search-hp">
       {!! Form::open(['route' => 'search-action', 'method' => 'post', 'class' => 'form-horizontal']) !!}
-        <div class="form-group row">
+      <div class="form-group row">
 
-          <!-- Formulaire de recherche -->
-          {!! Form::select('categorie_name',$arrayCat,'',['class' => 'form-control col-md-5','placeholder' => 'Choisissez votre métier']) !!}
-          {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
-          {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
+        <!-- Formulaire de recherche -->
+        {!! Form::select('categorie_name',$arrayCat,'',['class' => 'form-control col-md-5','placeholder' => 'Choisissez votre métier']) !!}
+        {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
+        {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-          {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
-          {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
-          {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
+        {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
+        {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
+        {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-          {!! Form::submit('Go',['class' => 'col-md-1 btn btn-succes']) !!}
-        </div>
+        {!! Form::submit('Go',['class' => 'col-md-1 btn btn-succes']) !!}
+      </div>
       {!! Form::close() !!}
     </div>
   </div>
@@ -114,145 +106,116 @@
 <!-- SERVICES AUX PROFESSIONNELS -->
 
   <main id="main-services">
-      <section id="services">
+    <section id="services">
 
-          <!-- Affichage des erreurs du formulaire -->
+    <!-- Affichage des erreurs du formulaire -->
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
+    <!-- Fin affichage des erreurs du formulaire -->
 
-          @if ($errors->any())
-              <div class="alert alert-danger">
-                  <ul>
-                      @foreach ($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                      @endforeach
-                  </ul>
-              </div>
-          @endif
-
-          <!-- Fin affichage des erreurs du formulaire -->
-
-        <h1 id="baseline" style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
-            “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
-        </h1>
-        <div id="first-service-box" class="service-box ">
-          <div class="picto-box">
-            <a href="{{ route('annuaire') }}">
-              {!! file_get_contents(asset('img/picto/picto-annuaire.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
+      <h1 id="baseline">
+          “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
+      </h1>
+      <div id="first-service-box" class="service-box ">
+        <div class="picto-box">
+          <a href="{{ route('annuaire') }}">
+            {!! file_get_contents(asset('img/picto/picto-annuaire.svg')) !!}
+          </a>
+        </div>
+        <div class="ServiceBoxText">
+          <h3 class="TxtPicto">Annuaire des Pro</h3>
+          <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
             <h3>Annuaire des Pro</h3>
-            <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
-          </div>
         </div>
-        <div class="service-box">
-          <div class="picto-box">
-            <a href="{{ route('register') }}">
-              {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
+      </div>
+      <div class="service-box">
+        <div class="picto-box">
+          <a href="{{ route('register') }}">
+            {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
+          </a>
+        </div>
+        <div class="ServiceBoxText">
+          <h3 class="TxtPicto">Inscription des Pro</h3>
+          <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
             <h3>Inscription des Pro</h3>
-            <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
-          </div>
+          </button>
         </div>
-        <div class="service-box">
-          <div class="picto-box">
-            <a href="{{ route('nous-contacter-view') }}">
-              {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
-            <h3>Prendre un rendez-vous</h3>
-            <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
-          </div>
+      </div>
+      <div class="service-box">
+        <div class="picto-box">
+          <a href="{{ route('nous-contacter-view') }}">
+            {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
+          </a>
         </div>
-        <div class="service-box">
-          <div class="picto-box">
-            <a href="{{ route('nous-contacter-view') }}">
-              {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
-            </a>
-          </div>
-          <div class="bloc-text">
+        <div class="ServiceBoxText">
+          <h3 class="TxtPicto">Prendre un rendez-vous</h3>
+          <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
+            <h3>Prendre un RV</h3>
+          </button>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="picto-box">
+          <a href="{{ route('nous-contacter-view') }}">
+            {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
+          </a>
+        </div>
+        <div class="ServiceBoxText">
+          <h3 class="TxtPicto">Demander un devis</h3>
+          <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
             <h3>Demander un devis</h3>
-            <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section id="actualites">
         <!-- separateur de section -->
         <div class="separator"></div>
-        <h2>
+        <h2 id="titleHP">
             Focus : les métiers du bâtiment
         </h2>
+        <div class="first-actu-box">
 
-<div class="first-actu-box">
         @foreach ( $selectCategories1 as $categorie)
-
-
-          {{-- {{dd($categorie)}} --}}
-          <div class="actu-box">
-            <div class="img-actu-box">
-              {{-- <img src="{{ Image::url(  route ('home') . '/' . $categorie->path . '/' . $categorie->original_name,295,209,array('crop'))}}" alt="" /> --}}
-              <a href="{{ route('listing-by-categorie',['categorieName' => $categorie->categorie_name])}}"><img src="{{ Image::url(  route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" /></a>
+          <div class="ActuBox">
+            <div class="ActuBoxImg">
+              <a href="{{ route('listing-by-categorie',['categorieName' => $categorie->categorie_name])}}">
+                <img src="{{ Image::url( route ('home') . '/' . $categorie->path_categorie . '/' . $categorie->original_name,330,229,array('crop'))}}" alt="" />
+              </a>
             </div>
-            <div class="bloc-text">
+            <div class="ActuBoxText">
               <h3>{{ $categorie->categorie_name}}</h3>
               <p>{{ $categorie->description}}</p>
             </div>
           </div>
         @endforeach
-</div>
 
-        {{-- <div id="first-actu-box" class="actu-box">
-          <div class="img-actu-box">
-            <a href="{{ route('register') }}">
-
-              <img src="{{ asset('img/photo/metiers-du-jour-01.jpg') }}" alt="" />
-            </a>
-
-          </div>
-
-            <h3>Paysagistes et jardiniers</h3>
-            <p>Découvrir le métier de jardinier / paysagiste dans l'Eure. <a href="#">Lire la suite</a></p>
-          </div>
         </div>
-        <div class="actu-box">
-          <div class="img-actu-box">
-            <a href="{{ route('register') }}">
-              <img src="{{ asset('img/photo/metiers-du-jour-02.jpg') }}" alt="" />
-            </a>
-          </div>
-          <div class="bloc-text">
-            <h3>Menuisiers et décorateurs</h3>
-            <p>Découvrir le métier de Menuisiers / décorateurs dans l'Eure. <a href="#">Lire la suite</a></p>
-          </div>
-        </div>
-        <div class="actu-box" id="last-actu-box">
-          <div class="img-actu-box">
-            <a href="{{ route('register') }}">
-              <img src="{{ asset('img/photo/metiers-du-jour-03.jpg') }}" alt="" />
-            </a>
-          </div>
-          <div class="bloc-text">
-            <h3>Conducteurs de travaux BTP</h3>
-            <p>Découvrir le métier de conducteurs de travaux pour le BTP dans l'Eure. <a href="#">Lire la suite</a></p>
-          </div>
-        </div> --}}
       </section>
   </main>
 
-<!-- SIDEBAR A DROITE - FLUX RSS -->
+<!-- SIDEBAR A DROITE : FLUX RSS -->
 
 <aside id="flux-RSS">
   <div class="rss">
 
     <?php
 
-    // Flux RSS N° 1 - Actualités Batiweb *****************************
-  	try{
+    /******** Flux RSS N° 1 - Actualités Batiweb *********/
+  	try {
 
-  		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')){
+  		if(!@$fluxrss=simplexml_load_file('http://www.batiweb.com/rss.html')) {
   			throw new Exception('Flux introuvable');
   		}
   		if(empty($fluxrss->channel->title) || empty($fluxrss->channel->description) || empty($fluxrss->channel->item->title))
@@ -264,19 +227,18 @@
   		$i = 0;
   		$nb_affichage = 5;
   		echo '<ul>';
-  		foreach($fluxrss->channel->item as $item){
+  		foreach($fluxrss->channel->item as $item) {
   			echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
   			if(++$i>=$nb_affichage)
   				break;
   		}
   		echo '</ul>';
   	}
-  	catch(Exception $e){
+  	catch(Exception $e) {
   		echo $e->getMessage();
   	}
-
-    // Flux RSS N° 2 - Actualité Le Moniteur *****************************
-    try{
+    /******** Flux RSS N° 2 - Actualité Le Moniteur *********/
+    try {
 
       if(!@$fluxrss2=simplexml_load_file('https://www.lemoniteur.fr/cache/X_articles_rss2_119.xml')){
         throw new Exception('Flux introuvable');
@@ -290,18 +252,18 @@
       $i = 0;
       $nb_affichage = 5;
       echo '<ul>';
-      foreach($fluxrss2->channel->item as $item){
+      foreach($fluxrss2->channel->item as $item) {
         echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
         if(++$i>=$nb_affichage)
           break;
       }
       echo '</ul>';
     }
-    catch(Exception $e){
+    catch(Exception $e) {
       echo $e->getMessage();
     }
 
-    // Flux RSS N° 3 - Offre d'emplois  *****************************
+    /******** Flux RSS N° 3 - Offre d'emplois *********/
     try{
 
       if(!@$fluxrss3=simplexml_load_file('https://www.loffredemploi.fr/offre-emploi/haute-normandie/construction-btp-batiment/eure/0/1000/fluxrss.xml')){
@@ -316,41 +278,21 @@
       $i = 0;
       $nb_affichage = 5;
       echo '<ul>';
-      foreach($fluxrss3->channel->item as $item){
+      foreach($fluxrss3->channel->item as $item) {
         echo '<li><span>'.date('d/m',strtotime($item->pubDate)).' : <a href="'.(string)$item->link.'" target="_blank">'.(string)$item->title.'</a> </li>';
         if(++$i>=$nb_affichage)
           break;
       }
       echo '</ul>';
     }
-    catch(Exception $e){
+    catch(Exception $e) {
       echo $e->getMessage();
     }
 
   ?>
 
-  <!-- <img class="logopub"src="{!! asset('img/logos/image.png') !!}" width="250px;" alt=""> -->
-  </div>
-  <span></span>
-        {{-- <div class="rss">
-          <h3>Titre du flux RSS</h3>
-          <p>
-            Ici un flux RSS sur les annonces d'emplois (à trouver sur Internet).
-          </p>
-        </div>
-        <div class="rss">
-          <h3>Titre du flux RSS</h3>
-          <p>
-            Ici un autre flux RSS sur les formations professionnelles (à trouver sur Internet).
-          </p>
-        </div>
-        <div class="rss">
-          <h3>Titre du flux RSS</h3>
-          <p>
-            Ici un autre flux RSS sur les actualités du BTP en général (à trouver sur Internet).
-          </p>
-        </div> --}}
-</aside>
+</div> <!-- Fin des flux RSS -->
+</aside> <!-- Fin de la Sidebar droite -->
 
 <!-- CONTENEUR AJAX JS -->
 
@@ -373,27 +315,6 @@
 </script>
 </div> --}}
 
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                      Dashboard
-                    </div>
-                    <div class="panel-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        You are logged in!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     {{--
       Affichage de 3 categories
       Nombre de pro inscrit
@@ -414,10 +335,10 @@
 
 @endsection
 
+<!-- CONTENEUR & FONCTIONS JS -->
 @section('js')
 
-<!-- CONTENEUR & FONCTIONS JS -->
-
+<!-- FLEXSLIDER JS -->
 <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 
 <script type="text/javascript" charset="utf-8">
@@ -430,8 +351,14 @@
       nextText:	"",
     });
   });
-</script>
+</script> <!-- FIN FLEXSLIDER JS -->
 
+<!-- ACTIVATION DES TOOLTIPS POPOVER JS -->
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
 
 
 @endsection
