@@ -54,9 +54,9 @@ body {
 
 #menuhp {
   height: 100px;
-  width: 80%;
-  float: left;
-  margin-left: 20%;
+  width: 82%;
+  /* float: left; */
+  margin-left: 18%;
 }
 #navhp {
   width: 100%;
@@ -68,6 +68,7 @@ body {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #295173;
+  margin-bottom: 10px;
 }
 
 ul#navhp {
@@ -80,14 +81,14 @@ ul#navhp {
 #navhp li {
   display: inline;
   margin: 10px 5px;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   line-height: 1.15rem;
   height: 30px;
 }
-#login {
+/* #login {
   width: 14%;
   float: left;
-}
+} */
 #navhp li a {
   color: #295173;
   padding: 5px;
@@ -199,12 +200,14 @@ section#services {
 }
 div.ServiceBoxText {
   width: 100%;
+  text-align: center;
 }
 div.ServiceBoxText h3,
 div.ActuBoxText h3 {
   font-size: 1.1rem;
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+  margin-bottom: 0;
 }
 div.ServiceBoxText p {
   font-size: 0.9rem;
@@ -253,19 +256,21 @@ a:hover #picto-annu-lum-9 {
   fill-opacity:1 !important;
   stroke-opacity:1 !important;
 }
+.BtnPicto { /* Boutons bulles (tooltip popover) pour responsive */
+  display: none;
+}
 
 /* HP -> Section actualités */
 
 section#actualites {
   width: 100%;
   margin: 10px 10px;
-  clear: left;
   float: left;
 }
 .separator{
   width: 100%;
   border-top: 2px solid #c9c9c9;
-  padding:0.5% 1%;
+  padding: 0.5% 1%;
 }
 h2#titleHP {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -741,33 +746,39 @@ div.PgMentionsLegales h2 {
 @media screen and (max-width: 1050px) {
 
     #header {
-      position: relative;
-      height: 230px;
+      position: static;
+      height: auto;
+      min-height: 200px;
+      /* max-height: 240px; */
+      line-height: 25px;
       width: 100%;
-      /* line-height: 1.2rem; */
       text-align: center;
+
     }
     #logo-entete {
-      /* position: absolute; */
-      position: relative;
+      position: static;
       margin: 0 auto;
+      padding: 10px;
       width: 100%;
       max-width: 300px;
+      /* height: auto; */
 
     }
     #menuhp {
-      height: 40px;
+      height: auto;
       width: 100%;
-      /* float: left; */
-      margin-left: 0%;
-      clear: both;
-      /* float: auto; */
-
+      margin-left: 0;
+      /* overflow: auto;
+      clear: left; */
+    }
+    #navhp {
+      height: auto;
     }
     #navhp li {
-      margin: 6px 6px;
-      font-size: 0.75rem;
-      height: 25px;
+      margin: 0;
+      /* font-size: 1.0rem; */
+      height: auto;
+      line-height: 25px;
     }
     #compteur {
       top : 20px;
@@ -788,32 +799,20 @@ div.PgMentionsLegales h2 {
     #footerMap {
       width: 100%;
       clear: both;
-      /* float:auto; */
       height: 350px;
-      /* min-width: 320px; */
-      /* margin-bottom: 20px; */
     }
     .footerLinks {
       width: 100%;
       clear: both;
-      /* font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif; */
-      font-size: 0.65rem;
-      /* float: left; */
+      font-size: 0.75rem;
+      margin-bottom: 15px;
     }
     .footerOneColTitle {
-      font-size: 0.75rem;
-      /* color: #99D420;
-      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif; */
+      font-size: 0.85rem;
     }
     aside#flux-RSS {
       width: 100%;
       clear: both;
-      /* background: #e5e5e5; */
-      /* min-height: 600px;
-      height: auto;
-      padding: 8px;
-      margin-top: 15px;
-      border-left: 2px solid #c9c9c9; */
     }
     #main-services {
       width: 100%;
@@ -821,14 +820,57 @@ div.PgMentionsLegales h2 {
       margin-right: 0;
       min-height: 600px;
     }
+    .sidebarLeft {
+        padding: 1% 4px 4px;
+    }
 }
 
 @media screen and (max-width: 790px)
 {
-
+    .footerLinks {
+      width: 100%;
+      clear: both;
+      font-size: 0.75rem;
+      margin-bottom: 15px;
+    }
+    .footerOneColTitle {
+      font-size: 0.85rem;
+    }
+    .BtnPicto {
+      display: contents;
+      margin: 0 auto;
+    }
+    .TxtPicto {
+      display: none;
+    }
+    #first-service-box {
+      margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 590px)
 {
-
+    .service-box {
+      position: static;
+      clear: left;
+      width: 100%;
+    }
+    h1#baseline {
+      font-size: 1.2rem;
+      padding: 10px 5px;
+    }
+    h2#titleHP {
+      font-size: 1.2rem;
+      min-height: 20px;
+    }
+    #footer {
+      padding: 10px;
+    }
+    .footerOneColTitle {
+      font-size: 0.75rem;
+    }
+    #footerMap {
+      height: 280px;
+      min-width: 300px;
+    }
 }
