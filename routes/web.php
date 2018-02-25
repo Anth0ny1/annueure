@@ -16,7 +16,7 @@
 // });
 
 Auth::routes();
-Route::get('/contactus', 'Ajax\AjaxController@contactUs')->name('nous-contacter');
+Route::post('/contact/ajax', 'Ajax\AjaxController@contactUsAjax')->name('nous-contacter');
 
 Route::group(['namespace' => 'Front'], function(){
 

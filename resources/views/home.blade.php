@@ -433,33 +433,5 @@
 </script>
 
 
-<script type="text/javascript">
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-  })
-</script>
 
-<script type="text/javascript">
-  $('#btnAfficheUser').on('click', function(e){
-
-    e.preventDefault();
-
-    $.ajax({
-      type: 'POST',
-      url: "{{ route('nous-contacter') }}",
-      // data: '_token',
-      beforeSend: function(){
-          console.log('beforeSend');
-      },
-      success:function(response){
-          console.log('Success');
-        $('#afficherUser').html(response.v);
-      }
-    });
-
-    // console.log('michel');
-  });
-</script>
 @endsection
