@@ -120,7 +120,7 @@
     @endif
     <!-- Fin affichage des erreurs du formulaire -->
 
-      <h1 id="baseline" style="font-family: 'pattayaregular', sans-serif; font-size:1.8rem; text-align: center; min-height: 30px; padding: 20px 5px; vertical-align: middle; color: #9EA5B2;">
+      <h1 id="baseline">
           “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
       </h1>
       <div id="first-service-box" class="service-box ">
@@ -130,8 +130,10 @@
           </a>
         </div>
         <div class="ServiceBoxText">
-          <h3>Annuaire des Pro</h3>
-          <p>Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!</p>
+          <h3 class="TxtPicto">Annuaire des Pro</h3>
+          <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
+            <h3>Annuaire des Pro</h3>
         </div>
       </div>
       <div class="service-box">
@@ -141,8 +143,11 @@
           </a>
         </div>
         <div class="ServiceBoxText">
-          <h3>Inscription des Pro</h3>
-          <p>Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!</p>
+          <h3 class="TxtPicto">Inscription des Pro</h3>
+          <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
+            <h3>Inscription des Pro</h3>
+          </button>
         </div>
       </div>
       <div class="service-box">
@@ -152,8 +157,11 @@
           </a>
         </div>
         <div class="ServiceBoxText">
-          <h3>Prendre un rendez-vous</h3>
-          <p>Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+          <h3 class="TxtPicto">Prendre un rendez-vous</h3>
+          <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
+            <h3>Prendre un RV</h3>
+          </button>
         </div>
       </div>
       <div class="service-box">
@@ -163,8 +171,10 @@
           </a>
         </div>
         <div class="ServiceBoxText">
-          <h3>Demander un devis</h3>
-          <p>Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
+          <h3 class="TxtPicto">Demander un devis</h3>
+          <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
+          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
+            <h3>Demander un devis</h3>
         </div>
       </div>
     </section>
@@ -172,7 +182,7 @@
       <section id="actualites">
         <!-- separateur de section -->
         <div class="separator"></div>
-        <h2 class="titleHP">
+        <h2 id="titleHP">
             Focus : les métiers du bâtiment
         </h2>
         <div class="first-actu-box">
@@ -325,9 +335,8 @@
 
 @endsection
 
-@section('js')
-
 <!-- CONTENEUR & FONCTIONS JS -->
+@section('js')
 
 <!-- FLEXSLIDER JS -->
 <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
@@ -343,6 +352,13 @@
     });
   });
 </script> <!-- FIN FLEXSLIDER JS -->
+
+<!-- ACTIVATION DES TOOLTIPS POPOVER JS -->
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
 
 <script type="text/javascript">
   $.ajaxSetup({
