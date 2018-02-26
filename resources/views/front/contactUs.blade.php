@@ -45,8 +45,8 @@
     </div>
   @endif --}}
     {{-- @include('layouts.front.sidebarLeft') --}}
-    <div class="container center_div">
-        <div class="formBox">
+    <div class="containerForm">
+      <div class="formBox">
 
           <div class="redirect">
             <!-- espace pour les alertes. A supprimer si inutile -->

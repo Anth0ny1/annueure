@@ -19,7 +19,7 @@
   <!-- section principale (droite) -->
   <section class="mainContentRight">
 
-  <h1 id="titlePageInt">Formulaire inscription société</h1>
+    <h1 id="titlePageInt">Formulaire inscription société</h1>
 
   @if ($errors->any())
       <div class="alert alert-danger">
