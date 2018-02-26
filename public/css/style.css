@@ -741,6 +741,9 @@ div.PgMentionsLegales h2 {
   border-color: #ec5c1b;
   text-transform: uppercase;
 }
+input#logo {
+  background-color: #FCFCFC;
+}
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
