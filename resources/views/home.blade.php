@@ -93,7 +93,7 @@
         {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
         {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-        {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
+        {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Code postal']) !!}
         {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
         {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
@@ -120,9 +120,17 @@
     @endif
     <!-- Fin affichage des erreurs du formulaire -->
 
+<style media="screen">
+  .serviceFlexbox{
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
       <h1 id="baseline">
           “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
       </h1>
+      <div class="serviceFlexbox">
+
       <div id="first-service-box" class="service-box ">
         <div class="picto-box">
           <a href="{{ route('annuaire') }}">
@@ -137,20 +145,23 @@
           </button>
         </div>
       </div>
-      <div class="service-box">
-        <div class="picto-box">
-          <a href="{{ route('register') }}">
-            {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
-          </a>
+      @if (empty(Auth::user()))
+        <div class="service-box">
+          <div class="picto-box">
+              <a href="{{ route('register') }}">
+                {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
+              </a>
+
+          </div>
+          <div class="ServiceBoxText">
+            <h3 class="TxtPicto">Inscription des Pro</h3>
+            <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
+            <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
+              Inscription Pro
+            </button>
+          </div>
         </div>
-        <div class="ServiceBoxText">
-          <h3 class="TxtPicto">Inscription des Pro</h3>
-          <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
-          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
-            Inscription Pro
-          </button>
-        </div>
-      </div>
+      @endif
       <div class="service-box">
         <div class="picto-box">
           <a href="{{ route('nous-contacter-view') }}">
@@ -179,6 +190,9 @@
           </button>
         </div>
       </div>
+
+    </div>
+
     </section>
 
       <section id="actualites">
