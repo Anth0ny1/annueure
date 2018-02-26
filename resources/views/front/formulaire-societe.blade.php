@@ -94,9 +94,6 @@
           $arrayCat[$cat->id] = $cat->categorie_name;
     } ?>
 
-    {{-- {!! Form::select('categorie_name',$arrayCat,null,array()) !!} --}}
-    {{-- {{Form::label('categorie_name', 'metier')}} --}}
-      {{-- {!! Form::label('categorie_name', 'Choississez votre catégorie : ') !!} --}}
     {{Form::select('categorie_name[]',$arrayCat,$cat->categorie_name,array('class' => 'form-control','multiple'=>'multiple','categorie_name'=>'categorie_name[]'))}}
   </div>
 </div>
@@ -105,19 +102,6 @@
 
 
 
-{{-- <div class="form-group">
-{!! Form::label('categorie_name', 'Choississez votre catégorie : ',['class' =>'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-<select name="categorie_name" id="categorie_name" class="col-md-6">
-    <option value=""> -- Catégorie métier --</option>
-    @foreach ($categories as $cat)
-        <option value="{{ $cat->id }}">{{ $cat->categorie_name }}</option>
-    @endforeach
-    {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
-
-</select>
-</div>
-  </div> --}}
 <div class="form-group">
     {!! Form::label('email', 'email : ',['class' =>'col-md-4 control-label']) !!}
     <div class="col-md-6">

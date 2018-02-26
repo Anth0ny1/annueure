@@ -31,10 +31,7 @@
           <hr class="hrclass">
           <p class="p"><i class="fas fa-address-card"></i> : {{$societies->adress}} - {{$societies->zip_code}} {{$societies->city}}</p>
           <hr class="hrclass">
-          {{-- <p class="p"><i class="fas fa-map-marker-alt"></i> : {{$societies->city}}</p>
-          <hr class="hrclass">
-          <p class="p"><i class="fas fa-map-signs"></i> : {{$societies->zip_code}}</p>
-          <hr> --}}
+
           <p class="p"><i class="fas fa-phone-square"></i> : {{$societies->phone}}</p>
           <hr>
           <p class="p"><i class="fas fa-globe"></i> : {{$societies->site_web}}</p>

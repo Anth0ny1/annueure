@@ -1,7 +1,5 @@
 @extends('layouts/layout')
- @section('css')
- {{-- <link rel="stylesheet" href="{{ asset('css/presentation-projet.css') }}" /> --}}
-@endsection
+
 @section('title')
   Présentation projet annu'eure
 @endsection

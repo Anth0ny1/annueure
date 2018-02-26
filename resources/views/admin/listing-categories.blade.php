@@ -1,9 +1,7 @@
 @extends('layouts/appback')
 
 @section('content')
-  {{--  --}}
-  {{-- VOIR IMAGE OUI OU NON--}}
-  {{--  --}}
+
   <h1 style="color:tomato; text-align:center;">listing des Categories</h1>
 
 

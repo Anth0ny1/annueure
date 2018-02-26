@@ -20,7 +20,7 @@
     </div>
   @endif
 
-    {{-- @include('layouts.front.sidebarLeft') --}}
+
 <div class="container center_div">
 <div class="panel-body">
 

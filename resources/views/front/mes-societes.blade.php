@@ -1,9 +1,6 @@
 @extends('layouts/layout')
 
-@section('css')
-{{-- <link rel="stylesheet" href="{{ asset('css/mes-societes.css') }}" /> --}}
-{{-- <link rel="stylesheet" href="{{ asset('css/annuaire-profil.css') }}" /> --}}
-@endsection
+
 
 @section('title')
   Profil : vos sociétés

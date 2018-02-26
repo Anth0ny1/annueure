@@ -26,6 +26,7 @@
       <div class="display">
 
         @foreach ($societies as $qq)
+
           <div class="bloc_societe">
             <div class="logo">
 

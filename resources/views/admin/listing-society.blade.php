@@ -4,8 +4,7 @@
 
   <h1 style="color:tomato; text-align:center;">listing des Sociétés</h1>
 
-  {{-- {{dd($societiesbyid)}} --}}
-  {{-- {{dd($categories)}} --}}
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -53,13 +52,7 @@
             {!! Form::close() !!}
 
           </td>
-          {{-- <td> '$societie->categories->categorie_name' </td> --}}
-          {{-- <td> @foreach ($societies->category as $a)
-          {{dd($a)}}
-        @endforeach </td> --}}
-        {{-- @foreach ($categoriesby as $category)
-        <td>{{$category->categorie_name}}</td>
-      @endforeach --}}
+
 
       <td>{{ $societie->created_at }}</td>
       <td>{{ $societie->updated_at }}</td>

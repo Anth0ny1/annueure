@@ -44,7 +44,6 @@ new categories
       {!! $errors->first('image', '<small class="help-block">:message</small>')!!}
     </div>
   </div>
-  {{-- {!! Form::select('status', array('actif' => 'actif', 'inactif' => 'inactif')) !!} --}}
 
   <div class="form-group">
     <div class="col-md-12" style="text-align:center;">
