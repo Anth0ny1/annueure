@@ -10,6 +10,7 @@ html {
 body {
   min-height: 100%;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10.4px;
   font-size: 0.65rem;
   color: #000;
   background: #dcdcdc url('../img/picto/fd-pictos-outils-couleur-fd-blanc.png');
@@ -81,7 +82,9 @@ ul#navhp {
 #navhp li {
   display: inline;
   margin: 10px 5px;
+  font-size: 19.2px;
   font-size: 1.2rem;
+  line-height: 18.4px;
   line-height: 1.15rem;
   height: 30px;
 }
@@ -131,6 +134,7 @@ ul#navhp {
   font-size: 400%;
   text-transform: uppercase;
   text-align:center;
+  line-height: 28.8px;
   line-height:1.8rem;
   color: #ec5c1b;
   text-shadow: -1px -1px 0px #efefef, 1px 1px 0px #295173;
@@ -173,6 +177,7 @@ input.form-control.col-sm-5 {
 
 h1#baseline {
   font-family: 'pattayaregular', sans-serif;
+  font-size: 28.8px;
   font-size: 1.8rem;
   text-align: center;
   min-height: 30px;
@@ -204,12 +209,14 @@ div.ServiceBoxText {
 }
 div.ServiceBoxText h3,
 div.ActuBoxText h3 {
+  font-size: 17.6px;
   font-size: 1.1rem;
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   margin-bottom: 0;
 }
 div.ServiceBoxText p {
+  font-size: 14.4px;
   font-size: 0.9rem;
   text-align: center;
 }
@@ -275,6 +282,7 @@ section#actualites {
 h2#titleHP {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  font-size: 24px;
   font-size: 1.5rem;
   color: #000;
   text-align: center;
@@ -297,6 +305,7 @@ div.ActuBoxText {
   margin-top: 10px;
 }
 div.ActuBoxText p {
+  font-size: 12.8px;
   font-size: 0.8rem;
   text-align: center;
 }
@@ -333,6 +342,7 @@ aside#flux-RSS {
   border-left: 2px solid #c9c9c9;
 }
 .h3_rss {
+  font-size: 16px;
   font-size:1.0rem;
   background:#295173;
   color:white;
@@ -361,6 +371,7 @@ aside#flux-RSS {
 .footerLinks {
   width: 50%;
   font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12.8px;
   font-size: 0.8rem;
   float: left;
 }
@@ -371,18 +382,23 @@ aside#flux-RSS {
   margin-right: 1%;
 }
 .footerOneColTitle {
+  font-size: 14.4px;
   font-size: 0.9rem;
   color: #99D420;
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
 }
 .footerLinkText {
   color: #CCCCCC;
+  line-height: 16px;
   line-height: 1.0rem;
+  margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
 .footerLinkText a {
   color: #CCCCCC;
+  line-height: 12.8px;
   line-height: 0.8rem;
+  margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
 .footerLinkText a:hover {
@@ -410,10 +426,15 @@ aside#flux-RSS {
 .footerLogos {
   margin-top: 10px;
   /* width: 100%; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* flex-wrap: wrap; */
-  justify-content: space-evenly;
-  flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   /* justify-content: space-around; */
 }
 .footerLogos img {
@@ -462,6 +483,7 @@ aside#flux-RSS {
   margin-top: 5%;
 }
 p.labelPicto {
+  font-size: 13.6px;
   font-size: 0.85rem;
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   text-align: center;
@@ -489,6 +511,7 @@ h1#titlePageInt {
   font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   background: #99D420;
+  font-size: 24px;
   font-size: 1.5rem;
   text-align:center;
   vertical-align: middle;
@@ -502,14 +525,16 @@ h2#titlePageInt {
   text-transform: capitalize;
   font-variant: small-caps;
   color: #000;
+  font-size: 19.2px;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
   padding: 10px;
   background: #B3ED26;
 }
-
+/******************************/
 /* PAGE ANNUAIRE DES SOCIETES */
+/******************************/
 
 h3#titlePgSocError {
   width: 100%;
@@ -519,6 +544,7 @@ h3#titlePgSocError {
   text-transform: capitalize;
   font-variant: small-caps;
   color: #fff;
+  font-size: 19.2px;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
@@ -539,14 +565,21 @@ h5.PgAnnu {
   min-height: 625px;
   margin: auto auto;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: space-around;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 .PgAnnuBlocCat {
   float: left;
   margin:1%;
+  background:-webkit-linear-gradient(#53b0ff ,#295173);
   background:linear-gradient(#53b0ff ,#295173);
   border-radius: 5px;
   color: white;
@@ -572,7 +605,10 @@ h5.PgAnnu {
   margin: 2px;
   text-align: center;
 }
+
+/****************************/
 /* PAGE PROFIL VOS SOCIETES */
+/****************************/
 
 /* Icônes des champs de sociétés */
 
@@ -581,10 +617,16 @@ h5.PgAnnu {
   min-height: 540px;
   margin: auto auto;
   padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: space-around;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 .fichePresentSte {
   position: relative;
@@ -599,6 +641,7 @@ h5.PgAnnu {
 }
 .logoBoxSte {
   text-align: center;
+  background: -webkit-linear-gradient(#295173,#53b0ff);
   background: linear-gradient(#295173,#53b0ff);
   border: 1px solid transparent;
   padding: 10px;
@@ -614,8 +657,10 @@ padding-top: 20px;
 .textFichSte {
   font-family: 'roboto_condensedbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
   color: black;
+  font-size: 13.6px;
   font-size: 0.85rem;
   padding-left: 10px;
+  line-height: 16px;
   line-height: 1.0rem;
   margin-bottom: 10px;
 }
@@ -625,8 +670,11 @@ padding-top: 20px;
 }
 .linkBtn {
   min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -646,7 +694,9 @@ padding-top: 20px;
   color: #2A5073;
 }
 
+/****************************/
 /* STYLES PAGE PRESENTATION */
+/****************************/
 
 h5.pgPresent {
   background: #295173;
@@ -655,11 +705,14 @@ h5.pgPresent {
   color:#99D420;
 }
 .boxPresent {
+  padding-top: 16px;
   padding-top: 1rem;
+  padding-bottom: 16px;
   padding-bottom: 1rem;
 }
 p.txtPresent {
   padding: 0 15px;
+  font-size: 16.8px;
   font-size:1.05rem;
 }
 em.italic {
@@ -668,6 +721,7 @@ em.italic {
 ul.listPgPresent {
  list-style: square inside url('../img/picto/puce-fleche.png');
  padding-left: 2.5%;
+ font-size: 16.8px;
  font-size:1.05rem;
 }
 ul.listPgPresent a, p.txtPresent a {
@@ -690,16 +744,35 @@ ul.listPgPresent a:hover, p.txtPresent a:hover {
   padding: 5% 0;
 }
 
+/*************************/
 /* PAGE MENTIONS LEGALES */
+/*************************/
 
 div.PgMentionsLegales {
   background: rgba(232, 232, 232, 0.59);
   padding: 20px;
+  font-size: 16px;
   font-size: 1.0rem;
 }
 div.PgMentionsLegales h2 {
   font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
   font-size: 1.2rem;
+}
+
+/* FORMULAIRES */
+
+.containerForm {
+  padding: 20px 10px 50px;
+}
+.formBox {
+  width: 50%;
+  min-width: 300px;
+  border-radius: 10px;
+  background: #295173;
+  margin: 20px auto;
+}
+.btn-primary:hover {
+  background: #F25C19;
 }
 
 /********** STYLES SPECIAUX **********/
@@ -711,7 +784,7 @@ div.PgMentionsLegales h2 {
 }
 
 /* Surcharges Bootstrap */
-
+/* Menus */
 .dropdown-menu a {
   background: #FCFCFC;
   color: #295173;
@@ -727,7 +800,9 @@ div.PgMentionsLegales h2 {
   width: 100%;
   text-align:center
 }
+/* Formulaires */
 .alert-danger { /* Taille de la police message d'alert */
+  font-size: 19.2px;
   font-size: 1.2rem;
   color: tomato;
 }
@@ -735,6 +810,9 @@ div.PgMentionsLegales h2 {
   margin-top: 20px;
   background-color: #295173;
   border-color: #295173;
+  font-size: 1.0rem;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+
 }
 .btn-danger {
   background-color: #ec5c1b;
@@ -744,6 +822,7 @@ div.PgMentionsLegales h2 {
 input#logo {
   background-color: #FCFCFC;
 }
+
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {

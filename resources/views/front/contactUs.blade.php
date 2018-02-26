@@ -7,9 +7,18 @@
 @endsection
 
 @section('content')
-  <div class="textePresentation">
-  <h1 id="titlePageInt">Nous contacter</h1>
-  </div>
+
+<!-- Container principal -->
+<main id="mainContainerPage">
+
+<!-- Sidebar left (gauche) -->
+@include('layouts.front.sidebarLeft')
+
+  <!-- section principale (droite) -->
+  <section class="mainContentRight">
+
+    <h1 id="titlePageInt">Nous contacter</h1>
+
   @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -36,51 +45,60 @@
     </div>
   @endif --}}
     {{-- @include('layouts.front.sidebarLeft') --}}
-<div class="container center_div">
-<div class="panel-body">
+    <div class="container center_div">
+        <div class="formBox">
 
-<div class="redirect">
+          <div class="redirect">
+            <!-- espace pour les alertes. A supprimer si inutile -->
+          </div>
 
-</div>
-  <div class="col-md-6">
+          <!-- formulaire de contact -->
+          <div class="col-md-6">
 
-    {!! Form::open(['route' => 'nous-contacter','method' => 'post','class' => 'form-group', 'id' => 'contactUsAjax']) !!}
+            {!! Form::open(['route' => 'nous-contacter','method' => 'post','class' => 'form-group', 'id' => 'contactUsAjax']) !!}
 
-    <div class="form-group">
-      {!! Form::label('nom', 'Nom *', ['class' => 'col-md-6 control-label']) !!}
-      {!! Form::text('nom',null,['class' => 'form-control','placeholder' => 'votre nom']) !!}
-      {{-- {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!} --}}
+            <div class="form-group">
+              {!! Form::label('nom', 'Nom *', ['class' => 'col-md-6 control-label']) !!}
+              {!! Form::text('nom',null,['class' => 'form-control','placeholder' => 'votre nom']) !!}
+              {{-- {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!} --}}
+            </div>
+            <small class="help-block nom"></small>
+
+            <div class="form-group">
+              {!! Form::label('email', 'Adresse E-Mail *', ['class' => 'col-md-6 control-label']) !!}
+              {!! Form::email('email',null,['class' => 'form-control','placeholder' => 'votre email']) !!}
+              {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
+            </div>
+            <small class="help-block email"></small>
+
+            <div class="form-group">
+              {!! Form::label('sujet', 'Sujet *', ['class' => 'col-md-6 control-label']) !!}
+              {!! Form::text('sujet',null,['class' => 'form-control','placeholder' => 'votre sujet']) !!}
+              {!! $errors->first('sujet', '<small class="help-block">:message</small><br />') !!}
+            </div>
+            <small class="help-block sujet"></small>
+
+            <div class="form-group">
+              {!! Form::label('message', 'Message *', ['class' => 'col-md-6 control-label']) !!}
+              {!! Form::textarea('message',null,['class' => 'form-control','placeholder' => 'votre message']) !!}
+              {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
+            </div>
+            <small class="help-block message"></small>
+
+            {!! Form::submit('Envoyez votre message',['class' => 'btn btn-primary']) !!}
+            {!! Form::button( '', ['class' => 'spinner']) !!}
+            {!! Form::close() !!}
+          </div>
+        </div>
     </div>
-    <small class="help-block nom"></small>
 
-    <div class="form-group">
-      {!! Form::label('email', 'Adresse E-Mail *', ['class' => 'col-md-6 control-label']) !!}
-      {!! Form::email('email',null,['class' => 'form-control','placeholder' => 'votre email']) !!}
-      {!! $errors->first('email', '<small class="help-block">:message</small><br />') !!}
-    </div>
-    <small class="help-block email"></small>
 
-    <div class="form-group">
-      {!! Form::label('sujet', 'Sujet *', ['class' => 'col-md-6 control-label']) !!}
-      {!! Form::text('sujet',null,['class' => 'form-control','placeholder' => 'votre sujet']) !!}
-      {!! $errors->first('sujet', '<small class="help-block">:message</small><br />') !!}
-    </div>
-    <small class="help-block sujet"></small>
 
-    <div class="form-group">
-      {!! Form::label('message', 'Message *', ['class' => 'col-md-6 control-label']) !!}
-      {!! Form::textarea('message',null,['class' => 'form-control','placeholder' => 'votre message']) !!}
-      {!! $errors->first('message', '<small class="help-block">:message</small><br />') !!}
-    </div>
-    <small class="help-block message"></small>
-{{-- echo Form::submit('Click Me!'); --}}
-    {!! Form::submit('Envoyez votre message',['class' => 'btn-primary']) !!}
-    {!! Form::button( '', ['class' => 'spinner']) !!}
-    {!! Form::close() !!}
-  </div>
+  </section> <!-- end section paragraphes -->
+  <div class="clearfix"></div> <!-- classe clear pour fixer div aside -->
+</main> <!-- end container -->
 
-  </div>
-</div>
+
   @section('js')
     <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -113,12 +131,12 @@
 
             beforeSend: function(){
                 $('.btn-primary').css("display","none");
-                $('.spinner').css('display','inline-block').html('<i class="fas fa-spinner fa-spin"></i>')
+                $('.spinner').css('display','block').html('<i class="fas fa-spinner fa-spin"></i>')
             },
             success:function(response){
 
               $('.spinner').css("display", "none");
-              $('.btn-primary').css("display","inline-block");
+              $('.btn-primary').css("display","block");
               if(response.errStatus !== true) {
 
                 $('#contactUsAjax').css("display","none");

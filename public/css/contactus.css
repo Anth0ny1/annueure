@@ -5,7 +5,7 @@
   margin: 20px auto 50px;
 }
 .col-md-6 {
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   line-height:1.3rem;
   font-size: 130%;
   max-width: 400px;
@@ -14,15 +14,15 @@
   margin: auto;
   padding: 7px;
 }
-form-group{
-  padding: 20px auto
+form-group {
+  padding: 15px auto
 }
-.btn-primary:hover {
+/* .btn-primary:hover {
   background: #F25C19;
-}
-h2{
+} */
+/* h2{
   font-size: 250%;
-}
-.textePresentation h2 {
+} */
+/* .textePresentation h2 {
   color: white;
-}
+} */
