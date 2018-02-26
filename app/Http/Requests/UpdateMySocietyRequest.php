@@ -31,6 +31,7 @@ class UpdateMySocietyRequest extends FormRequest
 
         return [
           'name_society'    => 'bail|required|between:5,50',
+          'gerant'         => 'bail|required|between:5,50',
           'adress'          => 'bail|required|between:5,150',
           'city'            => 'bail|required|between:5,30',
           'phone'           => 'phone:AUTO,FR',
@@ -38,7 +39,7 @@ class UpdateMySocietyRequest extends FormRequest
           'site_web'        => 'bail|max:50',
           'skills'          => 'bail|max:190',
           'email'           => 'bail|required|min:3|max:50|unique:society,email,'.$d['idSociety'],
-          'siren'           => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety'],  
+          'siren'           => 'required|min:9|max:9|unique:society,siren,'.$d['idSociety'],
         ];
     }
 }
