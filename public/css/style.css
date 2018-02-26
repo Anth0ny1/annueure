@@ -771,12 +771,34 @@ div.PgMentionsLegales h2 {
   background: #295173;
   margin: 20px auto;
 }
+.btn-primary { /* boutons bootstrap modifiés (modifier | supprimer) */
+  margin-top: 20px;
+  background-color: #33668C;
+  border-color: #295173;
+  font-size: 1.0rem;
+  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
 .btn-primary:hover {
   background: #F25C19;
 }
 .redirect {
   color: #fff;
-  
+}
+.btn-danger {
+  background-color: #ec5c1b;
+  border-color: #ec5c1b;
+  text-transform: uppercase;
+}
+input#logo {
+  background-color: #FCFCFC;
+}
+div.checkbox label {
+  color: #fff;
+  font-size: 0.8rem;
+}
+a.btn-link {
+  color: #fff;
+  font-size: 0.8rem;
 }
 
 /********** STYLES SPECIAUX **********/
@@ -810,23 +832,6 @@ div.PgMentionsLegales h2 {
   font-size: 1.2rem;
   color: tomato;
 }
-.btn-primary { /* boutons bootstrap modifiés (modifier | supprimer) */
-  margin-top: 20px;
-  background-color: #295173;
-  border-color: #295173;
-  font-size: 1.0rem;
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-
-}
-.btn-danger {
-  background-color: #ec5c1b;
-  border-color: #ec5c1b;
-  text-transform: uppercase;
-}
-input#logo {
-  background-color: #FCFCFC;
-}
-
 
 /*********** Media Queries ***********/
 @media screen and (max-width: 1050px) {
