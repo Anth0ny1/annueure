@@ -749,27 +749,21 @@ div.PgMentionsLegales h2 {
       position: static;
       height: auto;
       min-height: 200px;
-      /* max-height: 240px; */
       line-height: 25px;
       width: 100%;
       text-align: center;
-
     }
     #logo-entete {
       position: static;
       margin: 0 auto;
-      padding: 10px;
+      padding-top: 10px;
       width: 100%;
       max-width: 300px;
-      /* height: auto; */
-
     }
     #menuhp {
       height: auto;
       width: 100%;
       margin-left: 0;
-      /* overflow: auto;
-      clear: left; */
     }
     #navhp {
       height: auto;
@@ -836,6 +830,7 @@ div.PgMentionsLegales h2 {
     .footerOneColTitle {
       font-size: 0.85rem;
     }
+    /* apparition des tooltip (bulles) */
     .BtnPicto {
       display: contents;
       margin: 0 auto;
@@ -845,6 +840,30 @@ div.PgMentionsLegales h2 {
     }
     #first-service-box {
       margin-left: 0;
+    }
+    /* passage du menu haut en vertical */
+    #header {
+      text-align: left;
+    }
+    #menuhp {
+    width: 280px;
+    margin: 0 auto;
+    }
+    ul#menuhptop {
+      padding-left: 5px;
+    }
+    #navhp li {
+      display: block;
+      border-bottom: #CCCCCC 1px solid;
+    }
+    #navhp li:hover {
+      background-color: #efefef;
+      background: url('../img/picto/puce-fleche-menu-top.png') no-repeat 0 0.32em;
+      padding-left: 15px;
+    }
+    #navhp li a:hover {
+    background-color: transparent;
+    border-radius: 0;
     }
 }
 

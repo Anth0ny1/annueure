@@ -133,7 +133,7 @@
           <h3 class="TxtPicto">Annuaire des Pro</h3>
           <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
-            <h3>Annuaire des Pro</h3>
+            <h3>Annuaire Pro</h3>
         </div>
       </div>
       <div class="service-box">
@@ -146,7 +146,7 @@
           <h3 class="TxtPicto">Inscription des Pro</h3>
           <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
-            <h3>Inscription des Pro</h3>
+            <h3>Inscription Pro</h3>
           </button>
         </div>
       </div>
@@ -160,7 +160,7 @@
           <h3 class="TxtPicto">Prendre un rendez-vous</h3>
           <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
-            <h3>Prendre un RV</h3>
+            <h3>Prendre RV</h3>
           </button>
         </div>
       </div>
@@ -174,7 +174,7 @@
           <h3 class="TxtPicto">Demander un devis</h3>
           <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
-            <h3>Demander un devis</h3>
+            <h3>Devis</h3>
         </div>
       </div>
     </section>
