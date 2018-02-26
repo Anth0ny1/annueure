@@ -95,7 +95,7 @@ class UpdateSocietyFront extends Controller
 
         $variable = $request->input();
 
-        Mail::to('anthonythi51@gmail.com')->send(new ModerationSociety($variable));
+        Mail::to('annueure@gmail.com')->send(new ModerationSociety($variable));
 
         return redirect()
           ->route('mes-societes')

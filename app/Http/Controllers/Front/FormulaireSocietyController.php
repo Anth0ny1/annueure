@@ -91,7 +91,7 @@ class FormulaireSocietyController extends Controller
 
         $variable = $request->input();
 
-        Mail::to('anthonythi51@gmail.com')->send(new ModerationSociety($variable));
+        Mail::to('annueure@gmail.com')->send(new ModerationSociety($variable));
 
       return redirect()->route('mes-societes')->with('success', 'Merci votre société vient d\'être ajoutée ..');
     }
