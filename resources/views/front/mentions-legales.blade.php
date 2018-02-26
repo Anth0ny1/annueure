@@ -32,7 +32,7 @@
       <strong>Responsable de la publication</strong> : M. Gourdeau Loïc (annueure@gmail.com)<br />
       Le responsable de la publication est une personne physique.<br />
       <strong>Webmaster</strong> : Aucun pour l'instant.<br />
-      <strong>Hébergeur</strong> : En cours...<br />
+      <strong>Hébergeur</strong> : En cours...</p>
 
       <h2>2. Conditions générales d’utilisation du site et des services proposés.</h2>
       <p>L’utilisation du site <a href="http://annu'Eure/">annu'Eure</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="http://annu'Eure/">annu'Eure</a> sont donc invités à les consulter de manière régulière.</p>

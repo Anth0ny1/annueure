@@ -865,8 +865,15 @@ input#logo {
       padding-left: 15px;
     }
     #navhp li a:hover {
-    background-color: transparent;
-    border-radius: 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
+    p.txtPresent {
+      padding: 0 12px;
+      font-size: 0.85rem;
+    }
+    ul.listPgPresent {
+      font-size: 0.85rem;
     }
 }
 
@@ -884,6 +891,17 @@ input#logo {
     h2#titleHP {
       font-size: 1.2rem;
       min-height: 20px;
+    }
+    p.txtPresent {
+      padding: 0 8px;
+      font-size: 0.75rem;
+    }
+    ul.listPgPresent {
+      font-size: 0.65rem;
+    }
+    p.labelPicto {
+      font-size: 0.60rem;
+      font-family: 'roboto_slabbold', Georgia, Times, 'Times New Roman', serif;
     }
     #footer {
       padding: 10px;
