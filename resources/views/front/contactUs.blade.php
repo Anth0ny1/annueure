@@ -28,7 +28,22 @@
       </ul>
     </div>
   @endif
+<style media="screen">
+  .spinner{
+    display: none;
+  }
+</style>
+  {{-- @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
 
+  @if (session('danger'))
+    <div class="alert alert-danger">
+      {{ session('danger') }}
+    </div>
+  @endif --}}
     {{-- @include('layouts.front.sidebarLeft') --}}
     <div class="container center_div">
         <div class="formBox">
@@ -71,16 +86,22 @@
             <small class="help-block message"></small>
 
             {!! Form::submit('Envoyez votre message',['class' => 'btn btn-primary']) !!}
+            {!! Form::button( '', ['class' => 'spinner']) !!}
             {!! Form::close() !!}
           </div>
         </div>
     </div>
+
+
+
   </section> <!-- end section paragraphes -->
   <div class="clearfix"></div> <!-- classe clear pour fixer div aside -->
 </main> <!-- end container -->
 
+
   @section('js')
-    <scriptsrc="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <script type="text/javascript">
       $.ajaxSetup({
@@ -93,7 +114,13 @@
       <script type="text/javascript">
         $('#contactUsAjax').on('submit', function(e){
 
+          // $(".btn-primary").on('click', function(){
+          //
+          //   $(".btn-primary").css("display","none");
+          //
+          // });
           e.preventDefault();
+
           var form = $('#contactUsAjax');
 
           $.ajax({
@@ -103,35 +130,35 @@
             dataType: "json",
 
             beforeSend: function(){
-                console.log('before');
-                console.log(form.serialize());
+                $('.btn-primary').css("display","none");
+                $('.spinner').css('display','block').html('<i class="fas fa-spinner fa-spin"></i>')
             },
             success:function(response){
-              console.log('after');
-              console.log(response);
+
+              $('.spinner').css("display", "none");
+              $('.btn-primary').css("display","block");
               if(response.errStatus !== true) {
-                console.log('if');
-                // console.log(response);
+
+                $('#contactUsAjax').css("display","none");
+                $('.redirect').html(response.html);
+
                 $('.nom').html('');
                 $('.email').html('');
                 $('.sujet').html('');
                 $('.message').html('');
-                // $('.redirect').html(response.redirect);
-                // window.location.href = "http://localhost/annueure/public/";
+
               }
               else {
-                console.log('else');
 
-                $('.nom').html(response.error.nom);
-                $('.email').html(response.error.email);
-                $('.sujet').html(response.error.sujet);
-                $('.message').html(response.error.message);
+                $('.nom').html(response.nom);
+                $('.email').html(response.email);
+                $('.sujet').html(response.sujet);
+                $('.message').html(response.message);
+
               }
-              // $('#afficherUser').html(response.v);
+
             }
           });
-
-          // console.log('michel');
         });
       </script>
   @endsection

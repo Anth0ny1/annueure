@@ -25,9 +25,16 @@ class AjaxController extends Controller
           ]);
 
       if ($validator->fails()) {
+
+        // dd($validator->errors());
+        $errors = $validator->errors();
+
         return response()->json([
           'errStatus' => true,
-          'error' => $validator->errors()
+          'nom' => $errors->first('nom'),
+          'email' => $errors->first('email'),
+          'sujet' => $errors->first('sujet'),
+          'message' => $errors->first('message'),
         ]);
         // dd($validator);
         // return view('front/contactUs', compact('json'));
@@ -35,19 +42,16 @@ class AjaxController extends Controller
       }
       else {
 
-        // $variable = $request->input();
+         $variable = $request->input();
         // dd($variable);
-        // $variable = 'dd';
-        // Mail::to('madkdi1001@gmail.com')->send(new SendMail($variable));
-        //.
+         //$variable = 'dd';
+         Mail::to('annueure@gmail.com')->send(new SendMail($variable));
 
-        return response()->json([
-          'err' => false,
-          'redirect' => 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous'
-        ]);
-        // $html = 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous';
+         // $html = 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous';
 
-        // return response()->json($html);
+         return response()->json([
+           'html' => 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous',
+         ]);
 
         //
         // return redirect()->route('home')->with('success', 'Votre message a bien était envoyé, nous vous répondrons sous peu');
