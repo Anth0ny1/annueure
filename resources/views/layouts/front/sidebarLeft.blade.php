@@ -8,13 +8,15 @@
         <p class="labelPicto">
           <a href="{{ route('annuaire') }}">Annuaire des Pro</a></p>
       </li>
-      <li>
-        <a href="{{ route('register') }}">
-          {!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
-        </a>
-        <p class="labelPicto">
-          <a href="{{ route('register') }}">Inscription des Pro</a></p>
-      </li>
+      @if (empty(Auth::user()))
+        <li>
+          <a href="{{ route('register') }}">
+            {!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
+          </a>
+          <p class="labelPicto">
+            <a href="{{ route('register') }}">Inscription des Pro</a></p>
+        </li>
+      @endif
       <li>
         <a href="{{ route('nous-contacter-view') }}">
           {!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}

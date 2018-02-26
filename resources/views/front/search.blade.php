@@ -25,7 +25,10 @@
     <div class="content_search">
       <div class="display">
 
+  {{-- {{ dd($societies)}} --}}
+
         @foreach ($societies as $qq)
+
 
           <div class="bloc_societe">
             <div class="logo">
@@ -51,6 +54,7 @@
     </div>
   </section>
 </main>
+
 @endsection
 @section('js')
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

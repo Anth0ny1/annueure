@@ -1,31 +1,35 @@
-.panel-body{
+/* .containerForm {
+  padding: 20px 10px 50px;
+} */
+/* .FormBox {
   max-width: 700px;
   border-radius: 10px;
   background: #295173;
-  margin: 20px auto 50px;
-}
+  margin: 20px auto;
+} */
 .col-md-8{
   max-width: 600px;
   width: 100%;
   margin: auto;
 }
-.col-md-6{
+.col-md-6 {
+  font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
   max-width: 700px;
   width: 100%;
   margin: auto;
 }
-.col-md-4{
-  font-family: 'roboto_slabbold', Verdana, Geneva, Arial, Helvetica, sans-serif;
-  line-height:1.3rem;
-  font-size: 130%;
+.col-md-4 {
+  font-family: 'robotoregular', Verdana, Geneva, Arial, Helvetica, sans-serif;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
   max-width: 400px;
   width: 100%;
   color: #99D420;
   padding-top: 5px;
 }
-.btn-primary:hover{
+/* .btn-primary:hover{
   background: #F25C19;
-  }
+  } */
 .btn-succes{
 	margin-left: 15px;
 	margin-bottom: 20px;

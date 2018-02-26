@@ -55,7 +55,7 @@ class SearchController extends Controller
           ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
           ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
           ->where('society.moderation','=', 'valide')
-          ->select('society.*')
+          ->select('society.*', 'categories.*')
           ->get();
 
     }

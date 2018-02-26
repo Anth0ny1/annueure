@@ -93,7 +93,7 @@
         {!! $errors->first('categorie_name', '<small class="help-block">:message</small>') !!}
         {!! Form::label('categorie_name', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
-        {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Ville ou code postal']) !!}
+        {!! Form::select('zip', $arrayZip,'',['class' => 'form-control col-md-4','placeholder' => 'Code postal']) !!}
         {!! $errors->first('zip', '<small class="help-block">:message</small>') !!}
         {!! Form::label('zip', '&nbsp;',['class' =>'col-md-1 control-label']) !!}
 
@@ -120,9 +120,17 @@
     @endif
     <!-- Fin affichage des erreurs du formulaire -->
 
+<style media="screen">
+  .serviceFlexbox{
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
       <h1 id="baseline">
           “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
       </h1>
+      <div class="serviceFlexbox">
+
       <div id="first-service-box" class="service-box ">
         <div class="picto-box">
           <a href="{{ route('annuaire') }}">
@@ -133,23 +141,27 @@
           <h3 class="TxtPicto">Annuaire des Pro</h3>
           <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
-            <h3>Annuaire Pro</h3>
-        </div>
-      </div>
-      <div class="service-box">
-        <div class="picto-box">
-          <a href="{{ route('register') }}">
-            {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
-          </a>
-        </div>
-        <div class="ServiceBoxText">
-          <h3 class="TxtPicto">Inscription des Pro</h3>
-          <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
-          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
-            <h3>Inscription Pro</h3>
+          Annuaire Pro
           </button>
         </div>
       </div>
+      @if (empty(Auth::user()))
+        <div class="service-box">
+          <div class="picto-box">
+              <a href="{{ route('register') }}">
+                {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
+              </a>
+
+          </div>
+          <div class="ServiceBoxText">
+            <h3 class="TxtPicto">Inscription des Pro</h3>
+            <p class="TxtPicto">Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous en cliquant sur l'icône ci-dessus&nbsp;!</p>
+            <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous êtes un professionnel et vous souhaitez proposer vos services sur l'Annu'Eure&nbsp;? Inscrivez-vous&nbsp;!">
+              Inscription Pro
+            </button>
+          </div>
+        </div>
+      @endif
       <div class="service-box">
         <div class="picto-box">
           <a href="{{ route('nous-contacter-view') }}">
@@ -160,7 +172,7 @@
           <h3 class="TxtPicto">Prendre un rendez-vous</h3>
           <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
-            <h3>Prendre RV</h3>
+            Prendre RV
           </button>
         </div>
       </div>
@@ -174,9 +186,13 @@
           <h3 class="TxtPicto">Demander un devis</h3>
           <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
           <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
-            <h3>Devis</h3>
+          Devis
+          </button>
         </div>
       </div>
+
+    </div>
+
     </section>
 
       <section id="actualites">
@@ -195,8 +211,8 @@
               </a>
             </div>
             <div class="ActuBoxText">
-              <h3>{{ $categorie->categorie_name}}</h3>
-              <p>{{ $categorie->description}}</p>
+            <h3>{{ $categorie->categorie_name}}</h3>
+            <p>{{ $categorie->description}}</p>
             </div>
           </div>
         @endforeach
