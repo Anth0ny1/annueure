@@ -766,13 +766,17 @@ div.PgMentionsLegales h2 {
 }
 .formBox {
   width: 50%;
-  min-width: 300px;
+  min-width: 250px;
   border-radius: 10px;
   background: #295173;
   margin: 20px auto;
 }
 .btn-primary:hover {
   background: #F25C19;
+}
+.redirect {
+  color: #fff;
+  
 }
 
 /********** STYLES SPECIAUX **********/
