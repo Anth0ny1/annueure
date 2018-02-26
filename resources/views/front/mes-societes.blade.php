@@ -11,47 +11,27 @@
 
 @section('content')
 
-
 <!-- Container principal -->
 <main id="mainContainerPage">
 
   <!-- Sidebar left (gauche) -->
-  <aside class="sidebarLeft">
-      <div class="pictoSidebarLeft picto-box">
-        <ul>
-          <li>
-            <a href="#">{!! file_get_contents( asset('img/picto/picto-annuaire.svg')) !!}
-            </a>
-            <p class="labelPicto">Annuaire des Pro</p>
-          </li>
-          <li>
-            <a href="#">{!! file_get_contents( asset('img/picto/picto-inscription.svg')) !!}
-            </a>
-            <p class="labelPicto">Inscription des Pro</p>
-          </li>
-          <li>
-            <a href="#">{!! file_get_contents( asset('img/picto/picto-rendez-vous.svg')) !!}
-            </a>
-            <p class="labelPicto">Prendre un rendez-vous</p>
-          </li>
-          <li>
-            <a href="#">{!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
-            </a>
-            <p class="labelPicto">Demander un devis</p>
-          </li>
-        </ul>
-      </div>
-  </aside>
+  @include('layouts.front.sidebarLeft')
 
   <div class="mainContentRight">
 
       <!-- texte banniére verte de présentation -->
         @if ($mycountsociety == 0)
-          <h1 id="titlePageInt">Aucune société enregistrée dans votre profil</h1>
+          <h1 id="titlePageInt">
+            Aucune société enregistrée dans votre profil
+          </h1>
         @elseif ($mycountsociety == 1)
-            <h1 id="titlePageInt">Vous avez {{$mycountsociety}} société inscrite</h1>
+            <h1 id="titlePageInt">
+              Vous avez {{$mycountsociety}} société inscrite
+            </h1>
             @else
-              <h1 id="titlePageInt">Vous avez {{$mycountsociety}} sociétés inscrites</h1>
+            <h1 id="titlePageInt">
+              Vous avez {{$mycountsociety}} sociétés inscrites
+            </h1>
         @endif
 
         @if (session('success'))
@@ -68,9 +48,13 @@
 
       @if ($mycountsocietymoder == 0)
       @elseif ($mycountsocietymoder == 1)
-          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societé en attente de validation.</div>
+          <div class="alert alert-success clearfix width100">
+            vous avez {{$mycountsocietymoder}} societé en attente de validation.
+          </div>
         @elseif (($mycountsocietymoder > 1))
-          <div class="alert alert-success clearfix width100">vous avez {{$mycountsocietymoder}} societés en attente de validation.</div>
+          <div class="alert alert-success clearfix width100">
+            vous avez {{$mycountsocietymoder}} societés en attente de validation.
+          </div>
       @endif
 
       <section class="SectionFichesSte">
@@ -86,9 +70,9 @@
                       @endif
                   </div>
                   <div id="ficheBoxSte">
-                    <h2>{{$mysoc->name_society}}</h2>
+                    <h2 id="titlePageInt">{{$mysoc->name_society}}</h2>
                     @if ($mysoc->moderation == 'non conforme')
-                    <h3 style="color:red;">non conforme</h3>
+                    <h3 id="titlePgSocError" style="color:red;">Fiche non conforme !</h3>
                     @endif
                       <p class="textFichSte">
                         <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>

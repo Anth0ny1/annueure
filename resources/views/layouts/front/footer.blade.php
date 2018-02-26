@@ -27,7 +27,7 @@
           <a href="{{route('annuaire')}}">Annuaire</a>
         </p>
         <p class="footerLinkText">
-          <a href="{{route('mentions-legales')}}">Mentions-legales</a>
+          <a href="{{route('mentions-legales')}}">Mentions légales</a>
         </p>
       </div>
 
