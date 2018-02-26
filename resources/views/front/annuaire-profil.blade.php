@@ -37,7 +37,7 @@
           <hr> --}}
           <p class="p"><i class="fas fa-phone-square"></i> : {{$societies->phone}}</p>
           <hr>
-          <p class="p"><i class="fas fa-globe"></i> : {{$societies->site_web}}</p>
+          <p class="p"><i class="fas fa-globe"></i> : <a href="{{$societies->site_web}}">{{$societies->site_web}}</a></p>
           <hr>
           <p class="p"><i class="fas fa-envelope"></i> : {{$societies->email}}</p>
           <hr>
