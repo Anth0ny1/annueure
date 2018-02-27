@@ -69,7 +69,7 @@
                   <div id="ficheBoxSte">
                     <h2 id="titlePageInt">{{$mysoc->name_society}}</h2>
                     @if ($mysoc->moderation == 'non conforme')
-                    <h3 id="titlePgSocError" style="color:red;">Fiche non conforme !</h3>
+                    <h3 id="titlePgSocError">Fiche non conforme !</h3>
                     @endif
                       <p class="textFichSte">
                         <i class="fas fa-user"></i> : Mme/M. @php echo ucfirst( $mysoc->gerant)@endphp</p>
