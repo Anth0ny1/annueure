@@ -38,7 +38,7 @@ class AdminUsersController extends Controller
   }
 
     // SOFT DELETE D UN UTILISATEURS TOUJOURS PRESENT EN BASE DE DONNEE MAIS PLUS VISIBLE
-    // 
+    //
     public function deleteUsers($id){
 
       $user = User::findOrFail($id);
@@ -47,6 +47,6 @@ class AdminUsersController extends Controller
 
       return redirect()
         ->route('listing-users')
-        ->with('success', 'L\'utilisateur à bien était SUPPRIMER');
+        ->with('success', 'L\'utilisateur a bien été supprimé');
     }
 }

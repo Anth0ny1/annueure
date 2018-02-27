@@ -134,7 +134,7 @@ return [
 
 
     'to' => [
-      'address' => 'anthonythi51@gmail.com',
-      'name' => 'Anthony',
+      'address' => 'annueure@gmail.com',
+      'name' => 'Annueure',
     ]
 ];

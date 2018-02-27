@@ -22,8 +22,8 @@ class ContactUsController extends Controller
 
       $variable = $request->input();
 
-      Mail::to('anthonythi51@gmail.com')->send(new SendMail($variable));
+      Mail::to('annueure@gmail.com')->send(new SendMail($variable));
 
-      return redirect()->route('home')->with('success', 'Votre message a bien était envoyé, nous vous répondrons sous peu');
+      return redirect()->route('home')->with('success', 'Votre message a bien été envoyé, nous vous répondrons sous peu');
     }
 }
