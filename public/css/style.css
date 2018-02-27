@@ -639,13 +639,13 @@ h5.PgAnnu {
   border: 1px solid #CCCCCC;
   margin-bottom: 30px;
   width: 100%;
-  padding-bottom:60px;
+  /* padding-bottom:60px; */
   /* clear: both;
   overflow: hidden; */
 }
 
 .paddingbottom{
-  padding-bottom:60px; 
+  padding-bottom:60px;
 }
 
 .logoBoxSte {

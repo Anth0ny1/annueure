@@ -8,9 +8,11 @@
 @endsection
 
 @section('content')
-  <div class="textePresentation">
-  <h2>Modification formulaire société</h2>
-  </div>
+  {{-- <div class="textePresentation"> --}}
+  {{-- @include('layouts.front.sidebarLeft') --}}
+
+  <h1 id="titlePageInt">Modification formulaire société</h1>
+  {{-- </div> --}}
     {{-- {{ $soUp->siren }}<br> --}}
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -33,10 +35,10 @@
         {{ session('danger') }}
       </div>
     @endif
-    
+
 @foreach ($societyUpdate as $soUp)
-  <div class="container center_div">
-  <div class="panel-body">
+  <div class="containerForm">
+  <div class="formBox">
 {!! Form::open(['route' => ['update-societes-action', $soUp->id], 'method' => 'put', 'files' => true]) !!}
 
 <div class="form-group">
