@@ -120,38 +120,31 @@
     @endif
     <!-- Fin affichage des erreurs du formulaire -->
 
-<style media="screen">
-  .serviceFlexbox{
-    display: flex;
-    justify-content: space-around;
-  }
-</style>
       <h1 id="baseline">
           “ Bienvenue sur Annu'Eure, l'annuaire des professionnels et des artisans du bâtiment dans l'Eure en Haute Normandie. ”
       </h1>
-      <div class="serviceFlexbox">
-
-      <div id="first-service-box" class="service-box ">
+      <div class="serviceGrid">
+      <div class="serviceBox ">
         <div class="picto-box">
           <a href="{{ route('annuaire') }}">
             {!! file_get_contents(asset('img/picto/picto-annuaire.svg')) !!}
           </a>
         </div>
-        <div class="ServiceBoxText">
-          <h3 class="TxtPicto">Annuaire des Pro</h3>
-          <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
-          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
-          Annuaire Pro
-          </button>
+          <div class="ServiceBoxText">
+            <h3 class="TxtPicto">Annuaire des Pro</h3>
+            <p class="TxtPicto">Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire en cliquant sur l'icône ci-dessus&nbsp;!</p>
+            <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous recherchez un professionnel ou un artisan près de chez vous. Utilisez le répertoire de notre annuaire&nbsp;!">
+            Annuaire Pro
+            </button>
+          </div>
         </div>
-      </div>
-      @if (empty(Auth::user()))
-        <div class="service-box">
+
+        @if (empty(Auth::user()))
+        <div class="serviceBox">
           <div class="picto-box">
               <a href="{{ route('register') }}">
                 {!! file_get_contents(asset('img/picto/picto-inscription.svg')) !!}
               </a>
-
           </div>
           <div class="ServiceBoxText">
             <h3 class="TxtPicto">Inscription des Pro</h3>
@@ -161,35 +154,37 @@
             </button>
           </div>
         </div>
-      @endif
-      <div class="service-box">
-        <div class="picto-box">
-          <a href="{{ route('nous-contacter-view') }}">
-            {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
-          </a>
+        @endif
+
+        <div id="serviceBox3" class="serviceBox">
+          <div class="picto-box">
+            <a href="{{ route('nous-contacter-view') }}">
+              {!! file_get_contents(asset('img/picto/picto-rendez-vous.svg')) !!}
+            </a>
+          </div>
+          <div class="ServiceBoxText">
+            <h3 class="TxtPicto">Prendre un rendez-vous</h3>
+            <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
+            <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
+              Prendre RV
+            </button>
+          </div>
         </div>
-        <div class="ServiceBoxText">
-          <h3 class="TxtPicto">Prendre un rendez-vous</h3>
-          <p class="TxtPicto">Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification&nbsp;!</p>
-          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez trouvé le professionnel ou l'artisan recherché et vous souhaiteriez un rendez-vous&nbsp;? Envoyez-lui une notification en cliquant sur l'icône ci-dessus&nbsp;!">
-            Prendre RV
-          </button>
+
+        <div class="serviceBox">
+          <div class="picto-box">
+            <a href="{{ route('nous-contacter-view') }}">
+              {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
+            </a>
+          </div>
+          <div class="ServiceBoxText">
+            <h3 class="TxtPicto">Demander un devis</h3>
+            <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
+            <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
+            Devis
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="service-box">
-        <div class="picto-box">
-          <a href="{{ route('nous-contacter-view') }}">
-            {!! file_get_contents( asset('img/picto/picto-devis.svg')) !!}
-          </a>
-        </div>
-        <div class="ServiceBoxText">
-          <h3 class="TxtPicto">Demander un devis</h3>
-          <p class="TxtPicto">Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis&nbsp;!</p>
-          <button type="button" class="btn btn-light BtnPicto" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez des travaux à réaliser dans votre habitation ou votre bâtiment&nbsp;? Demandez un devis en cliquant sur l'icône ci-dessus&nbsp;!">
-          Devis
-          </button>
-        </div>
-      </div>
 
     </div>
 
@@ -199,7 +194,7 @@
         <!-- separateur de section -->
         <div class="separator"></div>
         <h2 id="titleHP">
-            Focus : les métiers du bâtiment
+            Focus : les corps de métiers du bâtiment
         </h2>
         <div class="first-actu-box">
 
