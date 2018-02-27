@@ -39,14 +39,10 @@
     </div>
   @endif
 
-<<<<<<< HEAD
-
 <div class="container center_div">
 <div class="panel-body">
 
-<div class="redirect">
 
-</div>
   <div class="col-md-6">
 
     {!! Form::open(['route' => 'nous-contacter','method' => 'post','class' => 'form-group', 'id' => 'contactUsAjax']) !!}
@@ -56,18 +52,17 @@
       {!! Form::text('nom',null,['class' => 'form-control','placeholder' => 'votre nom']) !!}
       {{-- {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!} --}}
 {{-- ======= --}}
+
   @if (session('danger'))
     <div class="alert alert-danger">
       {{ session('danger') }}
     </div>
-  @endif --}}
+  @endif
     {{-- @include('layouts.front.sidebarLeft') --}}
+    <div class="redirect"></div>
+
     <div class="containerForm">
       <div class="formBox">
-
-          <div class="redirect">
-            <!-- espace pour les alertes. A supprimer si inutile -->
-          </div>
 
           <!-- formulaire de contact -->
           <div class="col-md-6">
@@ -156,8 +151,9 @@
               $('.btn-primary').css("display","block");
               if(response.errStatus !== true) {
 
-                $('#contactUsAjax').css("display","none");
-                $('.redirect').html(response.html);
+                $('.containerForm').css("display","none");
+
+                $('.redirect').css('display','block').html(response.html);
 
                 $('.nom').html('');
                 $('.email').html('');

@@ -50,7 +50,7 @@ class AjaxController extends Controller
          // $html = 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous';
 
          return response()->json([
-           'html' => 'Votre message à bien été envoyer nous vous répondrons sous peu, merci à vous',
+           'html' => 'Votre message a bien été envoyé, nous vous répondrons sous peu. Nous vous remercions.',
          ]);
 
         //

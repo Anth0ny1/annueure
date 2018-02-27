@@ -82,8 +82,7 @@ ul#navhp {
 #navhp li {
   display: inline;
   margin: 10px 5px;
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 18.4px;
   line-height: 1.15rem;
   height: 30px;
@@ -530,7 +529,6 @@ h2#titlePageInt {
   text-transform: capitalize;
   font-variant: small-caps;
   color: #000;
-  font-size: 19.2px;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
@@ -549,7 +547,6 @@ h3#titlePgSocError {
   text-transform: capitalize;
   font-variant: small-caps;
   color: #fff;
-  font-size: 19.2px;
   font-size: 1.2rem;
   text-align:center;
   vertical-align: middle;
@@ -816,6 +813,19 @@ a.btn-link:hover {
   font-size: 1.0rem;
   padding-top: 15px;
 }
+div.redirect {
+  display: none;
+  min-width: 60%;
+  min-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 20px auto;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  font-size: 0.85rem;
+
+}
 
 /********** STYLES SPECIAUX **********/
 
@@ -844,9 +854,11 @@ a.btn-link:hover {
 }
 /* Formulaires */
 .alert-danger { /* Taille de la police message d'alert */
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: tomato;
+}
+.alert-success { /* Taille de la police message de succès */
+  font-size: 1.0rem;
 }
 
 /*********** Media Queries ***********/
@@ -880,7 +892,7 @@ a.btn-link:hover {
     }
     #navhp li {
       margin: 0;
-      /* font-size: 1.0rem; */
+      font-size: 1.0rem;
       height: auto;
       line-height: 25px;
     }
