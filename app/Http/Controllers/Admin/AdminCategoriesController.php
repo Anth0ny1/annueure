@@ -121,6 +121,6 @@ class AdminCategoriesController extends Controller
 
       return redirect()
         ->route('listing-categories')
-        ->with('success', 'Votre article à bien été supprimée');
+        ->with('success', 'Votre article à bien été supprimé');
     }
 }
