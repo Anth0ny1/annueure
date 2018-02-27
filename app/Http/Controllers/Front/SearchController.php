@@ -60,7 +60,7 @@ class SearchController extends Controller
 
     }
     else {
-      return redirect()->route('home')->with('danger', 'Veuillez entrez au moin un paramètre de recherche');
+      return redirect()->route('home')->with('danger', 'Veuillez entrer au moins un paramètre de recherche');
     }
 
     return view('front/search' ,compact('categories', 'societies'));

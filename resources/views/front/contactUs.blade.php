@@ -33,34 +33,12 @@
     display: none;
   }
 </style>
-  {{-- @if (session('success'))
-    <div class="alert alert-success">
-      {{ session('success') }}
-    </div>
-  @endif
 
-<<<<<<< HEAD
-
-<div class="container center_div">
-<div class="panel-body">
-
-<div class="redirect">
-
-</div>
-  <div class="col-md-6">
-
-    {!! Form::open(['route' => 'nous-contacter','method' => 'post','class' => 'form-group', 'id' => 'contactUsAjax']) !!}
-
-    <div class="form-group">
-      {!! Form::label('nom', 'Nom *', ['class' => 'col-md-6 control-label']) !!}
-      {!! Form::text('nom',null,['class' => 'form-control','placeholder' => 'votre nom']) !!}
-      {{-- {!! $errors->first('nom', '<small class="help-block">:message</small><br />') !!} --}}
-{{-- ======= --}}
   @if (session('danger'))
     <div class="alert alert-danger">
       {{ session('danger') }}
     </div>
-  @endif --}}
+  @endif
     {{-- @include('layouts.front.sidebarLeft') --}}
     <div class="containerForm">
       <div class="formBox">
