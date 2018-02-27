@@ -799,12 +799,22 @@ input#logo {
 }
 div.checkbox label {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.0rem;
 }
 a.btn-link {
+  margin-top: 10px;
   color: #fff;
-  font-size: 0.8rem;
-
+  font-size: 1.0rem;
+}
+a.btn-link:hover {
+  color: #B3ED26;
+  text-decoration: none;
+}
+.help-block {
+  display: block;
+  color: #fff;
+  font-size: 1.0rem;
+  padding-top: 15px;
 }
 
 /********** STYLES SPECIAUX **********/
