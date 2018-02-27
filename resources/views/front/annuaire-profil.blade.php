@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+  {{-- {{dd($societies)}} --}}
   <div class="textePresentation">
     <h1 id="titlePageInt">{{$societies->name_society}}</h1>
   </div>
