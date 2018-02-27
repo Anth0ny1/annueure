@@ -32,24 +32,24 @@
         @endif
 
         @if (session('success'))
-          <div class="alert alert-success clearfix width100">
+          <div class="alert alert-success width100">
             {{ session('success') }}
           </div>
         @endif
 
         @if (session('danger'))
-          <div class="alert alert-danger clearfix width100">
+          <div class="alert alert-danger width100">
             {{ session('danger') }}
           </div>
         @endif
 
       @if ($mycountsocietymoder == 0)
       @elseif ($mycountsocietymoder == 1)
-          <div class="alert alert-success clearfix width100">
+          <div class="alert alert-success width100">
             vous avez {{$mycountsocietymoder}} societé en attente de validation.
           </div>
         @elseif (($mycountsocietymoder > 1))
-          <div class="alert alert-success clearfix width100">
+          <div class="alert alert-success width100">
             vous avez {{$mycountsocietymoder}} societés en attente de validation.
           </div>
       @endif
