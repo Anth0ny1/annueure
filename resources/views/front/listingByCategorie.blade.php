@@ -27,7 +27,7 @@
       {{-- {{dd($categorie)}} --}}
 
         @foreach ($categorie as $qq)
-          <div class="fichePresentSte">
+          <div class="fichePresentSte paddingbottom">
             <div class="logo">
             @if (!empty($qq->path))
 
