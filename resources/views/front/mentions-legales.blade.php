@@ -27,7 +27,7 @@
         <li>M. Benot Franck,</li>
         <li>M. Brachet Jêrome,</li>
         <li>M. Gourdeau Loïc (responsable de la publication)</li>
-        <li>M. Thiriot Anthony,</li>
+        <li>M. T.Anthony,</li>
       </ul>
       <strong>Responsable de la publication</strong> : M. Gourdeau Loïc (annueure@gmail.com)<br />
       Le responsable de la publication est une personne physique.<br />
