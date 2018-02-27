@@ -81,6 +81,7 @@ class HomeController extends Controller
         ->join( 'categories_society', 'society.id', '=', 'categories_society.society_id' )
         ->join( 'categories', 'categories.id', '=', 'categories_society.categories_id' )
         ->where('categorie_name','=',$categorieName)
+        ->select('categories.*','society.*')
         ->get();
 
       return view('front/listingByCategorie', compact('categorie'));

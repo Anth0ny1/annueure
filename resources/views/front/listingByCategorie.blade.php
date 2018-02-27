@@ -45,7 +45,7 @@
             <p class="p"><i class="fas fa-phone-square"></i> : {{ $qq->phone}}</p>
             <p class="p"><i class="fas fa-globe"></i> : <a href="{{$qq->site_web}}">{{$qq->site_web}}</a></p>
             <p class="p"><i class="fas fa-envelope"></i> : {{$qq->email}}</p>
-            <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->society_id])}}">
+            <a class="btn btn-success" href="{{ route('annuaire-profil-societe',['id' => $qq->id])}}">
               Voir la fiche
             </a>
           </div>
