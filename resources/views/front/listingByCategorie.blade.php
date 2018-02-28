@@ -27,6 +27,8 @@
       {{-- {{dd($categorie)}} --}}
 
         @foreach ($categorie as $qq)
+          @if ($qq->moderation != 'non conforme')
+
           <div class="fichePresentSte paddingbottom">
             <div class="logo">
             @if (!empty($qq->path))
@@ -49,6 +51,7 @@
               Voir la fiche
             </a>
           </div>
+        @endif
         @endforeach
     </section>
   </div>
