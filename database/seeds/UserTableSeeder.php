@@ -41,7 +41,7 @@ class UserTableSeeder extends Seeder
           'city' => 'Paris',
           'email' => 'admin@mail.com',
           'role' => 'admin',
-          'password' => bcrypt('admin'),
+          'password' => bcrypt('admin1mp2k3'),
           'created_at' => Carbon::now()
         );
 
